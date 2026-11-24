@@ -15,8 +15,9 @@
       "deadline": "2026-12-04T18:00:00+05:30",
       "vacancies": 5,
       "notificationUrl": "https://www.upsc.gov.in/uploads/2026/11/AdvtNo-13-2026-Engl-131126_0.pdf",
-      "applyUrl": "https://upsconline.nic.in/",
-      "officialUrl": "https://upsc.gov.in/advertisements/"
+      "applyUrl": "https://upsconline.nic.in/ora/",
+      "officialUrl": "https://upsc.gov.in/advertisements/",
+      "applyInstructions": "Sign in to the official Online Recruitment Application portal and select Advertisement 13/2026, vacancy 26111301114."
     },
     {
       "id": "nta-cmat-2027",
@@ -260,7 +261,10 @@
       "verified": true,
       "verifiedOn": "2026-11-24",
       "publishedDate": "2026-11-24",
-      "type": "official-notice"
+      "type": "official-notice",
+      "applyUrl": "https://uppsc.up.nic.in/",
+      "applyInstructions": "On the UPPSC portal, open Notifications/Advertisements, select A-4/E-1/2026, choose Apply and authenticate with OTR. A separate public vacancy-specific application URL could not be verified.",
+      "otrUrl": "https://otr.pariksha.nic.in/"
     },
     {
       "id": "dsssb-je-mts-2026",
@@ -303,7 +307,9 @@
       "verified": true,
       "verifiedOn": "2026-11-24",
       "publishedDate": "2026-11-24",
-      "type": "official-notice"
+      "type": "official-notice",
+      "applyUrl": "https://dsssbonline.nic.in/",
+      "applyInstructions": "Register or sign in to DSSSB OARS, select advertisement 06/2026 and your eligible post."
     },
     {
       "id": "ssc-chsl-2025-tier2-marks",
