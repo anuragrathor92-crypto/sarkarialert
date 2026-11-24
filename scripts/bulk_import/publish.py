@@ -4,7 +4,7 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 from discover import official,article_url
 
-ROOT=Path(__file__).resolve().parents[1]
+ROOT=Path(__file__).resolve().parents[2]
 CATS={"latest-jobs":"Latest Jobs","results":"Results","admit-card":"Admit Cards","answer-key":"Answer Key","admission":"Admission","documents":"Documents","10th-iti":"10th / ITI Jobs","outsourcing":"Outsourcing Jobs","syllabus":"Syllabus","yojana":"Sarkari Yojana","scholarship":"Scholarship","exam-date":"Exam Dates"}
 JOB={"latest-jobs","10th-iti","outsourcing"}
 BASE="https://anuragrathor92-crypto.github.io/sarkarialert/"

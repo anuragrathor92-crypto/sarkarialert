@@ -3,7 +3,7 @@ import argparse, datetime as dt, json, re, time, urllib.request, urllib.parse, u
 from html.parser import HTMLParser
 from pathlib import Path
 
-ROOT=Path(__file__).resolve().parents[1]
+ROOT=Path(__file__).resolve().parents[2]
 BASE="https://sarkariresult.com.cm/"
 UA="SarkariAlertDiscovery/1.0"
 HOST="sarkariresult.com.cm"
