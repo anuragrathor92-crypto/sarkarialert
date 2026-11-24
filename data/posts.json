@@ -226,6 +226,481 @@
       "verified": true,
       "verifiedOn": "2026-11-24",
       "publishedDate": "2026-11-24"
+    },
+    {
+      "id": "uppsc-ro-aro-2026",
+      "title": "UPPSC RO / ARO Recruitment 2026 – 501 Vacancies",
+      "category": "latest-jobs",
+      "department": "UPPSC",
+      "noticeDate": "2026-10-26",
+      "lastDate": "2026-11-26",
+      "notificationUrl": "https://uppsc.up.nic.in/Documents/PostBifurcation_Details_307.pdf",
+      "officialUrl": "https://uppsc.up.nic.in/",
+      "summary": "समीक्षा अधिकारी, सहायक समीक्षा अधिकारी तथा अन्य पदों के लिए विज्ञापन A-4/E-1/2026 जारी है।",
+      "rows": [
+        [
+          "Vacancies",
+          "501 (general and special recruitment combined)"
+        ],
+        [
+          "Application period",
+          "26 October – 26 November 2026"
+        ],
+        [
+          "Application correction",
+          "Until 3 December 2026"
+        ],
+        [
+          "Eligibility, age and fees",
+          "Check the full advertisement and post-specific rules at the commission website."
+        ]
+      ],
+      "qualification": "",
+      "deadline": "2026-11-26T23:59:59+05:30",
+      "verified": true,
+      "verifiedOn": "2026-11-24",
+      "publishedDate": "2026-11-24",
+      "type": "official-notice"
+    },
+    {
+      "id": "dsssb-je-mts-2026",
+      "title": "DSSSB JE Electrical & MTS Recruitment 2026 – 1,260 Posts",
+      "category": "latest-jobs",
+      "department": "DSSSB",
+      "noticeDate": "2026-11-06",
+      "lastDate": "2026-12-11",
+      "notificationUrl": "https://dsssb.delhi.gov.in/sites/default/files/DSSSB/circulars-orders/advt_06_2026.pdf",
+      "officialUrl": "https://dsssbonline.nic.in/",
+      "summary": "दिल्ली अधीनस्थ सेवा चयन बोर्ड ने विज्ञापन 06/2026 में JE Electrical तथा MTS श्रेणियों की भर्ती घोषित की है।",
+      "rows": [
+        [
+          "Total tentative vacancies",
+          "1,260"
+        ],
+        [
+          "Post codes",
+          "809/26 (JE); 810/26 (MTS)"
+        ],
+        [
+          "Application start",
+          "12 November 2026, noon"
+        ],
+        [
+          "Closing time",
+          "11 December 2026, 11:59 PM"
+        ],
+        [
+          "Pay levels",
+          "JE: 6 or 8 depending on department; MTS: 1"
+        ],
+        [
+          "Eligibility / fees / age",
+          "See detailed advertisement for the relevant post."
+        ]
+      ],
+      "qualification": "",
+      "deadline": "2026-12-11T23:59:00+05:30",
+      "verified": true,
+      "verifiedOn": "2026-11-24",
+      "publishedDate": "2026-11-24",
+      "type": "official-notice"
+    },
+    {
+      "id": "ssc-chsl-2025-tier2-marks",
+      "title": "SSC CHSL 2025 Tier-II Marks & Final Answer Key",
+      "category": "results",
+      "department": "SSC",
+      "noticeDate": "2026-11-17",
+      "lastDate": "",
+      "notificationUrl": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/answer_key_17112026.pdf",
+      "officialUrl": "https://ssc.gov.in/",
+      "summary": "SSC ने CHSL 2025 के दूसरे चरण के अंक और अंतिम उत्तर कुंजी देखने की सुविधा घोषित की है।",
+      "rows": [
+        [
+          "Final result date",
+          "7 October 2026"
+        ],
+        [
+          "Marks / final key access",
+          "17 November, 11 PM – 16 December 2026, 11 PM"
+        ],
+        [
+          "How to check",
+          "Sign in on the official SSC portal; use the notice link for the final answer key."
+        ],
+        [
+          "Important",
+          "Save your own scorecard before the access window closes."
+        ]
+      ],
+      "qualification": "10+2",
+      "deadline": "",
+      "verified": true,
+      "verifiedOn": "2026-11-24",
+      "publishedDate": "2026-11-24",
+      "type": "official-notice"
+    },
+    {
+      "id": "ssc-chsl-2026-tier1-city",
+      "title": "SSC CHSL 2026 Tier-I Exam City & Admit Card Status",
+      "category": "admit-card",
+      "department": "SSC",
+      "noticeDate": "2026-11-23",
+      "lastDate": "",
+      "notificationUrl": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/notice_23112026.pdf",
+      "officialUrl": "https://ssc.gov.in/",
+      "summary": "SSC के 23 नवंबर के नोटिस के अनुसार परीक्षा शहर की जानकारी लॉगिन से देखी जा सकती है। एडमिट कार्ड अभ्यर्थी की परीक्षा तिथि के अनुसार उपलब्ध होगा।",
+      "rows": [
+        [
+          "Exam dates",
+          "3–31 December 2026"
+        ],
+        [
+          "Admission certificate",
+          "Expected 2–3 days before each candidate's exam"
+        ],
+        [
+          "Own scribe OTR mapping",
+          "Until 28 November 2026, 11 PM"
+        ],
+        [
+          "How to check",
+          "Sign in to the designated SSC candidate login."
+        ]
+      ],
+      "qualification": "10+2",
+      "deadline": "",
+      "verified": true,
+      "verifiedOn": "2026-11-24",
+      "publishedDate": "2026-11-24",
+      "type": "official-notice"
+    },
+    {
+      "id": "ssc-cpo-2026-paper1-admit",
+      "title": "SSC CPO SI 2026 Paper-I Admission Certificate Status",
+      "category": "admit-card",
+      "department": "SSC",
+      "noticeDate": "2026-11-13",
+      "lastDate": "",
+      "notificationUrl": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/City%20live%20CPO%20Exam%20notice_13112026.pdf",
+      "officialUrl": "https://ssc.gov.in/",
+      "summary": "दिल्ली पुलिस व CAPF उपनिरीक्षक परीक्षा के लिए SSC ने परीक्षा शहर और प्रवेश पत्र की जानकारी जारी की है।",
+      "rows": [
+        [
+          "Scheduled exams",
+          "23–28 November 2026"
+        ],
+        [
+          "Admission certificate",
+          "Expected 2–3 days before the assigned exam date"
+        ],
+        [
+          "How to check",
+          "Use the official SSC candidate login. Check for subsequent individual updates."
+        ]
+      ],
+      "qualification": "",
+      "deadline": "",
+      "verified": true,
+      "verifiedOn": "2026-11-24",
+      "publishedDate": "2026-11-24",
+      "type": "official-notice"
+    },
+    {
+      "id": "nta-swayam-july-2026-city",
+      "title": "SWAYAM July 2026 Exam City Slip – Not Admit Card",
+      "category": "admit-card",
+      "department": "NTA",
+      "noticeDate": "2026-11-20",
+      "lastDate": "",
+      "notificationUrl": "https://nta.ac.in/Download/Notice/Notice_20261120160752.pdf",
+      "officialUrl": "https://exams.nta.nic.in/swayam/",
+      "summary": "NTA ने जुलाई सत्र की परीक्षा के लिए अग्रिम शहर सूचना जारी की है। यह प्रवेश पत्र नहीं है।",
+      "rows": [
+        [
+          "Scheduled examinations",
+          "8–12 December 2026"
+        ],
+        [
+          "Courses",
+          "661 courses; course imb26_mg250 date to be notified separately"
+        ],
+        [
+          "Download",
+          "Application number and password on official portal"
+        ],
+        [
+          "Admit card",
+          "Will be issued separately."
+        ]
+      ],
+      "qualification": "",
+      "deadline": "",
+      "verified": true,
+      "verifiedOn": "2026-11-24",
+      "publishedDate": "2026-11-24",
+      "type": "official-notice"
+    },
+    {
+      "id": "nta-niftee-2027-extension",
+      "title": "NIFTEE 2027 Admission – Extended Registration Schedule",
+      "category": "admission",
+      "department": "NTA",
+      "noticeDate": "2026-11-14",
+      "lastDate": "2026-11-29",
+      "notificationUrl": "https://nta.ac.in/Download/Notice/Notice_20261114165715.pdf",
+      "officialUrl": "https://exams.nta.nic.in/niftee/",
+      "summary": "फैशन टेक्नोलॉजी प्रवेश परीक्षा की आवेदन समय-सीमा बढ़ाई गई है।",
+      "rows": [
+        [
+          "Regular applications",
+          "Until 24 November 2026"
+        ],
+        [
+          "Late-fee applications",
+          "25–29 November 2026"
+        ],
+        [
+          "Correction",
+          "30 November – 2 December 2026"
+        ],
+        [
+          "Courses",
+          "UG, PG, NLEA, artisans and PhD programmes; see respective eligibility and fee rules."
+        ]
+      ],
+      "qualification": "",
+      "deadline": "2026-11-29T23:59:59+05:30",
+      "verified": true,
+      "verifiedOn": "2026-11-24",
+      "publishedDate": "2026-11-24",
+      "type": "official-notice"
+    },
+    {
+      "id": "nta-jee-main-2027-session1",
+      "title": "JEE Main 2027 Session 1 – Late Fee Application",
+      "category": "admission",
+      "department": "NTA",
+      "noticeDate": "2026-10-24",
+      "lastDate": "2026-11-26",
+      "notificationUrl": "https://nta.ac.in/Download/Notice/Notice_20261024220013.pdf",
+      "officialUrl": "https://jeemain.nta.nic.in/",
+      "summary": "JEE Main जनवरी सत्र के लिए सामान्य पंजीकरण बंद है। मूल नोटिस के अनुसार विलंब शुल्क के साथ आवेदन की अवधि जारी है।",
+      "rows": [
+        [
+          "Regular deadline",
+          "22 November 2026 (closed)"
+        ],
+        [
+          "Late application / payment",
+          "23–26 November 2026; payment by 11:50 PM on 26 Nov"
+        ],
+        [
+          "Additional late fee",
+          "₹500"
+        ],
+        [
+          "Correction",
+          "27–29 November 2026"
+        ],
+        [
+          "Scheduled exam dates",
+          "20–24 and 28 January 2027"
+        ],
+        [
+          "Admit card scheduled",
+          "13 January 2027"
+        ],
+        [
+          "Eligibility and paper-specific fees",
+          "See official information bulletin."
+        ]
+      ],
+      "qualification": "",
+      "deadline": "2026-11-26T23:50:00+05:30",
+      "verified": true,
+      "verifiedOn": "2026-11-24",
+      "publishedDate": "2026-11-24",
+      "type": "official-notice"
+    },
+    {
+      "id": "nta-aissee-2027",
+      "title": "AISSEE 2027 Sainik School Class 6 & 9 Admission",
+      "category": "admission",
+      "department": "NTA",
+      "noticeDate": "2026-11-03",
+      "lastDate": "2026-12-02",
+      "notificationUrl": "https://nta.ac.in/Download/Notice/Notice_20261103151121.PDF",
+      "officialUrl": "https://exams.nta.nic.in/sainik-school-society/",
+      "summary": "सैनिक स्कूलों की कक्षा 6 और 9 के सत्र 2027–28 में प्रवेश के लिए आवेदन आमंत्रित हैं।",
+      "rows": [
+        [
+          "Regular applications",
+          "3 November – 2 December 2026, 11:50 PM"
+        ],
+        [
+          "Late application window",
+          "3–6 December 2026; payment by 11:50 PM on 6 Dec"
+        ],
+        [
+          "Additional late fee",
+          "₹500"
+        ],
+        [
+          "Correction",
+          "7–9 December 2026"
+        ],
+        [
+          "Exam city scheduled",
+          "11 January 2027"
+        ],
+        [
+          "Admit card scheduled",
+          "25 January 2027"
+        ],
+        [
+          "Exam scheduled",
+          "31 January 2027; OMR"
+        ],
+        [
+          "Eligibility and fees",
+          "Check the official bulletin for age, class and fee requirements."
+        ]
+      ],
+      "qualification": "School students",
+      "deadline": "2026-12-06T23:50:00+05:30",
+      "verified": true,
+      "verifiedOn": "2026-11-24",
+      "publishedDate": "2026-11-24",
+      "type": "official-notice"
+    },
+    {
+      "id": "clat-2027-exam-date",
+      "title": "CLAT 2027 Exam Schedule – 6 December",
+      "category": "exam-date",
+      "department": "Consortium of NLUs",
+      "noticeDate": "",
+      "lastDate": "",
+      "notificationUrl": "https://clat2027.consortiumofnlus.ac.in/clat-2027/ug-instructions.html",
+      "officialUrl": "https://clat2027.consortiumofnlus.ac.in/",
+      "summary": "CLAT 2027 की परीक्षा तिथि आधिकारिक निर्देशों में दी गई है। प्रवेश पत्र की उपलब्धता अलग से लॉगिन में देखें।",
+      "rows": [
+        [
+          "Exam date",
+          "6 December 2026 (subject to revision)"
+        ],
+        [
+          "Time",
+          "2–4 PM; eligible PwD candidates until 4:40 PM"
+        ],
+        [
+          "Mode",
+          "Offline"
+        ],
+        [
+          "Registration",
+          "Original deadline 31 October 2026; not advertised here as an open application."
+        ]
+      ],
+      "qualification": "",
+      "deadline": "",
+      "verified": true,
+      "verifiedOn": "2026-11-24",
+      "publishedDate": "2026-11-24",
+      "type": "official-notice"
+    },
+    {
+      "id": "voter-id-services",
+      "title": "Voter ID – Official Registration & Electoral Services",
+      "category": "documents",
+      "department": "ECI",
+      "noticeDate": "",
+      "lastDate": "",
+      "notificationUrl": "https://voters.eci.gov.in/",
+      "officialUrl": "https://voters.eci.gov.in/",
+      "summary": "निर्वाचन आयोग के नागरिक सेवा पोर्टल पर उपलब्ध मतदाता सेवाएँ देखें।",
+      "rows": [
+        [
+          "Portal",
+          "Election Commission citizen service portal"
+        ],
+        [
+          "Availability",
+          "Check the official portal for applicable forms, eligibility and deadlines."
+        ],
+        [
+          "Safety",
+          "Submit personal information only on the official portal."
+        ]
+      ],
+      "qualification": "",
+      "deadline": "",
+      "verified": true,
+      "verifiedOn": "2026-11-24",
+      "publishedDate": "2026-11-24",
+      "type": "service-guide"
+    },
+    {
+      "id": "nielit-student-services",
+      "title": "NIELIT Student Enrollment, Exam & Result Portal",
+      "category": "documents",
+      "department": "NIELIT",
+      "noticeDate": "",
+      "lastDate": "",
+      "notificationUrl": "https://student.nielit.gov.in/",
+      "officialUrl": "https://student.nielit.gov.in/",
+      "summary": "NIELIT के आधिकारिक छात्र पोर्टल पर नामांकन और परीक्षा संबंधी सेवाओं की जानकारी देखें।",
+      "rows": [
+        [
+          "Official system",
+          "Student Information and Enrollment System"
+        ],
+        [
+          "Current CCC cycle",
+          "Check the portal's notifications; no specific new application or result date independently confirmed."
+        ],
+        [
+          "Safety",
+          "Verify course and fees directly."
+        ]
+      ],
+      "qualification": "",
+      "deadline": "",
+      "verified": true,
+      "verifiedOn": "2026-11-24",
+      "publishedDate": "2026-11-24",
+      "type": "service-guide"
+    },
+    {
+      "id": "up-edistrict-services",
+      "title": "UP eDistrict – Certificate Services Official Portal",
+      "category": "documents",
+      "department": "UP eDistrict",
+      "noticeDate": "",
+      "lastDate": "",
+      "notificationUrl": "https://edistrict.up.gov.in/",
+      "officialUrl": "https://edistrict.up.gov.in/",
+      "summary": "उत्तर प्रदेश ई-डिस्ट्रिक्ट की आधिकारिक वेबसाइट पर प्रमाणपत्र संबंधी उपलब्ध सेवाएँ देखें।",
+      "rows": [
+        [
+          "Service type",
+          "Official eDistrict portal"
+        ],
+        [
+          "Application and verification",
+          "Check the portal for the current process and service availability."
+        ],
+        [
+          "Safety",
+          "Only use official services for identity documents."
+        ]
+      ],
+      "qualification": "",
+      "deadline": "",
+      "verified": true,
+      "verifiedOn": "2026-11-24",
+      "publishedDate": "2026-11-24",
+      "type": "service-guide"
     }
   ]
 }
