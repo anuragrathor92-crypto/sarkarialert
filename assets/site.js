@@ -8,3 +8,6 @@ form?.addEventListener('submit',e=>{e.preventDefault();filter()});form?.addEvent
 
 /* Remove obsolete registrations for this website only. */
 if('serviceWorker' in navigator){navigator.serviceWorker.getRegistrations().then(rs=>Promise.all(rs.filter(r=>new URL(r.scope).pathname==='/sarkarialert/').map(r=>r.unregister()))).catch(()=>{});}
+
+/* All scheme navigation opens the same complete directory, bypassing stale directory URL caches. */
+document.querySelectorAll('a[href]').forEach(a=>{try{const u=new URL(a.href,location.href);if(u.origin===location.origin&&u.pathname==='/sarkarialert/category/yojana/'){u.pathname='/sarkarialert/category/yojana/index.html';u.search='release=24-schemes-v2';a.href=u.href;}}catch{}});
