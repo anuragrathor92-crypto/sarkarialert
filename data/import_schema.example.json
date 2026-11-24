@@ -1,0 +1,30 @@
+{
+  "posts": [
+    {
+      "id": "example-do-not-publish",
+      "title": "Example only",
+      "category": "latest-jobs",
+      "department": "Department name",
+      "noticeId": "Official unique vacancy/notice identifier",
+      "notificationUrl": "https://ssc.gov.in/",
+      "officialUrl": "https://ssc.gov.in/",
+      "applyUrl": "https://ssc.gov.in/",
+      "discoveryUrl": "https://sarkariresult.com.cm/example-recruitment-2026/",
+      "qualification": "Qualification",
+      "summary": "Original factual description",
+      "rows": [
+        [
+          "Eligibility",
+          "Facts from official notice"
+        ]
+      ],
+      "reviewedBy": "Editor",
+      "reviewedOn": "YYYY-MM-DD",
+      "approved": false,
+      "officialFactsChecked": false,
+      "applyLinkChecked": false,
+      "applicationStatus": "OPEN",
+      "deadline": "YYYY-MM-DDTHH:MM:SS+05:30"
+    }
+  ]
+}

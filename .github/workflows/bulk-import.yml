@@ -1,0 +1,79 @@
+name: Sarkari Alert Bulk Import
+on:
+  schedule:
+    - cron: '17 */2 * * *'
+  push:
+    branches: [main]
+    paths: ['scripts/bulk_import/**', '.github/workflows/bulk-import.yml', 'data/import_approved.json']
+  workflow_dispatch:
+    inputs:
+      publish_approved:
+        description: 'Publish reviewed records (requires optional PUBLISH_TOKEN secret)'
+        type: boolean
+        default: false
+permissions:
+  contents: read
+concurrency:
+  group: sarkari-alert-bulk-import
+  cancel-in-progress: false
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate importer
+        run: python -m unittest discover -s scripts/bulk_import -p 'test_*.py'
+      - name: Discover candidate URLs
+        run: python scripts/bulk_import/discover.py --inspect 20
+      - name: Upload review queue
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: scheme-and-job-review-queue
+          path: import-output/
+          if-no-files-found: warn
+          retention-days: 14
+  publish:
+    if: github.event_name == 'workflow_dispatch' && inputs.publish_approved
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Build reviewed changes
+        run: |
+          python -m unittest discover -s scripts/bulk_import -p 'test_*.py'
+          python scripts/bulk_import/publish.py --write
+      - name: Commit reviewed pages in one release
+        env:
+          PUBLISH_TOKEN: ${{ secrets.PUBLISH_TOKEN }}
+        run: |
+          if [ -z "$(git status --porcelain --untracked-files=all -- index.html category posts data/posts.json sitemap.xml)" ]; then
+            echo "No new approved records."
+            exit 0
+          fi
+          if [ -z "$PUBLISH_TOKEN" ]; then
+            echo "::error::PUBLISH_TOKEN is not configured. No publication attempted."
+            exit 1
+          fi
+          git config user.name "Sarkari Alert publisher"
+          git config user.email "sarkarialert-bot@users.noreply.github.com"
+          git add index.html category posts data/posts.json sitemap.xml
+          git commit -m "Publish reviewed government notices in one bulk release"
+          GH_TOKEN="$PUBLISH_TOKEN" gh auth setup-git
+          git push origin HEAD:main
+      - name: Upload publication report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: bulk-publish-report
+          path: import-output/
+          if-no-files-found: warn
