@@ -1013,6 +1013,139 @@
       "verifiedOn": "2026-11-24",
       "publishedDate": "2026-11-24",
       "type": "service-guide"
+    },
+    {
+      "id": "pmuy",
+      "title": "Pradhan Mantri Ujjwala Yojana 2.0",
+      "titleHi": "प्रधानमंत्री उज्ज्वला योजना 2.0",
+      "department": "Ministry of Petroleum & Natural Gas",
+      "theme": "LPG",
+      "eligibility": "18 वर्ष या उससे अधिक आयु की गरीब परिवार की महिला; उसी परिवार में किसी OMC का अन्य LPG कनेक्शन नहीं होना चाहिए। निर्धारित वंचना घोषणा आवश्यक।",
+      "requiredDocuments": [
+        "KYC आवेदन फॉर्म",
+        "आवेदिका का आधार",
+        "वर्तमान पता अलग हो तो पता प्रमाण; प्रवासियों के लिए निर्धारित स्वघोषणा",
+        "राशन कार्ड या परिवार संरचना का राज्य सरकार का प्रमाण; प्रवासियों के लिए निर्धारित स्वघोषणा",
+        "परिवार के वयस्क सदस्यों के आधार की प्रतियाँ",
+        "बैंक पासबुक या रद्द चेक",
+        "निर्धारित वंचना घोषणा"
+      ],
+      "benefit": "पात्र महिलाओं को योजना के अंतर्गत नया LPG कनेक्शन; अन्य वित्तीय सहायता की नवीनतम शर्तें OMC से जाँचें।",
+      "officialUrl": "https://pmuy.gov.in/ujjwala2.html",
+      "sourceUrl": "https://pmuy.gov.in/ujjwala2.html",
+      "applyUrl": "https://pmuy.gov.in/ujjwala2.html",
+      "applyLinkType": "official_apply_hub",
+      "steps": [
+        "सरकारी योजना पेज खोलें।",
+        "अपनी पसंद के LPG वितरक के पास जाएँ या सरकारी पेज पर प्रदर्शित OMC आवेदन विकल्प चुनें।",
+        "KYC और जरूरी दस्तावेज संबंधित वितरक के पास जमा करें।"
+      ],
+      "statusText": "आधिकारिक पेज पर आवेदन का मार्ग उपलब्ध है; OMC के अलग फॉर्म का पूरा कार्यशील परीक्षण नहीं हुआ है।",
+      "applicationStatus": "ONGOING",
+      "category": "yojana",
+      "scope": "Central",
+      "state": "All India",
+      "verified": true,
+      "verificationLevel": "official_details_checked",
+      "editorVerifiedBy": "Sarkari Alert source review (ChatGPT)",
+      "editorVerifiedOn": "2026-11-24",
+      "verifiedOn": "2026-11-24",
+      "publishedDate": "2026-11-24",
+      "publishReady": true,
+      "applyUrlVerified": false,
+      "lastDate": null,
+      "notificationUrl": "https://pmuy.gov.in/ujjwala2.html",
+      "type": "service-guide",
+      "summary": "पात्र महिलाओं को योजना के अंतर्गत नया LPG कनेक्शन; अन्य वित्तीय सहायता की नवीनतम शर्तें OMC से जाँचें।"
+    },
+    {
+      "id": "eshram",
+      "title": "eShram Registration & UAN Card",
+      "titleHi": "ई-श्रम कार्ड पंजीकरण और UAN",
+      "department": "Ministry of Labour & Employment",
+      "theme": "Workers",
+      "eligibility": "असंगठित क्षेत्र में काम करने वाले 16 वर्ष या उससे अधिक आयु के व्यक्ति, अन्य निर्धारित शर्तों के अधीन। EPFO/ESIC सदस्यता तथा वर्तमान आयु-सीमा की लागू शर्तें पोर्टल पर जाँचें; पुरानी और नवीन सरकारी FAQ में आयु की अभिव्यक्ति अलग है।",
+      "requiredDocuments": [
+        "आधार नंबर",
+        "आधार से जुड़ा मोबाइल नंबर; न हो तो CSC/SSK पर बायोमेट्रिक पंजीकरण"
+      ],
+      "benefit": "मुफ्त पंजीकरण और स्थायी UAN; संबंधित कल्याण योजनाओं तक पहुँच में सहायता। कार्ड से अपने आप नकद राशि मिलने की गारंटी नहीं।",
+      "officialUrl": "https://eshram.gov.in/",
+      "sourceUrl": "https://eshram.gov.in/faqs",
+      "applyUrl": "https://eshram.gov.in/",
+      "applyLinkType": "official_apply_hub",
+      "steps": [
+        "ई-श्रम के आधिकारिक पोर्टल पर Register विकल्प चुनें या निकटतम CSC/SSK जाएँ।",
+        "आधार प्रमाणीकरण और आवश्यक विवरण पूरे करें।",
+        "UAN कार्ड सुरक्षित रखें; पहले से पंजीकृत होने पर दोबारा पंजीकरण न करें।"
+      ],
+      "statusText": "सरकारी FAQ के अनुसार पंजीकरण के लिए कोई निश्चित अंतिम तिथि नहीं है। अलग पंजीकरण फॉर्म का पूरा कार्यशील परीक्षण नहीं हुआ है।",
+      "applicationStatus": "ONGOING",
+      "extraLinks": [
+        [
+          "CSC खोजें",
+          "https://findmycsc.nic.in/csc"
+        ],
+        [
+          "पहले से पंजीकृत UAN लॉगिन",
+          "https://register.eshram.gov.in/#/user/uan-login"
+        ]
+      ],
+      "category": "yojana",
+      "scope": "Central",
+      "state": "All India",
+      "verified": true,
+      "verificationLevel": "official_details_checked",
+      "editorVerifiedBy": "Sarkari Alert source review (ChatGPT)",
+      "editorVerifiedOn": "2026-11-24",
+      "verifiedOn": "2026-11-24",
+      "publishedDate": "2026-11-24",
+      "publishReady": true,
+      "applyUrlVerified": false,
+      "lastDate": null,
+      "notificationUrl": "https://eshram.gov.in/faqs",
+      "type": "service-guide",
+      "summary": "मुफ्त पंजीकरण और स्थायी UAN; संबंधित कल्याण योजनाओं तक पहुँच में सहायता। कार्ड से अपने आप नकद राशि मिलने की गारंटी नहीं।"
+    },
+    {
+      "id": "pmsby",
+      "title": "Pradhan Mantri Suraksha Bima Yojana",
+      "titleHi": "प्रधानमंत्री सुरक्षा बीमा योजना",
+      "department": "Department of Financial Services",
+      "theme": "Accident insurance",
+      "eligibility": "भाग लेने वाले बैंक या डाकघर के व्यक्तिगत खाताधारक, 18–70 वर्ष आयु वर्ग; केवल एक खाते से सदस्यता। कवर समाप्ति की शर्तें आधिकारिक FAQ में देखें।",
+      "requiredDocuments": [
+        "बैंक/डाकघर का पात्र खाता",
+        "निर्धारित नामांकन फॉर्म",
+        "ऑटो-डेबिट सहमति और घोषणा फॉर्म"
+      ],
+      "benefit": "वार्षिक प्रीमियम ₹20। दुर्घटना में मृत्यु या निर्दिष्ट पूर्ण स्थायी दिव्यांगता पर ₹2 लाख; निर्दिष्ट आंशिक स्थायी दिव्यांगता पर ₹1 लाख। शर्तें लागू।",
+      "officialUrl": "https://financialservices.gov.in/pmsby",
+      "sourceUrl": "https://financialservices.gov.in/pmsby",
+      "applyUrl": null,
+      "applyLinkType": "bank_branch",
+      "steps": [
+        "भाग लेने वाले बैंक या डाकघर से संपर्क करें।",
+        "नामांकन और ऑटो-डेबिट की सहमति दें।",
+        "खाते में पर्याप्त राशि रखें और कवर की प्रभावी तारीख तथा नामांकन पुष्टि लें।"
+      ],
+      "statusText": "योजना में देर से नामांकन भी संभव है; बैंक/डाकघर से वर्तमान उपलब्धता जाँचें।",
+      "applicationStatus": "ONGOING",
+      "category": "yojana",
+      "scope": "Central",
+      "state": "All India",
+      "verified": true,
+      "verificationLevel": "official_details_checked",
+      "editorVerifiedBy": "Sarkari Alert source review (ChatGPT)",
+      "editorVerifiedOn": "2026-11-24",
+      "verifiedOn": "2026-11-24",
+      "publishedDate": "2026-11-24",
+      "publishReady": true,
+      "applyUrlVerified": false,
+      "lastDate": null,
+      "notificationUrl": "https://financialservices.gov.in/pmsby",
+      "type": "service-guide",
+      "summary": "वार्षिक प्रीमियम ₹20। दुर्घटना में मृत्यु या निर्दिष्ट पूर्ण स्थायी दिव्यांगता पर ₹2 लाख; निर्दिष्ट आंशिक स्थायी दिव्यांगता पर ₹1 लाख। शर्तें लागू।"
     }
   ]
 }

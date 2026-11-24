@@ -1,0 +1,198 @@
+{
+  "source": "Uploaded SARKARI_ALERT_ALL_SCHEMES_STARTER_PACKAGE.zip — condensed lead index, not the original full catalog",
+  "asOf": "2026-11-24",
+  "records": [
+    {
+      "id": "pm-kisan",
+      "title": "PM-KISAN",
+      "sourceUrl": "https://pmkisan.gov.in/RegistrationFormupdated.aspx",
+      "reviewStatus": "pending",
+      "publishReady": false,
+      "applyUrlVerified": false
+    },
+    {
+      "id": "pmfby",
+      "title": "PM Fasal Bima",
+      "sourceUrl": "https://pmfby.gov.in/pdf/Revised_Operational_Guidelines.pdf",
+      "reviewStatus": "pending",
+      "publishReady": false,
+      "applyUrlVerified": false
+    },
+    {
+      "id": "pm-kusum",
+      "title": "PM-KUSUM",
+      "sourceUrl": "https://pmkusum.mnre.gov.in/",
+      "reviewStatus": "pending",
+      "publishReady": false,
+      "applyUrlVerified": false
+    },
+    {
+      "id": "pm-surya-ghar",
+      "title": "PM Surya Ghar",
+      "sourceUrl": "https://solarrooftop.pmsuryaghar.gov.in/",
+      "reviewStatus": "existing_post_no_duplicate",
+      "publishReady": false,
+      "applyUrlVerified": false
+    },
+    {
+      "id": "pmay-u-2",
+      "title": "PMAY Urban 2.0",
+      "sourceUrl": "https://pmaymis.gov.in/PMAYMIS2_2024/faq.html",
+      "reviewStatus": "pending",
+      "publishReady": false,
+      "applyUrlVerified": false
+    },
+    {
+      "id": "pmuy",
+      "title": "Ujjwala",
+      "sourceUrl": "https://pmuy.gov.in/ujjwala2.html",
+      "reviewStatus": "published_source_reviewed",
+      "publishReady": false,
+      "applyUrlVerified": false
+    },
+    {
+      "id": "pmjdy",
+      "title": "Jan Dhan",
+      "sourceUrl": "https://www.pmjdy.gov.in/hi-scheme",
+      "reviewStatus": "pending",
+      "publishReady": false,
+      "applyUrlVerified": false
+    },
+    {
+      "id": "ayushman-70plus",
+      "title": "Ayushman 70+",
+      "sourceUrl": "https://nha.gov.in/img/resources/English_FAQs_related_to_the_benefits_for_senior_citizens.pdf",
+      "reviewStatus": "pending",
+      "publishReady": false,
+      "applyUrlVerified": false
+    },
+    {
+      "id": "eshram",
+      "title": "eShram",
+      "sourceUrl": "https://eshram.gov.in/faqs",
+      "reviewStatus": "published_source_reviewed",
+      "publishReady": false,
+      "applyUrlVerified": false
+    },
+    {
+      "id": "pmjjby",
+      "title": "PMJJBY",
+      "sourceUrl": "https://www.financialservices.gov.in/pmjjby",
+      "reviewStatus": "pending",
+      "publishReady": false,
+      "applyUrlVerified": false
+    },
+    {
+      "id": "pmsby",
+      "title": "PMSBY",
+      "sourceUrl": "https://financialservices.gov.in/pmsby",
+      "reviewStatus": "published_source_reviewed",
+      "publishReady": false,
+      "applyUrlVerified": false
+    },
+    {
+      "id": "apy",
+      "title": "Atal Pension Yojana",
+      "sourceUrl": "https://financialservices.gov.in/atal-pension-yojana",
+      "reviewStatus": "pending",
+      "publishReady": false,
+      "applyUrlVerified": false
+    },
+    {
+      "id": "pmmy",
+      "title": "MUDRA",
+      "sourceUrl": "https://financialservices.gov.in/jansamarth",
+      "reviewStatus": "pending",
+      "publishReady": false,
+      "applyUrlVerified": false
+    },
+    {
+      "id": "stand-up-india",
+      "title": "Stand Up India",
+      "sourceUrl": "https://www.financialservices.gov.in/stand-india-scheme-supi",
+      "reviewStatus": "pending",
+      "publishReady": false,
+      "applyUrlVerified": false
+    },
+    {
+      "id": "pm-kv-y",
+      "title": "PMKVY 4.0",
+      "sourceUrl": "https://www.pmkvyofficial.org/photos/General_document/PMKVY%204.0%20Guidelines.pdf",
+      "reviewStatus": "pending",
+      "publishReady": false,
+      "applyUrlVerified": false
+    },
+    {
+      "id": "pm-vishwakarma",
+      "title": "PM Vishwakarma",
+      "sourceUrl": "https://disclaimer.pmvishwakarma.gov.in/",
+      "reviewStatus": "pending",
+      "publishReady": false,
+      "applyUrlVerified": false
+    },
+    {
+      "id": "pmmvy",
+      "title": "PMMVY",
+      "sourceUrl": "https://pmmvy.wcd.gov.in/",
+      "reviewStatus": "pending",
+      "publishReady": false,
+      "applyUrlVerified": false
+    },
+    {
+      "id": "pm-svanidhi",
+      "title": "PM SVANidhi",
+      "sourceUrl": "https://financialservices.gov.in/jansamarth",
+      "reviewStatus": "pending",
+      "publishReady": false,
+      "applyUrlVerified": false
+    },
+    {
+      "id": "nsp-scholarship-directory",
+      "title": "NSP directory",
+      "sourceUrl": "https://scholarships.gov.in/Students",
+      "reviewStatus": "pending",
+      "publishReady": false,
+      "applyUrlVerified": false
+    },
+    {
+      "id": "up-kanya-sumangala",
+      "title": "UP Kanya Sumangala",
+      "sourceUrl": "https://mksy.up.gov.in/women_welfare/pdf/MKSY-Citizen-Process.pdf",
+      "reviewStatus": "pending",
+      "publishReady": false,
+      "applyUrlVerified": false
+    },
+    {
+      "id": "up-family-id",
+      "title": "UP Family ID",
+      "sourceUrl": "https://familyid.up.gov.in/",
+      "reviewStatus": "pending",
+      "publishReady": false,
+      "applyUrlVerified": false
+    },
+    {
+      "id": "up-myuva",
+      "title": "UP MYUVA",
+      "sourceUrl": "https://msme1connect.up.gov.in/scheme-list/mukhyamantri-yuva-udyami-vikas-abhiyan",
+      "reviewStatus": "pending",
+      "publishReady": false,
+      "applyUrlVerified": false
+    },
+    {
+      "id": "up-scholarships",
+      "title": "UP Scholarship directory",
+      "sourceUrl": "https://scholarship.up.gov.in/",
+      "reviewStatus": "pending",
+      "publishReady": false,
+      "applyUrlVerified": false
+    },
+    {
+      "id": "nsap",
+      "title": "NSAP directory",
+      "sourceUrl": "https://nsap.nic.in/",
+      "reviewStatus": "pending",
+      "publishReady": false,
+      "applyUrlVerified": false
+    }
+  ]
+}
