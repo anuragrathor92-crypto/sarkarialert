@@ -982,8 +982,6 @@
       "department": "MNRE",
       "notificationUrl": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2290402&lang=1&reg=22",
       "officialUrl": "https://pmsuryaghar.gov.in/",
-      "actionUrl": "https://pmsuryaghar.gov.in/",
-      "actionLabel": "Official Scheme Portal",
       "summary": "घरेलू बिजली उपभोक्ताओं के लिए रूफटॉप सोलर सहायता योजना।",
       "rows": [
         [
@@ -1003,16 +1001,12 @@
           "Official portal identified by PIB; live application page returned access error during review. No current submission guarantee."
         ]
       ],
-      "extraLinks": [
-        [
-          "Official subsidy explanation",
-          "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2010674&lang=1&reg=1"
-        ]
-      ],
       "verified": true,
       "verifiedOn": "2026-11-24",
       "publishedDate": "2026-11-24",
-      "type": "service-guide"
+      "type": "service-guide",
+      "applyLinkType": "information_only",
+      "applyUrlVerified": false
     },
     {
       "id": "pmuy",
@@ -1033,8 +1027,7 @@
       "benefit": "पात्र महिलाओं को योजना के अंतर्गत नया LPG कनेक्शन; अन्य वित्तीय सहायता की नवीनतम शर्तें OMC से जाँचें।",
       "officialUrl": "https://pmuy.gov.in/ujjwala2.html",
       "sourceUrl": "https://pmuy.gov.in/ujjwala2.html",
-      "applyUrl": "https://pmuy.gov.in/ujjwala2.html",
-      "applyLinkType": "official_apply_hub",
+      "applyLinkType": "information_only",
       "steps": [
         "सरकारी योजना पेज खोलें।",
         "अपनी पसंद के LPG वितरक के पास जाएँ या सरकारी पेज पर प्रदर्शित OMC आवेदन विकल्प चुनें।",
@@ -1072,8 +1065,7 @@
       "benefit": "मुफ्त पंजीकरण और स्थायी UAN; संबंधित कल्याण योजनाओं तक पहुँच में सहायता। कार्ड से अपने आप नकद राशि मिलने की गारंटी नहीं।",
       "officialUrl": "https://eshram.gov.in/",
       "sourceUrl": "https://eshram.gov.in/faqs",
-      "applyUrl": "https://eshram.gov.in/",
-      "applyLinkType": "official_apply_hub",
+      "applyLinkType": "information_only",
       "steps": [
         "ई-श्रम के आधिकारिक पोर्टल पर Register विकल्प चुनें या निकटतम CSC/SSK जाएँ।",
         "आधार प्रमाणीकरण और आवश्यक विवरण पूरे करें।",
@@ -1081,16 +1073,6 @@
       ],
       "statusText": "सरकारी FAQ के अनुसार पंजीकरण के लिए कोई निश्चित अंतिम तिथि नहीं है। अलग पंजीकरण फॉर्म का पूरा कार्यशील परीक्षण नहीं हुआ है।",
       "applicationStatus": "ONGOING",
-      "extraLinks": [
-        [
-          "CSC खोजें",
-          "https://findmycsc.nic.in/csc"
-        ],
-        [
-          "पहले से पंजीकृत UAN लॉगिन",
-          "https://register.eshram.gov.in/#/user/uan-login"
-        ]
-      ],
       "category": "yojana",
       "scope": "Central",
       "state": "All India",
@@ -1122,8 +1104,7 @@
       "benefit": "वार्षिक प्रीमियम ₹20। दुर्घटना में मृत्यु या निर्दिष्ट पूर्ण स्थायी दिव्यांगता पर ₹2 लाख; निर्दिष्ट आंशिक स्थायी दिव्यांगता पर ₹1 लाख। शर्तें लागू।",
       "officialUrl": "https://financialservices.gov.in/pmsby",
       "sourceUrl": "https://financialservices.gov.in/pmsby",
-      "applyUrl": null,
-      "applyLinkType": "bank_branch",
+      "applyLinkType": "information_only",
       "steps": [
         "भाग लेने वाले बैंक या डाकघर से संपर्क करें।",
         "नामांकन और ऑटो-डेबिट की सहमति दें।",
