@@ -262,9 +262,10 @@
       "verifiedOn": "2026-11-24",
       "publishedDate": "2026-11-24",
       "type": "official-notice",
-      "applyUrl": "https://uppsc.up.nic.in/",
-      "applyInstructions": "On the UPPSC portal, open Notifications/Advertisements, select A-4/E-1/2026, choose Apply and authenticate with OTR. A separate public vacancy-specific application URL could not be verified.",
-      "otrUrl": "https://otr.pariksha.nic.in/"
+      "applyUrl": "https://uppsc.up.nic.in/CandidatePages/Notifications.aspx",
+      "applyInstructions": "Open the official advertisements list, select A-4/E-1/2026 and click Apply. यदि UPPSC वेबसाइट पर SSL / Certificate Error आए, तो आगे न बढ़ें और व्यक्तिगत जानकारी या भुगतान न करें। सुरक्षित कनेक्शन उपलब्ध होने पर ही आवेदन करें।",
+      "otrUrl": "https://otr.pariksha.nic.in/",
+      "linkHealth": "Browser certificate error reported; secure access not independently confirmed."
     },
     {
       "id": "dsssb-je-mts-2026",
