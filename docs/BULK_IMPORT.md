@@ -1,13 +1,23 @@
-# Bulk import system
+# Bulk Import, Verification & Monitoring System
 
-Discovery scans nine category URLs on the reference website, checks robots.txt, extracts candidate URLs and at most 20 articles' outgoing official-link candidates per scheduled run. It does not copy article prose or publish discovered claims. Source failures are reported; zero results are not treated as success. GitHub Actions runs every two hours, on importer changes, or manually. Download the review queue artifact from Actions.
+## Automated Schedule (Every 2 Hours)
+GitHub Actions workflow `.github/workflows/bulk-import.yml` runs every two hours (`17 */2 * * *`), on pushes to `main` touching data/scripts, and via manual `workflow_dispatch`:
+1. Runs all unit tests and site integrity checks (`scripts/bulk_import/test_import.py`).
+2. Scans reference categories (`scripts/bulk_import/discover.py`) respecting `robots.txt` without copying third-party article prose, and extracts official `.gov.in` / `.nic.in` / `.ac.in` / allowlisted links.
+3. Monitors **UP RTE 25% School Admission 2027-28** (`https://rte25.upsdc.gov.in/`) and checks for expired deadlines in `data/posts.json`.
+4. Uploads `import-output/` artifacts (`discovery.json`, `publish-report.json`) for admin review.
 
-Review each notice against the issuing authority and check the actual official application link in a browser; domain allowlisting is not verification of content or availability. The initial domain allowlist is deliberately limited. Extend only after confirming authority ownership. Create original factual summaries and rows, then place approved records in data/import_approved.json. The schema example is in data/import_schema.example.json; never publish the fixture.
+## Admin Approval & Authorized Auto-Publishing
+- Place reviewed, official-source-verified records into `data/import_approved.json` (`approved: true`, `officialFactsChecked: true`). See `data/import_schema.example.json`.
+- `publish.py` enforces:
+  - Approved official HTTPS domains only.
+  - Strict duplicate rejection (ID, normalized title, department+noticeId, discovery URL).
+  - Strict expiry rejection (`deadline <= now`) and automatic expiry cleanup (`--prune-expired`).
+  - Prohibition of separate Apply buttons/links on `yojana` schemes.
+- Configure repository Actions secret `PUBLISH_TOKEN` (fine-grained PAT with `Contents: Read and write` for this repo) to authorize the `publish` job to commit and push directly to `main` (triggering GitHub Pages deployment).
 
-Manual publication: Actions > Sarkari Alert Bulk Import > Run workflow > publish_approved. It generates static article pages, adds links to existing homepage/category lists, updates data and sitemap in one commit. Existing posts remain intact. Jobs require an explicit open status, future offset-aware deadline, official HTTPS application link and review attestation. Schemes may not have application links. Duplicate ID, title, notice ID and discovery URL checks are exact matches; reviewers must check semantic duplicates. An optional fine-grained GitHub token restricted to this repo, Contents write only, stored as repository Actions secret PUBLISH_TOKEN, is needed for the workflow to push a commit that triggers branch-source Pages. Without it, discovery runs and reviewed publication can be performed via an authorized local git push or connector. Never paste a token into chat, source files or logs. No token has been configured by this change.
-
-Local dry run: python scripts/bulk_import/publish.py
-Local apply: python scripts/bulk_import/publish.py --write
-Run tests: python -m unittest discover -s scripts/bulk_import -p 'test_*.py'
-
-Publication does not independently certify link health or official facts; a reviewer must do that. It does not delete historical records or automatically scrape content; existing deadline handling remains. Verify Pages deployment after push.
+## Local Commands
+- Rebuild static site: `python scripts/bulk_import/build_site.py`
+- Dry-run approved publish: `python scripts/bulk_import/publish.py --prune-expired`
+- Apply approved publish: `python scripts/bulk_import/publish.py --write --prune-expired`
+- Run all tests: `python -m unittest discover -s scripts/bulk_import -p 'test_*.py'`

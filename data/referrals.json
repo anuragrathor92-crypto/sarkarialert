@@ -1,0 +1,95 @@
+{
+  "sectionTitle": "Loans & Credit Cards Referral Desk",
+  "sectionTitleHi": "लोन और क्रेडिट कार्ड रेफरल अनुभाग (गैर-सरकारी वाणिज्यिक सेवाएँ)",
+  "disclosure": "This section is strictly separate from government jobs and Sarkari Yojana. Listings below are commercial banking and credit products offered by RBI-regulated banks and NBFCs. Always verify interest rates, APR, processing fees, and terms on the official bank portal before applying.",
+  "disclosureHi": "यह अनुभाग सरकारी नौकरी व सरकारी योजनाओं से पूरी तरह अलग है। यहाँ केवल RBI-विनियमित बैंकों/संस्थाओं के वाणिज्यिक ऋण और क्रेडिट कार्ड उत्पाद सूचीबद्ध हैं। आवेदन से पहले ब्याज दर, प्रोसेसिंग शुल्क और नियम आधिकारिक बैंक वेबसाइट पर अवश्य जाँचें।",
+  "categories": [
+    {
+      "id": "education-loans",
+      "title": "Education Loans & Student Finance",
+      "titleHi": "शिक्षा ऋण (Education Loans)",
+      "items": [
+        {
+          "id": "govt-pm-vidyalaxmi-ref",
+          "name": "PM-Vidyalaxmi Portal (Govt. Interest Subvention Comparison)",
+          "provider": "Department of Financial Services / Participating Banks",
+          "type": "Government Portal Reference",
+          "highlights": "Collateral-free education loans for QHEIs; 3% interest subvention for eligible families up to ₹8 lakh annual income.",
+          "eligibility": "Merit-based admission in eligible higher education institutions.",
+          "officialInfoUrl": "https://pmvidyalaxmi.co.in/",
+          "referralUrl": "",
+          "ctaLabel": "Visit Official Portal"
+        },
+        {
+          "id": "sbi-student-loan",
+          "name": "SBI Scholar / Student Education Loan",
+          "provider": "State Bank of India",
+          "type": "Education Loan",
+          "highlights": "Covers tuition, hostel, books, and exam fees for domestic & abroad studies; transparent public sector bank rates.",
+          "eligibility": "Indian nationals with confirmed admission in recognized Indian/foreign institutions.",
+          "officialInfoUrl": "https://sbi.co.in/web/personal-banking/loans/education-loans",
+          "referralUrl": "",
+          "ctaLabel": "Check Bank Details"
+        }
+      ]
+    },
+    {
+      "id": "personal-business-loans",
+      "title": "Personal & MSME Business Loans",
+      "titleHi": "पर्सनल व बिजनेस लोन",
+      "items": [
+        {
+          "id": "hdfc-personal-loan",
+          "name": "HDFC Bank Personal Loan",
+          "provider": "HDFC Bank (RBI-Regulated)",
+          "type": "Personal Loan",
+          "highlights": "Unsecured personal financing for salaried and self-employed applicants; digital KYC available for eligible borrowers.",
+          "eligibility": "Age 21–60 years with stable verifiable monthly income and valid KYC.",
+          "officialInfoUrl": "https://www.hdfcbank.com/personal/borrow/popular-loans/personal-loan",
+          "referralUrl": "",
+          "ctaLabel": "Configure Referral Link"
+        },
+        {
+          "id": "icici-business-msme-loan",
+          "name": "ICICI Bank / JanSamarth MSME Credit",
+          "provider": "ICICI Bank / Regulated Lenders",
+          "type": "Business Loan",
+          "highlights": "Working capital and term loans for registered MSMEs and professionals; compare with Mudra/PMEGP government schemes.",
+          "eligibility": "Registered business entity with GST/ITR/bank statements as per lender norms.",
+          "officialInfoUrl": "https://www.jansamarth.in/",
+          "referralUrl": "",
+          "ctaLabel": "Compare Official Schemes"
+        }
+      ]
+    },
+    {
+      "id": "credit-cards",
+      "title": "Credit Cards (Cashback, Fuel & Student)",
+      "titleHi": "क्रेडिट कार्ड (कैशबैक, फ्यूल व छात्र कार्ड)",
+      "items": [
+        {
+          "id": "sbi-cashback-card",
+          "name": "SBI Cashback Credit Card",
+          "provider": "SBI Card",
+          "type": "Cashback Credit Card",
+          "highlights": "Online & offline spend cashback benefits subject to monthly caps and issuer schedule of charges.",
+          "eligibility": "Salaried or self-employed individuals meeting SBI Card income & CIBIL norms.",
+          "officialInfoUrl": "https://www.sbicard.com/",
+          "referralUrl": "",
+          "ctaLabel": "Configure Referral Link"
+        },
+        {
+          "id": "rupay-upi-credit-card",
+          "name": "RuPay UPI Credit Card (Entry / Utility)",
+          "provider": "Leading Public & Private Banks",
+          "type": "UPI-Linked Credit Card",
+          "highlights": "Linkable to UPI apps for merchant QR payments with interest-free billing cycle (verify annual fee waiver rules).",
+          "eligibility": "Indian residents meeting issuing bank KYC and credit eligibility.",
+          "officialInfoUrl": "https://www.npci.org.in/what-we-do/rupay/product-overview",
+          "referralUrl": "",
+          "ctaLabel": "View RuPay Details"
+        }
+      ]
+    }
+  ]
+}
