@@ -238,6 +238,63 @@ def render_standard_post(post):
         for k, v in rows
     )
 
+    # Rich 4-box Sarkari summary grid when structured detail fields or vacancies/dates are available
+    dates_list = post.get("detailDates") or []
+    fees_list = post.get("detailFees") or []
+    age_list = post.get("detailAge") or []
+    if not dates_list:
+        if post.get("startDate"):
+            dates_list.append(f"Application Start: {post['startDate']}")
+        if post.get("lastDate"):
+            dates_list.append(f"Last Date: {post['lastDate']}")
+        elif post.get("noticeDate"):
+            dates_list.append(f"Notice Date: {post['noticeDate']}")
+    if not fees_list:
+        for k, v in rows:
+            if "fee" in str(k).lower():
+                fees_list.append(f"{k}: {v}")
+    if not age_list:
+        for k, v in rows:
+            if "age" in str(k).lower():
+                age_list.append(f"{k}: {v}")
+
+    vac_val = post.get("vacancies")
+    grid_html = ""
+    if (cat in JOB_CATS or cat == "admission") and (dates_list or fees_list or age_list or vac_val):
+        d_li = "".join(f"<li>{e(x)}</li>" for x in dates_list) or "<li>See official notification</li>"
+        f_li = "".join(f"<li>{e(x)}</li>" for x in fees_list) or "<li>Refer official notice PDF</li>"
+        a_li = "".join(f"<li>{e(x)}</li>" for x in age_list) or "<li>Refer official notice PDF</li>"
+        v_str = f"{vac_val:,} Posts" if isinstance(vac_val, int) else (str(vac_val) if vac_val else "As per notice")
+        v_sub = post.get("qualification") or dept
+        grid_html = (
+            '<div class="detail-columns">'
+            f"<section><h3>Important Dates</h3><ul>{d_li}</ul></section>"
+            f"<section><h3>Application Fee</h3><ul>{f_li}</ul></section>"
+            f"<section><h3>Age Limit</h3><ul>{a_li}</ul></section>"
+            f'<section class="vacancy"><h3>Total Vacancies</h3><strong>{e(v_str)}</strong><p>{e(v_sub)}</p></section>'
+            "</div>"
+        )
+
+    how_html = ""
+    if post.get("howToApply"):
+        steps_li = "".join(f"<li>{e(st)}</li>" for st in post["howToApply"])
+        how_html = f'<h2 class="detail-bar">How to Apply</h2><ol>{steps_li}</ol>'
+    elif cat in JOB_CATS:
+        how_html = (
+            '<h2 class="detail-bar">How to Apply</h2>'
+            "<ol><li>Read the full official notification PDF before starting registration.</li>"
+            "<li>Click the official Apply Online portal link above and complete OTR/registration.</li>"
+            "<li>Fill accurate details, upload required photo/signature/documents, and pay applicable fee before deadline.</li>"
+            "<li>Download and save the final submitted application confirmation page.</li></ol>"
+        )
+
+    faq_html = ""
+    if post.get("faqs"):
+        faq_items = "".join(
+            f"<details><summary>{e(q)}</summary><p>{e(ans)}</p></details>" for q, ans in post["faqs"]
+        )
+        faq_html = f"<h2>Frequently Asked Questions</h2>{faq_items}"
+
     links = []
     if cat in JOB_CATS and post.get("applyUrl"):
         links.append(("Apply Online – Official Portal", post["applyUrl"]))
@@ -267,11 +324,14 @@ def render_standard_post(post):
         f'<p lang="hi">{e(summary)}</p>'
         '<div class="detail-box">'
         f'<div class="detail-heading"><h2>{e(title)}</h2><p>{e(dept)} · Verified Official Update</p><strong>SARKARI ALERT</strong></div>'
+        f"{grid_html}"
         '<h2 class="detail-bar">Important Dates, Eligibility, Fees &amp; Details</h2>'
         f"<table><tbody>{rows_html}</tbody></table>"
+        f"{how_html}"
         '<h2 class="detail-bar">Important Official Links</h2>'
         f'<table class="important-links"><tbody>{links_html}</tbody></table>'
         "</div>"
+        f"{faq_html}"
         '<p class="warning">Confirm current dates, eligibility, and fees against the original official notification. Sarkari Alert never collects application fees or personal documents.</p>'
         "</article>"
     )

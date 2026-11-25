@@ -98,6 +98,24 @@ class ImportTests(unittest.TestCase):
         self.assertIn("Non-Government", files["loans-and-cards/index.html"].replace("गैर-सरकारी", "Non-Government"))
         # Ensure UP RTE monitor is present
         self.assertIn("up-rte-admission-2027-28-monitor", files["category/admission/index.html"])
+        # Ensure zero empty categories (all 13 categories populated with verified entries)
+        for cat_slug in (
+            "latest-jobs", "results", "admit-card", "answer-key", "admission",
+            "yojana", "scholarship", "exam-date", "upcoming-jobs", "10th-iti",
+            "documents", "syllabus", "outsourcing",
+        ):
+            self.assertIn(f"category/{cat_slug}/index.html", files)
+            self.assertIn("<li data-post", files[f"category/{cat_slug}/index.html"], f"Empty category: {cat_slug}")
+        # Ensure all active jobs have official HTTPS apply/notification/official links
+        posts_data = json.loads((ROOT / "data/posts.json").read_text(encoding="utf-8"))["posts"]
+        seen_ids = set()
+        for post in posts_data:
+            self.assertNotIn(post["id"], seen_ids)
+            seen_ids.add(post["id"])
+            self.assertTrue(official(post["officialUrl"]), f"Unapproved officialUrl: {post['id']} -> {post['officialUrl']}")
+            if post["category"] in ("latest-jobs", "10th-iti", "outsourcing"):
+                self.assertTrue(official(post["applyUrl"]), f"Unapproved applyUrl: {post['id']} -> {post.get('applyUrl')}")
+                self.assertTrue(official(post["notificationUrl"]), f"Unapproved notificationUrl: {post['id']}")
         # Ensure zero broken relative links in generated HTML
         for rel_path, content in files.items():
             if not rel_path.endswith(".html") or rel_path == "404.html":

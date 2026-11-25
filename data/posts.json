@@ -17,7 +17,37 @@
       "notificationUrl": "https://www.upsc.gov.in/uploads/2026/11/AdvtNo-13-2026-Engl-131126_0.pdf",
       "applyUrl": "https://upsconline.nic.in/ora/",
       "officialUrl": "https://upsc.gov.in/advertisements/",
-      "applyInstructions": "Sign in to the official Online Recruitment Application portal and select Advertisement 13/2026, vacancy 26111301114."
+      "applyInstructions": "Sign in to the official Online Recruitment Application portal and select Advertisement 13/2026, vacancy 26111301114.",
+      "rows": [
+        [
+          "Advertisement & Vacancy No.",
+          "Advt. 13/2026 • Vacancy 26111301114"
+        ],
+        [
+          "Total vacancies",
+          "5 Posts (UR 3, EWS 1, SC 1; 1 PwBD reserved)"
+        ],
+        [
+          "Application window",
+          "14 November – 4 December 2026 (6:00 PM IST)"
+        ],
+        [
+          "Application fee",
+          "₹25 (Women, SC, ST, PwBD exempt)"
+        ],
+        [
+          "Age limit",
+          "UR/EWS: 35 yrs; SC: 40 yrs"
+        ],
+        [
+          "Eligibility",
+          "Recognised BDS degree, State Dental Council registration & compulsory rotating internship"
+        ],
+        [
+          "Pay scale",
+          "Pay Level-10 (7th CPC)"
+        ]
+      ]
     },
     {
       "id": "nta-cmat-2027",
@@ -274,7 +304,7 @@
       "department": "DSSSB",
       "noticeDate": "2026-11-06",
       "lastDate": "2026-12-11",
-      "notificationUrl": "https://dsssb.delhi.gov.in/sites/default/files/DSSSB/circulars-orders/advt_06_2026.pdf",
+      "notificationUrl": "https://dsssb.delhi.gov.in/sites/default/files/DSSSB/circulars-orders/final_advt_06_2026_j_e_electrical_mts.pdf",
       "officialUrl": "https://dsssbonline.nic.in/",
       "summary": "दिल्ली अधीनस्थ सेवा चयन बोर्ड ने विज्ञापन 06/2026 में JE Electrical तथा MTS श्रेणियों की भर्ती घोषित की है।",
       "rows": [
@@ -1411,7 +1441,7 @@
       "startDate": "2026-11-12",
       "lastDate": "2026-12-11",
       "deadline": "2026-12-11T23:30:00+05:30",
-      "notificationUrl": "https://afcat.edcil.co.in/AFCAT/",
+      "notificationUrl": "https://afcat.edcil.co.in/assets/images/news/Notification%20for%20AFCAT%2001%20of%202027.pdf",
       "applyUrl": "https://afcat.edcil.co.in/AFCAT/",
       "officialUrl": "https://indianairforce.nic.in/",
       "summary": "भारतीय वायुसेना ने AFCAT 01/2027 (जनवरी 2028 कोर्स) के तहत फ्लाइंग और ग्राउंड ड्यूटी के 284 अधिकारी पदों के लिए आवेदन आमंत्रित किए हैं।",
@@ -1518,7 +1548,7 @@
       "startDate": "2026-11-20",
       "lastDate": "2026-12-10",
       "deadline": "2026-12-10T23:59:00+05:30",
-      "notificationUrl": "https://sbi.bank.in/web/careers/current-openings",
+      "notificationUrl": "https://sbi.bank.in/documents/77530/57941334/20112026_Final_ADV_CRPD_SCO_2026-27_31.pdf/30ed8874-9669-c1eb-17bd-e8e4dfe534bb?t=1795161793708",
       "applyUrl": "https://sbi.bank.in/web/careers/current-openings",
       "officialUrl": "https://sbi.co.in/",
       "summary": "स्टेट बैंक ऑफ इंडिया (SBI) ने नियमित आधार पर Data Scientist (Chief Manager, Manager, Deputy Manager) के 20 पदों हेतु आवेदन मांगे हैं।",
@@ -2278,6 +2308,905 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "type": "upcoming-notice"
+    },
+    {
+      "id": "uksssc-police-constable-2026",
+      "title": "UKSSSC Police Constable & Group-C Uniformed Posts 2026 – 1,694 Posts",
+      "category": "latest-jobs",
+      "department": "UKSSSC",
+      "qualification": "10+2",
+      "noticeId": "84/UKSSSC/2026",
+      "vacancies": 1694,
+      "noticeDate": "2026-11-17",
+      "startDate": "2026-11-25",
+      "lastDate": "2026-12-25",
+      "deadline": "2026-12-25T23:59:00+05:30",
+      "notificationUrl": "https://cdnbbsr.s3waas.gov.in/s34ffd0e19d2069412274bd3025b0e176c/uploads/2026/11/20261117947374675.pdf",
+      "applyUrl": "https://sssc.uk.gov.in/",
+      "officialUrl": "https://sssc.uk.gov.in/",
+      "summary": "उत्तराखंड अधीनस्थ सेवा चयन आयोग (UKSSSC) ने विज्ञापन 84/UKSSSC/2026 के तहत पुलिस कांस्टेबल, फायरमैन, फॉरेस्ट गार्ड व जेल वार्डर सहित 1,694 पदों पर आवेदन आमंत्रित किए हैं।",
+      "rows": [
+        [
+          "Advertisement No.",
+          "84/UKSSSC/2026"
+        ],
+        [
+          "Total vacancies",
+          "1,694 (District Police Male 464, Female 238, PAC/IRB 284, Fireman 201, Forest Guard 171, Jail Warder 117, Special Tiger Guard 75, Secretariat Guard 54, Excise 45, Female Jail Warder 27, Transport 18)"
+        ],
+        [
+          "Application dates",
+          "25 November – 25 December 2026"
+        ],
+        [
+          "Correction window",
+          "28 – 30 December 2026"
+        ],
+        [
+          "Tentative written exam",
+          "4 April 2027"
+        ],
+        [
+          "Application fee",
+          "UR/OBC: ₹300; Uttarakhand SC/ST/EWS/PH: ₹150; Orphan (UK): ₹0"
+        ],
+        [
+          "Age limit (as on 01 Jul 2026)",
+          "Constable/Fireman/Forest Guard: 18–25 yrs; Secretariat/Transport: 18–30 yrs; Excise: 18–35 yrs; Female Jail Warder: 21–35 yrs"
+        ],
+        [
+          "Eligibility",
+          "10+2 (Intermediate) pass from recognized board + physical standards per notice"
+        ],
+        [
+          "Selection",
+          "PST/PET + Objective Written Exam + DV + Medical"
+        ]
+      ],
+      "verified": true,
+      "verifiedOn": "2026-11-26",
+      "publishedDate": "2026-11-26",
+      "applicationStatus": "OPEN",
+      "type": "official-notice"
+    },
+    {
+      "id": "bhel-engineer-supervisor-trainee-2026",
+      "title": "BHEL Engineer / Executive & Supervisor Trainee 2026 – 415 Posts",
+      "category": "latest-jobs",
+      "department": "BHEL",
+      "qualification": "Graduate",
+      "noticeId": "BHEL-02-03/2026",
+      "vacancies": 415,
+      "startDate": "2026-11-25",
+      "lastDate": "2026-12-28",
+      "deadline": "2026-12-28T23:45:00+05:30",
+      "notificationUrl": "https://careers.bhel.in/",
+      "applyUrl": "https://careers.bhel.in/",
+      "officialUrl": "https://careers.bhel.in/",
+      "summary": "भारत हेवी इलेक्ट्रिकल्स लिमिटेड (BHEL) ने Engineer/Executive Trainee (200 पद) और Supervisor Trainee (215 पद) के कुल 415 पदों के लिए ऑनलाइन आवेदन शुरू किए हैं।",
+      "rows": [
+        [
+          "Advertisement No.",
+          "02/2026 (ET) & 03/2026 (ST)"
+        ],
+        [
+          "Total vacancies",
+          "415 (Engineer/Executive Trainee: 200; Supervisor Trainee: 215)"
+        ],
+        [
+          "Application window",
+          "25 November – 28 December 2026 (11:45 PM)"
+        ],
+        [
+          "Application fee",
+          "UR/EWS/OBC: ₹1,072; SC/ST/PwBD/ESM: ₹472"
+        ],
+        [
+          "Age limit (as on 25 Nov 2026)",
+          "ET/ST: Max 27 yrs; HR/Finance/PG ET: Max 29 yrs (relaxation per GoI rules)"
+        ],
+        [
+          "Eligibility",
+          "ET: Full-time B.E./B.Tech or CA/CMA/MBA(HR); ST: Engineering Diploma or BBA/B.Com/BMS per stream"
+        ]
+      ],
+      "verified": true,
+      "verifiedOn": "2026-11-26",
+      "publishedDate": "2026-11-26",
+      "applicationStatus": "OPEN",
+      "type": "official-notice"
+    },
+    {
+      "id": "sidbi-grade-a-b-2026",
+      "title": "SIDBI Assistant Manager (Grade A) & Manager (Grade B) 2026 – 68 Posts",
+      "category": "latest-jobs",
+      "department": "SIDBI",
+      "qualification": "Graduate",
+      "noticeId": "8/GradeA-B/2026-27",
+      "vacancies": 68,
+      "noticeDate": "2026-11-21",
+      "startDate": "2026-11-21",
+      "lastDate": "2026-12-11",
+      "deadline": "2026-12-11T23:59:00+05:30",
+      "notificationUrl": "https://www.sidbi.in/head/uploads/career_document/SIDBI_DETAILED_WEB_ADVT_ENGLISH_211126_21_11_2026.pdf",
+      "applyUrl": "https://www.sidbi.in/index",
+      "officialUrl": "https://www.sidbi.in/index",
+      "summary": "भारतीय लघु उद्योग विकास बैंक (SIDBI) ने Grade A (63 पद) और Grade B (5 पद) अधिकारी भर्ती के लिए ऑनलाइन आवेदन आमंत्रित किए हैं।",
+      "rows": [
+        [
+          "Advertisement No.",
+          "8/Grade 'A' and 'B'/2026–27"
+        ],
+        [
+          "Total vacancies",
+          "68 (Grade A: 63 — General 53, IT 5, Legal 3, Hindi 2; Grade B: 5 — IT 1, Legal 3, Hindi 1)"
+        ],
+        [
+          "Application dates",
+          "21 November – 11 December 2026"
+        ],
+        [
+          "Tentative online exam",
+          "27 December 2026 (Phase I & II); Interview Feb 2027"
+        ],
+        [
+          "Application fee",
+          "General/OBC/EWS: ₹1,100; SC/ST/PwBD: ₹175"
+        ],
+        [
+          "Age limit (as on 21 Nov 2026)",
+          "Grade A: 21–30 yrs; Grade B: 25–33 yrs"
+        ],
+        [
+          "Eligibility",
+          "Graduation (60%, 50% SC/ST) / CA / CMA / CS / CFA / MBA per stream rules"
+        ]
+      ],
+      "verified": true,
+      "verifiedOn": "2026-11-26",
+      "publishedDate": "2026-11-26",
+      "applicationStatus": "OPEN",
+      "type": "official-notice"
+    },
+    {
+      "id": "assam-rifles-technical-tradesman-2026",
+      "title": "Assam Rifles Technical & Tradesman Rally 2026 – 354 Group-C Posts",
+      "category": "latest-jobs",
+      "extraCategory": "10th-iti",
+      "department": "Assam Rifles",
+      "qualification": "10th + ITI",
+      "noticeId": "AR-TT-2026",
+      "vacancies": 354,
+      "noticeDate": "2026-11-03",
+      "startDate": "2026-11-15",
+      "lastDate": "2026-12-14",
+      "deadline": "2026-12-14T23:59:00+05:30",
+      "notificationUrl": "https://www.assamrifles.gov.in/",
+      "applyUrl": "https://www.assamrifles.gov.in/onlineapp/Default.aspx",
+      "officialUrl": "https://www.assamrifles.gov.in/",
+      "summary": "असम राइफल्स ने टेक्निकल एवं ट्रेड्समैन रैली 2026 के अंतर्गत वारंट ऑफिसर, हवलदार व राइफलमैन के 354 ग्रुप-C पदों पर आवेदन आमंत्रित किए हैं।",
+      "rows": [
+        [
+          "Total vacancies",
+          "354 Group-C Posts (Warrant Officer, Havildar, Rifleman trades)"
+        ],
+        [
+          "Application dates",
+          "15 November – 14 December 2026 (11:59 PM)"
+        ],
+        [
+          "Tentative rally start",
+          "18 January 2027 onwards"
+        ],
+        [
+          "Application fee",
+          "General/OBC/EWS: ₹100; SC/ST/Female: Nil"
+        ],
+        [
+          "Age limit (as on 01 Jul 2026)",
+          "Rifleman/Havildar: 18–23 yrs; Warrant Officer: 18–25 yrs"
+        ],
+        [
+          "Eligibility",
+          "10th / 10+2 / ITI / Diploma / Degree depending on applied trade"
+        ]
+      ],
+      "verified": true,
+      "verifiedOn": "2026-11-26",
+      "publishedDate": "2026-11-26",
+      "applicationStatus": "OPEN",
+      "type": "official-notice"
+    },
+    {
+      "id": "bihar-vidhan-sabha-jsa-attendant-2026",
+      "title": "Bihar Vidhan Sabha JSA & Office Attendant 2026 (Advt. 01 & 02/2026)",
+      "category": "latest-jobs",
+      "extraCategory": "10th-iti",
+      "department": "Bihar Vidhan Sabha",
+      "qualification": "10+2",
+      "noticeId": "BVS-01-02/2026",
+      "startDate": "2026-11-07",
+      "lastDate": "2026-12-06",
+      "deadline": "2026-12-06T23:59:00+05:30",
+      "notificationUrl": "https://vidhansabha.bihar.gov.in/pdf/recruitment/2026/Advertisment/Advertisemnt%20No-01-2026%20(Junior%20Secretariat%20Assistant).pdf",
+      "applyUrl": "https://vidhansabha.bihar.gov.in/",
+      "officialUrl": "https://vidhansabha.bihar.gov.in/",
+      "extraLinks": [
+        [
+          "Office Attendant Notification PDF (Advt. 02/2026)",
+          "https://vidhansabha.bihar.gov.in/pdf/recruitment/2026/Advertisment/Advertisemnt%20No-02-2026%20(Office%20Attendent).pdf"
+        ]
+      ],
+      "summary": "बिहार विधानसभा सचिवालय ने Junior Secretariat Assistant (01/2026) और Office Attendant (02/2026) पदों के लिए 6 दिसंबर 2026 तक ऑनलाइन आवेदन आमंत्रित किए हैं।",
+      "rows": [
+        [
+          "Advertisements",
+          "01/2026 (JSA) & 02/2026 (Office Attendant)"
+        ],
+        [
+          "Application dates",
+          "7 November – 6 December 2026"
+        ],
+        [
+          "Application fee (JSA 01/2026)",
+          "UR/BC/EBC/EWS/Other State: ₹600; Bihar SC/ST/PwBD & All Women: ₹150"
+        ],
+        [
+          "Application fee (Attendant 02/2026)",
+          "UR/BC/EBC/EWS/Other State: ₹400; Bihar SC/ST/PwBD & All Women: ₹100"
+        ],
+        [
+          "Age limit (as on 01 Aug 2026)",
+          "Min 18 yrs; Max UR Male 37 yrs, BC/EBC/UR Female 40 yrs, SC/ST 42 yrs"
+        ],
+        [
+          "Eligibility",
+          "JSA: 10+2 (Intermediate); Office Attendant: 10th (Matriculation) pass"
+        ]
+      ],
+      "verified": true,
+      "verifiedOn": "2026-11-26",
+      "publishedDate": "2026-11-26",
+      "applicationStatus": "OPEN",
+      "type": "official-notice"
+    },
+    {
+      "id": "ecil-apprentice-recruitment-2026",
+      "title": "ECIL Graduate & Technician (Diploma) Apprentice 2026 – 242 Slots",
+      "category": "latest-jobs",
+      "department": "ECIL",
+      "qualification": "Diploma / Engineering",
+      "noticeId": "ECIL-APP-2026",
+      "vacancies": 242,
+      "startDate": "2026-11-24",
+      "lastDate": "2026-12-13",
+      "deadline": "2026-12-13T23:59:00+05:30",
+      "notificationUrl": "https://www.ecil.co.in/",
+      "applyUrl": "https://nats.education.gov.in/",
+      "officialUrl": "https://www.ecil.co.in/",
+      "summary": "ECIL ने 242 Graduate Engineer (₹12,300/माह) एवं Technician Diploma (₹10,900/माह) अप्रेंटिस सीटों के लिए 13 दिसंबर 2026 तक आवेदन आमंत्रित किए हैं। कोई शुल्क नहीं है।",
+      "rows": [
+        [
+          "Training slots",
+          "242 (GEA & Technician Diploma Apprentice)"
+        ],
+        [
+          "Application dates",
+          "24 November – 13 December 2026"
+        ],
+        [
+          "Application fee",
+          "₹0 (No fee)"
+        ],
+        [
+          "Age limit (as on 31 Dec 2026)",
+          "Maximum 25 years"
+        ],
+        [
+          "Monthly stipend",
+          "Graduate Engineer: ₹12,300; Diploma Technician: ₹10,900"
+        ],
+        [
+          "Eligibility",
+          "B.E./B.Tech or 3-yr Diploma passed on/after 01 Apr 2024 + NATS portal registration"
+        ]
+      ],
+      "verified": true,
+      "verifiedOn": "2026-11-26",
+      "publishedDate": "2026-11-26",
+      "applicationStatus": "OPEN",
+      "type": "official-notice"
+    },
+    {
+      "id": "mp-nhm-staff-nurse-2026",
+      "title": "MP NHM Staff Nurse Contractual Recruitment 2026 – 301 Posts",
+      "category": "latest-jobs",
+      "department": "NHM MP",
+      "qualification": "Graduate",
+      "noticeId": "NHM-MP-SN-2026",
+      "vacancies": 301,
+      "lastDate": "2026-12-05",
+      "deadline": "2026-12-05T23:59:00+05:30",
+      "notificationUrl": "https://nhmmp.gov.in/",
+      "applyUrl": "https://www.mponline.gov.in/",
+      "officialUrl": "https://nhmmp.gov.in/",
+      "summary": "राष्ट्रीय स्वास्थ्य मिशन मध्य प्रदेश (NHM MP) ने संविदा स्टाफ नर्स के 301 पदों हेतु 5 दिसंबर 2026 तक आवेदन आमंत्रित किए हैं।",
+      "rows": [
+        [
+          "Total vacancies",
+          "301 Contractual Staff Nurse Posts"
+        ],
+        [
+          "Last date to apply",
+          "5 December 2026 (Correction up to 6 Dec 2026)"
+        ],
+        [
+          "Salary",
+          "₹28,700 per month"
+        ],
+        [
+          "Age limit (as on 01 Jan 2026)",
+          "21 – 40 years (relaxation per MP govt rules)"
+        ],
+        [
+          "Eligibility",
+          "10+2 (PCB) + B.Sc Nursing / GNM + MP Nurses Registration Council valid registration"
+        ]
+      ],
+      "verified": true,
+      "verifiedOn": "2026-11-26",
+      "publishedDate": "2026-11-26",
+      "applicationStatus": "OPEN",
+      "type": "official-notice"
+    },
+    {
+      "id": "aiims-gorakhpur-faculty-2026",
+      "title": "AIIMS Gorakhpur Faculty Recruitment 2026 – 56 Professor & Asst. Professor Posts",
+      "category": "latest-jobs",
+      "department": "AIIMS Gorakhpur",
+      "qualification": "Postgraduate",
+      "noticeId": "AIIMS-GKP-FAC-2026",
+      "vacancies": 56,
+      "startDate": "2026-11-25",
+      "lastDate": "2026-12-24",
+      "deadline": "2026-12-24T23:59:00+05:30",
+      "notificationUrl": "https://aiimsgorakhpur.edu.in/",
+      "applyUrl": "https://aiimsgorakhpur.edu.in/",
+      "officialUrl": "https://aiimsgorakhpur.edu.in/",
+      "summary": "AIIMS गोरखपुर ने Professor, Additional/Associate Professor और Assistant Professor के 56 पदों पर ऑनलाइन आवेदन आमंत्रित किए हैं।",
+      "rows": [
+        [
+          "Total vacancies",
+          "56 Faculty Posts"
+        ],
+        [
+          "Application dates",
+          "25 November – 24 December 2026"
+        ],
+        [
+          "Eligibility & fees",
+          "MD/MS/DM/M.Ch/PhD with teaching experience as per AIIMS Gorakhpur official notice"
+        ]
+      ],
+      "verified": true,
+      "verifiedOn": "2026-11-26",
+      "publishedDate": "2026-11-26",
+      "applicationStatus": "OPEN",
+      "type": "official-notice"
+    },
+    {
+      "id": "aiims-bilaspur-faculty-2026",
+      "title": "AIIMS Bilaspur Faculty & Nursing Lecturer 2026 – 73 Posts",
+      "category": "latest-jobs",
+      "department": "AIIMS Bilaspur",
+      "qualification": "Postgraduate",
+      "noticeId": "AIIMS-BLS-FAC-2026",
+      "vacancies": 73,
+      "lastDate": "2026-12-14",
+      "deadline": "2026-12-14T23:59:00+05:30",
+      "notificationUrl": "https://www.aiimsbilaspur.edu.in/",
+      "applyUrl": "https://www.aiimsbilaspur.edu.in/",
+      "officialUrl": "https://www.aiimsbilaspur.edu.in/",
+      "summary": "AIIMS बिलासपुर ने 73 फैकल्टी एवं नर्सिंग लेक्चरर पदों पर ऑनलाइन आवेदन 14 दिसंबर 2026 तक आमंत्रित किए हैं (हार्ड कॉपी 21 दिसंबर तक)।",
+      "rows": [
+        [
+          "Total vacancies",
+          "73 Faculty & Nursing Lecturer Posts"
+        ],
+        [
+          "Last date (Online)",
+          "14 December 2026"
+        ],
+        [
+          "Hard copy deadline",
+          "21 December 2026"
+        ],
+        [
+          "Eligibility & fees",
+          "Check official recruitment notice on aiimsbilaspur.edu.in"
+        ]
+      ],
+      "verified": true,
+      "verifiedOn": "2026-11-26",
+      "publishedDate": "2026-11-26",
+      "applicationStatus": "OPEN",
+      "type": "official-notice"
+    },
+    {
+      "id": "bel-deputy-manager-senior-engineer-2026",
+      "title": "BEL Deputy Manager & Senior Engineer Recruitment 2026 – 17 Posts",
+      "category": "latest-jobs",
+      "department": "BEL",
+      "qualification": "Graduate",
+      "noticeId": "BEL-DM-SE-2026",
+      "vacancies": 17,
+      "startDate": "2026-11-25",
+      "lastDate": "2026-12-08",
+      "deadline": "2026-12-08T23:59:00+05:30",
+      "notificationUrl": "https://www.bel-india.in/",
+      "applyUrl": "https://www.bel-india.in/",
+      "officialUrl": "https://www.bel-india.in/",
+      "summary": "भारत इलेक्ट्रॉनिक्स लिमिटेड (BEL) ने Deputy Manager (E-IV) एवं Senior Engineer (E-III) के 17 पदों के लिए 8 दिसंबर 2026 तक आवेदन आमंत्रित किए हैं।",
+      "rows": [
+        [
+          "Total vacancies",
+          "17 Posts (E-III & E-IV Grades)"
+        ],
+        [
+          "Application window",
+          "25 November – 8 December 2026"
+        ],
+        [
+          "Eligibility",
+          "Relevant B.E./B.Tech degree + prescribed experience per official BEL notice"
+        ]
+      ],
+      "verified": true,
+      "verifiedOn": "2026-11-26",
+      "publishedDate": "2026-11-26",
+      "applicationStatus": "OPEN",
+      "type": "official-notice"
+    },
+    {
+      "id": "drdo-nstl-apprentice-2026",
+      "title": "DRDO NSTL Visakhapatnam Graduate, Diploma & ITI Apprentice 2026 – 42 Slots",
+      "category": "upcoming-jobs",
+      "extraCategory": "10th-iti",
+      "department": "DRDO",
+      "qualification": "10th + ITI",
+      "noticeId": "NSTL/ESTT/GAD/003/APPREN/OCT/2026",
+      "vacancies": 42,
+      "startDate": "2026-11-28",
+      "lastDate": "2026-12-13",
+      "notificationUrl": "https://www.drdo.gov.in/",
+      "officialUrl": "https://www.drdo.gov.in/",
+      "summary": "DRDO NSTL विशाखापत्तनम में ग्रेजुएट, डिप्लोमा एवं ITI अप्रेंटिस के 42 पदों पर आवेदन 28 नवंबर 2026 से 13 दिसंबर 2026 तक चलेंगे।",
+      "rows": [
+        [
+          "Reference No.",
+          "NSTL/ESTT/GAD/003/APPREN/OCT/2026"
+        ],
+        [
+          "Total slots",
+          "42 (Graduate, Technician Diploma & ITI Apprentice)"
+        ],
+        [
+          "Application window",
+          "28 November – 13 December 2026 (11:59 PM)"
+        ],
+        [
+          "Official portal",
+          "drdo.gov.in via NATS/NAPS portals"
+        ]
+      ],
+      "verified": true,
+      "verifiedOn": "2026-11-26",
+      "publishedDate": "2026-11-26",
+      "type": "upcoming-notice"
+    },
+    {
+      "id": "upsssc-auditor-assistant-accountant-result-2026",
+      "title": "UPSSSC Auditor & Assistant Accountant Eligibility Result 2026 (14-Exam/2026)",
+      "category": "results",
+      "department": "UPSSSC",
+      "qualification": "Graduate",
+      "noticeDate": "2026-11-18",
+      "notificationUrl": "https://upsssc.gov.in/AllNotifications.aspx",
+      "officialUrl": "https://upsssc.gov.in/",
+      "summary": "UPSSSC ने लेखा परीक्षक एवं सहायक लेखाकार (14-Exam/2026) मुख्य परीक्षा हेतु PET-2025 स्कोर के आधार पर 10,409 अभ्यर्थियों की पात्रता सूची जारी की है।",
+      "rows": [
+        [
+          "Advertisement No.",
+          "14-Exam/2026"
+        ],
+        [
+          "Result declared",
+          "18 November 2026"
+        ],
+        [
+          "Shortlisted for Mains",
+          "10,409 candidates (based on PET-2025)"
+        ],
+        [
+          "How to check",
+          "View status & cut-off on upsssc.gov.in"
+        ]
+      ],
+      "verified": true,
+      "verifiedOn": "2026-11-26",
+      "publishedDate": "2026-11-26",
+      "type": "official-notice"
+    },
+    {
+      "id": "upsc-nda-na-1-2026-final-result",
+      "title": "UPSC NDA & NA (I) 2026 Final Result – 617 Candidates Recommended",
+      "category": "results",
+      "department": "UPSC",
+      "qualification": "10+2",
+      "noticeDate": "2026-11-05",
+      "notificationUrl": "https://upsc.gov.in/",
+      "officialUrl": "https://upsc.gov.in/",
+      "summary": "UPSC ने NDA & NA (I) 2026 (157वां NDA व 119वां INAC कोर्स) का अंतिम परिणाम जारी किया है, जिसमें 617 अभ्यर्थी अनुशंसित हुए हैं।",
+      "rows": [
+        [
+          "Final result date",
+          "5 November 2026"
+        ],
+        [
+          "Recommended candidates",
+          "617 (551 Male, 66 Female)"
+        ],
+        [
+          "Course",
+          "157th NDA & 119th INAC"
+        ]
+      ],
+      "verified": true,
+      "verifiedOn": "2026-11-26",
+      "publishedDate": "2026-11-26",
+      "type": "official-notice"
+    },
+    {
+      "id": "up-police-constable-2026-scorecard",
+      "title": "UP Police Constable 2026 Normalized Scorecard (Active till 15 Dec)",
+      "category": "results",
+      "department": "UPPRPB",
+      "qualification": "10+2",
+      "noticeDate": "2026-11-16",
+      "notificationUrl": "https://uppbpb.gov.in/",
+      "officialUrl": "https://uppbpb.gov.in/",
+      "summary": "UPPRPB ने आरक्षी भर्ती के 32,679 पदों के लिए अभ्यर्थियों के नॉर्मलाइज्ड स्कोरकार्ड जारी किए हैं; लॉगिन लिंक 15 दिसंबर 2026 तक सक्रिय है।",
+      "rows": [
+        [
+          "Recruitment cycle",
+          "UP Police Constable Direct Recruitment (32,679 posts)"
+        ],
+        [
+          "Scorecard window",
+          "16 November – 15 December 2026"
+        ],
+        [
+          "How to check",
+          "Sign in with Registration Number & DOB on uppbpb.gov.in"
+        ]
+      ],
+      "verified": true,
+      "verifiedOn": "2026-11-26",
+      "publishedDate": "2026-11-26",
+      "type": "official-notice"
+    },
+    {
+      "id": "rssb-cet-12th-level-admit-card-2026",
+      "title": "RSSB CET Senior Secondary (12th Level) Admit Card 2026 – Exam 1–3 Dec",
+      "category": "admit-card",
+      "department": "RSSB",
+      "qualification": "10+2",
+      "noticeDate": "2026-11-26",
+      "notificationUrl": "https://rssb.rajasthan.gov.in/",
+      "officialUrl": "https://recruitment.rajasthan.gov.in/",
+      "extraLinks": [
+        [
+          "Rajasthan SSO Portal",
+          "https://sso.rajasthan.gov.in/"
+        ]
+      ],
+      "summary": "राजस्थान कर्मचारी चयन बोर्ड (RSSB) ने 1, 2 और 3 दिसंबर 2026 को होने वाली CET 12th Level परीक्षा के प्रवेश पत्र 26 नवंबर से जारी किए हैं।",
+      "rows": [
+        [
+          "Admit card release",
+          "26 November 2026"
+        ],
+        [
+          "Exam dates",
+          "1, 2 & 3 December 2026"
+        ],
+        [
+          "How to download",
+          "Use Application No./DOB or SSO ID on recruitment.rajasthan.gov.in"
+        ]
+      ],
+      "verified": true,
+      "verifiedOn": "2026-11-26",
+      "publishedDate": "2026-11-26",
+      "type": "official-notice"
+    },
+    {
+      "id": "ssc-gd-pet-pst-admit-card-2026",
+      "title": "SSC Constable GD PET / PST Admit Card 2026 (26 Nov – 11 Dec)",
+      "category": "admit-card",
+      "department": "SSC",
+      "qualification": "10th",
+      "noticeDate": "2026-11-12",
+      "notificationUrl": "https://ssc.gov.in/",
+      "officialUrl": "https://ssc.gov.in/",
+      "summary": "SSC Constable GD शारीरिक दक्षता/मानक परीक्षा (PET/PST) 26 नवंबर से 11 दिसंबर 2026 तक आयोजित की जा रही है; एडमिट कार्ड पोर्टल पर उपलब्ध हैं।",
+      "rows": [
+        [
+          "Admit card release",
+          "12 November 2026"
+        ],
+        [
+          "PET / PST schedule",
+          "26 November – 11 December 2026"
+        ],
+        [
+          "Official portal",
+          "ssc.gov.in & CRPF recruitment portal"
+        ]
+      ],
+      "verified": true,
+      "verifiedOn": "2026-11-26",
+      "publishedDate": "2026-11-26",
+      "type": "official-notice"
+    },
+    {
+      "id": "wbpsc-clerkship-part1-2026-schedule",
+      "title": "WBPSC Clerkship Part-I Exam Schedule (26–27 Dec 2026) & Admit Card Date",
+      "category": "admit-card",
+      "department": "WBPSC",
+      "qualification": "10th",
+      "noticeDate": "2026-11-20",
+      "notificationUrl": "https://psc.wb.gov.in/",
+      "officialUrl": "https://psc.wb.gov.in/",
+      "summary": "पश्चिम बंगाल लोक सेवा आयोग (WBPSC) की Clerkship Part-I परीक्षा 26 और 27 दिसंबर 2026 को होगी; एडमिट कार्ड ~14 दिसंबर 2026 को जारी होंगे।",
+      "rows": [
+        [
+          "Exam dates",
+          "26 & 27 December 2026"
+        ],
+        [
+          "Admit card expected",
+          "Around 14 December 2026 on psc.wb.gov.in"
+        ]
+      ],
+      "verified": true,
+      "verifiedOn": "2026-11-26",
+      "publishedDate": "2026-11-26",
+      "type": "official-notice"
+    },
+    {
+      "id": "ssc-cgl-2026-tier1-answer-key",
+      "title": "SSC CGL 2026 Tier-I Answer Key Status & Tier-II Schedule Update",
+      "category": "answer-key",
+      "department": "SSC",
+      "qualification": "Graduate",
+      "noticeDate": "2026-11-04",
+      "notificationUrl": "https://ssc.gov.in/",
+      "officialUrl": "https://ssc.gov.in/",
+      "summary": "SSC CGL 2026 Tier-I उत्तर कुंजी 4 नवंबर को जारी हुई थी; Tier-II परीक्षा दिसंबर 2026 / जनवरी 2027 में प्रस्तावित है।",
+      "rows": [
+        [
+          "Tier-I Answer Key",
+          "4 November 2026 (objections 4–7 Nov 2026)"
+        ],
+        [
+          "Tier-II expected schedule",
+          "December 2026 / January 2027"
+        ],
+        [
+          "Official website",
+          "ssc.gov.in"
+        ]
+      ],
+      "verified": true,
+      "verifiedOn": "2026-11-26",
+      "publishedDate": "2026-11-26",
+      "type": "official-notice"
+    },
+    {
+      "id": "asrb-icar-t3-t4-syllabus-2026",
+      "title": "ASRB ICAR Technical Assistant (T-3 & T-4) Official Syllabus PDF 2026",
+      "category": "syllabus",
+      "department": "ASRB",
+      "qualification": "Graduate",
+      "noticeDate": "2026-11-11",
+      "notificationUrl": "https://asrb.gov.in/asset/pdf/netSyllabus/T3T4%20Syllabus.pdf",
+      "officialUrl": "https://asrb.gov.in/",
+      "summary": "ASRB ICAR Technical Assistant (T-3 व T-4) केंद्रीकृत परीक्षा 2026 का आधिकारिक पाठ्यक्रम (Syllabus PDF) डाउनलोड करें।",
+      "rows": [
+        [
+          "Exam stages",
+          "Preliminary CBT + Mains CBT (No Interview)"
+        ],
+        [
+          "Official syllabus PDF",
+          "Hosted directly on asrb.gov.in"
+        ]
+      ],
+      "verified": true,
+      "verifiedOn": "2026-11-26",
+      "publishedDate": "2026-11-26",
+      "type": "official-notice"
+    },
+    {
+      "id": "rrb-isolated-cen-09-2026-syllabus",
+      "title": "RRB Ministerial & Isolated Categories CEN 09/2026 Exam Pattern & Syllabus",
+      "category": "syllabus",
+      "department": "RRB",
+      "qualification": "Graduate",
+      "noticeDate": "2026-11-05",
+      "notificationUrl": "https://www.rrbapply.gov.in/assets/forms/CEN_09_2026_IsolatedCategory.pdf",
+      "officialUrl": "https://rrb.indianrailways.gov.in/",
+      "summary": "रेलवे CEN 09/2026 मिनिस्टीरियल व आइसोलेटेड श्रेणियों की परीक्षा संरचना, अंक विभाजन व पदवार पाठ्यक्रम आधिकारिक अधिसूचना में देखें।",
+      "rows": [
+        [
+          "Notice",
+          "CEN 09/2026"
+        ],
+        [
+          "Pattern & Syllabus",
+          "Included in Section 13 & Annexures of official CEN 09/2026 PDF"
+        ]
+      ],
+      "verified": true,
+      "verifiedOn": "2026-11-26",
+      "publishedDate": "2026-11-26",
+      "type": "official-notice"
+    },
+    {
+      "id": "uptet-2026-2027-syllabus",
+      "title": "UPTET 2026–2027 Paper I & Paper II Exam Pattern & Syllabus",
+      "category": "syllabus",
+      "department": "UPESSC",
+      "qualification": "Graduate",
+      "noticeDate": "2026-11-24",
+      "notificationUrl": "https://www.upessc.up.gov.in/Notice/3b60-2875-44ae-ea9b-0d5f.pdf",
+      "officialUrl": "https://upessc.up.gov.in/",
+      "summary": "UPTET 2026–27 (विज्ञापन 10/2026) प्राथमिक (कक्षा 1–5) व उच्च प्राथमिक (कक्षा 6–8) का आधिकारिक परीक्षा पैटर्न व विषयवार विवरण।",
+      "rows": [
+        [
+          "Paper I (Classes 1–5)",
+          "Child Development, Language I (Hindi), Language II, Mathematics, Environmental Studies (150 MCQs)"
+        ],
+        [
+          "Paper II (Classes 6–8)",
+          "Child Development, Language I (Hindi), Language II, Maths & Science OR Social Studies (150 MCQs)"
+        ],
+        [
+          "Exam dates",
+          "26 & 27 February 2027"
+        ]
+      ],
+      "verified": true,
+      "verifiedOn": "2026-11-26",
+      "publishedDate": "2026-11-26",
+      "type": "official-notice"
+    },
+    {
+      "id": "pan-card-e-pan-aadhaar-services",
+      "title": "PAN Card Instant e-PAN & Aadhaar–PAN Link Status – Income Tax Portal",
+      "category": "documents",
+      "department": "Income Tax Dept",
+      "notificationUrl": "https://www.incometax.gov.in/iec/foportal/",
+      "officialUrl": "https://eportal.incometax.gov.in/iec/foservices/#/pre-login/instant-e-pan",
+      "actionUrl": "https://eportal.incometax.gov.in/iec/foservices/#/pre-login/instant-e-pan",
+      "actionLabel": "Open Instant e-PAN",
+      "summary": "आयकर विभाग के आधिकारिक ई-फाइलिंग पोर्टल पर निःशुल्क Instant e-PAN तथा Aadhaar–PAN लिंक स्थिति की जांच करें।",
+      "rows": [
+        [
+          "Services",
+          "Free Instant e-PAN (via Aadhaar e-KYC) & Link Aadhaar Status"
+        ],
+        [
+          "Safety",
+          "Never enter PAN/Aadhaar OTP on unofficial websites"
+        ]
+      ],
+      "verified": true,
+      "verifiedOn": "2026-11-26",
+      "publishedDate": "2026-11-26",
+      "type": "service-guide"
+    },
+    {
+      "id": "up-bhulekh-ekhasra-land-records",
+      "title": "UP Bhulekh – Khatauni, Khasra & Land Record Verification Portal",
+      "category": "documents",
+      "department": "UP Revenue Board",
+      "notificationUrl": "https://upbhulekh.gov.in/",
+      "officialUrl": "https://upbhulekh.gov.in/",
+      "summary": "उत्तर प्रदेश राजस्व परिषद के आधिकारिक भूलेख पोर्टल पर खतौनी की नकल, गाटा स्थिति व भू-अभिलेख सत्यापन की सेवा।",
+      "rows": [
+        [
+          "Services",
+          "Khatauni Copy, Real-time Khatauni, Bhulekh Verification"
+        ],
+        [
+          "Official portal",
+          "upbhulekh.gov.in"
+        ]
+      ],
+      "verified": true,
+      "verifiedOn": "2026-11-26",
+      "publishedDate": "2026-11-26",
+      "type": "service-guide"
+    },
+    {
+      "id": "bihar-serviceplus-certificates",
+      "title": "Bihar ServicePlus (RTPS) – Caste, Income & Residence Certificate Portal",
+      "category": "documents",
+      "department": "Bihar Govt",
+      "notificationUrl": "https://serviceonline.bihar.gov.in/",
+      "officialUrl": "https://serviceonline.bihar.gov.in/",
+      "summary": "बिहार लोक सेवाओं का अधिकार (ServicePlus RTPS) पोर्टल पर जाति, आय और आवासीय प्रमाण पत्र ऑनलाइन आवेदन व डाउनलोड सेवा।",
+      "rows": [
+        [
+          "Services",
+          "Caste, Income, Residence, NCL & EWS Certificates"
+        ],
+        [
+          "Official portal",
+          "serviceonline.bihar.gov.in"
+        ]
+      ],
+      "verified": true,
+      "verifiedOn": "2026-11-26",
+      "publishedDate": "2026-11-26",
+      "type": "service-guide"
+    },
+    {
+      "id": "up-ecce-educator-sewayojan-2026",
+      "title": "UP Basic Education ECCE Educator District Outsourcing 2026 (Sewayojan)",
+      "category": "outsourcing",
+      "department": "UP Sewayojan / Basic Education",
+      "qualification": "Graduate",
+      "noticeId": "UP-ECCE-SEWAYOJAN-2026",
+      "lastDate": "2026-12-03",
+      "deadline": "2026-12-03T23:59:00+05:30",
+      "notificationUrl": "https://sewayojan.up.nic.in/",
+      "applyUrl": "https://sewayojan.up.nic.in/",
+      "officialUrl": "https://sewayojan.up.nic.in/",
+      "summary": "उत्तर प्रदेश बेसिक शिक्षा विभाग के अंतर्गत विभिन्न जिलों में ECCE Educator (आउटसोर्सिंग) पदों हेतु सेवायोजन पोर्टल पर जिलेवार आवेदन सक्रिय हैं।",
+      "rows": [
+        [
+          "Nature of post",
+          "District-wise Contractual / Outsourcing via UP Sewayojan"
+        ],
+        [
+          "Salary",
+          "₹10,313 per month"
+        ],
+        [
+          "Application fee",
+          "₹0 (Free for all categories)"
+        ],
+        [
+          "Age limit",
+          "18/21 – 40 years (per state outsourcing norms)"
+        ],
+        [
+          "Eligibility",
+          "Graduation with Home Science (50% marks; 5% relaxation) OR 2-yr DPSE/CT Nursery/NTT Diploma"
+        ],
+        [
+          "How to apply",
+          "Sign in at sewayojan.up.nic.in -> Outsourced Jobs -> Filter Basic Education Department & check active district deadline"
+        ]
+      ],
+      "verified": true,
+      "verifiedOn": "2026-11-26",
+      "publishedDate": "2026-11-26",
+      "applicationStatus": "OPEN",
+      "type": "official-notice"
     }
   ]
 }

@@ -38,6 +38,11 @@ ALLOWED = {
     "pmsvanidhi.mohua.gov.in", "www.uok.ac.in", "uok.ac.in",
     "iimcat.ac.in", "www.iimcat.ac.in", "gate2027.iitm.ac.in",
     "www.bbmb.gov.in", "bbmb.gov.in", "www.apprenticeshipindia.gov.in", "apprenticeshipindia.gov.in",
+    "careers.bhel.in", "www.ecil.co.in", "ecil.co.in", "nats.education.gov.in",
+    "aiimsgorakhpur.edu.in", "www.aiimsbilaspur.edu.in", "aiimsbilaspur.edu.in",
+    "www.bel-india.in", "bel-india.in", "hal-india.co.in", "www.hal-india.co.in",
+    "www.assamrifles.gov.in", "assamrifles.gov.in", "assamrifles.mha.gov.in",
+    "www.mponline.gov.in", "mponline.gov.in", "www.rrccr.com", "rrccr.com",
 }
 UP_RTE_URL = "https://rte25.upsdc.gov.in/"
 
