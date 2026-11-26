@@ -8061,46 +8061,45 @@
     },
     {
       "id": "icmr-hqrs-new-de-icmr-rectt-sc-d-02-2026-rpce-2026",
-      "title": "Scientist-D (Non-Medical) at ICMR-NIRBI, Kolkata (ICMR-Hqrs New Delhi)",
-      "category": "latest-jobs",
+      "title": "ICMR Scientist-D (Non-Medical), NIRBI Kolkata — 1 Post, Application Portal Awaited",
+      "category": "upcoming-jobs",
       "department": "ICMR-Hqrs New Delhi",
       "qualification": "Post-wise per Official Notification",
       "noticeId": "ICMR/Rectt/Sc-D/02/2026-RPCell",
-      "vacancies": null,
-      "noticeDate": "2026-11-26",
-      "startDate": "2026-11-26",
+      "vacancies": 1,
       "lastDate": "2026-12-31",
-      "deadline": "2026-12-31T23:59:00+05:30",
-      "locationLocality": "New Delhi",
-      "locationRegion": "Delhi",
+      "deadline": "2026-12-31T17:30:00+05:30",
+      "locationLocality": "Kolkata",
+      "locationRegion": "West Bengal",
       "notificationUrl": "https://www.icmr.gov.in/icmrobject/uploads/Recruitment/1795166694_finaladvertisement_sci_d.pdf",
-      "applyUrl": "https://recruitment.icmr.org.in/",
-      "applyLabel": "Official ICMR-Hqrs New Delhi Recruitment Portal",
-      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
       "officialUrl": "https://www.icmr.gov.in/employment-opportunities",
-      "summary": "ICMR-Hqrs New Delhi ने विज्ञापन संख्या ICMR/Rectt/Sc-D/02/2026-RPCell के तहत Scientist-D (Non-Medical) at ICMR-NIRBI, Kolkata (ICMR-Hqrs New Delhi) के लिए आधिकारिक भर्ती अधिसूचना जारी की है। अंतिम तिथि 2026-12-31 है।",
+      "summary": "ICMR ने कोलकाता स्थित NIRBI में Scientist-D (Non-Medical) के एक पद की अधिसूचना जारी की है। आधिकारिक भर्ती सूची के अनुसार आवेदन पोर्टल जल्द शुरू होगा। अंतिम समय 31 दिसंबर 2026 शाम 5:30 बजे IST है।",
       "eligibilityHi": "शैक्षिक योग्यता, आयु सीमा एवं चयन शर्तें ICMR-Hqrs New Delhi के आधिकारिक विज्ञापन (ICMR/Rectt/Sc-D/02/2026-RPCell) PDF में देखें।",
-      "applyInstructions": "आधिकारिक भर्ती पोर्टल (https://recruitment.icmr.org.in/) पर जाकर विज्ञापन ICMR/Rectt/Sc-D/02/2026-RPCell के अंतर्गत ऑनलाइन पंजीकरण व आवेदन 2026-12-31 से पहले पूरा करें।",
+      "applyInstructions": "आवेदन पोर्टल शुरू होने की पुष्टि अभी बाकी है। आधिकारिक ICMR भर्ती सूची देखें।",
       "rows": [
         [
-          "विज्ञापन संख्या (Notice ID)",
+          "विज्ञापन संख्या",
           "ICMR/Rectt/Sc-D/02/2026-RPCell"
         ],
         [
-          "विभाग / संस्थान",
-          "ICMR-Hqrs New Delhi (New Delhi, Delhi)"
+          "पद",
+          "Scientist-D (Non-Medical) — 1"
         ],
         [
-          "पद / श्रेणी",
-          "Permanent Posts"
+          "नियुक्ति स्थान",
+          "ICMR-NIRBI, Kolkata; all-India transfer liability"
         ],
         [
-          "अंतिम तिथि",
-          "2026-12-31"
+          "आवेदन पोर्टल",
+          "अभी शुरू होने की पुष्टि नहीं"
         ],
         [
-          "आधिकारिक माध्यम",
-          "ऑनलाइन पोर्टल व PDF विज्ञप्ति"
+          "अंतिम समय",
+          "31 दिसंबर 2026, 5:30 PM IST"
+        ],
+        [
+          "वेतन",
+          "Pay Level 12, ₹78,800–2,09,200"
         ]
       ],
       "extraLinks": [
@@ -8112,13 +8111,13 @@
       "discoveryUrl": "https://www.icmr.gov.in/icmrobject/uploads/Recruitment/1795166694_finaladvertisement_sci_d.pdf",
       "approved": true,
       "officialFactsChecked": true,
-      "applyLinkChecked": true,
-      "applicationStatus": "OPEN",
+      "applyLinkChecked": false,
+      "applicationStatus": "UPCOMING",
       "type": "official-notice",
       "verified": true,
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
-      "reviewedBy": "auto-verify-official-rule-engine",
+      "reviewedBy": "official-notice-cross-check",
       "reviewedOn": "2026-11-26"
     }
   ]

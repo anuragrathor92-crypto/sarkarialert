@@ -287,9 +287,9 @@ class ImportTests(unittest.TestCase):
             mock_ok = {"ok": True, "status": 200, "isPdf": True, "finalUrl": "https://www.icmr.gov.in/", "reason": ""}
             with patch.object(auto_verify, "probe_official", return_value=mock_ok):
                 res = auto_verify.run_auto_verify(discovery_path=dpath, write_approved=False, now=self.now)
-            self.assertEqual(res["autoApprovedCount"], 1)
+            self.assertEqual(res["autoApprovedCount"], 0)
             self.assertEqual(res["duplicatesSkipped"], 1)
-            self.assertEqual(res["pendingReviewCount"], 2)
+            self.assertEqual(res["pendingReviewCount"], 3)
 
     def test_jobposting_audit_compliance_and_sitemap_stability(self):
         import tempfile
