@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="hi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Smart Search – Sarkari Alert</title><meta name="description" content="हिंदी और English में सरकारी भर्ती, परिणाम और योजनाएँ खोजें।">
+<link rel="canonical" href="https://anuragrathor92-crypto.github.io/sarkarialert/assets/smart-search.html">
+<link rel="stylesheet" href="style.css"><script defer src="smart-search.js"></script>
+<style>
+.search-page{max-width:900px;margin:auto;padding:16px}.smart-form{display:grid;gap:12px}.smart-form input,.smart-form select,.smart-form button{font:inherit;padding:12px;border:1px solid #777;border-radius:6px;width:100%;box-sizing:border-box}.smart-form button{background:#a6193b;color:white;font-weight:bold;cursor:pointer}.smart-results{list-style:none;padding:0}.smart-results li{background:white;color:#222;border:1px solid #ddd;border-radius:8px;padding:14px;margin:12px 0}.smart-results h2{font-size:1.15rem;margin:0 0 8px}.smart-results a{overflow-wrap:anywhere}.smart-meta{font-size:.9rem;color:#444;overflow-wrap:anywhere}.smart-nav{display:flex;gap:16px;flex-wrap:wrap;padding:12px 0}.smart-page-link{font-weight:bold}.smart-results p{margin:6px 0}.smart-filter{display:grid;grid-template-columns:1fr 1fr;gap:10px}@media(max-width:550px){.smart-filter{grid-template-columns:1fr}}
+</style></head><body><main class="search-page"><h1>Sarkari Alert — Smart Search</h1>
+<div class="smart-nav"><a href="../index.html">मुख्य वेबसाइट</a><a href="../data/public-search.json">Public JSON API</a></div>
+<p>सरकारी नौकरी, परिणाम, प्रवेश पत्र और योजनाएँ हिंदी या English में खोजें। उदाहरण: 12वीं पास सरकारी नौकरी, ITI, किसान योजना, UPSC, admit card.</p>
+<form class="smart-form" id="smart-form">
+<label for="smart-query">क्या खोजना है?</label><input id="smart-query" type="search" placeholder="12वीं पास सरकारी नौकरी" maxlength="180">
+<div class="smart-filter"><label>श्रेणी<select id="smart-category"><option value="">सभी</option><option value="jobs">सरकारी नौकरियाँ</option><option value="yojana">सरकारी योजनाएँ</option><option value="results">Results</option><option value="admit-card">Admit cards</option><option value="admission">Admissions</option><option value="scholarship">Scholarships</option><option value="answer-key">Answer keys</option><option value="exam-date">Exam dates</option><option value="upcoming-jobs">Upcoming jobs</option><option value="documents">Documents</option><option value="syllabus">Syllabus</option></select></label>
+<label>स्थिति<select id="smart-status"><option value="">सभी वर्तमान रिकॉर्ड</option><option value="open">आवेदन अवधि चालू (उपलब्ध तिथियों के अनुसार)</option></select></label></div>
+<button type="submit">खोजें / Search</button></form>
+<p id="smart-summary" role="status" aria-live="polite">डेटा लोड हो रहा है…</p><p>खोज योग्यता के लिखित शब्दों पर आधारित है, व्यक्तिगत पात्रता का प्रमाण नहीं। सभी शर्तें मूल अधिसूचना से जाँचें।</p>
+<ol class="smart-results" id="smart-results"></ol><button type="button" id="smart-more" hidden>और परिणाम देखें</button><noscript>Search के लिए JavaScript चालू करें या मुख्य वेबसाइट खोलें।</noscript></main></body></html>
