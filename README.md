@@ -1,3 +1,8 @@
 # Sarkari Alert
 
-New independent static website. Publish through GitHub Pages from main / (root). No old posts, sample posts, or automation. Post data starts empty in data/posts.json. Add new independently verified notices as individual HTML pages and update the relevant category and homepage. Do not copy third-party text or publish expired/duplicate application notices. No ads or affiliate tracking enabled.
+Independent static portal for verified Indian government jobs, results, admit cards, answer keys, admissions, scholarships, exam dates, upcoming jobs, and 32 Sarkari Yojana guides.
+
+- **Live Website:** https://anuragrathor92-crypto.github.io/sarkarialert/
+- **Categories:** Latest Jobs, Results, Admit Cards, Answer Key, Admission (with 2-hour UP RTE 2027-28 monitoring), Sarkari Yojana (32 schemes, no separate Apply buttons), Scholarship, Exam Dates, Upcoming Jobs, 10th / ITI Jobs, Documents, Syllabus, Outsourcing Jobs.
+- **Separate Referral Desk:** `/loans-and-cards/` (non-government commercial loans & credit cards configured via `data/referrals.json`).
+- **Automation:** GitHub Actions runs every 2 hours (`.github/workflows/bulk-import.yml`) to run tests, discover updates, monitor `rte25.upsdc.gov.in`, check expired deadlines, and publish reviewed changes when `PUBLISH_TOKEN` is configured.

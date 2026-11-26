@@ -1,0 +1,16 @@
+{
+  "lastCheckedAt": "2026-11-26T13:16:27+05:30",
+  "monitors": [
+    {
+      "id": "up-rte-2027-28",
+      "name": "UP RTE 25% Private School Admission 2027-28",
+      "url": "https://rte25.upsdc.gov.in/",
+      "checkedAt": "2026-11-26T13:16:27+05:30",
+      "httpStatus": 200,
+      "session2027Detected": false,
+      "status": "NOTIFICATION_AWAITED",
+      "summary": "Official portal https://rte25.upsdc.gov.in/ is online (HTTP 200). Session 2027-28 notification still awaited.",
+      "summaryHi": "आधिकारिक पोर्टल rte25.upsdc.gov.in सक्रिय है। सत्र 2027–28 की नई आधिकारिक समय-सारणी अभी प्रतीक्षित है; हर 2 घंटे में स्वचालित जाँच जारी है।"
+    }
+  ]
+}
