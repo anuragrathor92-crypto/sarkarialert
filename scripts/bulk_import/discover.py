@@ -51,6 +51,15 @@ ALLOWED = {
     "ukpsc.net.in", "www.ukpsc.net.in", "iforms.mponline.gov.in",
     "www.hpsbys.in", "hpsbys.in", "www.kudumbashree.org", "kudumbashree.org",
     "nationalinsurance.nic.co.in",
+    "powergrid.in", "www.powergrid.in", "careers.powergrid.in",
+    "gailonline.com", "www.gailonline.com", "gailebank.gail.co.in",
+    "cpcle26.onlineregistrationform.org", "upanganwadibharti.in",
+    "sbi.bank.in", "recruitment.sbi.bank.in",
+    "becil.com", "www.becil.com", "becilregistration.in",
+    "manitnt.samarth.edu.in", "niperahmnt.samarth.edu.in",
+    "nsic.co.in", "www.nsic.co.in", "career.nsic.co.in",
+    "nplindia.in", "www.nplindia.in",
+    "ukssscrecruitment.in", "cdn.digialm.com",
 }
 UP_RTE_URL = "https://rte25.upsdc.gov.in/"
 
