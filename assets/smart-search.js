@@ -20,12 +20,12 @@
   const synonyms = {'किसान':['farmer','kisan','किसान','कृषि','agriculture'],'रेलवे':['railway','rrb','rrc','रेलवे'],'पुलिस':['police','पुलिस'],'आंगनवाड़ी':['anganwadi','icds','आंगनवाड़ी','आंगनवाडी'],'यूपी':['uttar pradesh','upsssc','uppsc','उत्तर प्रदेश','up'],'एसएससी':['ssc'],'बैंक':['bank','sbi','ibps','बैंक'],'यूपीएससी':['upsc']};
   function current(r, now) {
     if (r.applicationStatus === 'EXPIRED') return false;
-    const end=Date.parse(r.deadline || '');
+    const end=/^\d{4}-\d{2}-\d{2}T/.test(r.deadline||'')?Date.parse(r.deadline):NaN;
     return !Number.isFinite(end) || end >= now;
   }
   function openWindow(r, now) {
     const start=Date.parse(r.startDate ? r.startDate+'T00:00:00+05:30' : '');
-    const end=Date.parse(r.deadline || '');
+    const end=/^\d{4}-\d{2}-\d{2}T/.test(r.deadline||'')?Date.parse(r.deadline):NaN;
     return jobs.has(r.category) && Number.isFinite(start) && Number.isFinite(end) && start<=now && now<=end && !r.verificationPending && Boolean(r.applyUrl);
   }
   function search(records, raw, cat, status, now=Date.now()) {
