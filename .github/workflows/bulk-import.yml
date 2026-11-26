@@ -107,13 +107,13 @@ jobs:
           python scripts/bulk_import/verify_links.py --check-internal --skip-external
       - name: Commit and push authorized updates to main
         run: |
-          if [ -z "$(git status --porcelain --untracked-files=all -- index.html 404.html robots.txt sitemap.xml category posts loans-and-cards about privacy disclaimer data/posts.json data/monitor_status.json data/import_approved.json)" ]; then
+          if [ -z "$(git status --porcelain --untracked-files=all -- index.html 404.html robots.txt sitemap.xml category posts loans-and-cards about privacy disclaimer data/posts.json data/monitor_status.json data/import_approved.json data/public-search.json)" ]; then
             echo "No new approved records or site changes."
             exit 0
           fi
           git config user.name "Sarkari Alert Publisher"
           git config user.email "sarkarialert-bot@users.noreply.github.com"
-          git add index.html 404.html robots.txt sitemap.xml category posts loans-and-cards about privacy disclaimer data/posts.json data/monitor_status.json data/import_approved.json
+          git add index.html 404.html robots.txt sitemap.xml category posts loans-and-cards about privacy disclaimer data/posts.json data/monitor_status.json data/import_approved.json data/public-search.json
           if [ -f ads.txt ]; then git add ads.txt; fi
           git commit -m "Publish verified updates, UP RTE monitor status, and expiry cleanup"
           git pull --rebase origin main
