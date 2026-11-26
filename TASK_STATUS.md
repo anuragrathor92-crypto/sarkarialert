@@ -16,7 +16,7 @@ Active Branch: `seo/advanced-seo-automation-2026-11-26` (PR #5 updated with 14 I
   - `publish.py --write --prune-expired` (`Changed files: 264`, `Skipped/rejected: 0`, `active posts: 172`)
 - **Technical SEO & Structured Data Audit (`seo_audit.py --strict`):**
   - `259` HTML pages (`258` indexable, `404.html` = `noindex,follow`), `duplicateTitlesCount = 0`, `duplicateDescriptionsCount = 0`, `errors = 0`, `warnings = 0`
-  - Eligible valid `JobPosting` pages: **`99`** (full HTML description, verified `addressLocality`/`addressRegion`, actual `noticeDate`/`startDate` as `datePosted`, strict `directApply`), expired/ineligible `JobPosting`s: **`0`**
+  - Eligible valid `JobPosting` pages: **`98`** (full HTML description, verified `addressLocality`/`addressRegion`, actual `noticeDate`/`startDate` as `datePosted`, strict `directApply`; upcoming ICMR notice accurately uses `upcoming-jobs` / `Article` without premature `JobPosting`), expired/ineligible `JobPosting`s: **`0`**
   - `sitemap.xml`: `258` URLs with real per-URL `<lastmod>` tracked in `data/seo_state.json` using substantive content fingerprints (`SITEMAP_REBUILD_DIFF = 0` on rebuild; `2` distinct `<lastmod>` dates); `feed.xml`: `40` latest items
 - **238-Record Live Link Audit (`audit-238-sources.json`):** `0` hard `404/410/422` errors in active `171` posts; 4 restricted portals verified (`mp-esb`: `UNSAFE_LEGACY_RENEGOTIATION_DISABLED`, `bhel` & `assam-rifles`: `200` locally / restricted on CI, `rrc-nr`: `403`).
 
