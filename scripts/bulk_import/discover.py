@@ -24,6 +24,8 @@ EXCLUDED = set(PAGES.values()) | {
     "about-us/", "about/", "more/", "feed/", "sarkari-result/", "wp-login.php"
 }
 ALLOWED = {
+    # Official recruitment portals verified against the corresponding notices, 26 Nov 2026.
+    "recruitment.csir.res.in", "www.csir.res.in", "goashipyard.ibtexamination.com", "ibpsreg.ibps.in",
     "www.ibps.in", "ibps.in", "www.rrbapply.gov.in", "rrbapply.gov.in",
     "www.joinindiannavy.gov.in", "www.joinindianarmy.nic.in", "joinindianarmy.nic.in",
     "www.aees.gov.in", "aees.gov.in", "aees.onlineregistrationforms.com",
