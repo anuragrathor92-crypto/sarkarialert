@@ -1051,6 +1051,9 @@ def build_all(now=None, prune_expired=False, posts_override=None):
     post_meta = ensure_unique_seo_meta(active_posts, is_scheme=False)
     scheme_meta = ensure_unique_seo_meta(schemes, is_scheme=True)
 
+    from public_search import public_feed
+    files["data/public-search.json"] = public_feed(active_posts, schemes, BASE, now)
+
     # 1. Render all active non-scheme posts with unique meta & related internal links
     for p in active_posts:
         rel_items = find_related_posts(p, active_posts, schemes=schemes, is_scheme=False)
@@ -1314,6 +1317,7 @@ def build_all(now=None, prune_expired=False, posts_override=None):
         '<a href="./sitemap/">All Updates Directory</a>'
         '<a href="./loans-and-cards/">Loans &amp; Cards Referral</a>'
         "</div>"
+        '<p><a href="./assets/smart-search.html" class="smart-page-link">Smart Search — हिंदी / English</a></p>'
         '<form id="search" class="search">'
         '<input id="query" type="search" aria-label="Search posts" placeholder="Search jobs, results, schemes, exams…">'
         f'<select id="department" aria-label="Department">{dept_opts}</select>'

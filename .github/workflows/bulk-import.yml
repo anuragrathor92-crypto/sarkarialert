@@ -123,13 +123,13 @@ jobs:
           python scripts/bulk_import/seo_audit.py --strict --output import-output/seo-report.json
       - name: Commit and push authorized updates to main
         run: |
-          if [ -z "$(git status --porcelain --untracked-files=all -- index.html 404.html robots.txt sitemap.xml feed.xml sitemap category posts loans-and-cards about privacy disclaimer data/posts.json data/monitor_status.json data/import_approved.json data/seo_state.json)" ]; then
+          if [ -z "$(git status --porcelain --untracked-files=all -- index.html 404.html robots.txt sitemap.xml feed.xml sitemap category posts loans-and-cards about privacy disclaimer data/posts.json data/monitor_status.json data/import_approved.json data/seo_state.json data/public-search.json)" ]; then
             echo "No new approved records or site changes."
             exit 0
           fi
           git config user.name "Sarkari Alert Publisher"
           git config user.email "sarkarialert-bot@users.noreply.github.com"
-          git add index.html 404.html robots.txt sitemap.xml feed.xml sitemap category posts loans-and-cards about privacy disclaimer data/posts.json data/monitor_status.json data/import_approved.json data/seo_state.json
+          git add index.html 404.html robots.txt sitemap.xml feed.xml sitemap category posts loans-and-cards about privacy disclaimer data/posts.json data/monitor_status.json data/import_approved.json data/seo_state.json data/public-search.json
           if [ -f ads.txt ]; then git add ads.txt; fi
           git commit -m "Publish verified updates, SEO state, UP RTE monitor, and expiry cleanup"
           git pull --rebase origin main
