@@ -14,7 +14,7 @@ GitHub Actions workflow `.github/workflows/bulk-import.yml` runs every two hours
   - Strict duplicate rejection (ID, normalized title, department+noticeId, discovery URL).
   - Strict expiry rejection (`deadline <= now`) and automatic expiry cleanup (`--prune-expired`).
   - Prohibition of separate Apply buttons/links on `yojana` schemes.
-- The `publish` job uses the repository's built-in `GITHUB_TOKEN` (`permissions: contents: write`) by default to commit and push reviewed changes, UP RTE monitor status updates, and expired job cleanup to `main` (zero external token setup required). Optionally, if you want automated pushes from Actions to re-trigger legacy branch-based GitHub Pages builds, you may still set an optional `PUBLISH_TOKEN` secret (`Contents: Read and write`), which is used automatically when present.
+- The `publish` and `deploy` jobs run completely using GitHub's built-in `GITHUB_TOKEN` (`permissions: contents: write`, `pages: write`, `id-token: write`) with zero external PATs or paid tools: `publish` commits reviewed updates/monitor/expiry changes to `main`, and `deploy` immediately deploys via `actions/configure-pages`, `actions/upload-pages-artifact`, and `actions/deploy-pages`.
 
 ## Local Commands
 - Rebuild static site: `python scripts/bulk_import/build_site.py`

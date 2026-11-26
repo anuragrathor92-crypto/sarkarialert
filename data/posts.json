@@ -4325,6 +4325,103 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "type": "official-notice"
+    },
+    {
+      "id": "rrb-ntpc-graduate-cen-06-2026-status",
+      "title": "RRB NTPC Graduate Level (CEN 06/2026) Application Status Out – 3,548 Posts",
+      "category": "admit-card",
+      "department": "RRB",
+      "qualification": "Graduate",
+      "noticeDate": "2026-11-26",
+      "lastDate": "",
+      "deadline": "Status Live 26 Nov 2026",
+      "notificationUrl": "https://www.rrbapply.gov.in/",
+      "officialUrl": "https://www.rrbapply.gov.in/",
+      "summary": "रेलवे भर्ती बोर्ड (RRB) ने CEN 06/2026 (NTPC ग्रेजुएट लेवल – 3,548 पद) के लिए आवेदन स्थिति (Application Status) 26 नवंबर 2026 को सक्रिय कर दी है। अभ्यर्थी rrbapply.gov.in पर लॉगिन करके स्थिति जांच सकते हैं।",
+      "rows": [
+        [
+          "Notification No.",
+          "CEN 06/2026 (NTPC Graduate Posts – 3,548 Vacancies)"
+        ],
+        [
+          "Application Status Active",
+          "26 November 2026"
+        ],
+        [
+          "Official Candidate Portal",
+          "rrbapply.gov.in (Provisionally Accepted / Rejected Check)"
+        ]
+      ],
+      "verified": true,
+      "verifiedOn": "2026-11-26",
+      "publishedDate": "2026-11-26",
+      "type": "official-notice"
+    },
+    {
+      "id": "rpsc-1st-grade-teacher-result-2026",
+      "title": "RPSC School Lecturer (1st Grade) Subject-wise Provisional Result & DV Shortlist",
+      "category": "results",
+      "department": "RPSC",
+      "qualification": "Postgraduate + B.Ed",
+      "noticeDate": "2026-11-22",
+      "lastDate": "",
+      "deadline": "Subject Lists Live",
+      "notificationUrl": "https://rpsc.rajasthan.gov.in/",
+      "officialUrl": "https://rpsc.rajasthan.gov.in/",
+      "summary": "राजस्थान लोक सेवा आयोग (RPSC) द्वारा प्राध्यापक (स्कूल शिक्षा / 1st ग्रेड) परीक्षा के विषयवार अनंतिम परिणाम, मेरिट सूची एवं दस्तावेज सत्यापन शॉर्टलिस्ट rpsc.rajasthan.gov.in पर जारी किए जा रहे हैं।",
+      "rows": [
+        [
+          "Commission",
+          "Rajasthan Public Service Commission (RPSC)"
+        ],
+        [
+          "Update Type",
+          "Subject-wise Provisional & Main Merit / Reserve Lists"
+        ],
+        [
+          "Official Portal",
+          "rpsc.rajasthan.gov.in (Results Section)"
+        ]
+      ],
+      "verified": true,
+      "verifiedOn": "2026-11-26",
+      "publishedDate": "2026-11-26",
+      "type": "official-notice"
+    },
+    {
+      "id": "nicl-assistant-prelims-scorecard-2026",
+      "title": "NICL Assistant (Class-III) Prelims Scorecard & Mains Shortlist – 500 Posts",
+      "category": "results",
+      "department": "NICL",
+      "qualification": "Graduate",
+      "noticeDate": "2026-11-20",
+      "lastDate": "",
+      "deadline": "Scorecard Live",
+      "notificationUrl": "https://nationalinsurance.nic.co.in/",
+      "officialUrl": "https://nationalinsurance.nic.co.in/",
+      "summary": "नेशनल इंश्योरेंस कंपनी लिमिटेड (NICL) ने 500 असिस्टेंट (क्लास-III) पदों की प्रारंभिक परीक्षा के स्कोरकार्ड एवं मुख्य परीक्षा हेतु शॉर्टलिस्ट विवरण जारी किया है।",
+      "rows": [
+        [
+          "Organization",
+          "National Insurance Company Limited (NICL)"
+        ],
+        [
+          "Total Vacancies",
+          "500 Assistant (Class-III) Posts"
+        ],
+        [
+          "Update Status",
+          "Phase-I Scorecard & Mains Shortlist Released"
+        ],
+        [
+          "Official Portal",
+          "nationalinsurance.nic.co.in (Recruitment Section)"
+        ]
+      ],
+      "verified": true,
+      "verifiedOn": "2026-11-26",
+      "publishedDate": "2026-11-26",
+      "type": "official-notice"
     }
   ]
 }

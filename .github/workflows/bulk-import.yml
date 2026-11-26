@@ -4,7 +4,7 @@ on:
     - cron: '17 */2 * * *'
   push:
     branches: [main]
-    paths: ['scripts/bulk_import/**', '.github/workflows/bulk-import.yml', 'data/import_approved.json', 'data/posts.json', 'data/schemes_directory.json', 'data/referrals.json']
+    paths: ['scripts/bulk_import/**', '.github/workflows/bulk-import.yml', 'data/**', 'assets/**', '*.html']
   pull_request:
     branches: [main]
     paths: ['scripts/bulk_import/**', '.github/workflows/bulk-import.yml', 'data/**', 'assets/**', 'posts/**', 'category/**', '*.html']
@@ -16,6 +16,8 @@ on:
         default: false
 permissions:
   contents: write
+  pages: write
+  id-token: write
 concurrency:
   group: sarkari-alert-bulk-import
   cancel-in-progress: false
@@ -90,7 +92,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          token: ${{ secrets.PUBLISH_TOKEN || secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           persist-credentials: true
       - uses: actions/setup-python@v5
         with:
@@ -120,3 +122,53 @@ jobs:
           name: bulk-publish-report
           path: import-output/
           if-no-files-found: warn
+
+  deploy:
+    needs: [discover, publish]
+    if: >-
+      always() &&
+      needs.discover.result == 'success' &&
+      (needs.publish.result == 'success' || needs.publish.result == 'skipped') &&
+      github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Build & verify static site for GitHub Pages
+        run: |
+          python scripts/bulk_import/build_site.py
+          python scripts/bulk_import/verify_links.py --check-internal --skip-external
+          python - << 'EOF'
+          import shutil
+          from pathlib import Path
+          out = Path("_site")
+          if out.exists():
+              shutil.rmtree(out)
+          out.mkdir()
+          for item in ("index.html", "404.html", "robots.txt", "sitemap.xml", "ads.txt"):
+              p = Path(item)
+              if p.exists():
+                  shutil.copy2(p, out / item)
+          for d in ("assets", "category", "posts", "loans-and-cards", "about", "privacy", "disclaimer", "data"):
+              p = Path(d)
+              if p.exists():
+                  shutil.copytree(p, out / d)
+          EOF
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -4,14 +4,12 @@ Last Updated: `2026-11-26 14:33 IST`
 Feature Branch: `feat/all-states-seo-workflows-2026-11-26` (Base: `main` at `592cb9e`; Backup: `backup/main-2026-11-26`)
 
 ## Summary Metrics
-- **Active Verified Posts (`data/posts.json`):** `111` (`0` expired posts excluded)
-  - `latest-jobs`: `40` | `admit-card`: `13` | `results`: `14` | `admission`: `9` (incl. 3 Upcoming + UP RTE Monitor)
+- **Active Verified Posts (`data/posts.json`):** `114` (`0` expired posts excluded)
+  - `latest-jobs`: `40` | `results`: `16` | `admit-card`: `14` | `admission`: `9` (incl. 3 Upcoming + UP RTE Monitor)
   - `upcoming-jobs`: `8` | `documents`: `7` | `scholarship`: `6` | `answer-key`: `5` | `exam-date`: `5` | `syllabus`: `3` | `outsourcing`: `1` (+ `10th-iti` cross-tag)
 - **Government Schemes (`data/schemes_directory.json`):** **`67` total verified schemes** covering **27 Central schemes + ALL 28 States + ALL 8 Union Territories (37 jurisdictions)**; **ZERO separate Apply buttons** (`applyUrl` = `0`)
-- **Built Files (`build_site.py`):** `199` generated static files (`197` HTML pages + `sitemap.xml` + `robots.txt`)
-- **Internal Link Audit (`verify_links.py`):** `197` HTML pages, `4,548` internal links checked, **`broken = 0`**
-- **External Official URL Audit:** `222` unique official URLs audited (`183/222` direct Python `urllib` 2xx/3xx; `external404 = 0`, `badPDF = 0`; **`pendingRechecked = 4`** tracked every 2 hours)
-- **Automated Tests (`test_import.py`):** `Ran 9 tests in 3.670s — OK`
+- **Built Files (`build_site.py`):** `202` generated static files (`200` HTML pages + `sitemap.xml` + `robots.txt`)
+- **GitHub Pages Automation (`actions/deploy-pages@v4`):** Configured cleanly inside `.github/workflows/bulk-import.yml` using built-in `GITHUB_TOKEN` (no external PAT or paid tools required) so 2-hourly `schedule`, `workflow_dispatch`, and `main` pushes build, link-check, and deploy autonomously even when local laptop is OFF.
 
 ## Completed Tasks (1–14)
 - [x] **1. SarkariResult.com.cm Active Comparison & Additions:** Compared `452` candidates (`0` source errors), added missing verified Admit Cards (`upsssc-cane-supervisor-2026`, `gims-noida-staff-nurse-2026`), Results (`up-special-tet-2026-result`, `upsssc-forest-guard-result-2026`, `csbc-bihar-special-branch-constable-result-2026`), Scholarships, and Upcoming Jobs/Admissions while preserving all existing data.

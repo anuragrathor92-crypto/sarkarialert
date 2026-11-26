@@ -48,6 +48,7 @@ ALLOWED = {
     "nsap.dord.gov.in", "blasrecruit.in", "www.blasrecruit.in",
     "ukpsc.net.in", "www.ukpsc.net.in", "iforms.mponline.gov.in",
     "www.hpsbys.in", "hpsbys.in", "www.kudumbashree.org", "kudumbashree.org",
+    "nationalinsurance.nic.co.in",
 }
 UP_RTE_URL = "https://rte25.upsdc.gov.in/"
 
