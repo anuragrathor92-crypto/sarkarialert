@@ -1,11 +1,11 @@
 {
-  "lastCheckedAt": "2026-11-26T14:39:19+05:30",
+  "lastCheckedAt": "2026-11-26T15:23:02+05:30",
   "monitors": [
     {
       "id": "up-rte-2027-28",
       "name": "UP RTE 25% Private School Admission 2027-28",
       "url": "https://rte25.upsdc.gov.in/",
-      "checkedAt": "2026-11-26T14:39:19+05:30",
+      "checkedAt": "2026-11-26T15:23:02+05:30",
       "httpStatus": 0,
       "session2027Detected": false,
       "status": "CHECK_ERROR",
