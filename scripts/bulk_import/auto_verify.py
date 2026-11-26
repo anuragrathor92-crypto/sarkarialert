@@ -154,6 +154,20 @@ def verify_official_discovery(item, now, idx):
     if pre_dup:
         return None, [pre_dup_reason]
 
+    # A working portal/PDF is not proof of the application window or eligibility.
+    # Current listing-only adapters cannot prove these facts; keep them pending.
+    if not (item.get("officialFactsEvidence") and item.get("applicationWindowEvidence")
+            and item.get("startDateRaw") and item.get("deadlineExact")
+            and item.get("vacancies") and item.get("qualification") and item.get("rows")):
+        return None, ["official_facts_or_application_window_not_independently_verified"]
+    try:
+        exact_deadline = dt.datetime.fromisoformat(item["deadlineExact"])
+        start = dt.date.fromisoformat(parse_date_str(item["startDateRaw"]))
+        if exact_deadline.tzinfo is None or exact_deadline <= now or start > now.date():
+            return None, ["application_window_not_confirmed_open"]
+    except (ValueError, TypeError):
+        return None, ["invalid_exact_application_window"]
+
     p_notif = probe_official(notif_url)
     p_apply = probe_official(apply_url)
     p_off = probe_official(official_url)
@@ -178,7 +192,7 @@ def verify_official_discovery(item, now, idx):
     if item.get("hindiNotificationUrl") and probe_official(item["hindiNotificationUrl"])["ok"]:
         extra_links.append(["Official Notification (Hindi PDF)", item["hindiNotificationUrl"]])
 
-    start_date = parse_date_str(item.get("startDateRaw")) or now.date().isoformat()
+    start_date = parse_date_str(item["startDateRaw"])
     rec = {
         "id": pid,
         "title": title,
@@ -190,7 +204,7 @@ def verify_official_discovery(item, now, idx):
         "noticeDate": item.get("noticeDate") or start_date,
         "startDate": start_date,
         "lastDate": last_date,
-        "deadline": f"{last_date}T23:59:00+05:30",
+        "deadline": exact_deadline.isoformat(),
         "locationLocality": item.get("locationLocality") or loc_city,
         "locationRegion": item.get("locationRegion") or loc_state,
         "notificationUrl": notif_url,
