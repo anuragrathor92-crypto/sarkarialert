@@ -3523,6 +3523,115 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "type": "upcoming-notice"
+    },
+    {
+      "id": "upsssc-platoon-commander-answer-key-2026",
+      "title": "UPSSSC Platoon Commander, Block Organizer & Havaldar Instructor Answer Key 2026",
+      "category": "answer-key",
+      "department": "UPSSSC",
+      "qualification": "Intermediate / Graduate",
+      "noticeDate": "2026-11-24",
+      "lastDate": "2026-11-30",
+      "deadline": "30 Nov 2026",
+      "notificationUrl": "https://upsssc.gov.in/",
+      "officialUrl": "https://upsssc.gov.in/",
+      "summary": "UPSSSC ने 22 नवंबर 2026 को आयोजित प्लाटून कमांडर, ब्लॉक ऑर्गनाइज़र और हवलदार प्रशिक्षक मुख्य परीक्षा की मास्टर उत्तर कुंजी जारी की है। अभ्यर्थी 30 नवंबर 2026 तक आधिकारिक पोर्टल पर आपत्तियां देख व दर्ज कर सकते हैं।",
+      "rows": [
+        [
+          "Main Exam Date",
+          "22 November 2026"
+        ],
+        [
+          "Provisional Answer Key Released",
+          "24 November 2026"
+        ],
+        [
+          "Last Date to Check / Object",
+          "30 November 2026"
+        ],
+        [
+          "Official Portal",
+          "upsssc.gov.in (Notice Board & Answer Key Section)"
+        ]
+      ],
+      "verified": true,
+      "verifiedOn": "2026-11-26",
+      "publishedDate": "2026-11-26",
+      "type": "official-notice"
+    },
+    {
+      "id": "bssc-stenographer-admit-card-2026",
+      "title": "Bihar BSSC Stenographer / Steno Typist Exam City & Admit Card 2026",
+      "category": "admit-card",
+      "department": "BSSC",
+      "qualification": "10+2 (Intermediate) & Stenography",
+      "noticeDate": "2026-11-24",
+      "lastDate": "2026-12-01",
+      "deadline": "01 Dec 2026 (Exam)",
+      "notificationUrl": "https://bssc.bihar.gov.in/",
+      "officialUrl": "https://bssc.bihar.gov.in/",
+      "summary": "बिहार कर्मचारी चयन आयोग (BSSC) ने विज्ञापन संख्या 07/25 के अंतर्गत स्टेनोग्राफर / स्टेनो टाइपिस्ट ग्रेड-III की 1 दिसंबर 2026 की CBT परीक्षा के लिए परीक्षा शहर पर्ची जारी कर दी है। एडमिट कार्ड 27 नवंबर 2026 से डाउनलोड किए जा सकेंगे।",
+      "rows": [
+        [
+          "Advertisement No.",
+          "07/25 (Stenographer / Steno Typist Grade-III)"
+        ],
+        [
+          "Exam City Slip Released",
+          "24 November 2026"
+        ],
+        [
+          "Admit Card Release Date",
+          "27 November 2026"
+        ],
+        [
+          "CBT Examination Date",
+          "1 December 2026"
+        ],
+        [
+          "How to Check",
+          "Log in with Registration Number & DOB/Password on bssc.bihar.gov.in"
+        ]
+      ],
+      "verified": true,
+      "verifiedOn": "2026-11-26",
+      "publishedDate": "2026-11-26",
+      "type": "official-notice"
+    },
+    {
+      "id": "rrb-ntpc-ug-cbtst-admit-card-2026",
+      "title": "Railway RRB NTPC (10+2 UG) CEN 07/2025 CBTST Typing Admit Card 2026",
+      "category": "admit-card",
+      "department": "RRB",
+      "qualification": "10+2 (Intermediate)",
+      "noticeDate": "2026-11-24",
+      "lastDate": "2026-11-27",
+      "deadline": "27 Nov 2026 (CBTST)",
+      "notificationUrl": "https://www.rrbcdg.gov.in/",
+      "officialUrl": "https://www.rrbapply.gov.in/",
+      "summary": "रेलवे भर्ती बोर्ड (RRB) ने CEN 07/2025 (NTPC 10+2 अंडरग्रेजुएट लेवल) के तहत कंप्यूटर आधारित टाइपिंग कौशल परीक्षा (CBTST) के ई-कॉल लेटर 24 नवंबर 2026 को जारी कर दिए हैं। परीक्षा 27 नवंबर 2026 को निर्धारित है।",
+      "rows": [
+        [
+          "Notification No.",
+          "CEN 07/2025 (NTPC 10+2 Undergraduate Posts)"
+        ],
+        [
+          "CBTST E-Call Letter Released",
+          "24 November 2026"
+        ],
+        [
+          "CBTST Typing Exam Date",
+          "27 November 2026"
+        ],
+        [
+          "Official Login Portal",
+          "Regional RRB Website / rrbapply.gov.in (Registration No. & DOB)"
+        ]
+      ],
+      "verified": true,
+      "verifiedOn": "2026-11-26",
+      "publishedDate": "2026-11-26",
+      "type": "official-notice"
     }
   ]
 }

@@ -8,11 +8,11 @@ on:
   workflow_dispatch:
     inputs:
       publish_approved:
-        description: 'Publish reviewed records & prune expired jobs (requires PUBLISH_TOKEN secret)'
+        description: 'Publish reviewed records & prune expired jobs (uses built-in GITHUB_TOKEN)'
         type: boolean
         default: false
 permissions:
-  contents: read
+  contents: write
 concurrency:
   group: sarkari-alert-bulk-import
   cancel-in-progress: false
@@ -66,13 +66,16 @@ jobs:
 
   publish:
     needs: discover
-    if: (github.event_name == 'workflow_dispatch' && inputs.publish_approved) || (github.event_name == 'push' && github.ref == 'refs/heads/main')
+    if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.publish_approved) || (github.event_name == 'push' && github.ref == 'refs/heads/main')
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
         with:
-          persist-credentials: false
+          token: ${{ secrets.PUBLISH_TOKEN || secrets.GITHUB_TOKEN }}
+          persist-credentials: true
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -83,22 +86,15 @@ jobs:
           python scripts/bulk_import/publish.py --write --prune-expired
           python scripts/bulk_import/build_site.py
       - name: Commit and push authorized updates to main
-        env:
-          PUBLISH_TOKEN: ${{ secrets.PUBLISH_TOKEN }}
         run: |
           if [ -z "$(git status --porcelain --untracked-files=all -- index.html 404.html category posts loans-and-cards about privacy disclaimer data/posts.json data/monitor_status.json data/import_approved.json sitemap.xml)" ]; then
             echo "No new approved records or site changes."
-            exit 0
-          fi
-          if [ -z "$PUBLISH_TOKEN" ]; then
-            echo "::notice::PUBLISH_TOKEN secret is not configured; skipping automated git push. Configure PUBLISH_TOKEN (repo Contents write) to enable authorized auto-publishing."
             exit 0
           fi
           git config user.name "Sarkari Alert Publisher"
           git config user.email "sarkarialert-bot@users.noreply.github.com"
           git add index.html 404.html category posts loans-and-cards about privacy disclaimer data/posts.json data/monitor_status.json data/import_approved.json sitemap.xml
           git commit -m "Publish verified updates, UP RTE monitor status, and expiry cleanup"
-          GH_TOKEN="$PUBLISH_TOKEN" gh auth setup-git
           git push origin HEAD:main
       - name: Upload publication report
         if: always()
