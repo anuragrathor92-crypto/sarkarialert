@@ -126,9 +126,14 @@ def render_item(post, prefix, is_scheme=False, now_date=None):
     date_html = f' <span class="date-tag">Last Date: {e(date_label)}</span>' if date_label else ""
     actions = ""
     if post.get("category") in JOB_CATS and post.get("applyUrl"):
+        is_pending = post.get("applyStatus") == "VERIFICATION_PENDING"
+        apply_label = post.get("applyLabel") or (
+            "Portal (Verification Pending)" if is_pending else "Apply Online"
+        )
+        apply_cls = "pending-btn" if is_pending else "apply-btn"
         actions = (
             '<div class="job-actions">'
-            + ext_link(post["applyUrl"], "Apply Online", "apply-btn")
+            + ext_link(post["applyUrl"], apply_label, apply_cls)
             + " "
             + ext_link(post.get("notificationUrl") or post["officialUrl"], "Notification", "notice-btn")
             + "</div>"
@@ -201,6 +206,12 @@ def render_standard_post(post):
 
     action_box = ""
     if cat in JOB_CATS and post.get("applyUrl"):
+        is_pending = post.get("applyStatus") == "VERIFICATION_PENDING"
+        apply_label = post.get("applyLabel") or (
+            "Official Portal (Verification Pending)" if is_pending else "Apply Online – Official Portal"
+        )
+        apply_cls = "pending-btn" if is_pending else "apply-btn"
+        box_cls = "apply-box pending-box" if is_pending else "apply-box"
         instr = f'<p>{e(post.get("applyInstructions"))}</p>' if post.get("applyInstructions") else ""
         otr = (
             " " + ext_link(post["otrUrl"], "OTR Registration / Login", "notice-btn")
@@ -208,8 +219,8 @@ def render_standard_post(post):
             else ""
         )
         action_box = (
-            f'<div class="apply-box" data-apply-box data-deadline="{e(deadline)}">'
-            + ext_link(post["applyUrl"], "Apply Online – Official Portal", "apply-btn")
+            f'<div class="{box_cls}" data-apply-box data-deadline="{e(deadline)}">'
+            + ext_link(post["applyUrl"], apply_label, apply_cls)
             + " "
             + ext_link(post.get("notificationUrl") or post["officialUrl"], "Official Notification", "notice-btn")
             + otr
@@ -297,7 +308,12 @@ def render_standard_post(post):
 
     links = []
     if cat in JOB_CATS and post.get("applyUrl"):
-        links.append(("Apply Online – Official Portal", post["applyUrl"]))
+        tbl_label = post.get("applyLabel") or (
+            "Official Portal (Verification Pending)"
+            if post.get("applyStatus") == "VERIFICATION_PENDING"
+            else "Apply Online – Official Portal"
+        )
+        links.append((tbl_label, post["applyUrl"]))
     if post.get("actionUrl"):
         links.append((post.get("actionLabel") or "Direct Official Link", post["actionUrl"]))
     if post.get("otrUrl"):

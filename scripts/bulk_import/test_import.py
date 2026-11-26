@@ -3,6 +3,7 @@ from pathlib import Path
 from discover import article_url, official, Anchors, get_ist
 from build_site import build_all, ROOT
 from publish import validate, build
+from verify_links import check_internal_links
 
 
 class ImportTests(unittest.TestCase):
@@ -140,6 +141,14 @@ class ImportTests(unittest.TestCase):
                         parts.append(part)
                 norm = "/".join(parts)
                 self.assertTrue(norm in files or (ROOT / norm).exists(), f"Broken link {href} -> {norm} in {rel_path}")
+        # Ensure built disk HTML + sitemap have zero broken internal links
+        internal = check_internal_links(ROOT)
+        self.assertEqual(internal["broken"], [], f"Broken internal links on disk: {internal['broken']}")
+        # Ensure unverified portals are marked Verification Pending rather than Apply Online
+        for pid in ("assam-rifles-technical-tradesman-2026", "bhel-engineer-supervisor-trainee-2026", "rrc-nr-apprentice-2026"):
+            html_txt = files[f"posts/{pid}/index.html"]
+            self.assertIn("Verification Pending", html_txt)
+            self.assertIn("pending-btn", html_txt)
 
 
 if __name__ == "__main__":

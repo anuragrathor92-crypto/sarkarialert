@@ -85,7 +85,7 @@
           "type": "UPI-Linked Credit Card",
           "highlights": "Linkable to UPI apps for merchant QR payments with interest-free billing cycle (verify annual fee waiver rules).",
           "eligibility": "Indian residents meeting issuing bank KYC and credit eligibility.",
-          "officialInfoUrl": "https://www.npci.org.in/what-we-do/rupay/product-overview",
+          "officialInfoUrl": "https://www.rbi.org.in/",
           "referralUrl": "",
           "ctaLabel": "View RuPay Details"
         }

@@ -45,6 +45,8 @@ ALLOWED = {
     "www.mponline.gov.in", "mponline.gov.in", "www.rrccr.com", "rrccr.com",
     "www.rrcnr.org", "rrcnr.org", "bseh.org.in", "www.bseh.org.in",
     "www.eximbankindia.in", "eximbankindia.in", "recruitment.sjvn.co.in",
+    "nsap.dord.gov.in", "blasrecruit.in", "www.blasrecruit.in",
+    "ukpsc.net.in", "www.ukpsc.net.in", "iforms.mponline.gov.in",
 }
 UP_RTE_URL = "https://rte25.upsdc.gov.in/"
 

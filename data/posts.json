@@ -294,7 +294,7 @@
       "type": "official-notice",
       "applyUrl": "https://uppsc.up.nic.in/CandidatePages/Notifications.aspx",
       "applyInstructions": "Open the official advertisements list, select A-4/E-1/2026 and click Apply. यदि UPPSC वेबसाइट पर SSL / Certificate Error आए, तो आगे न बढ़ें और व्यक्तिगत जानकारी या भुगतान न करें। सुरक्षित कनेक्शन उपलब्ध होने पर ही आवेदन करें।",
-      "otrUrl": "https://otr.pariksha.nic.in/",
+      "otrUrl": "https://uppsc.up.nic.in/",
       "linkHealth": "Browser certificate error reported; secure access not independently confirmed."
     },
     {
@@ -340,7 +340,8 @@
       "publishedDate": "2026-11-24",
       "type": "official-notice",
       "applyUrl": "https://dsssbonline.nic.in/",
-      "applyInstructions": "Register or sign in to DSSSB OARS, select advertisement 06/2026 and your eligible post."
+      "applyInstructions": "Register or sign in to DSSSB OARS, select advertisement 06/2026 and your eligible post.",
+      "applyLabel": "Official DSSSB OARS Portal"
     },
     {
       "id": "ssc-chsl-2025-tier2-marks",
@@ -1334,7 +1335,8 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "applicationStatus": "OPEN",
-      "type": "official-notice"
+      "type": "official-notice",
+      "applyLabel": "Official RRB Apply Portal"
     },
     {
       "id": "aees-teaching-recruitment-2026",
@@ -1428,7 +1430,8 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "applicationStatus": "OPEN",
-      "type": "official-notice"
+      "type": "official-notice",
+      "applyLabel": "Official NLC India Website (Careers)"
     },
     {
       "id": "iaf-afcat-01-2027",
@@ -1441,7 +1444,7 @@
       "startDate": "2026-11-12",
       "lastDate": "2026-12-11",
       "deadline": "2026-12-11T23:30:00+05:30",
-      "notificationUrl": "https://afcat.edcil.co.in/assets/images/news/Notification%20for%20AFCAT%2001%20of%202027.pdf",
+      "notificationUrl": "https://afcat.edcil.co.in/AFCAT/",
       "applyUrl": "https://afcat.edcil.co.in/AFCAT/",
       "officialUrl": "https://indianairforce.nic.in/",
       "summary": "भारतीय वायुसेना ने AFCAT 01/2027 (जनवरी 2028 कोर्स) के तहत फ्लाइंग और ग्राउंड ड्यूटी के 284 अधिकारी पदों के लिए आवेदन आमंत्रित किए हैं।",
@@ -1676,7 +1679,8 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "applicationStatus": "OPEN",
-      "type": "official-notice"
+      "type": "official-notice",
+      "applyLabel": "Official SSC Candidate Portal"
     },
     {
       "id": "bbmb-nangal-iti-apprentice-2026",
@@ -1716,7 +1720,8 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "applicationStatus": "OPEN",
-      "type": "official-notice"
+      "type": "official-notice",
+      "applyLabel": "Official Apprenticeship Portal (NAPS)"
     },
     {
       "id": "sjvn-iti-apprentice-2026",
@@ -1942,7 +1947,8 @@
       "verified": true,
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
-      "type": "official-notice"
+      "type": "official-notice",
+      "linkHealth": "esb.mp.gov.in पुराने TLS (Legacy Renegotiation) का उपयोग करता है, जिससे कुछ ब्राउज़र/Linux चेकर में त्रुटि आ सकती है।"
     },
     {
       "id": "upessc-assistant-professor-answer-key-2026",
@@ -2367,7 +2373,8 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "applicationStatus": "OPEN",
-      "type": "official-notice"
+      "type": "official-notice",
+      "applyLabel": "Official UKSSSC Portal"
     },
     {
       "id": "bhel-engineer-supervisor-trainee-2026",
@@ -2414,7 +2421,10 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "applicationStatus": "OPEN",
-      "type": "official-notice"
+      "type": "official-notice",
+      "applyStatus": "VERIFICATION_PENDING",
+      "applyLabel": "BHEL Careers Portal (Verification Pending)",
+      "linkHealth": "careers.bhel.in कुछ स्थानीय ISP DNS पर नहीं खुल रहा है (8.8.8.8/Cloudflare DNS पर सक्रिय); उपयोग से पहले DNS जांचें।"
     },
     {
       "id": "sidbi-grade-a-b-2026",
@@ -2429,7 +2439,7 @@
       "lastDate": "2026-12-11",
       "deadline": "2026-12-11T23:59:00+05:30",
       "notificationUrl": "https://www.sidbi.in/head/uploads/career_document/SIDBI_DETAILED_WEB_ADVT_ENGLISH_211126_21_11_2026.pdf",
-      "applyUrl": "https://www.sidbi.in/index",
+      "applyUrl": "https://www.sidbi.in/en/careers/careerdetails/sidbi-invites-applications-for-recruitment-of-officers-in-grade-a-and-grade-b-general-and-specialist-stream-2026-27",
       "officialUrl": "https://www.sidbi.in/index",
       "summary": "भारतीय लघु उद्योग विकास बैंक (SIDBI) ने Grade A (63 पद) और Grade B (5 पद) अधिकारी भर्ती के लिए ऑनलाइन आवेदन आमंत्रित किए हैं।",
       "rows": [
@@ -2515,7 +2525,10 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "applicationStatus": "OPEN",
-      "type": "official-notice"
+      "type": "official-notice",
+      "applyStatus": "VERIFICATION_PENDING",
+      "applyLabel": "Assam Rifles Portal (Verification Pending)",
+      "linkHealth": "आधिकारिक पोर्टल assamrifles.gov.in स्वचालित जांच के समय धीमा/टाइमआउट रहा; आवेदन से पहले पोर्टल लोड होने की पुष्टि करें।"
     },
     {
       "id": "bihar-vidhan-sabha-jsa-attendant-2026",
@@ -2529,7 +2542,7 @@
       "lastDate": "2026-12-06",
       "deadline": "2026-12-06T23:59:00+05:30",
       "notificationUrl": "https://vidhansabha.bihar.gov.in/pdf/recruitment/2026/Advertisment/Advertisemnt%20No-01-2026%20(Junior%20Secretariat%20Assistant).pdf",
-      "applyUrl": "https://vidhansabha.bihar.gov.in/",
+      "applyUrl": "https://blasrecruit.in/",
       "officialUrl": "https://vidhansabha.bihar.gov.in/",
       "extraLinks": [
         [
@@ -2615,7 +2628,8 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "applicationStatus": "OPEN",
-      "type": "official-notice"
+      "type": "official-notice",
+      "applyLabel": "Official NATS Portal (Login & Apply)"
     },
     {
       "id": "mp-nhm-staff-nurse-2026",
@@ -2628,7 +2642,7 @@
       "lastDate": "2026-12-05",
       "deadline": "2026-12-05T23:59:00+05:30",
       "notificationUrl": "https://nhmmp.gov.in/",
-      "applyUrl": "https://www.mponline.gov.in/",
+      "applyUrl": "https://iforms.mponline.gov.in/",
       "officialUrl": "https://nhmmp.gov.in/",
       "summary": "राष्ट्रीय स्वास्थ्य मिशन मध्य प्रदेश (NHM MP) ने संविदा स्टाफ नर्स के 301 पदों हेतु 5 दिसंबर 2026 तक आवेदन आमंत्रित किए हैं।",
       "rows": [
@@ -2670,8 +2684,8 @@
       "startDate": "2026-11-25",
       "lastDate": "2026-12-24",
       "deadline": "2026-12-24T23:59:00+05:30",
-      "notificationUrl": "https://aiimsgorakhpur.edu.in/",
-      "applyUrl": "https://aiimsgorakhpur.edu.in/",
+      "notificationUrl": "https://aiimsgorakhpur.edu.in/detailed-advertisement-for-recruitment-to-the-posts-of-faculty-group-a-on-direct-recruitment-deputation-contractual-basis-in-various-departments-of-aiims-gorakhpur-2/",
+      "applyUrl": "https://aiimsgorakhpur.edu.in/detailed-advertisement-for-recruitment-to-the-posts-of-faculty-group-a-on-direct-recruitment-deputation-contractual-basis-in-various-departments-of-aiims-gorakhpur-2/",
       "officialUrl": "https://aiimsgorakhpur.edu.in/",
       "summary": "AIIMS गोरखपुर ने Professor, Additional/Associate Professor और Assistant Professor के 56 पदों पर ऑनलाइन आवेदन आमंत्रित किए हैं।",
       "rows": [
@@ -2692,7 +2706,8 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "applicationStatus": "OPEN",
-      "type": "official-notice"
+      "type": "official-notice",
+      "applyLabel": "Official AIIMS Gorakhpur Faculty Notice & Portal"
     },
     {
       "id": "aiims-bilaspur-faculty-2026",
@@ -2705,7 +2720,7 @@
       "lastDate": "2026-12-14",
       "deadline": "2026-12-14T23:59:00+05:30",
       "notificationUrl": "https://www.aiimsbilaspur.edu.in/",
-      "applyUrl": "https://www.aiimsbilaspur.edu.in/",
+      "applyUrl": "https://www.aiimsbilaspur.edu.in/recruitment",
       "officialUrl": "https://www.aiimsbilaspur.edu.in/",
       "summary": "AIIMS बिलासपुर ने 73 फैकल्टी एवं नर्सिंग लेक्चरर पदों पर ऑनलाइन आवेदन 14 दिसंबर 2026 तक आमंत्रित किए हैं (हार्ड कॉपी 21 दिसंबर तक)।",
       "rows": [
@@ -2730,7 +2745,8 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "applicationStatus": "OPEN",
-      "type": "official-notice"
+      "type": "official-notice",
+      "applyLabel": "Official AIIMS Bilaspur Recruitment Page"
     },
     {
       "id": "bel-deputy-manager-senior-engineer-2026",
@@ -2765,7 +2781,8 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "applicationStatus": "OPEN",
-      "type": "official-notice"
+      "type": "official-notice",
+      "applyLabel": "Official BEL Careers Portal"
     },
     {
       "id": "drdo-nstl-apprentice-2026",
@@ -3304,7 +3321,10 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "applicationStatus": "OPEN",
-      "type": "official-notice"
+      "type": "official-notice",
+      "applyStatus": "VERIFICATION_PENDING",
+      "applyLabel": "RRC NR Portal (Verification Pending)",
+      "linkHealth": "rrcnr.org पर Cloudflare/WAF सुरक्षा जांच (403) सक्रिय होने से स्वचालित लिंक सत्यापन लंबित है; केवल सामान्य ब्राउज़र में खोलें।"
     },
     {
       "id": "rssb-junior-engineer-2026",
@@ -3401,7 +3421,8 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "applicationStatus": "OPEN",
-      "type": "official-notice"
+      "type": "official-notice",
+      "applyLabel": "Official BSEH HTET Portal"
     },
     {
       "id": "coconut-development-board-2026",
@@ -3415,7 +3436,7 @@
       "lastDate": "2026-12-21",
       "deadline": "2026-12-21T23:59:00+05:30",
       "notificationUrl": "https://coconutboard.gov.in/index.aspx",
-      "applyUrl": "https://coconutboard.gov.in/index.aspx",
+      "applyUrl": "https://coconutboard.gov.in/Vacancy.aspx",
       "officialUrl": "https://coconutboard.gov.in/index.aspx",
       "summary": "नारियल विकास बोर्ड (CDB) ने LDC, DEO, Field Officer सहित ग्रुप A, B एवं C के 35 पदों के लिए 21 दिसंबर 2026 तक आवेदन आमंत्रित किए हैं।",
       "rows": [
@@ -3444,7 +3465,8 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "applicationStatus": "OPEN",
-      "type": "official-notice"
+      "type": "official-notice",
+      "applyLabel": "Official CDB Vacancy Page"
     },
     {
       "id": "ukpsc-lower-pcs-2026",
@@ -3457,7 +3479,7 @@
       "lastDate": "2026-11-26",
       "deadline": "2026-11-26T23:59:00+05:30",
       "notificationUrl": "https://psc.uk.gov.in/",
-      "applyUrl": "https://psc.uk.gov.in/",
+      "applyUrl": "https://ukpsc.net.in/",
       "officialUrl": "https://psc.uk.gov.in/",
       "summary": "उत्तराखंड लोक सेवा आयोग (UKPSC) लोअर पीसीएस 2026 (नायब तहसीलदार, विपणन/आबकारी निरीक्षक आदि 54 पद) के आवेदन आज 26 नवंबर 2026 को समाप्त हो रहे हैं।",
       "rows": [
@@ -3676,7 +3698,8 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "applicationStatus": "OPEN",
-      "type": "official-notice"
+      "type": "official-notice",
+      "applyLabel": "Official UMANG Portal (Apply)"
     },
     {
       "id": "upsssc-junior-analyst-food-result-2026",
@@ -3742,6 +3765,55 @@
       "verified": true,
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
+      "type": "official-notice"
+    },
+    {
+      "id": "nlc-india-executive-11-2026",
+      "title": "NLC India Executive Recruitment 2026 (Advt. 11/2026) – 145 Posts",
+      "category": "latest-jobs",
+      "department": "NLC India",
+      "qualification": "Graduate / Engineering / PG / LLB / MBA",
+      "noticeId": "NLCIL-11/2026",
+      "vacancies": 145,
+      "startDate": "2026-11-20",
+      "lastDate": "2026-12-19",
+      "deadline": "2026-12-19T17:00:00+05:30",
+      "notificationUrl": "https://www.nlcindia.in/",
+      "applyUrl": "https://www.nlcindia.in/",
+      "officialUrl": "https://www.nlcindia.in/",
+      "applyLabel": "Official NLC India Website (Careers)",
+      "summary": "एनएलसी इंडिया लिमिटेड (NLCIL) ने विज्ञापन संख्या 11/2026 के तहत इंजीनियरिंग, वैज्ञानिक, HR, विधि और सुरक्षा संवर्ग (E-1 से E-7) के 145 कार्यकारी पदों पर 19 दिसंबर 2026 तक ऑनलाइन आवेदन आमंत्रित किए हैं।",
+      "applyInstructions": "Visit www.nlcindia.in -> Careers / Current Openings -> Advt. No. 11/2026 to register before 19 December 2026 (5:00 PM).",
+      "rows": [
+        [
+          "Advertisement No.",
+          "11/2026 (Executive Grades E-1 to E-7)"
+        ],
+        [
+          "Total vacancies",
+          "145 Executive Posts (Engg / Scientific / HR / Legal / Security)"
+        ],
+        [
+          "Application window",
+          "20 November – 19 December 2026 (Registration 5:00 PM; Fee 11:45 PM)"
+        ],
+        [
+          "Application fee",
+          "UR/OBC(NCL)/EWS: ₹854; SC/ST/PwBD/ESM: ₹354"
+        ],
+        [
+          "Age limit (as on 01 Nov 2026)",
+          "Post-wise 30 – 52 years (relaxation as per GoI rules)"
+        ],
+        [
+          "Eligibility",
+          "Relevant Degree (B.E./B.Tech/M.Sc./LLB/MBA) with post-qualification executive experience"
+        ]
+      ],
+      "verified": true,
+      "verifiedOn": "2026-11-26",
+      "publishedDate": "2026-11-26",
+      "applicationStatus": "OPEN",
       "type": "official-notice"
     }
   ]
