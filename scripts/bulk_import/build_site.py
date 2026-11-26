@@ -535,7 +535,7 @@ def render_standard_post(
 ):
     now = now or dt.datetime.now(get_ist())
     cat = post["category"]
-    cat_en = category_label(cat)
+    cat_en = CAT_MAP[cat][0]
     title = post["title"]
     dept = post.get("department", "")
     verified_on = post.get("verifiedOn", "2026-11-26")
@@ -699,7 +699,7 @@ def render_standard_post(
 
     body = (
         '<article class="article detail">'
-        f'<a href="../../">Home</a> › <a href="../../category/{e(cat)}/">{cat_en}</a>'
+        f'<a href="../../">Home</a> › <a href="../../category/{e(cat)}/">{category_label(cat)}</a>'
         f"<h1>{e(title)}</h1>"
         + (f'<p lang="hi" class="hindi"><strong>{e(post["titleHi"])}</strong></p>' if post.get("titleHi") and post["titleHi"] != title else "")
         + f"{action_box}"
