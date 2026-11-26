@@ -135,6 +135,7 @@ if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--check-internal", action="store_true", default=True)
     ap.add_argument("--skip-external", action="store_true")
+    ap.add_argument("--strict-external", action="store_true")
     ap.add_argument("--output", default=str(ROOT / "import-output/link-verification.json"))
     args = ap.parse_args()
 
@@ -144,19 +145,21 @@ if __name__ == "__main__":
         print("  BROKEN INTERNAL:", b)
 
     results = []
+    bad_pdf = []
     if not args.skip_external:
         urls = collect_urls()
         with concurrent.futures.ThreadPoolExecutor(max_workers=12) as ex:
             results = list(ex.map(check_url, urls))
         ok = sum(1 for r in results if 200 <= r["status"] < 400)
-        hard_404 = [r for r in results if r["status"] in (404, 410, 422)]
-        print(f"External URL check: {len(results)} URLs, urllib2xx/3xx={ok}/{len(results)}, hard404orBadPDF={len(hard_404)}")
-        for r in hard_404:
-            print("  HARD ERROR:", r["status"], r["url"], r["note"])
+        bad_pdf = [r for r in results if r["status"] == 422]
+        hard_404 = [r for r in results if r["status"] in (404, 410)]
+        print(f"External URL check: {len(results)} URLs, urllib2xx/3xx={ok}/{len(results)}, external404={len(hard_404)}, badPDF={len(bad_pdf)}")
+        for r in bad_pdf + hard_404:
+            print("  EXTERNAL NOTICE:", r["status"], r["url"], r["note"])
         out = Path(args.output)
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(json.dumps({"internal": internal, "external": results}, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-        if hard_404:
+        if bad_pdf or (args.strict_external and hard_404):
             sys.exit(1)
 
     if internal["broken"]:

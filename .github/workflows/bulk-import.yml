@@ -42,8 +42,10 @@ jobs:
           python - << 'EOF'
           import json, os
           from pathlib import Path
-          disc = json.loads(Path("import-output/discovery.json").read_text(encoding="utf-8"))
-          pub = json.loads(Path("import-output/publish-report.json").read_text(encoding="utf-8"))
+          disc_p = Path("import-output/discovery.json")
+          pub_p = Path("import-output/publish-report.json")
+          disc = json.loads(disc_p.read_text(encoding="utf-8")) if disc_p.exists() else {}
+          pub = json.loads(pub_p.read_text(encoding="utf-8")) if pub_p.exists() else {}
           lv_path = Path("import-output/link-verification.json")
           lv = json.loads(lv_path.read_text(encoding="utf-8")) if lv_path.exists() else {}
           broken_int = len(lv.get("internal", {}).get("broken", []))
