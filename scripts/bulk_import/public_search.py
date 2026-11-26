@@ -2,10 +2,11 @@
 import json
 import re
 
-FIELDS = ("title", "titleHi", "category", "department", "qualification",
+FIELDS = ("title", "titleHi", "category", "department", "qualification", "eligibilityHi",
           "noticeId", "publishedDate", "verifiedOn", "startDate", "lastDate",
           "deadline", "vacancies", "summary", "eligibility", "benefit",
           "requiredDocuments", "state", "stateOrUt", "scope", "theme",
+          "locationLocality", "locationRegion", "applyLinkType",
           "extraCategory", "applicationStatus", "applyStatus", "linkStatus",
           "applyLabel", "applyInstructions", "rows", "officialUrl",
           "notificationUrl", "sourceUrl")

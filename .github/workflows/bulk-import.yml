@@ -34,8 +34,14 @@ jobs:
         run: python -m unittest discover -s scripts/bulk_import -p 'test_*.py'
       - name: Run permanent broken-link & PDF checker
         run: python scripts/bulk_import/verify_links.py --check-internal --output import-output/link-verification.json
+      - name: Run automated technical SEO & JobPosting health audit
+        run: |
+          python scripts/bulk_import/seo_audit.py --strict --output import-output/seo-report.json
+          python scripts/bulk_import/google_indexing.py --output import-output/indexing-queue.json
       - name: Discover candidate URLs & monitor UP RTE 2027-28
-        run: python scripts/bulk_import/discover.py --inspect 20 --write-monitor
+        run: |
+          python scripts/bulk_import/discover.py --inspect 20 --write-monitor
+          python scripts/bulk_import/auto_verify.py
       - name: Dry-run expiry & approved queue check
         run: python scripts/bulk_import/publish.py --prune-expired
       - name: Write workflow summary
@@ -46,8 +52,12 @@ jobs:
           from pathlib import Path
           disc_p = Path("import-output/discovery.json")
           pub_p = Path("import-output/publish-report.json")
+          seo_p = Path("import-output/seo-report.json")
+          idx_p = Path("import-output/indexing-queue.json")
           disc = json.loads(disc_p.read_text(encoding="utf-8")) if disc_p.exists() else {}
           pub = json.loads(pub_p.read_text(encoding="utf-8")) if pub_p.exists() else {}
+          seo = json.loads(seo_p.read_text(encoding="utf-8")) if seo_p.exists() else {}
+          idx = json.loads(idx_p.read_text(encoding="utf-8")) if idx_p.exists() else {}
           lv_path = Path("import-output/link-verification.json")
           lv = json.loads(lv_path.read_text(encoding="utf-8")) if lv_path.exists() else {}
           broken_int = len(lv.get("internal", {}).get("broken", []))
@@ -56,14 +66,16 @@ jobs:
           pending_cnt = len(lv.get("pendingRecheck", []))
           rte = disc.get("upRteMonitor", {})
           lines = [
-              "## Sarkari Alert 2-Hour Discovery & Monitor Report",
+              "## Sarkari Alert 2-Hour Discovery, SEO & Monitor Report",
               f"- Checked At: `{disc.get('checkedAt')}`",
               f"- Discovered Candidate URLs: `{len(disc.get('candidates', []))}`",
               f"- Source Errors: `{len(disc.get('errors', []))}`",
               f"- Internal Links Checked: `{lv.get('internal', {}).get('linksChecked', 0)}` (Broken: `{broken_int}`)",
               f"- External URLs Audited: `{len(ext_list)}` (404/Bad PDF: `{hard_404}`)",
               f"- Verification Pending Links Rechecked: `{pending_cnt}`",
-              f"- Expired Active Posts Detected: `{len(disc.get('expiredActivePosts', []))}`",
+              f"- SEO Health Audit Passed: `{seo.get('passed')}` (`{seo.get('pagesAudited', 0)}` pages, `{seo.get('eligibleJobPostingPages', 0)}` valid JobPostings, `{seo.get('expiredOrIneligibleJobPostings', 0)}` bad JobPostings, `{len(seo.get('errors', []))}` errors)",
+              f"- SEO Uniqueness & Discovery: `dupTitles={seo.get('duplicateTitlesCount', 0)}`, `dupDescs={seo.get('duplicateDescriptionsCount', 0)}`, `sitemap={seo.get('sitemapUrls', 0)}`, `rssItems={seo.get('rssFeedItems', 0)}`",
+              f"- Indexing API Queue: `eligible={idx.get('eligibleJobPostingCount', 0)}`, `update={idx.get('updatedQueued', 0)}`, `delete={idx.get('deletedQueued', 0)}`, `status={(idx.get('googleIndexingApi') or {}).get('status')}`",
               f"- UP RTE 2027-28 Monitor: `{rte.get('status')}` (HTTP `{rte.get('httpStatus')}`)",
               f"- Pending Publish Changes: `{len(pub.get('changedFiles', []))}`",
           ]
@@ -98,24 +110,28 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Build reviewed changes & prune expired jobs
+      - name: Build reviewed changes, prune expired jobs & verify SEO
+        env:
+          BING_INDEXNOW_KEY: ${{ secrets.BING_INDEXNOW_KEY }}
         run: |
           python -m unittest discover -s scripts/bulk_import -p 'test_*.py'
           python scripts/bulk_import/discover.py --inspect 10 --write-monitor || true
+          python scripts/bulk_import/auto_verify.py --write-approved || true
           python scripts/bulk_import/publish.py --write --prune-expired
           python scripts/bulk_import/build_site.py
           python scripts/bulk_import/verify_links.py --check-internal --skip-external
+          python scripts/bulk_import/seo_audit.py --strict --output import-output/seo-report.json
       - name: Commit and push authorized updates to main
         run: |
-          if [ -z "$(git status --porcelain --untracked-files=all -- index.html 404.html robots.txt sitemap.xml category posts loans-and-cards about privacy disclaimer data/posts.json data/monitor_status.json data/import_approved.json data/public-search.json)" ]; then
+          if [ -z "$(git status --porcelain --untracked-files=all -- index.html 404.html robots.txt sitemap.xml feed.xml sitemap category posts loans-and-cards about privacy disclaimer data/posts.json data/monitor_status.json data/import_approved.json data/seo_state.json data/public-search.json)" ]; then
             echo "No new approved records or site changes."
             exit 0
           fi
           git config user.name "Sarkari Alert Publisher"
           git config user.email "sarkarialert-bot@users.noreply.github.com"
-          git add index.html 404.html robots.txt sitemap.xml category posts loans-and-cards about privacy disclaimer data/posts.json data/monitor_status.json data/import_approved.json data/public-search.json
+          git add index.html 404.html robots.txt sitemap.xml feed.xml sitemap category posts loans-and-cards about privacy disclaimer data/posts.json data/monitor_status.json data/import_approved.json data/seo_state.json data/public-search.json
           if [ -f ads.txt ]; then git add ads.txt; fi
-          git commit -m "Publish verified updates, UP RTE monitor status, and expiry cleanup"
+          git commit -m "Publish verified updates, SEO state, UP RTE monitor, and expiry cleanup"
           git pull --rebase origin main
           git push origin HEAD:main
       - name: Upload publication report
@@ -136,7 +152,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     permissions:
-      contents: read
+      contents: write
       pages: write
       id-token: write
     environment:
@@ -146,25 +162,34 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: main
+          token: ${{ secrets.GITHUB_TOKEN }}
+          persist-credentials: true
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Build & verify static site for GitHub Pages
+      - name: Build, verify SEO & prepare static site for GitHub Pages
+        env:
+          BING_INDEXNOW_KEY: ${{ secrets.BING_INDEXNOW_KEY }}
         run: |
           python scripts/bulk_import/build_site.py
           python scripts/bulk_import/verify_links.py --check-internal --skip-external
+          python scripts/bulk_import/seo_audit.py --strict --output import-output/seo-report.json
           python - << 'EOF'
-          import shutil
+          import os, re, shutil
           from pathlib import Path
           out = Path("_site")
           if out.exists():
               shutil.rmtree(out)
           out.mkdir()
-          for item in ("index.html", "404.html", "robots.txt", "sitemap.xml", "ads.txt"):
+          items = ["index.html", "404.html", "robots.txt", "sitemap.xml", "feed.xml", "ads.txt"]
+          inow_key = os.environ.get("BING_INDEXNOW_KEY", "").strip()
+          if re.fullmatch(r"[A-Za-z0-9-]{8,128}", inow_key):
+              items.append(f"{inow_key}.txt")
+          for item in items:
               p = Path(item)
               if p.exists():
                   shutil.copy2(p, out / item)
-          for d in ("assets", "category", "posts", "loans-and-cards", "about", "privacy", "disclaimer", "data"):
+          for d in ("assets", "category", "posts", "sitemap", "loans-and-cards", "about", "privacy", "disclaimer", "data"):
               p = Path(d)
               if p.exists():
                   shutil.copytree(p, out / d)
@@ -176,3 +201,55 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+      - name: Post-deploy SEO report & Google Indexing API / IndexNow sync
+        if: always() && steps.deployment.outcome == 'success'
+        env:
+          GOOGLE_INDEXING_SA_JSON: ${{ secrets.GOOGLE_INDEXING_SA_JSON }}
+          BING_INDEXNOW_KEY: ${{ secrets.BING_INDEXNOW_KEY }}
+        run: |
+          python scripts/bulk_import/google_indexing.py --submit --output import-output/indexing-queue.json
+          if [ -n "$(git status --porcelain -- data/indexing_state.json)" ]; then
+            git config user.name "Sarkari Alert Publisher"
+            git config user.email "sarkarialert-bot@users.noreply.github.com"
+            git add data/indexing_state.json
+            git commit -m "Update post-deploy Indexing API state [skip ci]"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+          python - << 'EOF'
+          import json, os
+          from pathlib import Path
+          seo = json.loads(Path("import-output/seo-report.json").read_text(encoding="utf-8"))
+          idx = json.loads(Path("import-output/indexing-queue.json").read_text(encoding="utf-8"))
+          g = idx.get("googleIndexingApi", {})
+          b = idx.get("bingIndexNow", {})
+          lines = [
+              "## Post-Deployment SEO & Organic Indexing Report",
+              f"- Live URL: `https://anuragrathor92-crypto.github.io/sarkarialert/`",
+              f"- Pages Audited: `{seo.get('pagesAudited')}` (`indexable={seo.get('indexablePages')}`)",
+              f"- Duplicate Titles / Meta Descriptions: `{seo.get('duplicateTitlesCount')}` / `{seo.get('duplicateDescriptionsCount')}`",
+              f"- Valid Eligible JobPosting Pages: `{seo.get('eligibleJobPostingPages')}` (Expired/Ineligible JobPostings: `{seo.get('expiredOrIneligibleJobPostings')}`)",
+              f"- Sitemap URLs: `{seo.get('sitemapUrls')}` (Distinct lastmod dates: `{len(seo.get('sitemapDistinctLastmods', []))}`)",
+              f"- RSS Feed Items (`feed.xml`): `{seo.get('rssFeedItems')}`",
+              f"- CSS / OG Card Size: `{seo.get('cssBytes')} B` / `{seo.get('ogImageBytes')} B`",
+              f"- Integrations: `{json.dumps(seo.get('integrations', {}))}`",
+              f"- Google Indexing API (`URL_UPDATED={idx.get('updatedQueued')}`, `URL_DELETED={idx.get('deletedQueued')}`): `{g.get('status')}` (submitted=`{g.get('submitted')}`, failed=`{g.get('failed')}`)",
+              f"- Bing IndexNow: `{b.get('status')}` (submitted=`{b.get('submitted')}`)",
+          ]
+          summary_path = os.environ.get("GITHUB_STEP_SUMMARY")
+          if summary_path:
+              with open(summary_path, "a", encoding="utf-8") as fh:
+                  fh.write("\n".join(lines) + "\n")
+          else:
+              print("\n".join(lines))
+          EOF
+      - name: Upload post-deploy SEO & Indexing report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: post-deploy-seo-report
+          path: |
+            import-output/seo-report.json
+            import-output/indexing-queue.json
+          if-no-files-found: warn
+          retention-days: 30

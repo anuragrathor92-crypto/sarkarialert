@@ -61,8 +61,10 @@ ALLOWED = {
     "nplindia.in", "www.nplindia.in",
     "ukssscrecruitment.in", "cdn.digialm.com",
     "goashipyard.in", "www.goashipyard.in",
+    "recruitment.icmr.org.in", "apply.upessc.org",
 }
 UP_RTE_URL = "https://rte25.upsdc.gov.in/"
+UP_RTE_FALLBACK_URL = "https://basiceducation.up.gov.in/hi"
 
 
 def get_ist():
@@ -135,13 +137,40 @@ def article_url(href, base=BASE):
     return BASE + path
 
 
+def _fetch_strict_ipv4(url, timeout=25):
+    """Fetch HTTPS URL using strict certificate validation, preferring IPv4 to avoid IPv6 blackholes."""
+    import socket
+    orig_getaddrinfo = socket.getaddrinfo
+
+    def ipv4_only(host, port, family=0, type=0, proto=0, flags=0):
+        res = orig_getaddrinfo(host, port, socket.AF_INET, type, proto, flags)
+        return res or orig_getaddrinfo(host, port, family, type, proto, flags)
+
+    ctx = ssl.create_default_context()
+    req = urllib.request.Request(
+        url,
+        headers={
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/124.0.0.0 Safari/537.36",
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+            "Connection": "close",
+        },
+    )
+    socket.getaddrinfo = ipv4_only
+    try:
+        with urllib.request.urlopen(req, timeout=timeout, context=ctx) as r:
+            return r.status, r.read(350_000).decode(r.headers.get_content_charset() or "utf-8", errors="replace")
+    finally:
+        socket.getaddrinfo = orig_getaddrinfo
+
+
 def check_up_rte_monitor():
-    """Check official UP RTE portal for 2027-28 academic session notification updates."""
+    """Check official UP RTE portal (and official parent ministry portal fallback) with strict SSL."""
     now_iso = dt.datetime.now(get_ist()).isoformat(timespec="seconds")
     status = {
         "id": "up-rte-2027-28",
         "name": "UP RTE 25% Private School Admission 2027-28",
         "url": UP_RTE_URL,
+        "fallbackUrl": UP_RTE_FALLBACK_URL,
         "checkedAt": now_iso,
         "httpStatus": 0,
         "session2027Detected": False,
@@ -149,24 +178,78 @@ def check_up_rte_monitor():
         "summary": "Monitor check pending.",
         "summaryHi": "आधिकारिक पोर्टल की जाँच जारी है।",
     }
-    try:
-        req = urllib.request.Request(UP_RTE_URL, headers={"User-Agent": "Mozilla/5.0 (compatible; SarkariAlertMonitor/1.0)"})
-        with urllib.request.urlopen(req, timeout=15) as r:
-            body = r.read(300_000).decode(r.headers.get_content_charset() or "utf-8", errors="replace")
-            status["httpStatus"] = r.status
+    errors = []
+    for target_u, is_fallback in ((UP_RTE_URL, False), (UP_RTE_URL, False), (UP_RTE_FALLBACK_URL, True)):
+        try:
+            st, body = _fetch_strict_ipv4(target_u, timeout=25)
+            status["httpStatus"] = st
             detected = bool(re.search(r"2027\s*[-–]\s*(?:20)?28", body))
             status["session2027Detected"] = detected
+            if is_fallback:
+                status["fallbackUsed"] = True
             if detected:
                 status["status"] = "POSSIBLE_2027_28_UPDATE"
-                status["summary"] = f"2027-28 session text detected on {UP_RTE_URL}; manual verification required."
-                status["summaryHi"] = "पोर्टल पर 2027–28 सत्र का उल्लेख मिला है; अंतिम तिथि की पुष्टि हेतु समीक्षा करें।"
+                status["summary"] = f"2027-28 session text detected on {target_u} (HTTP {st}); review notification details."
+                status["summaryHi"] = "आधिकारिक पोर्टल पर 2027–28 सत्र का उल्लेख मिला है; समय-सारणी की समीक्षा करें।"
             else:
                 status["status"] = "NOTIFICATION_AWAITED"
-                status["summary"] = f"Official portal {UP_RTE_URL} is online (HTTP {r.status}). Session 2027-28 notification still awaited."
-                status["summaryHi"] = "आधिकारिक पोर्टल rte25.upsdc.gov.in सक्रिय है। सत्र 2027–28 की नई आधिकारिक समय-सारणी अभी प्रतीक्षित है; हर 2 घंटे में स्वचालित जाँच जारी है।"
-    except Exception as e:
-        status["summary"] = f"Monitor fetch error: {e}"
+                note = "via official parent portal basiceducation.up.gov.in" if is_fallback else "direct portal online"
+                status["summary"] = f"Official UP RTE check OK (HTTP {st}, {note}). Session 2027-28 notification still awaited."
+                status["summaryHi"] = "आधिकारिक यूपी आरटीई / बेसिक शिक्षा पोर्टल सक्रिय है। सत्र 2027–28 की समय-सारणी अभी प्रतीक्षित है; हर 2 घंटे में स्वचालित जाँच जारी है।"
+            return status
+        except Exception as ex:
+            errors.append(f"{target_u}: {ex}")
+    status["summary"] = "Monitor fetch error: " + " | ".join(errors[-2:])
     return status
+
+
+def discover_official_icmr():
+    """Parse structured open recruitment advertisements directly from https://www.icmr.gov.in/employment-opportunities."""
+    url = "https://www.icmr.gov.in/employment-opportunities"
+    items = []
+    try:
+        _, html_txt = _fetch_strict_ipv4(url, timeout=20)
+    except Exception:
+        return items
+
+    for m in re.finditer(r"<tr\b[^>]*>(.*?)</tr>", html_txt, re.S | re.I):
+        row_html = m.group(1)
+        cols = [
+            re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", c)).strip()
+            for c in re.findall(r"<td\b[^>]*>(.*?)</td>", row_html, re.S | re.I)
+        ]
+        if len(cols) < 6:
+            continue
+        raw_title, institute, adv_status, post_nature, last_date_raw = cols[1], cols[2], cols[3], cols[4], cols[5]
+        if adv_status.lower() != "open":
+            continue
+        pdfs = re.findall(r'href=["\']([^"\']+\.pdf)["\']', row_html, re.I)
+        if not pdfs:
+            continue
+        en_pdf = next((u for u in pdfs if "hindi" not in u.lower()), pdfs[0])
+        hi_pdf = next((u for u in pdfs if "hindi" in u.lower()), "")
+        portal_match = re.search(r"https://recruitment\.icmr\.org\.in", row_html)
+        apply_url = portal_match.group(0) + "/" if portal_match else url
+        nid_m = re.search(r"Advertisement\s+No\.?\s*:?\s*([^\s(]+)|Advt\.?\s*No\.?\s*:?\s*([^\s)]+)", raw_title, re.I)
+        notice_id = (nid_m.group(1) or nid_m.group(2)).rstrip(".,:;") if nid_m else re.sub(r"\W+", "-", raw_title[:24]).strip("-")
+        clean_t = re.sub(r"\(The online application portal.*?$", "", raw_title).strip()
+        clean_t = re.sub(r"Last Date:.*$", "", clean_t).strip()
+        items.append({
+            "source": "icmr.gov.in",
+            "title": f"{clean_t} ({institute})",
+            "department": f"ICMR ({institute})" if institute and "ICMR" not in institute else (institute or "ICMR"),
+            "locationHint": f"{clean_t} {institute}",
+            "noticeId": notice_id,
+            "postNature": post_nature,
+            "lastDateRaw": last_date_raw,
+            "notificationUrl": en_pdf,
+            "hindiNotificationUrl": hi_pdf,
+            "applyUrl": apply_url,
+            "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+            "officialUrl": url,
+            "category": "latest-jobs",
+        })
+    return items
 
 
 def check_expired_posts():
@@ -241,10 +324,12 @@ def discover(limit):
     imported = {p.get("discoveryUrl") for p in existing if p.get("discoveryUrl")}
     rte_status = check_up_rte_monitor()
     expired = check_expired_posts()
+    official_discoveries = discover_official_icmr()
     return {
         "checkedAt": dt.datetime.now(dt.timezone.utc).isoformat(),
         "source": BASE,
         "candidates": [r for u, r in found.items() if u not in imported],
+        "officialDiscoveries": official_discoveries,
         "errors": errors,
         "sourcePages": PAGES,
         "publishedCount": len(existing),

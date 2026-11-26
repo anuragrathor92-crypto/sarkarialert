@@ -12,12 +12,29 @@
   ];
   const quals = [
     [/12\s*(?:वीं|वी|th)|10\s*\+\s*2|इंटरमीडिएट|\bintermediate\b|\b12th\b|बारहवीं|बारहवी/gu,/12\s*(?:वीं|वी|th)|10\s*\+\s*2|इंटरमीडिएट|\bintermediate\b|बारहवीं|\bhsc\b|higher secondary/u],
-    [/10\s*(?:वीं|वी|th)|दसवीं|मैट्रिक|\bsslc\b|\bmatric\b/gu,/10\s*(?:वीं|वी|th)|दसवीं|मैट्रिक|\bsslc\b|\bmatric\b/u],
-    [/\biti\b|आईटीआई/gu,/\biti\b|आईटीआई/u],
+    [/10\s*(?:वीं|वी|th)|दसवीं|मैट्रिक|हाई\s*स्कूल|हाईस्कूल|\bhigh\s*school\b|\bclass\s*10\b|\bsslc\b|\bmatric\b/gu,/(?:10\s*(?:वीं|वी|th)|दसवीं|मैट्रिक|हाई\s*स्कूल|हाईस्कूल|\bhigh\s*school\b|\bclass\s*10\b|\bsslc\b|\bmatric\b)/u],
+    [/\biti\b|आईटीआई/gu,/\biti\b|आईटीआई|10th-iti/u],
     [/\bdiploma\b|डिप्लोमा/gu,/\bdiploma\b|डिप्लोमा/u],
     [/\bgraduate\b|\bgraduation\b|स्नातक/gu,/\bgraduate\b|\bgraduation\b|स्नातक|\bb\.?a\b|\bb\.?sc\b|\bb\.?com\b|\bb\.?tech\b|\bb\.?e\b|\bdegree\b/u]
   ];
-  const synonyms = {'किसान':['farmer','kisan','किसान','कृषि','agriculture'],'रेलवे':['railway','rrb','rrc','रेलवे'],'पुलिस':['police','पुलिस'],'आंगनवाड़ी':['anganwadi','icds','आंगनवाड़ी','आंगनवाडी'],'यूपी':['uttar pradesh','upsssc','uppsc','उत्तर प्रदेश','up'],'एसएससी':['ssc'],'बैंक':['bank','sbi','ibps','बैंक'],'यूपीएससी':['upsc']};
+  const synonymGroups = [
+    ['farmer', 'kisan', 'किसान', 'कृषि', 'agriculture'],
+    ['railway', 'rrb', 'rrc', 'rail', 'रेलवे'],
+    ['police', 'constable', 'पुलिस', 'csbc'],
+    ['anganwadi', 'icds', 'आंगनवाड़ी', 'आंगनवाडी'],
+    ['uttar pradesh', 'upsssc', 'uppsc', 'upessc', 'उत्तर प्रदेश', 'up', 'यूपी'],
+    ['ssc', 'एसएससी'],
+    ['bank', 'sbi', 'ibps', 'sidbi', 'exim', 'बैंक'],
+    ['upsc', 'यूपीएससी'],
+    ['apprentice', 'अप्रेंटिस'],
+    ['scholarship', 'छात्रवृत्ति', 'nsp']
+  ];
+  const synonyms = {};
+  for (const grp of synonymGroups) {
+    for (const term of grp) {
+      synonyms[term] = grp;
+    }
+  }
   function current(r, now) {
     if (r.applicationStatus === 'EXPIRED') return false;
     const end=/^\d{4}-\d{2}-\d{2}T/.test(r.deadline||'')?Date.parse(r.deadline):NaN;
@@ -41,10 +58,13 @@
     const category=cat||implicit;
     return records.filter(r=>{
       if(!r.verified || !current(r,now))return false;
-      if(category==='jobs'?!jobs.has(r.category):category && r.category!==category)return false;
+      if(category==='jobs'?!jobs.has(r.category) && r.extraCategory!=='10th-iti':category && r.category!==category && r.extraCategory!==category)return false;
       if(status==='open'&&!openWindow(r,now))return false;
-      if(wanted.length&&!wanted.every(rx=>rx.test(norm(r.qualification))))return false;
-      const hay=norm([r.title,r.titleHi,r.department,r.qualification,r.noticeId,r.summary,r.eligibility,r.benefit,r.state,r.stateOrUt,r.theme,r.rows?.flat().join(' ')].filter(Boolean).join(' '));
+      if(wanted.length){
+        const qHay=norm([r.qualification,r.extraCategory,r.category==='10th-iti'?'10th-iti':''].filter(Boolean).join(' '));
+        if(!wanted.every(rx=>rx.test(qHay)))return false;
+      }
+      const hay=norm([r.title,r.titleHi,r.department,r.qualification,r.eligibilityHi,r.noticeId,r.summary,r.eligibility,r.benefit,r.locationLocality,r.locationRegion,r.state,r.stateOrUt,r.theme,r.rows?.flat().join(' ')].filter(Boolean).join(' '));
       return words.every(w=>(synonyms[w]||[w]).some(v=>hay.includes(v)));
     });
   }

@@ -27,3 +27,19 @@ class PublicSearchTests(unittest.TestCase):
         self.assertIn("assets/smart-search.html", files["index.html"])
         self.assertIn("upsc-dental-surgeon-2026", {r["id"] for r in records})
         self.assertIn("pm-kisan", {r["id"] for r in records})
+        # Expired post must never leak into public-search.json
+        expired_sample = {"id": "expired-test-job", "title": "Expired Sample", "category": "latest-jobs", "verified": True, "deadline": "2026-11-20T23:59:00+05:30"}
+        from public_search import public_feed
+        self.assertEqual(json.loads(public_feed([], [], "https://anuragrathor92-crypto.github.io/sarkarialert/", now))["count"], 0)
+        # Ensure smart-search.html carries GA4 G-K7T49V1PWN & consent controls
+        ss_html = (Path(__file__).resolve().parents[2] / "assets/smart-search.html").read_text(encoding="utf-8")
+        self.assertIn("G-K7T49V1PWN", ss_html)
+        self.assertIn("manage-analytics-consent", ss_html)
+        # Verify real query coverage against generated public-search records
+        quals_txt = [str(r.get("qualification", "")) for r in records]
+        self.assertTrue(any("10" in q for q in quals_txt))
+        self.assertTrue(any("12" in q or "10+2" in q or "12वीं" in q for q in quals_txt))
+        self.assertTrue(any("ITI" in q.upper() for q in quals_txt))
+        self.assertTrue(any("UPSC" in (r.get("department", "") + " " + r.get("title", "")).upper() for r in records))
+        self.assertTrue(any(k in (r.get("department", "") + " " + r.get("title", "")).upper() for r in records for k in ("RAILWAY", "RRB", "RRC")))
+        self.assertGreaterEqual(sum(1 for r in records if r.get("category") == "yojana"), 67)

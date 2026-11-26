@@ -30,7 +30,7 @@ def validate(p, now):
             raise ValueError("unapproved official domain: " + key)
     if not isinstance(p.get("rows"), list) or not p["rows"] or any(not isinstance(r, list) or len(r) != 2 for r in p["rows"]):
         raise ValueError("reviewed facts rows required")
-    if p.get("discoveryUrl") and article_url(p["discoveryUrl"]) != p["discoveryUrl"]:
+    if p.get("discoveryUrl") and not official(p["discoveryUrl"]) and article_url(p["discoveryUrl"]) != p["discoveryUrl"]:
         raise ValueError("invalid discovery URL")
     if p["category"] == "yojana":
         if p.get("applyUrl") or p.get("actionUrl"):
