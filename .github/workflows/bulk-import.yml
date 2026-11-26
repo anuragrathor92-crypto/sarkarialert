@@ -19,7 +19,7 @@ permissions:
   pages: write
   id-token: write
 concurrency:
-  group: sarkari-alert-bulk-import
+  group: ${{ github.event_name == 'pull_request' && format('sarkari-alert-bulk-import-pr-{0}', github.event.pull_request.number) || 'sarkari-alert-bulk-import' }}
   cancel-in-progress: false
 jobs:
   discover:
