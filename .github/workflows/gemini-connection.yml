@@ -1,0 +1,35 @@
+name: Gemini API Connection Check
+on:
+  pull_request:
+    branches: [main]
+    paths: ['scripts/gemini_connection.py', '.github/workflows/gemini-connection.yml']
+  push:
+    branches: [main]
+    paths: ['scripts/gemini_connection.py', '.github/workflows/gemini-connection.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/gemini_connection.py --self-test
+  connect:
+    needs: test
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check configured keys using models.list only
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_API_KEY_1: ${{ secrets.GEMINI_API_KEY_1 }}
+          GEMINI_API_KEY_2: ${{ secrets.GEMINI_API_KEY_2 }}
+          GEMINI_API_KEY_3: ${{ secrets.GEMINI_API_KEY_3 }}
+          GEMINI_API_KEY1: ${{ secrets.GEMINI_API_KEY1 }}
+          GEMINI_API_KEY2: ${{ secrets.GEMINI_API_KEY2 }}
+          GEMINI_API_KEY3: ${{ secrets.GEMINI_API_KEY3 }}
+        run: python3 scripts/gemini_connection.py
