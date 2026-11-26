@@ -60,6 +60,7 @@ ALLOWED = {
     "nsic.co.in", "www.nsic.co.in", "career.nsic.co.in",
     "nplindia.in", "www.nplindia.in",
     "ukssscrecruitment.in", "cdn.digialm.com",
+    "goashipyard.in", "www.goashipyard.in",
 }
 UP_RTE_URL = "https://rte25.upsdc.gov.in/"
 
