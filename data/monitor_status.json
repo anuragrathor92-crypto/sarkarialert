@@ -1,16 +1,16 @@
 {
-  "lastCheckedAt": "2026-11-26T13:27:21+05:30",
+  "lastCheckedAt": "2026-11-26T14:26:12+05:30",
   "monitors": [
     {
       "id": "up-rte-2027-28",
       "name": "UP RTE 25% Private School Admission 2027-28",
       "url": "https://rte25.upsdc.gov.in/",
-      "checkedAt": "2026-11-26T13:27:21+05:30",
-      "httpStatus": 0,
+      "checkedAt": "2026-11-26T14:26:12+05:30",
+      "httpStatus": 200,
       "session2027Detected": false,
-      "status": "CHECK_ERROR",
-      "summary": "Monitor fetch error: <urlopen error _ssl.c:994: The handshake operation timed out>",
-      "summaryHi": "आधिकारिक पोर्टल की जाँच जारी है।"
+      "status": "NOTIFICATION_AWAITED",
+      "summary": "Official portal https://rte25.upsdc.gov.in/ is online (HTTP 200). Session 2027-28 notification still awaited.",
+      "summaryHi": "आधिकारिक पोर्टल rte25.upsdc.gov.in सक्रिय है। सत्र 2027–28 की नई आधिकारिक समय-सारणी अभी प्रतीक्षित है; हर 2 घंटे में स्वचालित जाँच जारी है।"
     }
   ]
 }

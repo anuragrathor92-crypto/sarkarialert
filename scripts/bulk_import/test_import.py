@@ -70,9 +70,14 @@ class ImportTests(unittest.TestCase):
 
     def test_site_integrity(self):
         schemes = json.loads((ROOT / "data/schemes_directory.json").read_text(encoding="utf-8"))["records"]
-        self.assertEqual(len(schemes), 32)
+        self.assertGreaterEqual(len(schemes), 67)
+        # Verify coverage of all 28 States + 8 UTs + All India Central
+        jurisdictions = {s.get("stateOrUt") for s in schemes if s.get("stateOrUt")}
+        self.assertGreaterEqual(len(jurisdictions), 37)
         files, active, expired = build_all(now=self.now)
-        # Ensure all 32 schemes exist and have NO apply buttons
+        self.assertIn("robots.txt", files)
+        self.assertTrue((ROOT / "data/site_config.json").exists())
+        # Ensure all schemes exist and have NO apply buttons
         yojana_cat = files["category/yojana/index.html"]
         self.assertNotIn("apply-btn", yojana_cat)
         for s in schemes:
@@ -80,6 +85,7 @@ class ImportTests(unittest.TestCase):
             post_html = files[f"posts/{s['id']}/index.html"]
             self.assertNotIn("apply-btn", post_html)
             self.assertNotIn("Apply Online", post_html)
+            self.assertIn("GovernmentService", post_html)
             self.assertTrue(s.get("eligibility"))
             self.assertTrue(s.get("benefit"))
             self.assertTrue(s.get("requiredDocuments"))
@@ -144,11 +150,14 @@ class ImportTests(unittest.TestCase):
         # Ensure built disk HTML + sitemap have zero broken internal links
         internal = check_internal_links(ROOT)
         self.assertEqual(internal["broken"], [], f"Broken internal links on disk: {internal['broken']}")
-        # Ensure unverified portals are marked Verification Pending rather than Apply Online
+        # Ensure unverified portals (4 pending links) are marked Verification Pending rather than Apply Online
         for pid in ("assam-rifles-technical-tradesman-2026", "bhel-engineer-supervisor-trainee-2026", "rrc-nr-apprentice-2026"):
             html_txt = files[f"posts/{pid}/index.html"]
             self.assertIn("Verification Pending", html_txt)
             self.assertIn("pending-btn", html_txt)
+        pending_tracked = [p["id"] for p in posts_data if p.get("applyStatus") == "VERIFICATION_PENDING" or p.get("linkStatus") == "VERIFICATION_PENDING"]
+        self.assertGreaterEqual(len(pending_tracked), 4)
+        self.assertIn("JobPosting", files["posts/upsc-dental-surgeon-2026/index.html"])
 
 
 if __name__ == "__main__":

@@ -61,7 +61,16 @@ def ext_link(url, label, cls=""):
     return f'<a{cls_attr} href="{e(url)}" target="_blank" rel="noopener noreferrer">{e(label)}</a>'
 
 
-def render_shell(prefix, title, desc, canonical_path, main_html, json_ld=None, root_relative=False):
+def load_site_config():
+    cfg_path = ROOT / "data/site_config.json"
+    if cfg_path.exists():
+        return json.loads(cfg_path.read_text(encoding="utf-8"))
+    return {}
+
+
+def render_shell(prefix, title, desc, canonical_path, main_html, json_ld=None, root_relative=False, site_cfg=None):
+    site_cfg = site_cfg if site_cfg is not None else load_site_config()
+
     def nav_href(rel):
         return f"/sarkarialert/{rel}" if root_relative else f"{prefix}{rel}"
 
@@ -73,22 +82,37 @@ def render_shell(prefix, title, desc, canonical_path, main_html, json_ld=None, r
         if json_ld
         else ""
     )
+    gsc_token = (site_cfg.get("googleSearchConsole") or {}).get("verificationMetaContent", "").strip()
+    gsc_tag = f'<meta name="google-site-verification" content="{e(gsc_token)}">' if gsc_token else ""
+    ads_cfg = site_cfg.get("googleAdSense") or {}
+    pub_id = str(ads_cfg.get("publisherId", "")).strip()
+    ads_tag = (
+        f'<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={e(pub_id)}" crossorigin="anonymous"></script>'
+        if pub_id.startswith("ca-pub-") and ads_cfg.get("enableAutoAds")
+        else ""
+    )
     return (
         '<!doctype html><html lang="en"><head>'
         '<meta charset="utf-8">'
         '<meta name="viewport" content="width=device-width,initial-scale=1">'
+        '<meta name="robots" content="index,follow,max-image-preview:large">'
         f"<title>{e(title)}</title>"
         f'<meta name="description" content="{e(desc[:160])}">'
         f'<link rel="canonical" href="{e(canonical)}">'
         '<meta name="theme-color" content="#a6193b">'
+        f"{gsc_tag}"
         f'<meta property="og:title" content="{e(title)}">'
         f'<meta property="og:description" content="{e(desc[:160])}">'
         f'<meta property="og:url" content="{e(canonical)}">'
         '<meta property="og:type" content="website">'
+        '<meta property="og:locale" content="en_IN">'
         '<meta property="og:site_name" content="Sarkari Alert">'
         '<meta name="twitter:card" content="summary">'
+        f'<meta name="twitter:title" content="{e(title)}">'
+        f'<meta name="twitter:description" content="{e(desc[:160])}">'
         f'<link rel="stylesheet" href="{asset_prefix}assets/style.css">'
         f'<script defer src="{asset_prefix}assets/site.js"></script>'
+        f"{ads_tag}"
         f"{ld_tag}"
         "</head><body><div class=\"wrap\">"
         f'<header class="brand"><a href="{nav_href("")}"><span class="logo" aria-hidden="true">SA</span>'
@@ -115,11 +139,12 @@ def render_item(post, prefix, is_scheme=False, now_date=None):
     new_badge = '<span class="new-tag">New</span>' if is_new else ""
 
     if is_scheme:
-        scope_tag = "राज्य" if post.get("scope") == "State" else "केंद्र"
+        loc_tag = post.get("stateOrUt") or ("राज्य" if post.get("scope") == "State" else "केंद्र")
+        upc_tag = ' <span class="new-tag">Upcoming</span>' if post.get("upcoming") else ""
         return (
             f'<li data-post data-deadline="" data-department="{e(dept)}" data-qualification="">'
-            f'<a href="{prefix}posts/{e(pid)}/">{e(title)}</a> '
-            f'<small class="date-tag">{e(scope_tag)}</small>'
+            f'<a href="{prefix}posts/{e(pid)}/">{e(title)}</a>{upc_tag} '
+            f'<small class="date-tag">{e(loc_tag)}</small>'
             "</li>"
         )
 
@@ -185,14 +210,26 @@ def render_scheme_post(scheme):
         "</article>"
     )
     desc = f"{title_en} ({title_hi}) — पात्रता, लाभ, आवश्यक दस्तावेज और आधिकारिक वेबसाइट।"
-    ld = {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": f"{title_hi} | {title_en}",
-        "description": desc,
-        "dateModified": verified_on,
-        "publisher": {"@type": "Organization", "name": "Sarkari Alert"},
-    }
+    ld = [
+        {
+            "@context": "https://schema.org",
+            "@type": "GovernmentService",
+            "name": f"{title_hi} | {title_en}",
+            "serviceType": "Government Welfare Scheme Information",
+            "provider": {"@type": "GovernmentOrganization", "name": dept},
+            "areaServed": scheme.get("stateOrUt") or "India",
+            "url": f"{BASE}posts/{scheme['id']}/",
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "Home", "item": BASE},
+                {"@type": "ListItem", "position": 2, "name": "Sarkari Yojana", "item": f"{BASE}category/yojana/"},
+                {"@type": "ListItem", "position": 3, "name": title_en, "item": f"{BASE}posts/{scheme['id']}/"},
+            ],
+        },
+    ]
     return render_shell("../../", f"{title_hi} | Sarkari Alert", desc, f"posts/{scheme['id']}/", body, ld)
 
 
@@ -351,15 +388,36 @@ def render_standard_post(post):
         '<p class="warning">Confirm current dates, eligibility, and fees against the original official notification. Sarkari Alert never collects application fees or personal documents.</p>'
         "</article>"
     )
-    ld = {
+    ld_main = {
         "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": title,
+        "@type": "JobPosting" if cat in JOB_CATS else "Article",
+        "title" if cat in JOB_CATS else "headline": title,
         "description": summary,
-        "datePublished": post.get("publishedDate", verified_on),
+        "datePosted" if cat in JOB_CATS else "datePublished": post.get("publishedDate", verified_on),
         "dateModified": verified_on,
-        "publisher": {"@type": "Organization", "name": "Sarkari Alert"},
+        **(
+            {
+                "validThrough": deadline or post.get("lastDate"),
+                "hiringOrganization": {"@type": "Organization", "name": dept},
+                "jobLocation": {"@type": "Place", "address": {"@type": "PostalAddress", "addressCountry": "IN"}},
+                "directApply": post.get("applyStatus") != "VERIFICATION_PENDING",
+            }
+            if cat in JOB_CATS
+            else {"publisher": {"@type": "Organization", "name": "Sarkari Alert"}}
+        ),
     }
+    ld = [
+        ld_main,
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "Home", "item": BASE},
+                {"@type": "ListItem", "position": 2, "name": cat_en, "item": f"{BASE}category/{cat}/"},
+                {"@type": "ListItem", "position": 3, "name": title, "item": f"{BASE}posts/{post['id']}/"},
+            ],
+        },
+    ]
     return render_shell("../../", f"{title} | Sarkari Alert", summary, f"posts/{post['id']}/", body, ld)
 
 
@@ -457,16 +515,28 @@ def build_all(now=None, prune_expired=False, posts_override=None):
     # 4. Render all 13 category pages
     for slug, en, hi, _ in CATEGORIES:
         if slug == "yojana":
+            upcoming_s = [s for s in schemes if s.get("upcoming")]
+            upc_bar = ""
+            if upcoming_s:
+                upc_links = " · ".join(
+                    f'<a href="../../posts/{e(s["id"])}/">{e(s.get("titleHi") or s["title"])}</a>'
+                    for s in upcoming_s
+                )
+                upc_bar = (
+                    '<div class="monitor-bar"><div>'
+                    '<span class="monitor-badge">Upcoming Schemes Watch</span> '
+                    f'<span lang="hi">{upc_links}</span></div></div>'
+                )
             items_html = "".join(render_item(s, "../../", is_scheme=True, now_date=now_date) for s in schemes)
             body = (
                 '<article class="article">'
                 '<a href="../../">← Home</a>'
                 f"<h1>{e(en)} ({len(schemes)}) — {e(hi)}</h1>"
-                f'<p class="notice" lang="hi"><strong>कुल {len(schemes)} सत्यापित सरकारी योजनाएँ</strong> (27 केंद्रीय + 5 उत्तर प्रदेश) · पात्रता, लाभ, आवश्यक दस्तावेज और आधिकारिक वेबसाइट विवरण। सरकारी योजनाओं के लिए अलग Apply बटन नहीं दिए गए हैं।</p>'
-                f"<ul>{items_html}</ul>"
+                f'<p class="notice" lang="hi"><strong>कुल {len(schemes)} सत्यापित सरकारी योजनाएँ</strong> (केंद्रीय + सभी 28 राज्य और 8 केंद्र शासित प्रदेश) · पात्रता, लाभ, आवश्यक दस्तावेज और आधिकारिक वेबसाइट विवरण। सरकारी योजनाओं के लिए अलग Apply बटन नहीं दिए गए हैं।</p>'
+                f"{upc_bar}<ul>{items_html}</ul>"
                 "</article>"
             )
-            desc = f"{en} — Complete directory of {len(schemes)} central and state government schemes with eligibility, benefits, documents, and official websites."
+            desc = f"{en} — Complete directory of {len(schemes)} central, 28 state and 8 UT government schemes with eligibility, benefits, documents, and official websites."
         else:
             items = by_cat[slug]
             if items:
@@ -479,7 +549,7 @@ def build_all(now=None, prune_expired=False, posts_override=None):
                 m = monitors[0]
                 extra_mon = (
                     '<div class="monitor-bar"><div>'
-                    f'<span class="monitor-badge">Live 2-Hour Monitor</span> <strong>{e(m["name"])}</strong>: '
+                    '<span class="monitor-badge">Live 2-Hour Monitor</span> <strong>' + e(m["name"]) + "</strong>: "
                     f'<span lang="hi">{e(m.get("summaryHi") or m["summary"])}</span></div>'
                     + ext_link(m["url"], "Check Official RTE Portal", "notice-btn")
                     + "</div>"
@@ -492,7 +562,24 @@ def build_all(now=None, prune_expired=False, posts_override=None):
                 "</article>"
             )
             desc = f"{en} — Verified official {en.lower()} updates, dates, and direct official links on Sarkari Alert."
-        files[f"category/{slug}/index.html"] = render_shell("../../", f"{en} | Sarkari Alert", desc, f"category/{slug}/", body)
+        cat_ld = [
+            {
+                "@context": "https://schema.org",
+                "@type": "CollectionPage",
+                "name": f"{en} | Sarkari Alert",
+                "description": desc,
+                "url": f"{BASE}category/{slug}/",
+            },
+            {
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {"@type": "ListItem", "position": 1, "name": "Home", "item": BASE},
+                    {"@type": "ListItem", "position": 2, "name": en, "item": f"{BASE}category/{slug}/"},
+                ],
+            },
+        ]
+        files[f"category/{slug}/index.html"] = render_shell("../../", f"{en} | Sarkari Alert", desc, f"category/{slug}/", body, cat_ld)
 
     # 5. Render Separate Loans & Credit Cards Referral Page
     files["loans-and-cards/index.html"] = render_referrals_page(referrals)
@@ -562,7 +649,7 @@ def build_all(now=None, prune_expired=False, posts_override=None):
             panels_html.append(
                 f'<section class="panel" data-category="yojana">'
                 f'<h2><a href="./category/yojana/">Sarkari Yojana ({len(schemes)})</a></h2>'
-                f'<p class="inset" lang="hi"><strong>कुल {len(schemes)} योजनाएँ</strong> · पात्रता, लाभ व दस्तावेज (बिना अलग Apply बटन)।</p>'
+                f'<p class="inset" lang="hi"><strong>कुल {len(schemes)} योजनाएँ</strong> · केंद्रीय + सभी 28 राज्य व 8 UT (बिना अलग Apply बटन)।</p>'
                 f"<ul>{ul}</ul>"
                 f'<a class="more" href="./category/yojana/">View All {len(schemes)} Schemes »</a></section>'
             )
@@ -602,7 +689,7 @@ def build_all(now=None, prune_expired=False, posts_override=None):
         '<a href="./category/results/">Exam Results</a>'
         '<a href="./category/admit-card/">Admit Cards</a>'
         '<a href="./category/answer-key/">Answer Key</a>'
-        '<a href="./category/yojana/">Sarkari Yojana (32)</a>'
+        f'<a href="./category/yojana/">Sarkari Yojana ({len(schemes)})</a>'
         '<a href="./category/upcoming-jobs/">Upcoming Jobs</a>'
         '<a href="./loans-and-cards/">Loans &amp; Cards Referral</a>'
         "</div>"
@@ -620,30 +707,38 @@ def build_all(now=None, prune_expired=False, posts_override=None):
         '<p style="margin:4px 0 0;font-size:14px">Non-government commercial banking offers, education loans &amp; credit cards separated from government listings.</p></div>'
         '<a class="referral-cta" href="./loans-and-cards/">Explore Loans &amp; Credit Cards »</a></div>'
         '<section class="about"><h2>About Sarkari Alert</h2>'
-        "<p>Sarkari Alert publishes verified official government recruitment notices, results, admit cards, answer keys, admissions, scholarships, exam calendars, and 32 government welfare schemes. Automated checks run every 2 hours to monitor updates and exclude expired forms.</p></section>"
+        f"<p>Sarkari Alert publishes verified official government recruitment notices, results, admit cards, answer keys, admissions, scholarships, exam calendars, and {len(schemes)} central, 28 state &amp; 8 UT government welfare schemes. Automated checks run every 2 hours to monitor updates and exclude expired forms.</p></section>"
     )
 
-    home_ld = {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "Sarkari Alert",
-        "url": BASE,
-        "potentialAction": {
-            "@type": "SearchAction",
-            "target": BASE + "?q={search_term_string}",
-            "query-input": "required name=search_term_string",
+    home_ld = [
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Sarkari Alert",
+            "url": BASE,
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": BASE + "?q={search_term_string}",
+                "query-input": "required name=search_term_string",
+            },
         },
-    }
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Sarkari Alert",
+            "url": BASE,
+        },
+    ]
     files["index.html"] = render_shell(
         "./",
         "Latest Government Jobs, Results, Admit Cards, Sarkari Yojana | Sarkari Alert",
-        "Verified government jobs, exam results, admit cards, answer keys, admissions, scholarships, upcoming jobs, and 32 Sarkari Yojana guides.",
+        f"Verified government jobs, exam results, admit cards, answer keys, admissions, scholarships, upcoming jobs, and {len(schemes)} central & state Sarkari Yojana guides.",
         "",
         home_main,
         home_ld,
     )
 
-    # 8. Build sitemap.xml
+    # 8. Build sitemap.xml, robots.txt, and optional ads.txt
     urls = [BASE]
     for slug, _, _, _ in CATEGORIES:
         urls.append(f"{BASE}category/{slug}/")
@@ -660,6 +755,11 @@ def build_all(now=None, prune_expired=False, posts_override=None):
         '<?xml version="1.0" encoding="UTF-8"?>\n'
         f'<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{url_tags}</urlset>\n'
     )
+    files["robots.txt"] = f"User-agent: *\nAllow: /\nSitemap: {BASE}sitemap.xml\n"
+    site_cfg = load_site_config()
+    pub_id = str((site_cfg.get("googleAdSense") or {}).get("publisherId", "")).strip()
+    if pub_id.startswith("ca-pub-"):
+        files["ads.txt"] = f"google.com, {pub_id.replace('ca-pub-', 'pub-')}, DIRECT, f08c47fec0942fa0\n"
 
     if prune_expired and expired_posts:
         posts_data["posts"] = active_posts

@@ -101,15 +101,16 @@ jobs:
           python scripts/bulk_import/discover.py --inspect 10 --write-monitor || true
           python scripts/bulk_import/publish.py --write --prune-expired
           python scripts/bulk_import/build_site.py
+          python scripts/bulk_import/verify_links.py --check-internal --skip-external
       - name: Commit and push authorized updates to main
         run: |
-          if [ -z "$(git status --porcelain --untracked-files=all -- index.html 404.html category posts loans-and-cards about privacy disclaimer data/posts.json data/monitor_status.json data/import_approved.json sitemap.xml)" ]; then
+          if [ -z "$(git status --porcelain --untracked-files=all -- index.html 404.html robots.txt sitemap.xml category posts loans-and-cards about privacy disclaimer data/posts.json data/monitor_status.json data/import_approved.json)" ]; then
             echo "No new approved records or site changes."
             exit 0
           fi
           git config user.name "Sarkari Alert Publisher"
           git config user.email "sarkarialert-bot@users.noreply.github.com"
-          git add index.html 404.html category posts loans-and-cards about privacy disclaimer data/posts.json data/monitor_status.json data/import_approved.json sitemap.xml
+          git add index.html 404.html robots.txt sitemap.xml category posts loans-and-cards about privacy disclaimer data/posts.json data/monitor_status.json data/import_approved.json
           git commit -m "Publish verified updates, UP RTE monitor status, and expiry cleanup"
           git push origin HEAD:main
       - name: Upload publication report
