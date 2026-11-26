@@ -1,9 +1,16 @@
 import datetime as dt
 import json
 import unittest
+import shutil
+import subprocess
+from pathlib import Path
 from build_site import build_all
 
 class PublicSearchTests(unittest.TestCase):
+    @unittest.skipUnless(shutil.which('node'), 'Node is required for JS search tests')
+    def test_browser_search_logic(self):
+        subprocess.run(['node', str(Path(__file__).with_name('test_smart_search.js'))], check=True)
+
     def test_generated_feed(self):
         now = dt.datetime.fromisoformat("2026-11-26T12:00:00+05:30")
         files, active, expired = build_all(now=now)
