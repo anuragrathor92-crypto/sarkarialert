@@ -121,6 +121,20 @@ jobs:
           python scripts/bulk_import/build_site.py
           python scripts/bulk_import/verify_links.py --check-internal --skip-external
           python scripts/bulk_import/seo_audit.py --strict --output import-output/seo-report.json
+      - name: Prepare optional free AI official notice drafts (review only)
+        continue-on-error: true
+        timeout-minutes: 3
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_API_KEY_1: ${{ secrets.GEMINI_API_KEY_1 }}
+          GEMINI_API_KEY_2: ${{ secrets.GEMINI_API_KEY_2 }}
+          GEMINI_API_KEY_3: ${{ secrets.GEMINI_API_KEY_3 }}
+          GEMINI_API_KEY1: ${{ secrets.GEMINI_API_KEY1 }}
+          GEMINI_API_KEY2: ${{ secrets.GEMINI_API_KEY2 }}
+          GEMINI_API_KEY3: ${{ secrets.GEMINI_API_KEY3 }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          GEMINI_FREE_TIER_CONFIRMED: ${{ vars.GEMINI_FREE_TIER_CONFIRMED }}
+        run: python scripts/bulk_import/ai_notice_drafts.py
       - name: Commit and push authorized updates to main
         run: |
           if [ -z "$(git status --porcelain --untracked-files=all -- index.html 404.html robots.txt sitemap.xml feed.xml sitemap category posts loans-and-cards about privacy disclaimer data/posts.json data/monitor_status.json data/import_approved.json data/seo_state.json data/public-search.json)" ]; then
