@@ -43,6 +43,8 @@ ALLOWED = {
     "www.bel-india.in", "bel-india.in", "hal-india.co.in", "www.hal-india.co.in",
     "www.assamrifles.gov.in", "assamrifles.gov.in", "assamrifles.mha.gov.in",
     "www.mponline.gov.in", "mponline.gov.in", "www.rrccr.com", "rrccr.com",
+    "www.rrcnr.org", "rrcnr.org", "bseh.org.in", "www.bseh.org.in",
+    "www.eximbankindia.in", "eximbankindia.in",
 }
 UP_RTE_URL = "https://rte25.upsdc.gov.in/"
 
