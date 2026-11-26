@@ -24,6 +24,8 @@ EXCLUDED = set(PAGES.values()) | {
     "about-us/", "about/", "more/", "feed/", "sarkari-result/", "wp-login.php"
 }
 ALLOWED = {
+    # Official recruitment portals verified against the corresponding notices, 26 Nov 2026.
+    "recruitment.csir.res.in", "www.csir.res.in", "goashipyard.ibtexamination.com", "ibpsreg.ibps.in",
     "www.ibps.in", "ibps.in", "www.rrbapply.gov.in", "rrbapply.gov.in",
     "www.joinindiannavy.gov.in", "www.joinindianarmy.nic.in", "joinindianarmy.nic.in",
     "www.aees.gov.in", "aees.gov.in", "aees.onlineregistrationforms.com",
@@ -49,6 +51,16 @@ ALLOWED = {
     "ukpsc.net.in", "www.ukpsc.net.in", "iforms.mponline.gov.in",
     "www.hpsbys.in", "hpsbys.in", "www.kudumbashree.org", "kudumbashree.org",
     "nationalinsurance.nic.co.in",
+    "powergrid.in", "www.powergrid.in", "careers.powergrid.in",
+    "gailonline.com", "www.gailonline.com", "gailebank.gail.co.in",
+    "cpcle26.onlineregistrationform.org", "upanganwadibharti.in",
+    "sbi.bank.in", "recruitment.sbi.bank.in",
+    "becil.com", "www.becil.com", "becilregistration.in",
+    "manitnt.samarth.edu.in", "niperahmnt.samarth.edu.in",
+    "nsic.co.in", "www.nsic.co.in", "career.nsic.co.in",
+    "nplindia.in", "www.nplindia.in",
+    "ukssscrecruitment.in", "cdn.digialm.com",
+    "goashipyard.in", "www.goashipyard.in",
 }
 UP_RTE_URL = "https://rte25.upsdc.gov.in/"
 
