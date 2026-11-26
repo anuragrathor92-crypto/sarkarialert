@@ -47,7 +47,12 @@
           "Pay scale",
           "Pay Level-10 (7th CPC)"
         ]
-      ]
+      ],
+      "summary": "संघ लोक सेवा आयोग (UPSC) ने विज्ञापन संख्या 13/2026 (रिक्ति 26111301114) के तहत डेंटल सर्जन के 5 स्थायी पदों पर ऑनलाइन आवेदन आमंत्रित किए हैं। BDS डिग्री व स्टेट डेंटल काउंसिल पंजीकरण रखने वाले पात्र अभ्यर्थी 4 दिसंबर 2026 (शाम 6:00 बजे) तक UPSC ORA पोर्टल पर आवेदन कर सकते हैं।",
+      "applyLinkType": "DIRECT_APPLICATION_FORM",
+      "locationLocality": "New Delhi",
+      "locationRegion": "Delhi",
+      "eligibilityHi": "न्यूनतम योग्यता: BDS। आयु सीमा व आरक्षण शर्तें UPSC के आधिकारिक विज्ञापन (26111301114) में सत्यापित करें।"
     },
     {
       "id": "nta-cmat-2027",
@@ -295,7 +300,11 @@
       "applyUrl": "https://uppsc.up.nic.in/CandidatePages/Notifications.aspx",
       "applyInstructions": "Open the official advertisements list, select A-4/E-1/2026 and click Apply. यदि UPPSC वेबसाइट पर SSL / Certificate Error आए, तो आगे न बढ़ें और व्यक्तिगत जानकारी या भुगतान न करें। सुरक्षित कनेक्शन उपलब्ध होने पर ही आवेदन करें।",
       "otrUrl": "https://uppsc.up.nic.in/",
-      "linkHealth": "Browser certificate error reported; secure access not independently confirmed."
+      "linkHealth": "Browser certificate error reported; secure access not independently confirmed.",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "Prayagraj",
+      "locationRegion": "Uttar Pradesh",
+      "eligibilityHi": "न्यूनतम योग्यता: विज्ञापन के अनुसार निर्धारित योग्यता। आयु सीमा व आरक्षण शर्तें UPPSC के आधिकारिक विज्ञापन (नोटिस) में सत्यापित करें।"
     },
     {
       "id": "dsssb-je-mts-2026",
@@ -341,7 +350,11 @@
       "type": "official-notice",
       "applyUrl": "https://dsssbonline.nic.in/",
       "applyInstructions": "Register or sign in to DSSSB OARS, select advertisement 06/2026 and your eligible post.",
-      "applyLabel": "Official DSSSB OARS Portal"
+      "applyLabel": "Official DSSSB OARS Portal",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "New Delhi",
+      "locationRegion": "Delhi",
+      "eligibilityHi": "न्यूनतम योग्यता: विज्ञापन के अनुसार निर्धारित योग्यता। आयु सीमा व आरक्षण शर्तें DSSSB के आधिकारिक विज्ञापन (नोटिस) में सत्यापित करें।"
     },
     {
       "id": "ssc-chsl-2025-tier2-marks",
@@ -801,7 +814,12 @@
       "verified": true,
       "verifiedOn": "2026-11-24",
       "publishedDate": "2026-11-24",
-      "type": "official-notice"
+      "type": "official-notice",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "New Delhi",
+      "locationRegion": "Delhi",
+      "eligibilityHi": "न्यूनतम योग्यता: Ayurveda degree। आयु सीमा व आरक्षण शर्तें UPSC के आधिकारिक विज्ञापन (26111302114) में सत्यापित करें।",
+      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या 26111302114 चुनें, OTR/पंजीकरण लॉगिन करें और 2026-12-04 तक आवेदन सबमिट करें।"
     },
     {
       "id": "upsc-homoeopathic-physician-13-2026",
@@ -864,7 +882,12 @@
       "verified": true,
       "verifiedOn": "2026-11-24",
       "publishedDate": "2026-11-24",
-      "type": "official-notice"
+      "type": "official-notice",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "New Delhi",
+      "locationRegion": "Delhi",
+      "eligibilityHi": "न्यूनतम योग्यता: Homoeopathy degree। आयु सीमा व आरक्षण शर्तें UPSC के आधिकारिक विज्ञापन (26111303114) में सत्यापित करें।",
+      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या 26111303114 चुनें, OTR/पंजीकरण लॉगिन करें और 2026-12-04 तक आवेदन सबमिट करें।"
     },
     {
       "id": "upsc-scientist-b-13-2026",
@@ -931,7 +954,12 @@
       "verified": true,
       "verifiedOn": "2026-11-24",
       "publishedDate": "2026-11-24",
-      "type": "official-notice"
+      "type": "official-notice",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "New Delhi",
+      "locationRegion": "Delhi",
+      "eligibilityHi": "न्यूनतम योग्यता: Postgraduate। आयु सीमा व आरक्षण शर्तें UPSC के आधिकारिक विज्ञापन (26111304214) में सत्यापित करें।",
+      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या 26111304214 चुनें, OTR/पंजीकरण लॉगिन करें और 2026-12-04 तक आवेदन सबमिट करें।"
     },
     {
       "id": "upsc-civil-services-main-result-2026",
@@ -1055,7 +1083,12 @@
       "verifiedOn": "2026-11-24",
       "publishedDate": "2026-11-24",
       "applicationStatus": "OPEN",
-      "verificationLevel": "official_notice_and_registration_page_checked"
+      "verificationLevel": "official_notice_and_registration_page_checked",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "New Delhi",
+      "locationRegion": "Delhi",
+      "eligibilityHi": "न्यूनतम योग्यता: 10th + ITI। आयु सीमा व आरक्षण शर्तें RRC Central Railway के आधिकारिक विज्ञापन (RRC/CR/AA/2026) में सत्यापित करें।",
+      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या RRC/CR/AA/2026 चुनें, OTR/पंजीकरण लॉगिन करें और 2026-12-02 तक आवेदन सबमिट करें।"
     },
     {
       "id": "uppsc-civil-judge-jd-2026",
@@ -1097,7 +1130,12 @@
       "verifiedOn": "2026-11-24",
       "publishedDate": "2026-11-24",
       "applicationStatus": "OPEN",
-      "verificationLevel": "official_application_listing_checked"
+      "verificationLevel": "official_application_listing_checked",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "Prayagraj",
+      "locationRegion": "Uttar Pradesh",
+      "eligibilityHi": "न्यूनतम योग्यता: विज्ञापन के अनुसार निर्धारित योग्यता। आयु सीमा व आरक्षण शर्तें UPPSC के आधिकारिक विज्ञापन (A-6/E-1/2026) में सत्यापित करें।",
+      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या A-6/E-1/2026 चुनें, OTR/पंजीकरण लॉगिन करें और 2026-12-21 तक आवेदन सबमिट करें।"
     },
     {
       "id": "uppsc-miscellaneous-examination-2026",
@@ -1139,7 +1177,12 @@
       "verifiedOn": "2026-11-24",
       "publishedDate": "2026-11-24",
       "applicationStatus": "OPEN",
-      "verificationLevel": "official_application_listing_checked"
+      "verificationLevel": "official_application_listing_checked",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "Prayagraj",
+      "locationRegion": "Uttar Pradesh",
+      "eligibilityHi": "न्यूनतम योग्यता: विज्ञापन के अनुसार निर्धारित योग्यता। आयु सीमा व आरक्षण शर्तें UPPSC के आधिकारिक विज्ञापन (A-5/E-1/2026) में सत्यापित करें।",
+      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या A-5/E-1/2026 चुनें, OTR/पंजीकरण लॉगिन करें और 2026-12-04 तक आवेदन सबमिट करें।"
     },
     {
       "id": "uptet-2026-2027",
@@ -1194,7 +1237,12 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "applicationStatus": "OPEN",
-      "type": "official-notice"
+      "type": "official-notice",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "Prayagraj",
+      "locationRegion": "Uttar Pradesh",
+      "eligibilityHi": "न्यूनतम योग्यता: Graduate। आयु सीमा व आरक्षण शर्तें UPESSC के आधिकारिक विज्ञापन (UPESSC/10/2026) में सत्यापित करें।",
+      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या UPESSC/10/2026 चुनें, OTR/पंजीकरण लॉगिन करें और 2026-12-23 तक आवेदन सबमिट करें।"
     },
     {
       "id": "upsssc-inter-12th-level-2026",
@@ -1246,7 +1294,12 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "applicationStatus": "OPEN",
-      "type": "official-notice"
+      "type": "official-notice",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "Lucknow",
+      "locationRegion": "Uttar Pradesh",
+      "eligibilityHi": "न्यूनतम योग्यता: 10+2। आयु सीमा व आरक्षण शर्तें UPSSSC के आधिकारिक विज्ञापन (26-Exam/2026) में सत्यापित करें।",
+      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या 26-Exam/2026 चुनें, OTR/पंजीकरण लॉगिन करें और 2026-12-01 तक आवेदन सबमिट करें।"
     },
     {
       "id": "upsssc-je-electrical-2026",
@@ -1288,7 +1341,12 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "applicationStatus": "OPEN",
-      "type": "official-notice"
+      "type": "official-notice",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "Lucknow",
+      "locationRegion": "Uttar Pradesh",
+      "eligibilityHi": "न्यूनतम योग्यता: Diploma / Engineering। आयु सीमा व आरक्षण शर्तें UPSSSC के आधिकारिक विज्ञापन (UPSSSC-JE-EE-2026) में सत्यापित करें।",
+      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या UPSSSC-JE-EE-2026 चुनें, OTR/पंजीकरण लॉगिन करें और 2026-11-27 तक आवेदन सबमिट करें।"
     },
     {
       "id": "rrb-isolated-categories-cen-09-2026",
@@ -1336,7 +1394,12 @@
       "publishedDate": "2026-11-26",
       "applicationStatus": "OPEN",
       "type": "official-notice",
-      "applyLabel": "Official RRB Apply Portal"
+      "applyLabel": "Official RRB Apply Portal",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "New Delhi",
+      "locationRegion": "Delhi",
+      "eligibilityHi": "न्यूनतम योग्यता: Graduate। आयु सीमा व आरक्षण शर्तें RRB के आधिकारिक विज्ञापन (CEN 09/2026) में सत्यापित करें।",
+      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या CEN 09/2026 चुनें, OTR/पंजीकरण लॉगिन करें और 2026-12-04 तक आवेदन सबमिट करें।"
     },
     {
       "id": "aees-teaching-recruitment-2026",
@@ -1379,7 +1442,12 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "applicationStatus": "OPEN",
-      "type": "official-notice"
+      "type": "official-notice",
+      "applyLinkType": "DIRECT_APPLICATION_FORM",
+      "locationLocality": "Mumbai",
+      "locationRegion": "Maharashtra",
+      "eligibilityHi": "न्यूनतम योग्यता: Graduate। आयु सीमा व आरक्षण शर्तें AEES के आधिकारिक विज्ञापन (AEES/01/2026) में सत्यापित करें।",
+      "applyInstructions": "सीधा आवेदन लिंक उपलब्ध है: ऊपर दिए हरे बटन पर क्लिक करके AEES (AEES/01/2026) के ऑनलाइन आवेदन फ़ॉर्म पर पंजीकरण व शुल्क भुगतान 2026-11-29 से पहले पूरा करें।"
     },
     {
       "id": "nlc-india-get-10-2026",
@@ -1431,7 +1499,12 @@
       "publishedDate": "2026-11-26",
       "applicationStatus": "OPEN",
       "type": "official-notice",
-      "applyLabel": "Official NLC India Website (Careers)"
+      "applyLabel": "Official NLC India Website (Careers)",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "Neyveli",
+      "locationRegion": "Tamil Nadu",
+      "eligibilityHi": "न्यूनतम योग्यता: Graduate। आयु सीमा व आरक्षण शर्तें NLC India के आधिकारिक विज्ञापन (NLCIL/10/2026) में सत्यापित करें।",
+      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या NLCIL/10/2026 चुनें, OTR/पंजीकरण लॉगिन करें और 2026-12-14 तक आवेदन सबमिट करें।"
     },
     {
       "id": "iaf-afcat-01-2027",
@@ -1482,7 +1555,12 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "applicationStatus": "OPEN",
-      "type": "official-notice"
+      "type": "official-notice",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "New Delhi",
+      "locationRegion": "Delhi",
+      "eligibilityHi": "न्यूनतम योग्यता: Graduate। आयु सीमा व आरक्षण शर्तें Indian Air Force के आधिकारिक विज्ञापन (AFCAT-01/2027) में सत्यापित करें।",
+      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या AFCAT-01/2027 चुनें, OTR/पंजीकरण लॉगिन करें और 2026-12-11 तक आवेदन सबमिट करें।"
     },
     {
       "id": "asrb-icar-technical-assistant-2026",
@@ -1538,7 +1616,12 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "applicationStatus": "OPEN",
-      "type": "official-notice"
+      "type": "official-notice",
+      "applyLinkType": "DIRECT_APPLICATION_FORM",
+      "locationLocality": "New Delhi",
+      "locationRegion": "Delhi",
+      "eligibilityHi": "न्यूनतम योग्यता: Graduate। आयु सीमा व आरक्षण शर्तें ASRB के आधिकारिक विज्ञापन (F.No.2(2)/2025-Exam) में सत्यापित करें।",
+      "applyInstructions": "सीधा आवेदन लिंक उपलब्ध है: ऊपर दिए हरे बटन पर क्लिक करके ASRB (F.No.2(2)/2025-Exam) के ऑनलाइन आवेदन फ़ॉर्म पर पंजीकरण व शुल्क भुगतान 2026-12-17 से पहले पूरा करें।"
     },
     {
       "id": "sbi-sco-data-scientist-2026",
@@ -1585,7 +1668,12 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "applicationStatus": "OPEN",
-      "type": "official-notice"
+      "type": "official-notice",
+      "applyLinkType": "DIRECT_APPLICATION_FORM",
+      "locationLocality": "Mumbai",
+      "locationRegion": "Maharashtra",
+      "eligibilityHi": "न्यूनतम योग्यता: Graduate। आयु सीमा व आरक्षण शर्तें SBI के आधिकारिक विज्ञापन (CRPD/SCO/2026-27/31) में सत्यापित करें।",
+      "applyInstructions": "सीधा आवेदन लिंक उपलब्ध है: ऊपर दिए हरे बटन पर क्लिक करके SBI (CRPD/SCO/2026-27/31) के ऑनलाइन आवेदन फ़ॉर्म पर पंजीकरण व शुल्क भुगतान 2026-12-10 से पहले पूरा करें।"
     },
     {
       "id": "sbi-am-fire-2026",
@@ -1631,7 +1719,12 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "applicationStatus": "OPEN",
-      "type": "official-notice"
+      "type": "official-notice",
+      "applyLinkType": "DIRECT_APPLICATION_FORM",
+      "locationLocality": "Mumbai",
+      "locationRegion": "Maharashtra",
+      "eligibilityHi": "न्यूनतम योग्यता: Graduate। आयु सीमा व आरक्षण शर्तें SBI के आधिकारिक विज्ञापन (CRPD/SCO/2026-27/29) में सत्यापित करें।",
+      "applyInstructions": "सीधा आवेदन लिंक उपलब्ध है: ऊपर दिए हरे बटन पर क्लिक करके SBI (CRPD/SCO/2026-27/29) के ऑनलाइन आवेदन फ़ॉर्म पर पंजीकरण व शुल्क भुगतान 2026-12-02 से पहले पूरा करें।"
     },
     {
       "id": "ssc-steno-grade-c-ldce-2026",
@@ -1680,7 +1773,12 @@
       "publishedDate": "2026-11-26",
       "applicationStatus": "OPEN",
       "type": "official-notice",
-      "applyLabel": "Official SSC Candidate Portal"
+      "applyLabel": "Official SSC Candidate Portal",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "New Delhi",
+      "locationRegion": "Delhi",
+      "eligibilityHi": "न्यूनतम योग्यता: Departmental। आयु सीमा व आरक्षण शर्तें SSC के आधिकारिक विज्ञापन (4/12/2026-CONF-5) में सत्यापित करें।",
+      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या 4/12/2026-CONF-5 चुनें, OTR/पंजीकरण लॉगिन करें और 2026-12-08 तक आवेदन सबमिट करें।"
     },
     {
       "id": "bbmb-nangal-iti-apprentice-2026",
@@ -1721,7 +1819,12 @@
       "publishedDate": "2026-11-26",
       "applicationStatus": "OPEN",
       "type": "official-notice",
-      "applyLabel": "Official Apprenticeship Portal (NAPS)"
+      "applyLabel": "Official Apprenticeship Portal (NAPS)",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "Chandigarh",
+      "locationRegion": "Punjab",
+      "eligibilityHi": "न्यूनतम योग्यता: 10th + ITI। आयु सीमा व आरक्षण शर्तें BBMB के आधिकारिक विज्ञापन (BBMB/Nangal/2026) में सत्यापित करें।",
+      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या BBMB/Nangal/2026 चुनें, OTR/पंजीकरण लॉगिन करें और 2026-12-24 तक आवेदन सबमिट करें।"
     },
     {
       "id": "sjvn-iti-apprentice-2026",
@@ -1761,7 +1864,12 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "applicationStatus": "OPEN",
-      "type": "official-notice"
+      "type": "official-notice",
+      "applyLinkType": "DIRECT_APPLICATION_FORM",
+      "locationLocality": "New Delhi",
+      "locationRegion": "Delhi",
+      "eligibilityHi": "न्यूनतम योग्यता: 10th + ITI। आयु सीमा व आरक्षण शर्तें SJVN के आधिकारिक विज्ञापन (SJVN/APP/2026) में सत्यापित करें।",
+      "applyInstructions": "सीधा आवेदन लिंक उपलब्ध है: ऊपर दिए हरे बटन पर क्लिक करके SJVN (SJVN/APP/2026) के ऑनलाइन आवेदन फ़ॉर्म पर पंजीकरण व शुल्क भुगतान 2026-12-17 से पहले पूरा करें।"
     },
     {
       "id": "upsssc-excise-constable-result-2026",
@@ -2375,7 +2483,12 @@
       "publishedDate": "2026-11-26",
       "applicationStatus": "OPEN",
       "type": "official-notice",
-      "applyLabel": "Official UKSSSC Recruitment Portal"
+      "applyLabel": "Official UKSSSC Recruitment Portal",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "Dehradun",
+      "locationRegion": "Uttarakhand",
+      "eligibilityHi": "न्यूनतम योग्यता: 10+2। आयु सीमा व आरक्षण शर्तें UKSSSC के आधिकारिक विज्ञापन (84/UKSSSC/2026) में सत्यापित करें।",
+      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या 84/UKSSSC/2026 चुनें, OTR/पंजीकरण लॉगिन करें और 2026-12-25 तक आवेदन सबमिट करें।"
     },
     {
       "id": "bhel-engineer-supervisor-trainee-2026",
@@ -2425,7 +2538,12 @@
       "type": "official-notice",
       "applyStatus": "VERIFICATION_PENDING",
       "applyLabel": "BHEL Careers Portal (Verification Pending)",
-      "linkHealth": "careers.bhel.in कुछ स्थानीय ISP DNS पर नहीं खुल रहा है (8.8.8.8/Cloudflare DNS पर सक्रिय); उपयोग से पहले DNS जांचें।"
+      "linkHealth": "careers.bhel.in कुछ स्थानीय ISP DNS पर नहीं खुल रहा है (8.8.8.8/Cloudflare DNS पर सक्रिय); उपयोग से पहले DNS जांचें।",
+      "applyLinkType": "VERIFICATION_PENDING",
+      "locationLocality": "New Delhi",
+      "locationRegion": "Delhi",
+      "eligibilityHi": "न्यूनतम योग्यता: Graduate। आयु सीमा व आरक्षण शर्तें BHEL के आधिकारिक विज्ञापन (BHEL-02-03/2026) में सत्यापित करें।",
+      "applyInstructions": "सरकारी पोर्टल स्वचालित पुनः-सत्यापन (Verification Pending) में है: पहले आधिकारिक नोटिफिकेशन PDF की पूरी जांच करें और तकनीकी पहुँच की पुष्टि करते हुए BHEL की आधिकारिक वेबसाइट से ही आवेदन करें।"
     },
     {
       "id": "sidbi-grade-a-b-2026",
@@ -2477,7 +2595,12 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "applicationStatus": "OPEN",
-      "type": "official-notice"
+      "type": "official-notice",
+      "applyLinkType": "DIRECT_APPLICATION_FORM",
+      "locationLocality": "Lucknow",
+      "locationRegion": "Uttar Pradesh",
+      "eligibilityHi": "न्यूनतम योग्यता: Graduate। आयु सीमा व आरक्षण शर्तें SIDBI के आधिकारिक विज्ञापन (8/GradeA-B/2026-27) में सत्यापित करें।",
+      "applyInstructions": "सीधा आवेदन लिंक उपलब्ध है: ऊपर दिए हरे बटन पर क्लिक करके SIDBI (8/GradeA-B/2026-27) के ऑनलाइन आवेदन फ़ॉर्म पर पंजीकरण व शुल्क भुगतान 2026-12-11 से पहले पूरा करें।"
     },
     {
       "id": "assam-rifles-technical-tradesman-2026",
@@ -2529,7 +2652,12 @@
       "type": "official-notice",
       "applyStatus": "VERIFICATION_PENDING",
       "applyLabel": "Assam Rifles Portal (Verification Pending)",
-      "linkHealth": "आधिकारिक पोर्टल assamrifles.gov.in स्वचालित जांच के समय धीमा/टाइमआउट रहा; आवेदन से पहले पोर्टल लोड होने की पुष्टि करें।"
+      "linkHealth": "आधिकारिक पोर्टल assamrifles.gov.in स्वचालित जांच के समय धीमा/टाइमआउट रहा; आवेदन से पहले पोर्टल लोड होने की पुष्टि करें।",
+      "applyLinkType": "VERIFICATION_PENDING",
+      "locationLocality": "Shillong",
+      "locationRegion": "Meghalaya",
+      "eligibilityHi": "न्यूनतम योग्यता: 10th + ITI। आयु सीमा व आरक्षण शर्तें Assam Rifles के आधिकारिक विज्ञापन (AR-TT-2026) में सत्यापित करें।",
+      "applyInstructions": "सरकारी पोर्टल स्वचालित पुनः-सत्यापन (Verification Pending) में है: पहले आधिकारिक नोटिफिकेशन PDF की पूरी जांच करें और तकनीकी पहुँच की पुष्टि करते हुए Assam Rifles की आधिकारिक वेबसाइट से ही आवेदन करें।"
     },
     {
       "id": "bihar-vidhan-sabha-jsa-attendant-2026",
@@ -2582,7 +2710,12 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "applicationStatus": "OPEN",
-      "type": "official-notice"
+      "type": "official-notice",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "Patna",
+      "locationRegion": "Bihar",
+      "eligibilityHi": "न्यूनतम योग्यता: 10+2। आयु सीमा व आरक्षण शर्तें Bihar Vidhan Sabha के आधिकारिक विज्ञापन (BVS-01-02/2026) में सत्यापित करें।",
+      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या BVS-01-02/2026 चुनें, OTR/पंजीकरण लॉगिन करें और 2026-12-06 तक आवेदन सबमिट करें।"
     },
     {
       "id": "ecil-apprentice-recruitment-2026",
@@ -2630,7 +2763,12 @@
       "publishedDate": "2026-11-26",
       "applicationStatus": "OPEN",
       "type": "official-notice",
-      "applyLabel": "Official NATS Portal (Login & Apply)"
+      "applyLabel": "Official NATS Portal (Login & Apply)",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "Hyderabad",
+      "locationRegion": "Telangana",
+      "eligibilityHi": "न्यूनतम योग्यता: Diploma / Engineering। आयु सीमा व आरक्षण शर्तें ECIL के आधिकारिक विज्ञापन (ECIL-APP-2026) में सत्यापित करें।",
+      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या ECIL-APP-2026 चुनें, OTR/पंजीकरण लॉगिन करें और 2026-12-13 तक आवेदन सबमिट करें।"
     },
     {
       "id": "mp-nhm-staff-nurse-2026",
@@ -2672,7 +2810,12 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "applicationStatus": "OPEN",
-      "type": "official-notice"
+      "type": "official-notice",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "Bhopal",
+      "locationRegion": "Madhya Pradesh",
+      "eligibilityHi": "न्यूनतम योग्यता: Graduate। आयु सीमा व आरक्षण शर्तें NHM MP के आधिकारिक विज्ञापन (NHM-MP-SN-2026) में सत्यापित करें।",
+      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या NHM-MP-SN-2026 चुनें, OTR/पंजीकरण लॉगिन करें और 2026-12-05 तक आवेदन सबमिट करें।"
     },
     {
       "id": "aiims-gorakhpur-faculty-2026",
@@ -2708,7 +2851,12 @@
       "publishedDate": "2026-11-26",
       "applicationStatus": "OPEN",
       "type": "official-notice",
-      "applyLabel": "Official AIIMS Gorakhpur Faculty Notice & Portal"
+      "applyLabel": "Official AIIMS Gorakhpur Faculty Notice & Portal",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "Gorakhpur",
+      "locationRegion": "Uttar Pradesh",
+      "eligibilityHi": "न्यूनतम योग्यता: Postgraduate। आयु सीमा व आरक्षण शर्तें AIIMS Gorakhpur के आधिकारिक विज्ञापन (AIIMS-GKP-FAC-2026) में सत्यापित करें।",
+      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या AIIMS-GKP-FAC-2026 चुनें, OTR/पंजीकरण लॉगिन करें और 2026-12-24 तक आवेदन सबमिट करें।"
     },
     {
       "id": "aiims-bilaspur-faculty-2026",
@@ -2747,7 +2895,12 @@
       "publishedDate": "2026-11-26",
       "applicationStatus": "OPEN",
       "type": "official-notice",
-      "applyLabel": "Official AIIMS Bilaspur Recruitment Page"
+      "applyLabel": "Official AIIMS Bilaspur Recruitment Page",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "Bilaspur",
+      "locationRegion": "Himachal Pradesh",
+      "eligibilityHi": "न्यूनतम योग्यता: Postgraduate। आयु सीमा व आरक्षण शर्तें AIIMS Bilaspur के आधिकारिक विज्ञापन (AIIMS-BLS-FAC-2026) में सत्यापित करें।",
+      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या AIIMS-BLS-FAC-2026 चुनें, OTR/पंजीकरण लॉगिन करें और 2026-12-14 तक आवेदन सबमिट करें।"
     },
     {
       "id": "bel-deputy-manager-senior-engineer-2026",
@@ -2783,7 +2936,12 @@
       "publishedDate": "2026-11-26",
       "applicationStatus": "OPEN",
       "type": "official-notice",
-      "applyLabel": "Official BEL Careers Portal"
+      "applyLabel": "Official BEL Careers Portal",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "Bengaluru",
+      "locationRegion": "Karnataka",
+      "eligibilityHi": "न्यूनतम योग्यता: Graduate। आयु सीमा व आरक्षण शर्तें BEL के आधिकारिक विज्ञापन (BEL-DM-SE-2026) में सत्यापित करें।",
+      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या BEL-DM-SE-2026 चुनें, OTR/पंजीकरण लॉगिन करें और 2026-12-08 तक आवेदन सबमिट करें।"
     },
     {
       "id": "drdo-nstl-apprentice-2026",
@@ -3224,7 +3382,12 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "applicationStatus": "OPEN",
-      "type": "official-notice"
+      "type": "official-notice",
+      "applyLinkType": "DIRECT_APPLICATION_FORM",
+      "locationLocality": "New Delhi",
+      "locationRegion": "Delhi",
+      "eligibilityHi": "न्यूनतम योग्यता: Graduate। आयु सीमा व आरक्षण शर्तें UP Sewayojan / Basic Education के आधिकारिक विज्ञापन (UP-ECCE-SEWAYOJAN-2026) में सत्यापित करें।",
+      "applyInstructions": "सीधा आवेदन लिंक उपलब्ध है: ऊपर दिए हरे बटन पर क्लिक करके UP Sewayojan / Basic Education (UP-ECCE-SEWAYOJAN-2026) के ऑनलाइन आवेदन फ़ॉर्म पर पंजीकरण व शुल्क भुगतान 2026-12-03 से पहले पूरा करें।"
     },
     {
       "id": "upessc-up-tgt-2026",
@@ -3275,7 +3438,12 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "applicationStatus": "OPEN",
-      "type": "official-notice"
+      "type": "official-notice",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "Prayagraj",
+      "locationRegion": "Uttar Pradesh",
+      "eligibilityHi": "न्यूनतम योग्यता: Graduate। आयु सीमा व आरक्षण शर्तें UPESSC के आधिकारिक विज्ञापन (UPESSC/07/2026) में सत्यापित करें।",
+      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या UPESSC/07/2026 चुनें, OTR/पंजीकरण लॉगिन करें और 2026-11-28 तक आवेदन सबमिट करें।"
     },
     {
       "id": "rrc-nr-apprentice-2026",
@@ -3325,7 +3493,12 @@
       "type": "official-notice",
       "applyStatus": "VERIFICATION_PENDING",
       "applyLabel": "RRC NR Portal (Verification Pending)",
-      "linkHealth": "rrcnr.org पर Cloudflare/WAF सुरक्षा जांच (403) सक्रिय होने से स्वचालित लिंक सत्यापन लंबित है; केवल सामान्य ब्राउज़र में खोलें।"
+      "linkHealth": "rrcnr.org पर Cloudflare/WAF सुरक्षा जांच (403) सक्रिय होने से स्वचालित लिंक सत्यापन लंबित है; केवल सामान्य ब्राउज़र में खोलें।",
+      "applyLinkType": "VERIFICATION_PENDING",
+      "locationLocality": "New Delhi",
+      "locationRegion": "Delhi",
+      "eligibilityHi": "न्यूनतम योग्यता: 10th + ITI। आयु सीमा व आरक्षण शर्तें RRC Northern Railway के आधिकारिक विज्ञापन (RRC/NR/AA/2026) में सत्यापित करें।",
+      "applyInstructions": "सरकारी पोर्टल स्वचालित पुनः-सत्यापन (Verification Pending) में है: पहले आधिकारिक नोटिफिकेशन PDF की पूरी जांच करें और तकनीकी पहुँच की पुष्टि करते हुए RRC Northern Railway की आधिकारिक वेबसाइट से ही आवेदन करें।"
     },
     {
       "id": "rssb-junior-engineer-2026",
@@ -3381,7 +3554,12 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "applicationStatus": "OPEN",
-      "type": "official-notice"
+      "type": "official-notice",
+      "applyLinkType": "DIRECT_APPLICATION_FORM",
+      "locationLocality": "New Delhi",
+      "locationRegion": "Delhi",
+      "eligibilityHi": "न्यूनतम योग्यता: Diploma / Engineering। आयु सीमा व आरक्षण शर्तें RSSB के आधिकारिक विज्ञापन (RSSB-JE-2026) में सत्यापित करें।",
+      "applyInstructions": "सीधा आवेदन लिंक उपलब्ध है: ऊपर दिए हरे बटन पर क्लिक करके RSSB (RSSB-JE-2026) के ऑनलाइन आवेदन फ़ॉर्म पर पंजीकरण व शुल्क भुगतान 2026-12-17 से पहले पूरा करें।"
     },
     {
       "id": "haryana-htet-2026",
@@ -3423,7 +3601,12 @@
       "publishedDate": "2026-11-26",
       "applicationStatus": "OPEN",
       "type": "official-notice",
-      "applyLabel": "Official BSEH HTET Portal"
+      "applyLabel": "Official BSEH HTET Portal",
+      "applyLinkType": "DIRECT_APPLICATION_FORM",
+      "locationLocality": "Bhiwani",
+      "locationRegion": "Haryana",
+      "eligibilityHi": "न्यूनतम योग्यता: Graduate। आयु सीमा व आरक्षण शर्तें BSEH Haryana के आधिकारिक विज्ञापन (BSEH-HTET-2026) में सत्यापित करें।",
+      "applyInstructions": "सीधा आवेदन लिंक उपलब्ध है: ऊपर दिए हरे बटन पर क्लिक करके BSEH Haryana (BSEH-HTET-2026) के ऑनलाइन आवेदन फ़ॉर्म पर पंजीकरण व शुल्क भुगतान 2026-11-27 से पहले पूरा करें।"
     },
     {
       "id": "coconut-development-board-2026",
@@ -3467,7 +3650,12 @@
       "publishedDate": "2026-11-26",
       "applicationStatus": "OPEN",
       "type": "official-notice",
-      "applyLabel": "Official CDB Vacancy Page"
+      "applyLabel": "Official CDB Vacancy Page",
+      "applyLinkType": "DIRECT_APPLICATION_FORM",
+      "locationLocality": "New Delhi",
+      "locationRegion": "Delhi",
+      "eligibilityHi": "न्यूनतम योग्यता: 10+2। आयु सीमा व आरक्षण शर्तें Coconut Development Board के आधिकारिक विज्ञापन (CDB-2026) में सत्यापित करें।",
+      "applyInstructions": "सीधा आवेदन लिंक उपलब्ध है: ऊपर दिए हरे बटन पर क्लिक करके Coconut Development Board (CDB-2026) के ऑनलाइन आवेदन फ़ॉर्म पर पंजीकरण व शुल्क भुगतान 2026-12-21 से पहले पूरा करें।"
     },
     {
       "id": "ukpsc-lower-pcs-2026",
@@ -3509,7 +3697,12 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "applicationStatus": "OPEN",
-      "type": "official-notice"
+      "type": "official-notice",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "Haridwar",
+      "locationRegion": "Uttarakhand",
+      "eligibilityHi": "न्यूनतम योग्यता: Graduate। आयु सीमा व आरक्षण शर्तें UKPSC के आधिकारिक विज्ञापन (UKPSC-LPCS-2026) में सत्यापित करें।",
+      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या UKPSC-LPCS-2026 चुनें, OTR/पंजीकरण लॉगिन करें और 2026-11-26 तक आवेदन सबमिट करें।"
     },
     {
       "id": "exim-bank-mt-manager-2026",
@@ -3700,7 +3893,11 @@
       "publishedDate": "2026-11-26",
       "applicationStatus": "OPEN",
       "type": "official-notice",
-      "applyLabel": "Official UMANG Portal (Apply)"
+      "applyLabel": "Official UMANG Portal (Apply)",
+      "applyLinkType": "DIRECT_APPLICATION_FORM",
+      "locationLocality": "Sriharikota",
+      "locationRegion": "Andhra Pradesh",
+      "eligibilityHi": "न्यूनतम योग्यता: 10th + ITI / Diploma / Graduate। आयु सीमा व आरक्षण शर्तें ISRO SDSC SHAR के आधिकारिक विज्ञापन (SDSC-SHAR-APP-2026) में सत्यापित करें।"
     },
     {
       "id": "upsssc-junior-analyst-food-result-2026",
@@ -3815,7 +4012,11 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "applicationStatus": "OPEN",
-      "type": "official-notice"
+      "type": "official-notice",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "Neyveli",
+      "locationRegion": "Tamil Nadu",
+      "eligibilityHi": "न्यूनतम योग्यता: Graduate / Engineering / PG / LLB / MBA। आयु सीमा व आरक्षण शर्तें NLC India के आधिकारिक विज्ञापन (NLCIL-11/2026) में सत्यापित करें।"
     },
     {
       "id": "upsssc-cane-supervisor-2026",
@@ -4443,7 +4644,7 @@
       "notificationUrl": "https://goashipyard.in/storage/clients_logo/1793965321.pdf",
       "officialUrl": "https://goashipyard.in/notice-board/career/advertisement",
       "applyUrl": "https://goashipyard.ibtexamination.com/App09Gsl2026VeR4/",
-      "summary": "Fixed-term non-executive recruitment across 20 post categories. Check the advertisement for trade-specific qualifications.",
+      "summary": "गोवा शिपयार्ड लिमिटेड (GSL) ने विज्ञापन संख्या 09/2026 के तहत 91 विभिन्न नॉन-एग्जीक्यूटिव (आईटीआई, डिप्लोमा एवं तकनीकी संवर्ग) पदों पर नियमित भर्ती निकाली है। पात्र अभ्यर्थी 14 दिसंबर 2026 तक ऑनलाइन आवेदन कर सकते हैं।",
       "applyInstructions": "Open the advertisement-specific recruitment portal and register or sign in. Submission behind login has not been tested.",
       "rows": [
         [
@@ -4477,7 +4678,11 @@
       ],
       "verified": true,
       "verifiedOn": "2026-11-26",
-      "publishedDate": "2026-11-26"
+      "publishedDate": "2026-11-26",
+      "applyLinkType": "DIRECT_APPLICATION_FORM",
+      "locationLocality": "Vasco da Gama",
+      "locationRegion": "Goa",
+      "eligibilityHi": "न्यूनतम योग्यता: Post-specific। आयु सीमा व आरक्षण शर्तें Goa Shipyard Limited के आधिकारिक विज्ञापन (09/2026) में सत्यापित करें।"
     },
     {
       "category": "latest-jobs",
@@ -4499,7 +4704,7 @@
       "notificationUrl": "https://goashipyard.in/storage/clients_logo/1795240391.pdf",
       "officialUrl": "https://goashipyard.in/notice-board/career/advertisement",
       "applyUrl": "https://goashipyard.ibtexamination.com/App05gsL2026veR5/",
-      "summary": "Regular non-executive recruitment for Assistant Superintendent in personal secretary and stores/commercial roles.",
+      "summary": "गोवा शिपयार्ड लिमिटेड (GSL) ने विज्ञापन संख्या 10/2026 के अंतर्गत असिस्टेंट सुपरिटेंडेंट (ऑफिशियल लैंग्वेज हिंदी व सिक्योरिटी) के 4 नियमित पदों पर भर्ती जारी की है। संबंधित स्नातकोत्तर/डिग्री योग्यता वाले अभ्यर्थी 24 दिसंबर 2026 तक ऑनलाइन आवेदन कर सकते हैं।",
       "applyInstructions": "Choose New Registration or log in on the specific advertisement portal. Authenticated submission not tested.",
       "rows": [
         [
@@ -4537,7 +4742,11 @@
       ],
       "verified": true,
       "verifiedOn": "2026-11-26",
-      "publishedDate": "2026-11-26"
+      "publishedDate": "2026-11-26",
+      "applyLinkType": "DIRECT_APPLICATION_FORM",
+      "locationLocality": "Vasco da Gama",
+      "locationRegion": "Goa",
+      "eligibilityHi": "न्यूनतम योग्यता: Graduate। आयु सीमा व आरक्षण शर्तें Goa Shipyard Limited के आधिकारिक विज्ञापन (10/2026) में सत्यापित करें।"
     },
     {
       "category": "latest-jobs",
@@ -4560,7 +4769,7 @@
       "officialUrl": "https://www.csir.res.in/en/career-opportunities/recruitment/recruitment-posts-security-officer-security-assistantwatch-ward",
       "applyUrl": "https://recruitment.csir.res.in/",
       "applyLabel": "Official CSIR application portal",
-      "summary": "CSIR headquarters invites applications across five Group B and C designations under one advertisement.",
+      "summary": "वैज्ञानिक तथा औद्योगिक अनुसंधान परिषद (CSIR मुख्यालय, नई दिल्ली) ने विज्ञापन संख्या R&A/02/2026 के अंतर्गत मल्टी-टास्किंग स्टाफ (MTS), ड्राइवर, जूनियर हिंदी अनुवादक व सिक्योरिटी पदों की 29 रिक्तियों पर भर्ती निकाली है। अंतिम तिथि 21 दिसंबर 2026 है।",
       "applyInstructions": "Select the relevant post on the CSIR application portal; separate registration links are provided for MTS, Driver, JHT and security posts. Authenticated submission not tested.",
       "rows": [
         [
@@ -4594,7 +4803,11 @@
       ],
       "verified": true,
       "verifiedOn": "2026-11-26",
-      "publishedDate": "2026-11-26"
+      "publishedDate": "2026-11-26",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "New Delhi",
+      "locationRegion": "Delhi",
+      "eligibilityHi": "न्यूनतम योग्यता: Post-specific। आयु सीमा व आरक्षण शर्तें CSIR Headquarters के आधिकारिक विज्ञापन (R&A/02/2026) में सत्यापित करें।"
     },
     {
       "category": "latest-jobs",
@@ -4616,7 +4829,7 @@
       "notificationUrl": "https://sbi.bank.in/documents/77530/57941334/03112026_1_ADV_Security%2BOfficer.pdf/69e017fe-5e1c-6312-c285-8855f9882102?download=true&t=1793713497818&version=1.0",
       "officialUrl": "https://sbi.bank.in/en/web/careers/current-openings",
       "applyUrl": "https://ibpsreg.ibps.in/sbirscooct26/",
-      "summary": "Regular security officer recruitment; application window extended to 2 December 2026 as shown on the official IBPS registration page.",
+      "summary": "भारतीय स्टेट बैंक (SBI) ने विज्ञापन CRPD/SCO/2026-27/28 के तहत मैनेजर व डिप्टी मैनेजर (सिक्योरिटी) के 60 पदों पर भर्ती की अंतिम तिथि बढ़ाकर 2 दिसंबर 2026 कर दी है। पात्र भूतपूर्व सेवा/सुरक्षा अनुभव वाले अभ्यर्थी IBPS पोर्टल से आवेदन करें।",
       "applyInstructions": "Register or log in through the advertisement-specific SBI IBPS portal. Exact closing time not stated on the registration page; apply early. Authenticated submission not tested.",
       "rows": [
         [
@@ -4646,7 +4859,11 @@
       ],
       "verified": true,
       "verifiedOn": "2026-11-26",
-      "publishedDate": "2026-11-26"
+      "publishedDate": "2026-11-26",
+      "applyLinkType": "DIRECT_APPLICATION_FORM",
+      "locationLocality": "Mumbai",
+      "locationRegion": "Maharashtra",
+      "eligibilityHi": "न्यूनतम योग्यता: Graduate with specified service experience। आयु सीमा व आरक्षण शर्तें SBI के आधिकारिक विज्ञापन (CRPD/SCO/2026-27/28) में सत्यापित करें।"
     },
     {
       "id": "powergrid-trainee-engineer-electronics-gate-2026",
@@ -4699,7 +4916,12 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "reviewedBy": "sarkari-alert-avyaan-import",
-      "reviewedOn": "2026-11-26"
+      "reviewedOn": "2026-11-26",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "Gurugram",
+      "locationRegion": "Haryana",
+      "eligibilityHi": "न्यूनतम योग्यता: BE / B.Tech + GATE 2026 (EC)। आयु सीमा व आरक्षण शर्तें POWERGRID के आधिकारिक विज्ञापन (CC/04/2026) में सत्यापित करें।",
+      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या CC/04/2026 चुनें, OTR/पंजीकरण लॉगिन करें और 2026-11-27 तक आवेदन सबमिट करें।"
     },
     {
       "id": "bpcl-pwbd-special-recruitment-2026",
@@ -4752,7 +4974,12 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "reviewedBy": "sarkari-alert-avyaan-import",
-      "reviewedOn": "2026-11-26"
+      "reviewedOn": "2026-11-26",
+      "applyLinkType": "DIRECT_APPLICATION_FORM",
+      "locationLocality": "Mumbai",
+      "locationRegion": "Maharashtra",
+      "eligibilityHi": "न्यूनतम योग्यता: Graduate / As per Post। आयु सीमा व आरक्षण शर्तें BPCL के आधिकारिक विज्ञापन (Special Recruitment Drive for PwBDs) में सत्यापित करें।",
+      "applyInstructions": "सीधा आवेदन लिंक उपलब्ध है: ऊपर दिए हरे बटन पर क्लिक करके BPCL (Special Recruitment Drive for PwBDs) के ऑनलाइन आवेदन फ़ॉर्म पर पंजीकरण व शुल्क भुगतान 2026-11-29 से पहले पूरा करें।"
     },
     {
       "id": "du-tgt-assistant-teacher-primary-324-2026",
@@ -4805,7 +5032,12 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "reviewedBy": "sarkari-alert-avyaan-import",
-      "reviewedOn": "2026-11-26"
+      "reviewedOn": "2026-11-26",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "New Delhi",
+      "locationRegion": "Delhi",
+      "eligibilityHi": "न्यूनतम योग्यता: Graduate + B.Ed / Teacher Training। आयु सीमा व आरक्षण शर्तें Delhi University के आधिकारिक विज्ञापन (R&P/324/2026) में सत्यापित करें।",
+      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या R&P/324/2026 चुनें, OTR/पंजीकरण लॉगिन करें और 2026-11-30 तक आवेदन सबमिट करें।"
     },
     {
       "id": "du-assistant-recruitment-325-2026",
@@ -4858,7 +5090,12 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "reviewedBy": "sarkari-alert-avyaan-import",
-      "reviewedOn": "2026-11-26"
+      "reviewedOn": "2026-11-26",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "New Delhi",
+      "locationRegion": "Delhi",
+      "eligibilityHi": "न्यूनतम योग्यता: Graduate। आयु सीमा व आरक्षण शर्तें Delhi University के आधिकारिक विज्ञापन (R&P/325/2026) में सत्यापित करें।",
+      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या R&P/325/2026 चुनें, OTR/पंजीकरण लॉगिन करें और 2026-11-30 तक आवेदन सबमिट करें।"
     },
     {
       "id": "du-hindi-translator-legal-assistant-326-2026",
@@ -4911,7 +5148,12 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "reviewedBy": "sarkari-alert-avyaan-import",
-      "reviewedOn": "2026-11-26"
+      "reviewedOn": "2026-11-26",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "New Delhi",
+      "locationRegion": "Delhi",
+      "eligibilityHi": "न्यूनतम योग्यता: Master's / LLB as per Post। आयु सीमा व आरक्षण शर्तें Delhi University के आधिकारिक विज्ञापन (R&P/326/2026) में सत्यापित करें।",
+      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या R&P/326/2026 चुनें, OTR/पंजीकरण लॉगिन करें और 2026-11-30 तक आवेदन सबमिट करें।"
     },
     {
       "id": "scl-technical-administrative-01-2026",
@@ -4964,7 +5206,12 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "reviewedBy": "sarkari-alert-avyaan-import",
-      "reviewedOn": "2026-11-26"
+      "reviewedOn": "2026-11-26",
+      "applyLinkType": "DIRECT_APPLICATION_FORM",
+      "locationLocality": "SAS Nagar (Mohali)",
+      "locationRegion": "Punjab",
+      "eligibilityHi": "न्यूनतम योग्यता: 10th / ITI / Diploma / Graduate। आयु सीमा व आरक्षण शर्तें SCL के आधिकारिक विज्ञापन (SCL:DR:01/2026) में सत्यापित करें।",
+      "applyInstructions": "सीधा आवेदन लिंक उपलब्ध है: ऊपर दिए हरे बटन पर क्लिक करके SCL (SCL:DR:01/2026) के ऑनलाइन आवेदन फ़ॉर्म पर पंजीकरण व शुल्क भुगतान 2026-11-30 से पहले पूरा करें।"
     },
     {
       "id": "gail-cgm-law-recruitment-2026",
@@ -5017,7 +5264,12 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "reviewedBy": "sarkari-alert-avyaan-import",
-      "reviewedOn": "2026-11-26"
+      "reviewedOn": "2026-11-26",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "New Delhi",
+      "locationRegion": "Delhi",
+      "eligibilityHi": "न्यूनतम योग्यता: LLB + Senior Legal Experience। आयु सीमा व आरक्षण शर्तें GAIL (India) Limited के आधिकारिक विज्ञापन (GAIL/OPEN/LAW/2/2026) में सत्यापित करें।",
+      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या GAIL/OPEN/LAW/2/2026 चुनें, OTR/पंजीकरण लॉगिन करें और 2026-12-02 तक आवेदन सबमिट करें।"
     },
     {
       "id": "kerala-psc-lab-assistant-dairy-cfp-general-2026",
@@ -5074,7 +5326,12 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "reviewedBy": "sarkari-alert-avyaan-import",
-      "reviewedOn": "2026-11-26"
+      "reviewedOn": "2026-11-26",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "Thiruvananthapuram",
+      "locationRegion": "Kerala",
+      "eligibilityHi": "न्यूनतम योग्यता: रसायन विज्ञान, जैवरसायन, बायोटेक्नोलॉजी या माइक्रोबायोलॉजी में B.Sc. या अधिसूचित समकक्ष।। आयु सीमा व आरक्षण शर्तें Kerala PSC के आधिकारिक विज्ञापन (162/2026) में सत्यापित करें।",
+      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या 162/2026 चुनें, OTR/पंजीकरण लॉगिन करें और 2026-12-02 तक आवेदन सबमिट करें।"
     },
     {
       "id": "kerala-psc-lab-assistant-dairy-cfp-society-2026",
@@ -5131,7 +5388,12 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "reviewedBy": "sarkari-alert-avyaan-import",
-      "reviewedOn": "2026-11-26"
+      "reviewedOn": "2026-11-26",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "Thiruvananthapuram",
+      "locationRegion": "Kerala",
+      "eligibilityHi": "न्यूनतम योग्यता: अधिसूचित विषय में B.Sc. या समकक्ष और पात्र सदस्य सहकारी सोसायटी में कम से कम तीन वर्ष की स। आयु सीमा व आरक्षण शर्तें Kerala PSC के आधिकारिक विज्ञापन (163/2026) में सत्यापित करें।",
+      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या 163/2026 चुनें, OTR/पंजीकरण लॉगिन करें और 2026-12-02 तक आवेदन सबमिट करें।"
     },
     {
       "id": "kerala-psc-attender-st-164-2026",
@@ -5188,7 +5450,12 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "reviewedBy": "sarkari-alert-avyaan-import",
-      "reviewedOn": "2026-11-26"
+      "reviewedOn": "2026-11-26",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "Thiruvananthapuram",
+      "locationRegion": "Kerala",
+      "eligibilityHi": "न्यूनतम योग्यता: केवल ST। कक्षा 7 पास या अधिसूचित समकक्ष।। आयु सीमा व आरक्षण शर्तें Kerala PSC के आधिकारिक विज्ञापन (164/2026) में सत्यापित करें।",
+      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या 164/2026 चुनें, OTR/पंजीकरण लॉगिन करें और 2026-12-02 तक आवेदन सबमिट करें।"
     },
     {
       "id": "kerala-psc-assistant-professor-cardiology-165-166-2026",
@@ -5245,7 +5512,12 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "reviewedBy": "sarkari-alert-avyaan-import",
-      "reviewedOn": "2026-11-26"
+      "reviewedOn": "2026-11-26",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "Thiruvananthapuram",
+      "locationRegion": "Kerala",
+      "eligibilityHi": "न्यूनतम योग्यता: मुस्लिम (2) और LC/AI (2)। कार्डियोलॉजी में DM/DNB/DrNB और लागू NMC शर्तें।। आयु सीमा व आरक्षण शर्तें Kerala PSC के आधिकारिक विज्ञापन (165–166/2026) में सत्यापित करें।",
+      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या 165–166/2026 चुनें, OTR/पंजीकरण लॉगिन करें और 2026-12-02 तक आवेदन सबमिट करें।"
     },
     {
       "id": "kerala-psc-assistant-professor-pathology-167-2026",
@@ -5302,7 +5574,12 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "reviewedBy": "sarkari-alert-avyaan-import",
-      "reviewedOn": "2026-11-26"
+      "reviewedOn": "2026-11-26",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "Thiruvananthapuram",
+      "locationRegion": "Kerala",
+      "eligibilityHi": "न्यूनतम योग्यता: Dheevara वर्ग। MD/DNB पैथोलॉजी और निर्धारित सीनियर रेजिडेंसी।। आयु सीमा व आरक्षण शर्तें Kerala PSC के आधिकारिक विज्ञापन (167/2026) में सत्यापित करें।",
+      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या 167/2026 चुनें, OTR/पंजीकरण लॉगिन करें और 2026-12-02 तक आवेदन सबमिट करें।"
     },
     {
       "id": "kerala-psc-assistant-professor-cardiology-sc-168-2026",
@@ -5359,7 +5636,12 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "reviewedBy": "sarkari-alert-avyaan-import",
-      "reviewedOn": "2026-11-26"
+      "reviewedOn": "2026-11-26",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "Thiruvananthapuram",
+      "locationRegion": "Kerala",
+      "eligibilityHi": "न्यूनतम योग्यता: केवल SC। कार्डियोलॉजी में DM/DNB/DrNB और लागू NMC शर्तें।। आयु सीमा व आरक्षण शर्तें Kerala PSC के आधिकारिक विज्ञापन (168/2026) में सत्यापित करें।",
+      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या 168/2026 चुनें, OTR/पंजीकरण लॉगिन करें और 2026-12-02 तक आवेदन सबमिट करें।"
     },
     {
       "id": "kerala-psc-assistant-professor-cvts-169-2026",
@@ -5416,7 +5698,12 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "reviewedBy": "sarkari-alert-avyaan-import",
-      "reviewedOn": "2026-11-26"
+      "reviewedOn": "2026-11-26",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "Thiruvananthapuram",
+      "locationRegion": "Kerala",
+      "eligibilityHi": "न्यूनतम योग्यता: Dheevara वर्ग। संबंधित MCh/DNB/DrNB और अधिसूचित NMC शर्तें।। आयु सीमा व आरक्षण शर्तें Kerala PSC के आधिकारिक विज्ञापन (169/2026) में सत्यापित करें।",
+      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या 169/2026 चुनें, OTR/पंजीकरण लॉगिन करें और 2026-12-02 तक आवेदन सबमिट करें।"
     },
     {
       "id": "kerala-psc-sterilization-technician-grade-ii-170-171-2026",
@@ -5473,7 +5760,12 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "reviewedBy": "sarkari-alert-avyaan-import",
-      "reviewedOn": "2026-11-26"
+      "reviewedOn": "2026-11-26",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "Thiruvananthapuram",
+      "locationRegion": "Kerala",
+      "eligibilityHi": "न्यूनतम योग्यता: SC (2) और LC/AI (1)। SSLC, निर्धारित स्टेराइल सप्लाई डिप्लोमा/समकक्ष और लागू काउंसिल पंजीक। आयु सीमा व आरक्षण शर्तें Kerala PSC के आधिकारिक विज्ञापन (170–171/2026) में सत्यापित करें।",
+      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या 170–171/2026 चुनें, OTR/पंजीकरण लॉगिन करें और 2026-12-02 तक आवेदन सबमिट करें।"
     },
     {
       "id": "kerala-psc-armed-police-constable-trainee-ernakulam-172-2026",
@@ -5530,7 +5822,12 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "reviewedBy": "sarkari-alert-avyaan-import",
-      "reviewedOn": "2026-11-26"
+      "reviewedOn": "2026-11-26",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "Ernakulam",
+      "locationRegion": "Kerala",
+      "eligibilityHi": "न्यूनतम योग्यता: LC/AI वर्ग। 12वीं या समकक्ष और निर्धारित शारीरिक मानक।। आयु सीमा व आरक्षण शर्तें Kerala PSC के आधिकारिक विज्ञापन (172/2026) में सत्यापित करें।",
+      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या 172/2026 चुनें, OTR/पंजीकरण लॉगिन करें और 2026-12-02 तक आवेदन सबमिट करें।"
     },
     {
       "id": "kerala-psc-ld-typist-clerk-typist-ernakulam-173-2026",
@@ -5587,7 +5884,12 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "reviewedBy": "sarkari-alert-avyaan-import",
-      "reviewedOn": "2026-11-26"
+      "reviewedOn": "2026-11-26",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "Ernakulam",
+      "locationRegion": "Kerala",
+      "eligibilityHi": "न्यूनतम योग्यता: SC वर्ग के पात्र भूतपूर्व सैनिक। SSLC और अधिसूचित टाइपराइटिंग योग्यताएँ।। आयु सीमा व आरक्षण शर्तें Kerala PSC के आधिकारिक विज्ञापन (173/2026) में सत्यापित करें।",
+      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या 173/2026 चुनें, OTR/पंजीकरण लॉगिन करें और 2026-12-02 तक आवेदन सबमिट करें।"
     },
     {
       "id": "cpcl-engineer-officer-02-2026",
@@ -5640,7 +5942,12 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "reviewedBy": "sarkari-alert-avyaan-import",
-      "reviewedOn": "2026-11-26"
+      "reviewedOn": "2026-11-26",
+      "applyLinkType": "DIRECT_APPLICATION_FORM",
+      "locationLocality": "Chennai",
+      "locationRegion": "Tamil Nadu",
+      "eligibilityHi": "न्यूनतम योग्यता: Engineering Degree / CA / Post-wise। आयु सीमा व आरक्षण शर्तें CPCL के आधिकारिक विज्ञापन (02 of 2026 / CPCL/HRD:03:056) में सत्यापित करें।",
+      "applyInstructions": "सीधा आवेदन लिंक उपलब्ध है: ऊपर दिए हरे बटन पर क्लिक करके CPCL (02 of 2026 / CPCL/HRD:03:056) के ऑनलाइन आवेदन फ़ॉर्म पर पंजीकरण व शुल्क भुगतान 2026-12-03 से पहले पूरा करें।"
     },
     {
       "id": "up-icds-pilibhit-anganwadi-2026",
@@ -5693,7 +6000,12 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "reviewedBy": "sarkari-alert-avyaan-import",
-      "reviewedOn": "2026-11-26"
+      "reviewedOn": "2026-11-26",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "Pilibhit",
+      "locationRegion": "Uttar Pradesh",
+      "eligibilityHi": "न्यूनतम योग्यता: 12th Pass (Local Resident)। आयु सीमा व आरक्षण शर्तें Pilibhit ICDS के आधिकारिक विज्ञापन (ICDS-Pilibhit-12Nov2026) में सत्यापित करें।",
+      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या ICDS-Pilibhit-12Nov2026 चुनें, OTR/पंजीकरण लॉगिन करें और 2026-12-03 तक आवेदन सबमिट करें।"
     },
     {
       "id": "sbi-sco-gm-head-cstra-36-2026",
@@ -5746,7 +6058,12 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "reviewedBy": "sarkari-alert-avyaan-import",
-      "reviewedOn": "2026-11-26"
+      "reviewedOn": "2026-11-26",
+      "applyLinkType": "DIRECT_APPLICATION_FORM",
+      "locationLocality": "Mumbai",
+      "locationRegion": "Maharashtra",
+      "eligibilityHi": "न्यूनतम योग्यता: BE/B.Tech / Cybersecurity Exp.। आयु सीमा व आरक्षण शर्तें SBI के आधिकारिक विज्ञापन (CRPD/SCO/2026-27/36) में सत्यापित करें।",
+      "applyInstructions": "सीधा आवेदन लिंक उपलब्ध है: ऊपर दिए हरे बटन पर क्लिक करके SBI (CRPD/SCO/2026-27/36) के ऑनलाइन आवेदन फ़ॉर्म पर पंजीकरण व शुल्क भुगतान 2026-12-03 से पहले पूरा करें।"
     },
     {
       "id": "up-icds-lucknow-anganwadi-2026",
@@ -5799,7 +6116,12 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "reviewedBy": "sarkari-alert-avyaan-import",
-      "reviewedOn": "2026-11-26"
+      "reviewedOn": "2026-11-26",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "Lucknow",
+      "locationRegion": "Uttar Pradesh",
+      "eligibilityHi": "न्यूनतम योग्यता: 12th Pass (Local Resident)। आयु सीमा व आरक्षण शर्तें Lucknow ICDS के आधिकारिक विज्ञापन (ICDS-Lucknow-12Nov2026) में सत्यापित करें।",
+      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या ICDS-Lucknow-12Nov2026 चुनें, OTR/पंजीकरण लॉगिन करें और 2026-12-03 तक आवेदन सबमिट करें।"
     },
     {
       "id": "becil-project-technical-noida-568-2026",
@@ -5852,7 +6174,12 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "reviewedBy": "sarkari-alert-avyaan-import",
-      "reviewedOn": "2026-11-26"
+      "reviewedOn": "2026-11-26",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "Noida",
+      "locationRegion": "Uttar Pradesh",
+      "eligibilityHi": "न्यूनतम योग्यता: Degree + Contract Experience। आयु सीमा व आरक्षण शर्तें BECIL के आधिकारिक विज्ञापन (568) में सत्यापित करें।",
+      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या 568 चुनें, OTR/पंजीकरण लॉगिन करें और 2026-12-05 तक आवेदन सबमिट करें।"
     },
     {
       "id": "becil-recruitment-payroll-noida-567-2026",
@@ -5905,7 +6232,12 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "reviewedBy": "sarkari-alert-avyaan-import",
-      "reviewedOn": "2026-11-26"
+      "reviewedOn": "2026-11-26",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "Noida",
+      "locationRegion": "Uttar Pradesh",
+      "eligibilityHi": "न्यूनतम योग्यता: Degree / HR-Payroll Exp.। आयु सीमा व आरक्षण शर्तें BECIL के आधिकारिक विज्ञापन (567) में सत्यापित करें।",
+      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या 567 चुनें, OTR/पंजीकरण लॉगिन करें और 2026-12-05 तक आवेदन सबमिट करें।"
     },
     {
       "id": "dvc-executive-trainee-gate-2025-2026",
@@ -5962,7 +6294,12 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "reviewedBy": "sarkari-alert-avyaan-import",
-      "reviewedOn": "2026-11-26"
+      "reviewedOn": "2026-11-26",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "Kolkata",
+      "locationRegion": "West Bengal",
+      "eligibilityHi": "न्यूनतम योग्यता: B.E. / B.Tech + GATE 2025। आयु सीमा व आरक्षण शर्तें Damodar Valley Corporation (DVC) के आधिकारिक विज्ञापन (PLR/ET/04/2026/05) में सत्यापित करें।",
+      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या PLR/ET/04/2026/05 चुनें, OTR/पंजीकरण लॉगिन करें और 2026-12-06 तक आवेदन सबमिट करें।"
     },
     {
       "id": "up-icds-ghazipur-anganwadi-worker-2026",
@@ -6015,7 +6352,12 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "reviewedBy": "sarkari-alert-avyaan-import",
-      "reviewedOn": "2026-11-26"
+      "reviewedOn": "2026-11-26",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "Ghazipur",
+      "locationRegion": "Uttar Pradesh",
+      "eligibilityHi": "न्यूनतम योग्यता: 12th Pass (Local Resident)। आयु सीमा व आरक्षण शर्तें Ghazipur ICDS के आधिकारिक विज्ञापन (ICDS-Ghazipur-Worker-18Nov2026) में सत्यापित करें।",
+      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या ICDS-Ghazipur-Worker-18Nov2026 चुनें, OTR/पंजीकरण लॉगिन करें और 2026-12-09 तक आवेदन सबमिट करें।"
     },
     {
       "id": "manit-bhopal-non-teaching-group-b-c-2026",
@@ -6068,7 +6410,12 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "reviewedBy": "sarkari-alert-avyaan-import",
-      "reviewedOn": "2026-11-26"
+      "reviewedOn": "2026-11-26",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "Bhopal",
+      "locationRegion": "Madhya Pradesh",
+      "eligibilityHi": "न्यूनतम योग्यता: 12th / ITI / Diploma / Degree। आयु सीमा व आरक्षण शर्तें MANIT Bhopal के आधिकारिक विज्ञापन (Non-Teaching Recruitment 2026) में सत्यापित करें।",
+      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या Non-Teaching Recruitment 2026 चुनें, OTR/पंजीकरण लॉगिन करें और 2026-12-10 तक आवेदन सबमिट करें।"
     },
     {
       "id": "up-icds-ghazipur-anganwadi-helper-2026",
@@ -6121,7 +6468,12 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "reviewedBy": "sarkari-alert-avyaan-import",
-      "reviewedOn": "2026-11-26"
+      "reviewedOn": "2026-11-26",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "Ghazipur",
+      "locationRegion": "Uttar Pradesh",
+      "eligibilityHi": "न्यूनतम योग्यता: 12th Pass (Local Resident)। आयु सीमा व आरक्षण शर्तें Ghazipur ICDS के आधिकारिक विज्ञापन (ICDS-Ghazipur-Helper-21Nov2026) में सत्यापित करें।",
+      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या ICDS-Ghazipur-Helper-21Nov2026 चुनें, OTR/पंजीकरण लॉगिन करें और 2026-12-12 तक आवेदन सबमिट करें।"
     },
     {
       "id": "nsic-executive-recruitment-02-2026",
@@ -6174,7 +6526,12 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "reviewedBy": "sarkari-alert-avyaan-import",
-      "reviewedOn": "2026-11-26"
+      "reviewedOn": "2026-11-26",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "New Delhi",
+      "locationRegion": "Delhi",
+      "eligibilityHi": "न्यूनतम योग्यता: Graduate / Engineering / MBA। आयु सीमा व आरक्षण शर्तें NSIC के आधिकारिक विज्ञापन (NSIC/HR/02/2026) में सत्यापित करें।",
+      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या NSIC/HR/02/2026 चुनें, OTR/पंजीकरण लॉगिन करें और 2026-12-14 तक आवेदन सबमिट करें।"
     },
     {
       "id": "nsic-executive-special-drive-01-2026",
@@ -6227,7 +6584,12 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "reviewedBy": "sarkari-alert-avyaan-import",
-      "reviewedOn": "2026-11-26"
+      "reviewedOn": "2026-11-26",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "New Delhi",
+      "locationRegion": "Delhi",
+      "eligibilityHi": "न्यूनतम योग्यता: Graduate / Engineering / MBA। आयु सीमा व आरक्षण शर्तें NSIC के आधिकारिक विज्ञापन (NSIC/HR/01/2026) में सत्यापित करें।",
+      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या NSIC/HR/01/2026 चुनें, OTR/पंजीकरण लॉगिन करें और 2026-12-14 तक आवेदन सबमिट करें।"
     },
     {
       "id": "up-icds-ballia-anganwadi-helper-2026",
@@ -6280,7 +6642,12 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "reviewedBy": "sarkari-alert-avyaan-import",
-      "reviewedOn": "2026-11-26"
+      "reviewedOn": "2026-11-26",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "Ballia",
+      "locationRegion": "Uttar Pradesh",
+      "eligibilityHi": "न्यूनतम योग्यता: 12th Pass (Local Resident)। आयु सीमा व आरक्षण शर्तें Ballia ICDS के आधिकारिक विज्ञापन (ICDS-Ballia-Helper-21Nov2026) में सत्यापित करें।",
+      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या ICDS-Ballia-Helper-21Nov2026 चुनें, OTR/पंजीकरण लॉगिन करें और 2026-12-14 तक आवेदन सबमिट करें।"
     },
     {
       "id": "kerala-psc-systems-manager-175-2026",
@@ -6337,7 +6704,12 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "reviewedBy": "sarkari-alert-avyaan-import",
-      "reviewedOn": "2026-11-26"
+      "reviewedOn": "2026-11-26",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "Thiruvananthapuram",
+      "locationRegion": "Kerala",
+      "eligibilityHi": "न्यूनतम योग्यता: कंप्यूटर इंजीनियरिंग/टेक्नोलॉजी की डिग्री या निर्दिष्ट कंप्यूटर योग्यता व सॉफ्टवेयर/डेटा प। आयु सीमा व आरक्षण शर्तें Kerala PSC के आधिकारिक विज्ञापन (175/2026) में सत्यापित करें।",
+      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या 175/2026 चुनें, OTR/पंजीकरण लॉगिन करें और 2026-12-16 तक आवेदन सबमिट करें।"
     },
     {
       "id": "kerala-psc-divisional-accounts-officer-kseb-176-2026",
@@ -6394,7 +6766,12 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "reviewedBy": "sarkari-alert-avyaan-import",
-      "reviewedOn": "2026-11-26"
+      "reviewedOn": "2026-11-26",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "Thiruvananthapuram",
+      "locationRegion": "Kerala",
+      "eligibilityHi": "न्यूनतम योग्यता: KSEB के पात्र सेवारत कर्मचारियों के लिए। निर्धारित विभागीय परीक्षा और सेवा शर्तें लागू।। आयु सीमा व आरक्षण शर्तें Kerala PSC के आधिकारिक विज्ञापन (176/2026) में सत्यापित करें।",
+      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या 176/2026 चुनें, OTR/पंजीकरण लॉगिन करें और 2026-12-16 तक आवेदन सबमिट करें।"
     },
     {
       "id": "kerala-psc-marketing-executive-177-2026",
@@ -6451,7 +6828,12 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "reviewedBy": "sarkari-alert-avyaan-import",
-      "reviewedOn": "2026-11-26"
+      "reviewedOn": "2026-11-26",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "Thiruvananthapuram",
+      "locationRegion": "Kerala",
+      "eligibilityHi": "न्यूनतम योग्यता: MBA (मार्केटिंग) या MBA के साथ मार्केटिंग में निर्दिष्ट पीजी डिप्लोमा।। आयु सीमा व आरक्षण शर्तें Kerala PSC के आधिकारिक विज्ञापन (177/2026) में सत्यापित करें।",
+      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या 177/2026 चुनें, OTR/पंजीकरण लॉगिन करें और 2026-12-16 तक आवेदन सबमिट करें।"
     },
     {
       "id": "kerala-psc-revenue-surveyor-grade-ii-178-2026",
@@ -6508,7 +6890,12 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "reviewedBy": "sarkari-alert-avyaan-import",
-      "reviewedOn": "2026-11-26"
+      "reviewedOn": "2026-11-26",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "Thiruvananthapuram",
+      "locationRegion": "Kerala",
+      "eligibilityHi": "न्यूनतम योग्यता: SSLC (10वीं) और सर्वेइंग में NTC/KGTE या अधिसूचित समकक्ष योग्यता।। आयु सीमा व आरक्षण शर्तें Kerala PSC के आधिकारिक विज्ञापन (178/2026) में सत्यापित करें।",
+      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या 178/2026 चुनें, OTR/पंजीकरण लॉगिन करें और 2026-12-16 तक आवेदन सबमिट करें।"
     },
     {
       "id": "kerala-psc-ecg-technician-grade-ii-179-2026",
@@ -6565,7 +6952,12 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "reviewedBy": "sarkari-alert-avyaan-import",
-      "reviewedOn": "2026-11-26"
+      "reviewedOn": "2026-11-26",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "Thiruvananthapuram",
+      "locationRegion": "Kerala",
+      "eligibilityHi": "न्यूनतम योग्यता: SSLC और ECG/ऑडियोमेट्री टेक्नोलॉजी में अधिसूचित व्यावसायिक योग्यता।। आयु सीमा व आरक्षण शर्तें Kerala PSC के आधिकारिक विज्ञापन (179/2026) में सत्यापित करें।",
+      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या 179/2026 चुनें, OTR/पंजीकरण लॉगिन करें और 2026-12-16 तक आवेदन सबमिट करें।"
     },
     {
       "id": "kerala-psc-palmgur-instructor-180-2026",
@@ -6622,7 +7014,12 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "reviewedBy": "sarkari-alert-avyaan-import",
-      "reviewedOn": "2026-11-26"
+      "reviewedOn": "2026-11-26",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "Thiruvananthapuram",
+      "locationRegion": "Kerala",
+      "eligibilityHi": "न्यूनतम योग्यता: स्नातक और KVIC से अनुमोदित एडवांस्ड पाम प्रोडक्ट्स टेक्नोलॉजी प्रमाणपत्र।। आयु सीमा व आरक्षण शर्तें Kerala PSC के आधिकारिक विज्ञापन (180/2026) में सत्यापित करें।",
+      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या 180/2026 चुनें, OTR/पंजीकरण लॉगिन करें और 2026-12-16 तक आवेदन सबमिट करें।"
     },
     {
       "id": "kerala-psc-field-supervisor-grade-ii-181-2026",
@@ -6679,7 +7076,12 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "reviewedBy": "sarkari-alert-avyaan-import",
-      "reviewedOn": "2026-11-26"
+      "reviewedOn": "2026-11-26",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "Thiruvananthapuram",
+      "locationRegion": "Kerala",
+      "eligibilityHi": "न्यूनतम योग्यता: SSLC और कृषि में अधिसूचित प्रमाणपत्र।। आयु सीमा व आरक्षण शर्तें Kerala PSC के आधिकारिक विज्ञापन (181/2026) में सत्यापित करें।",
+      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या 181/2026 चुनें, OTR/पंजीकरण लॉगिन करें और 2026-12-16 तक आवेदन सबमिट करें।"
     },
     {
       "id": "kerala-psc-lower-division-clerk-182-2026",
@@ -6736,7 +7138,12 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "reviewedBy": "sarkari-alert-avyaan-import",
-      "reviewedOn": "2026-11-26"
+      "reviewedOn": "2026-11-26",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "Thiruvananthapuram",
+      "locationRegion": "Kerala",
+      "eligibilityHi": "न्यूनतम योग्यता: 12वीं या समकक्ष और छह महीने का कंप्यूटर एप्लिकेशन डिप्लोमा।। आयु सीमा व आरक्षण शर्तें Kerala PSC के आधिकारिक विज्ञापन (182/2026) में सत्यापित करें।",
+      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या 182/2026 चुनें, OTR/पंजीकरण लॉगिन करें और 2026-12-16 तक आवेदन सबमिट करें।"
     },
     {
       "id": "kerala-psc-saddler-ncc-thrissur-183-2026",
@@ -6793,7 +7200,12 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "reviewedBy": "sarkari-alert-avyaan-import",
-      "reviewedOn": "2026-11-26"
+      "reviewedOn": "2026-11-26",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "Thrissur",
+      "locationRegion": "Kerala",
+      "eligibilityHi": "न्यूनतम योग्यता: पात्र भूतपूर्व सैनिक, सातवीं पास, तथा सैडलरी कौशल/अनुभव। शैक्षणिक सीमा नोटिस में देखें।। आयु सीमा व आरक्षण शर्तें Kerala PSC के आधिकारिक विज्ञापन (183/2026) में सत्यापित करें।",
+      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या 183/2026 चुनें, OTR/पंजीकरण लॉगिन करें और 2026-12-16 तक आवेदन सबमिट करें।"
     },
     {
       "id": "kerala-psc-assistant-motor-vehicle-inspector-st-184-2026",
@@ -6850,7 +7262,12 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "reviewedBy": "sarkari-alert-avyaan-import",
-      "reviewedOn": "2026-11-26"
+      "reviewedOn": "2026-11-26",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "Thiruvananthapuram",
+      "locationRegion": "Kerala",
+      "eligibilityHi": "न्यूनतम योग्यता: केवल ST। SSLC, ऑटोमोबाइल/मैकेनिकल में तीन वर्षीय डिप्लोमा और निर्धारित लाइसेंस व अनुभव।। आयु सीमा व आरक्षण शर्तें Kerala PSC के आधिकारिक विज्ञापन (184/2026) में सत्यापित करें।",
+      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या 184/2026 चुनें, OTR/पंजीकरण लॉगिन करें और 2026-12-16 तक आवेदन सबमिट करें।"
     },
     {
       "id": "kerala-psc-computer-assistant-grade-ii-st-185-2026",
@@ -6907,7 +7324,12 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "reviewedBy": "sarkari-alert-avyaan-import",
-      "reviewedOn": "2026-11-26"
+      "reviewedOn": "2026-11-26",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "Thiruvananthapuram",
+      "locationRegion": "Kerala",
+      "eligibilityHi": "न्यूनतम योग्यता: केवल ST। SSLC और अंग्रेजी एवं मलयालम टाइपराइटिंग की निर्धारित योग्यताएँ।। आयु सीमा व आरक्षण शर्तें Kerala PSC के आधिकारिक विज्ञापन (185/2026) में सत्यापित करें।",
+      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या 185/2026 चुनें, OTR/पंजीकरण लॉगिन करें और 2026-12-16 तक आवेदन सबमिट करें।"
     },
     {
       "id": "kerala-psc-assistant-professor-pharmacology-186-187-2026",
@@ -6964,7 +7386,12 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "reviewedBy": "sarkari-alert-avyaan-import",
-      "reviewedOn": "2026-11-26"
+      "reviewedOn": "2026-11-26",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "Thiruvananthapuram",
+      "locationRegion": "Kerala",
+      "eligibilityHi": "न्यूनतम योग्यता: Dheevara/SCCC। MD/DNB या अधिसूचित MSc व PhD और लागू रेजिडेंसी शर्त।। आयु सीमा व आरक्षण शर्तें Kerala PSC के आधिकारिक विज्ञापन (186–187/2026) में सत्यापित करें।",
+      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या 186–187/2026 चुनें, OTR/पंजीकरण लॉगिन करें और 2026-12-16 तक आवेदन सबमिट करें।"
     },
     {
       "id": "kerala-psc-motor-transport-inspector-technical-sc-188-2026",
@@ -7021,7 +7448,12 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "reviewedBy": "sarkari-alert-avyaan-import",
-      "reviewedOn": "2026-11-26"
+      "reviewedOn": "2026-11-26",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "Thiruvananthapuram",
+      "locationRegion": "Kerala",
+      "eligibilityHi": "न्यूनतम योग्यता: केवल SC। ऑटोमोबाइल/मैकेनिकल इंजीनियरिंग की डिग्री और वाहन वर्कशॉप में निर्धारित अनुभव।। आयु सीमा व आरक्षण शर्तें Kerala PSC के आधिकारिक विज्ञापन (188/2026) में सत्यापित करें।",
+      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या 188/2026 चुनें, OTR/पंजीकरण लॉगिन करें और 2026-12-16 तक आवेदन सबमिट करें।"
     },
     {
       "id": "kerala-psc-blood-bank-technician-189-2026",
@@ -7078,7 +7510,12 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "reviewedBy": "sarkari-alert-avyaan-import",
-      "reviewedOn": "2026-11-26"
+      "reviewedOn": "2026-11-26",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "Thiruvananthapuram",
+      "locationRegion": "Kerala",
+      "eligibilityHi": "न्यूनतम योग्यता: Ezhava/Thiyya/Billava। 12वीं विज्ञान (50%) और ब्लड बैंक टेक्नोलॉजी डिप्लोमा या अधिसूचित सम। आयु सीमा व आरक्षण शर्तें Kerala PSC के आधिकारिक विज्ञापन (189/2026) में सत्यापित करें।",
+      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या 189/2026 चुनें, OTR/पंजीकरण लॉगिन करें और 2026-12-16 तक आवेदन सबमिट करें।"
     },
     {
       "id": "kerala-psc-mortuary-technician-grade-ii-190-2026",
@@ -7135,7 +7572,12 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "reviewedBy": "sarkari-alert-avyaan-import",
-      "reviewedOn": "2026-11-26"
+      "reviewedOn": "2026-11-26",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "Thiruvananthapuram",
+      "locationRegion": "Kerala",
+      "eligibilityHi": "न्यूनतम योग्यता: मुस्लिम वर्ग। 12वीं विज्ञान और विज्ञापन में निर्धारित BMLT/DMLT या समकक्ष।। आयु सीमा व आरक्षण शर्तें Kerala PSC के आधिकारिक विज्ञापन (190/2026) में सत्यापित करें।",
+      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या 190/2026 चुनें, OTR/पंजीकरण लॉगिन करें और 2026-12-16 तक आवेदन सबमिट करें।"
     },
     {
       "id": "kerala-psc-police-constable-driver-sc-191-2026",
@@ -7192,7 +7634,12 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "reviewedBy": "sarkari-alert-avyaan-import",
-      "reviewedOn": "2026-11-26"
+      "reviewedOn": "2026-11-26",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "Thiruvananthapuram",
+      "locationRegion": "Kerala",
+      "eligibilityHi": "न्यूनतम योग्यता: केवल SC। 12वीं, निर्धारित ड्राइविंग लाइसेंस व शारीरिक मानक।। आयु सीमा व आरक्षण शर्तें Kerala PSC के आधिकारिक विज्ञापन (191/2026) में सत्यापित करें।",
+      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या 191/2026 चुनें, OTR/पंजीकरण लॉगिन करें और 2026-12-16 तक आवेदन सबमिट करें।"
     },
     {
       "id": "kerala-psc-electrician-192-2026",
@@ -7249,7 +7696,12 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "reviewedBy": "sarkari-alert-avyaan-import",
-      "reviewedOn": "2026-11-26"
+      "reviewedOn": "2026-11-26",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "Thiruvananthapuram",
+      "locationRegion": "Kerala",
+      "eligibilityHi": "न्यूनतम योग्यता: Ezhava/Thiyya/Billava। इलेक्ट्रिकल डिप्लोमा या अधिसूचित ट्रेड प्रशिक्षण विकल्प और फिल्म स्। आयु सीमा व आरक्षण शर्तें Kerala PSC के आधिकारिक विज्ञापन (192/2026) में सत्यापित करें।",
+      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या 192/2026 चुनें, OTR/पंजीकरण लॉगिन करें और 2026-12-16 तक आवेदन सबमिट करें।"
     },
     {
       "id": "osssc-medical-laboratory-technician-2026",
@@ -7302,7 +7754,12 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "reviewedBy": "sarkari-alert-avyaan-import",
-      "reviewedOn": "2026-11-26"
+      "reviewedOn": "2026-11-26",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "Bhubaneswar",
+      "locationRegion": "Odisha",
+      "eligibilityHi": "न्यूनतम योग्यता: 12th Science + DMLT / BMLT। आयु सीमा व आरक्षण शर्तें OSSSC के आधिकारिक विज्ञापन (IIE-99/2026-3440/OSSSC) में सत्यापित करें।",
+      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या IIE-99/2026-3440/OSSSC चुनें, OTR/पंजीकरण लॉगिन करें और 2026-12-17 तक आवेदन सबमिट करें।"
     },
     {
       "id": "iit-ism-dhanbad-technical-officer-2026",
@@ -7355,7 +7812,12 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "reviewedBy": "sarkari-alert-avyaan-import",
-      "reviewedOn": "2026-11-26"
+      "reviewedOn": "2026-11-26",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "Dhanbad",
+      "locationRegion": "Jharkhand",
+      "eligibilityHi": "न्यूनतम योग्यता: Engineering / M.Sc + Exp.। आयु सीमा व आरक्षण शर्तें IIT (ISM) Dhanbad के आधिकारिक विज्ञापन (411002/7/2026-NFR) में सत्यापित करें।",
+      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या 411002/7/2026-NFR चुनें, OTR/पंजीकरण लॉगिन करें और 2026-12-20 तक आवेदन सबमिट करें।"
     },
     {
       "id": "ncpul-stenographer-ldc-2026",
@@ -7408,7 +7870,12 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "reviewedBy": "sarkari-alert-avyaan-import",
-      "reviewedOn": "2026-11-26"
+      "reviewedOn": "2026-11-26",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "New Delhi",
+      "locationRegion": "Delhi",
+      "eligibilityHi": "न्यूनतम योग्यता: 12th + Typing / Shorthand। आयु सीमा व आरक्षण शर्तें NCPUL के आधिकारिक विज्ञापन (परिषद की ऑनलाइन भर्ती सूचना 21 नवंबर 2026) में सत्यापित करें।",
+      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या परिषद की ऑनलाइन भर्ती सूचना 21 नवंबर 2026 चुनें, OTR/पंजीकरण लॉगिन करें और 2026-12-20 तक आवेदन सबमिट करें।"
     },
     {
       "id": "niper-ahmedabad-non-teaching-2026",
@@ -7461,7 +7928,12 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "reviewedBy": "sarkari-alert-avyaan-import",
-      "reviewedOn": "2026-11-26"
+      "reviewedOn": "2026-11-26",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "Gandhinagar",
+      "locationRegion": "Gujarat",
+      "eligibilityHi": "न्यूनतम योग्यता: Degree / PG / Admin Exp.। आयु सीमा व आरक्षण शर्तें NIPER Ahmedabad के आधिकारिक विज्ञापन (NIPER-A/NF/2026/001) में सत्यापित करें।",
+      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या NIPER-A/NF/2026/001 चुनें, OTR/पंजीकरण लॉगिन करें और 2026-12-21 तक आवेदन सबमिट करें।"
     },
     {
       "id": "csir-npl-mts-offline-2026",
@@ -7519,7 +7991,11 @@
       "publishedDate": "2026-11-26",
       "reviewedBy": "sarkari-alert-avyaan-import",
       "reviewedOn": "2026-11-26",
-      "applyInstructions": "आवेदन केवल डाक (ऑफलाइन) से भेजें। निर्धारित प्रपत्र विज्ञापन PDF में दिया गया है; आवेदन 23 दिसंबर 2026 तक संबंधित पते पर पहुँच जाना चाहिए।"
+      "applyInstructions": "आवेदन केवल डाक (ऑफलाइन) से भेजें। निर्धारित प्रपत्र विज्ञापन PDF में दिया गया है; आवेदन 23 दिसंबर 2026 तक संबंधित पते पर पहुँच जाना चाहिए।",
+      "applyLinkType": "OFFLINE_POSTAL_FORM",
+      "locationLocality": "New Delhi",
+      "locationRegion": "Delhi",
+      "eligibilityHi": "न्यूनतम योग्यता: 10th Pass (Postal Application)। आयु सीमा व आरक्षण शर्तें CSIR-NPL के आधिकारिक विज्ञापन (NPL MTS 2026) में सत्यापित करें।"
     },
     {
       "id": "ossc-chsl-specialist-caretaker-weaving-2026",
@@ -7576,6 +8052,73 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "reviewedBy": "sarkari-alert-avyaan-import",
+      "reviewedOn": "2026-11-26",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "locationLocality": "Bhubaneswar",
+      "locationRegion": "Odisha",
+      "eligibilityHi": "न्यूनतम योग्यता: 12th / Technical Course। आयु सीमा व आरक्षण शर्तें OSSC के आधिकारिक विज्ञापन (4273/OSSC) में सत्यापित करें।",
+      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या 4273/OSSC चुनें, OTR/पंजीकरण लॉगिन करें और 2026-12-28 तक आवेदन सबमिट करें।"
+    },
+    {
+      "id": "icmr-hqrs-new-de-icmr-rectt-sc-d-02-2026-rpce-2026",
+      "title": "Scientist-D (Non-Medical) at ICMR-NIRBI, Kolkata (ICMR-Hqrs New Delhi)",
+      "category": "latest-jobs",
+      "department": "ICMR-Hqrs New Delhi",
+      "qualification": "Post-wise per Official Notification",
+      "noticeId": "ICMR/Rectt/Sc-D/02/2026-RPCell",
+      "vacancies": null,
+      "noticeDate": "2026-11-26",
+      "startDate": "2026-11-26",
+      "lastDate": "2026-12-31",
+      "deadline": "2026-12-31T23:59:00+05:30",
+      "locationLocality": "New Delhi",
+      "locationRegion": "Delhi",
+      "notificationUrl": "https://www.icmr.gov.in/icmrobject/uploads/Recruitment/1795166694_finaladvertisement_sci_d.pdf",
+      "applyUrl": "https://recruitment.icmr.org.in/",
+      "applyLabel": "Official ICMR-Hqrs New Delhi Recruitment Portal",
+      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "officialUrl": "https://www.icmr.gov.in/employment-opportunities",
+      "summary": "ICMR-Hqrs New Delhi ने विज्ञापन संख्या ICMR/Rectt/Sc-D/02/2026-RPCell के तहत Scientist-D (Non-Medical) at ICMR-NIRBI, Kolkata (ICMR-Hqrs New Delhi) के लिए आधिकारिक भर्ती अधिसूचना जारी की है। अंतिम तिथि 2026-12-31 है।",
+      "eligibilityHi": "शैक्षिक योग्यता, आयु सीमा एवं चयन शर्तें ICMR-Hqrs New Delhi के आधिकारिक विज्ञापन (ICMR/Rectt/Sc-D/02/2026-RPCell) PDF में देखें।",
+      "applyInstructions": "आधिकारिक भर्ती पोर्टल (https://recruitment.icmr.org.in/) पर जाकर विज्ञापन ICMR/Rectt/Sc-D/02/2026-RPCell के अंतर्गत ऑनलाइन पंजीकरण व आवेदन 2026-12-31 से पहले पूरा करें।",
+      "rows": [
+        [
+          "विज्ञापन संख्या (Notice ID)",
+          "ICMR/Rectt/Sc-D/02/2026-RPCell"
+        ],
+        [
+          "विभाग / संस्थान",
+          "ICMR-Hqrs New Delhi (New Delhi, Delhi)"
+        ],
+        [
+          "पद / श्रेणी",
+          "Permanent Posts"
+        ],
+        [
+          "अंतिम तिथि",
+          "2026-12-31"
+        ],
+        [
+          "आधिकारिक माध्यम",
+          "ऑनलाइन पोर्टल व PDF विज्ञप्ति"
+        ]
+      ],
+      "extraLinks": [
+        [
+          "Official Notification (Hindi PDF)",
+          "https://www.icmr.gov.in/icmrobject/uploads/Recruitment/1795607733_advertisementrpcellscientist-dnon-medical-hindi.pdf"
+        ]
+      ],
+      "discoveryUrl": "https://www.icmr.gov.in/icmrobject/uploads/Recruitment/1795166694_finaladvertisement_sci_d.pdf",
+      "approved": true,
+      "officialFactsChecked": true,
+      "applyLinkChecked": true,
+      "applicationStatus": "OPEN",
+      "type": "official-notice",
+      "verified": true,
+      "verifiedOn": "2026-11-26",
+      "publishedDate": "2026-11-26",
+      "reviewedBy": "auto-verify-official-rule-engine",
       "reviewedOn": "2026-11-26"
     }
   ]

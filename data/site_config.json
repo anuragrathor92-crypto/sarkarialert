@@ -27,7 +27,7 @@
   },
   "bingWebmaster": {
     "verificationMetaContent": "",
-    "indexNowEnabled": false,
+    "indexNowEnabled": true,
     "secretName": "BING_INDEXNOW_KEY",
     "status": "READY_FOR_OWNER_TOKEN"
   },

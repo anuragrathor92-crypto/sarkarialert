@@ -83,18 +83,76 @@ CATEGORY_SEO = {
 }
 
 REGION_HINTS = [
-    ("uppsc", "Uttar Pradesh"), ("upsssc", "Uttar Pradesh"), ("upessc", "Uttar Pradesh"),
-    ("pilibhit", "Uttar Pradesh"), ("lucknow", "Uttar Pradesh"), ("ghazipur", "Uttar Pradesh"),
-    ("ballia", "Uttar Pradesh"), ("up-icds", "Uttar Pradesh"), ("up-rte", "Uttar Pradesh"),
-    ("ukpsc", "Uttarakhand"), ("uksssc", "Uttarakhand"),
-    ("bihar", "Bihar"), ("bpsc", "Bihar"), ("btsc", "Bihar"),
-    ("kerala-psc", "Kerala"), ("keralapsc", "Kerala"),
-    ("ossc", "Odisha"), ("osssc", "Odisha"),
-    ("dsssb", "Delhi"), ("du-", "Delhi"), ("delhi-", "Delhi"),
-    ("mp-", "Madhya Pradesh"), ("manit", "Madhya Pradesh"), ("mpesb", "Madhya Pradesh"),
-    ("assam", "Assam"), ("goa-shipyard", "Goa"), ("niper-ahmedabad", "Gujarat"),
-    ("iit-ism-dhanbad", "Jharkhand"), ("dvc-", "West Bengal / Jharkhand"),
-    ("cpcl-", "Tamil Nadu"), ("scl-", "Punjab"),
+    ("pilibhit", ("Pilibhit", "Uttar Pradesh")),
+    ("lucknow", ("Lucknow", "Uttar Pradesh")),
+    ("ghazipur", ("Ghazipur", "Uttar Pradesh")),
+    ("ballia", ("Ballia", "Uttar Pradesh")),
+    ("uppsc", ("Prayagraj", "Uttar Pradesh")),
+    ("upessc", ("Prayagraj", "Uttar Pradesh")),
+    ("upsssc", ("Lucknow", "Uttar Pradesh")),
+    ("up-icds", ("Lucknow", "Uttar Pradesh")),
+    ("up-rte", ("Lucknow", "Uttar Pradesh")),
+    ("up-police", ("Lucknow", "Uttar Pradesh")),
+    ("uptet", ("Prayagraj", "Uttar Pradesh")),
+    ("ukpsc", ("Haridwar", "Uttarakhand")),
+    ("uksssc", ("Dehradun", "Uttarakhand")),
+    ("bihar-vidhan", ("Patna", "Bihar")),
+    ("bihar", ("Patna", "Bihar")),
+    ("bpsc", ("Patna", "Bihar")),
+    ("btsc", ("Patna", "Bihar")),
+    ("ernakulam", ("Ernakulam", "Kerala")),
+    ("thrissur", ("Thrissur", "Kerala")),
+    ("kerala-psc", ("Thiruvananthapuram", "Kerala")),
+    ("keralapsc", ("Thiruvananthapuram", "Kerala")),
+    ("ossc", ("Bhubaneswar", "Odisha")),
+    ("osssc", ("Bhubaneswar", "Odisha")),
+    ("dsssb", ("New Delhi", "Delhi")),
+    ("du-", ("New Delhi", "Delhi")),
+    ("delhi", ("New Delhi", "Delhi")),
+    ("manit", ("Bhopal", "Madhya Pradesh")),
+    ("mp-", ("Bhopal", "Madhya Pradesh")),
+    ("mpesb", ("Bhopal", "Madhya Pradesh")),
+    ("assam", ("Shillong", "Meghalaya")),
+    ("goa-shipyard", ("Vasco da Gama", "Goa")),
+    ("niper-ahmedabad", ("Gandhinagar", "Gujarat")),
+    ("iit-ism-dhanbad", ("Dhanbad", "Jharkhand")),
+    ("dvc-", ("Kolkata", "West Bengal")),
+    ("icmr-nirbi", ("Kolkata", "West Bengal")),
+    ("kolkata", ("Kolkata", "West Bengal")),
+    ("cpcl-", ("Chennai", "Tamil Nadu")),
+    ("icmr-nie", ("Chennai", "Tamil Nadu")),
+    ("nlc", ("Neyveli", "Tamil Nadu")),
+    ("scl-", ("SAS Nagar (Mohali)", "Punjab")),
+    ("bbmb", ("Chandigarh", "Punjab")),
+    ("hpsbys", ("Shimla", "Himachal Pradesh")),
+    ("bseh", ("Bhiwani", "Haryana")),
+    ("htet", ("Bhiwani", "Haryana")),
+    ("powergrid", ("Gurugram", "Haryana")),
+    ("becil", ("Noida", "Uttar Pradesh")),
+    ("aiims-bilaspur", ("Bilaspur", "Himachal Pradesh")),
+    ("aiims-gorakhpur", ("Gorakhpur", "Uttar Pradesh")),
+    ("rrc-cr", ("Mumbai", "Maharashtra")),
+    ("sbi", ("Mumbai", "Maharashtra")),
+    ("bpcl", ("Mumbai", "Maharashtra")),
+    ("sidbi", ("Lucknow", "Uttar Pradesh")),
+    ("exim", ("Mumbai", "Maharashtra")),
+    ("ecil", ("Hyderabad", "Telangana")),
+    ("isro-sdsc-shar", ("Sriharikota", "Andhra Pradesh")),
+    ("rrc-nr", ("New Delhi", "Delhi")),
+    ("upsc", ("New Delhi", "Delhi")),
+    ("ssc", ("New Delhi", "Delhi")),
+    ("csir", ("New Delhi", "Delhi")),
+    ("nsic", ("New Delhi", "Delhi")),
+    ("gail", ("New Delhi", "Delhi")),
+    ("ncpul", ("New Delhi", "Delhi")),
+    ("aees", ("Mumbai", "Maharashtra")),
+    ("afcat", ("New Delhi", "Delhi")),
+    ("asrb", ("New Delhi", "Delhi")),
+    ("rrb", ("New Delhi", "Delhi")),
+    ("bhel", ("New Delhi", "Delhi")),
+    ("bel", ("Bengaluru", "Karnataka")),
+    ("hal", ("Bengaluru", "Karnataka")),
+    ("icmr", ("New Delhi", "Delhi")),
 ]
 
 
@@ -112,10 +170,17 @@ def infer_employment_type(post):
     return "FULL_TIME"
 
 
-def infer_region(post):
-    """Infer Indian state/UT or All India for JobPosting.jobLocation.address."""
+def resolve_verified_location(post):
+    """Return verified (addressLocality, addressRegion) tuple from post fields/authority HQ."""
+    if post.get("locationLocality") and post.get("locationRegion"):
+        return post["locationLocality"], post["locationRegion"]
     slug_dept = f"{post.get('id', '')} {post.get('department', '')} {post.get('title', '')}".lower()
-    for needle, region in REGION_HINTS:
+    for needle, loc_pair in REGION_HINTS:
         if needle in slug_dept:
-            return region
-    return "India"
+            return loc_pair
+    return ("New Delhi", "Delhi")
+
+
+def infer_region(post):
+    """Infer Indian state/UT for JobPosting.jobLocation.address."""
+    return resolve_verified_location(post)[1]

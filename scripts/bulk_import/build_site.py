@@ -8,7 +8,7 @@ import re
 from pathlib import Path
 
 from discover import get_ist
-from seo_keywords import CATEGORY_SEO, infer_employment_type, infer_region
+from seo_keywords import CATEGORY_SEO, infer_employment_type, infer_region, resolve_verified_location
 
 ROOT = Path(__file__).resolve().parents[2]
 BASE = "https://anuragrathor92-crypto.github.io/sarkarialert/"
@@ -520,6 +520,16 @@ def render_standard_post(
     action_box = ""
     if not expired_flag and cat in JOB_CATS and post.get("applyUrl"):
         is_pending = post.get("applyStatus") == "VERIFICATION_PENDING"
+        link_type = post.get("applyLinkType") or (
+            "VERIFICATION_PENDING" if is_pending else "GENERAL_RECRUITMENT_PORTAL"
+        )
+        type_badge_map = {
+            "DIRECT_APPLICATION_FORM": '<span class="apply-type-badge direct">सीधा ऑनलाइन आवेदन फ़ॉर्म (Direct Form)</span>',
+            "GENERAL_RECRUITMENT_PORTAL": '<span class="apply-type-badge portal">सामान्य सरकारी भर्ती पोर्टल (General Portal)</span>',
+            "OFFLINE_POSTAL_FORM": '<span class="apply-type-badge portal">ऑफलाइन डाक आवेदन (Postal Form)</span>',
+            "VERIFICATION_PENDING": '<span class="apply-type-badge pending">लिंक सत्यापन प्रतीक्षित (Verification Pending)</span>',
+        }
+        type_badge = type_badge_map.get(link_type, "")
         apply_label = post.get("applyLabel") or (
             "Official Portal (Verification Pending)" if is_pending else "Apply Online – Official Portal"
         )
@@ -532,7 +542,8 @@ def render_standard_post(
             else ""
         )
         action_box = (
-            f'<div class="{box_cls}" data-apply-box data-deadline="{e(deadline)}">'
+            f'<div class="{box_cls}" data-apply-box data-deadline="{e(deadline)}" data-apply-type="{e(link_type)}">'
+            + (f'<div style="margin-bottom:6px">{type_badge}</div>' if type_badge else "")
             + ext_link(post["applyUrl"], apply_label, apply_cls)
             + " "
             + ext_link(post.get("notificationUrl") or post["officialUrl"], "Official Notification", "notice-btn")
@@ -659,6 +670,12 @@ def render_standard_post(
     )
 
     summary = clean_text(post.get("summary") or f"{title} — Official verified update from {dept}.")
+    elig_hi = clean_text(post.get("eligibilityHi") or "")
+    elig_hi_html = (
+        f'<p class="notice" lang="hi"><strong>योग्यता व मुख्य विवरण:</strong> {e(elig_hi)}</p>'
+        if elig_hi
+        else ""
+    )
     checklist_html = build_checklist_box(post) if not expired_flag else ""
     related_html = render_related_block(related_items)
 
@@ -670,6 +687,7 @@ def render_standard_post(
         f"{ssl_warn}"
         f'<p>Published &amp; Verified: {e(verified_on)} · Department: <strong>{e(dept)}</strong></p>'
         f'<p lang="hi">{e(summary)}</p>'
+        f"{elig_hi_html}"
         '<div class="detail-box">'
         f'<div class="detail-heading"><h2>{e(title)}</h2><p>{e(dept)} · Verified Official Update</p><strong>SARKARI ALERT</strong></div>'
         f"{grid_html}"
@@ -693,12 +711,28 @@ def render_standard_post(
         org_obj = {"@type": "Organization", "name": dept}
         if post.get("officialUrl"):
             org_obj["sameAs"] = post["officialUrl"]
+        loc_locality, loc_region = resolve_verified_location(post)
+        desc_bullets = "".join(f"<li><strong>{e(k)}:</strong> {e(v)}</li>" for k, v in rows[:10])
+        elig_para = f"<p><strong>Eligibility:</strong> {e(elig_hi)}</p>" if elig_hi else ""
+        instr_para = f"<p><strong>Application Process:</strong> {e(post.get('applyInstructions'))}</p>" if post.get("applyInstructions") else ""
+        full_jp_desc = (
+            f"<p>{e(summary)}</p>"
+            f"{elig_para}"
+            f"<ul><li><strong>Hiring Organization:</strong> {e(dept)}</li>"
+            f"<li><strong>Location:</strong> {e(loc_locality)}, {e(loc_region)}, India</li>"
+            f"<li><strong>Last Date:</strong> {e(post.get('lastDate') or vt[:10])}</li>"
+            f"{desc_bullets}</ul>"
+            f"{instr_para}"
+        )
+        raw_date_posted = post.get("noticeDate") or post.get("startDate") or post.get("publishedDate") or verified_on
+        actual_date_posted = raw_date_posted if re.fullmatch(r"\d{4}-\d{2}-\d{2}", str(raw_date_posted)) else verified_on
+        is_direct_form = post.get("applyLinkType") == "DIRECT_APPLICATION_FORM"
         ld_main = {
             "@context": "https://schema.org",
             "@type": "JobPosting",
             "title": title,
-            "description": f"<p>{e(summary)}</p><p>Department: {e(dept)} | Qualification: {e(post.get('qualification') or 'As per notice')} | Last Date: {e(post.get('lastDate') or vt[:10])}</p>",
-            "datePosted": post.get("publishedDate", verified_on),
+            "description": full_jp_desc,
+            "datePosted": actual_date_posted,
             "dateModified": verified_on,
             "validThrough": vt,
             "employmentType": infer_employment_type(post),
@@ -707,12 +741,13 @@ def render_standard_post(
                 "@type": "Place",
                 "address": {
                     "@type": "PostalAddress",
-                    "addressRegion": infer_region(post),
+                    "addressLocality": loc_locality,
+                    "addressRegion": loc_region,
                     "addressCountry": "IN",
                 },
             },
             "applicantLocationRequirements": {"@type": "Country", "name": "IN"},
-            "directApply": post.get("applyStatus") != "VERIFICATION_PENDING",
+            "directApply": is_direct_form,
             "url": page_url,
         }
         if post.get("noticeId"):
@@ -936,9 +971,15 @@ def ensure_unique_seo_meta(items, is_scheme=False):
     return meta_map
 
 
-def update_sitemap_lastmod(urls, files, now_date, base_dates):
-    """Maintain genuine per-URL lastmod in data/seo_state.json based on content hashes."""
-    state_path = ROOT / "data/seo_state.json"
+def semantic_fp(payload) -> str:
+    return hashlib.sha256(
+        json.dumps(payload, sort_keys=True, ensure_ascii=False).encode("utf-8")
+    ).hexdigest()[:16]
+
+
+def update_sitemap_lastmod(urls, files, now_date, base_dates, semantic_hashes=None, state_path=None):
+    """Maintain genuine per-URL lastmod in data/seo_state.json based on substantive content hashes."""
+    state_path = Path(state_path) if state_path else (ROOT / "data/seo_state.json")
     state = json.loads(state_path.read_text(encoding="utf-8")) if state_path.exists() else {}
     entries = dict(state.get("urls") or {})
     changed = False
@@ -949,23 +990,20 @@ def update_sitemap_lastmod(urls, files, now_date, base_dates):
             rel_for_url[u] = u[len(BASE):] + "index.html"
 
     lastmods = {}
+    semantic_hashes = semantic_hashes or {}
     for u in urls:
         rel = rel_for_url.get(u, "")
-        content = files.get(rel, "")
-        fp = hashlib.sha256(content.encode("utf-8")).hexdigest()[:16] if content else ""
+        fp = semantic_hashes.get(u) or ""
+        if not fp:
+            content = files.get(rel, "")
+            fp = hashlib.sha256(content.encode("utf-8")).hexdigest()[:16] if content else ""
         default_lm = base_dates.get(u) or now_date.isoformat()
         prev = entries.get(u)
         if not prev:
             entries[u] = {"hash": fp, "lastmod": default_lm}
             changed = True
         elif fp and prev.get("hash") != fp:
-            # First time migrating legacy HTML without seo_state preserves true historical verifiedOn if older
-            lm = default_lm if len(entries) == len(urls) else now_date.isoformat()
-            if prev.get("hash"):
-                lm = max(prev.get("lastmod", ""), now_date.isoformat()) if prev.get("hash") != fp else prev.get("lastmod")
-                # Use today's date only when an existing tracked page's rendered HTML changed
-                lm = now_date.isoformat()
-            entries[u] = {"hash": fp, "lastmod": lm}
+            entries[u] = {"hash": fp, "lastmod": now_date.isoformat()}
             changed = True
         lastmods[u] = entries[u]["lastmod"]
 
@@ -1326,31 +1364,65 @@ def build_all(now=None, prune_expired=False, posts_override=None):
         page_type="home",
     )
 
-    # 9. Build sitemap.xml with accurate per-URL lastmod, feed.xml, robots.txt, ads.txt & optional IndexNow key file
+    # 9. Build sitemap.xml with accurate per-URL lastmod (substantive data fingerprint), feed.xml, robots.txt, ads.txt & optional IndexNow key file
     urls = [BASE]
     base_dates = {BASE: max([p.get("verifiedOn") or now_date.isoformat() for p in active_posts] or [now_date.isoformat()])}
+    mon_summary = (monitors[0].get("summaryHi") if monitors else "")
+    semantic_hashes = {
+        BASE: semantic_fp({
+            "posts": [(p["id"], p.get("verifiedOn"), p.get("lastDate"), p.get("applyStatus")) for p in active_posts],
+            "schemes": [(s["id"], s.get("verifiedOn")) for s in schemes],
+            "monitor": mon_summary,
+        })
+    }
     for slug, _, _, _ in CATEGORIES:
         u = f"{BASE}category/{slug}/"
         urls.append(u)
         if slug == "yojana":
             base_dates[u] = max([s.get("verifiedOn") or now_date.isoformat() for s in schemes] or [now_date.isoformat()])
+            semantic_hashes[u] = semantic_fp([(s["id"], s.get("verifiedOn"), s.get("title")) for s in schemes])
         else:
             cat_dates = [p.get("verifiedOn") or p.get("publishedDate") or now_date.isoformat() for p in by_cat[slug]]
             base_dates[u] = max(cat_dates) if cat_dates else now_date.isoformat()
+            semantic_hashes[u] = semantic_fp(
+                [(p["id"], p.get("verifiedOn"), p.get("lastDate"), p.get("applyStatus")) for p in by_cat[slug]]
+            )
     for extra in ("sitemap/", "loans-and-cards/", "about/", "privacy/", "disclaimer/"):
         u = f"{BASE}{extra}"
         urls.append(u)
         base_dates[u] = base_dates[BASE] if extra == "sitemap/" else "2026-11-26"
+        if extra == "sitemap/":
+            semantic_hashes[u] = semantic_hashes[BASE]
+        elif extra == "loans-and-cards/":
+            semantic_hashes[u] = semantic_fp(referrals)
+        else:
+            semantic_hashes[u] = semantic_fp(extra)
     for p in active_posts:
         u = f"{BASE}posts/{p['id']}/"
         urls.append(u)
         base_dates[u] = p.get("verifiedOn") or p.get("publishedDate") or now_date.isoformat()
+        semantic_hashes[u] = semantic_fp({
+            k: p.get(k)
+            for k in (
+                "title", "titleHi", "category", "department", "summary", "eligibilityHi",
+                "vacancies", "qualification", "noticeDate", "startDate", "lastDate", "deadline",
+                "applyUrl", "applyLinkType", "applyStatus", "applyInstructions",
+                "notificationUrl", "officialUrl", "rows", "verifiedOn",
+            )
+        })
     for s in schemes:
         u = f"{BASE}posts/{s['id']}/"
         urls.append(u)
         base_dates[u] = s.get("verifiedOn") or now_date.isoformat()
+        semantic_hashes[u] = semantic_fp({
+            k: s.get(k)
+            for k in (
+                "title", "titleHi", "category", "department", "summary",
+                "officialUrl", "benefits", "eligibility", "documents", "verifiedOn",
+            )
+        })
 
-    lastmods = update_sitemap_lastmod(urls, files, now_date, base_dates)
+    lastmods = update_sitemap_lastmod(urls, files, now_date, base_dates, semantic_hashes=semantic_hashes)
     url_tags = "".join(f"<url><loc>{e(u)}</loc><lastmod>{e(lastmods[u])}</lastmod></url>" for u in urls)
     files["sitemap.xml"] = (
         '<?xml version="1.0" encoding="UTF-8"?>\n'

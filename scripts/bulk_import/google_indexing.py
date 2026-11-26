@@ -27,8 +27,73 @@ def b64url(data: bytes) -> str:
     return base64.urlsafe_b64encode(data).rstrip(b"=").decode("ascii")
 
 
+def _find_openssl() -> str:
+    import shutil
+    found = shutil.which("openssl")
+    if found:
+        return found
+    for cand in (r"C:\Program Files\Git\usr\bin\openssl.exe", r"C:\Program Files\Git\mingw64\bin\openssl.exe"):
+        if Path(cand).exists():
+            return cand
+    return "openssl"
+
+
+def _read_asn1_tl(buf: bytes, offset: int):
+    tag = buf[offset]
+    idx = offset + 1
+    first_len = buf[idx]
+    idx += 1
+    if first_len & 0x80:
+        nbytes = first_len & 0x7F
+        length = int.from_bytes(buf[idx : idx + nbytes], "big")
+        idx += nbytes
+    else:
+        length = first_len
+    return tag, idx, idx + length
+
+
+def _parse_rsa_pkcs1_or_pkcs8(private_key_pem: str):
+    b64_lines = [ln.strip() for ln in private_key_pem.strip().splitlines() if not ln.strip().startswith("-----")]
+    der = base64.b64decode("".join(b64_lines))
+    _, s, e = _read_asn1_tl(der, 0)
+    pos = s
+    tag, vs, ve = _read_asn1_tl(der, pos)  # version
+    pos = ve
+    nxt_tag, ns, ne = _read_asn1_tl(der, pos)
+    if nxt_tag == 0x30:
+        # PKCS#8: AlgorithmIdentifier SEQUENCE followed by OCTET STRING privateKey
+        pos = ne
+        _, os_s, os_e = _read_asn1_tl(der, pos)
+        der = der[os_s:os_e]
+        _, s, e = _read_asn1_tl(der, 0)
+        _, _, pos = _read_asn1_tl(der, s)  # skip PKCS#1 version INTEGER
+    ints = []
+    while pos < e and len(ints) < 3:
+        t, is_, ie = _read_asn1_tl(der, pos)
+        if t == 0x02:
+            ints.append(int.from_bytes(der[is_:ie], "big"))
+        pos = ie
+    return ints[0], ints[1], ints[2]  # (n, e, d)
+
+
+def _sign_rs256_pure_python(signing_input: bytes, private_key_pem: str) -> bytes:
+    """RFC 8017 EMSA-PKCS1-v1_5 SHA-256 fallback when cryptography/openssl are absent."""
+    n, _, d = _parse_rsa_pkcs1_or_pkcs8(private_key_pem)
+    k = (n.bit_length() + 7) // 8
+    digest_info = (
+        b"\x30\x31\x30\x0d\x06\x09\x60\x86\x48\x01\x65\x03\x04\x02\x01\x05\x00\x04\x20"
+        + hashlib.sha256(signing_input).digest()
+    )
+    ps_len = k - len(digest_info) - 3
+    if ps_len < 8:
+        raise ValueError("RSA key modulus too small for SHA-256 signature")
+    em = b"\x00\x01" + (b"\xff" * ps_len) + b"\x00" + digest_info
+    sig_int = pow(int.from_bytes(em, "big"), d, n)
+    return sig_int.to_bytes(k, "big")
+
+
 def sign_rs256(signing_input: bytes, private_key_pem: str) -> bytes:
-    """Sign JWT payload with RS256 using cryptography if installed, else openssl CLI."""
+    """Sign JWT payload with RS256 using cryptography, openssl CLI, or pure-Python RSA."""
     try:
         from cryptography.hazmat.primitives import hashes, serialization
         from cryptography.hazmat.primitives.asymmetric import padding
@@ -41,12 +106,14 @@ def sign_rs256(signing_input: bytes, private_key_pem: str) -> bytes:
             key_path = kf.name
         try:
             res = subprocess.run(
-                ["openssl", "dgst", "-sha256", "-sign", key_path],
+                [_find_openssl(), "dgst", "-sha256", "-sign", key_path],
                 input=signing_input,
                 capture_output=True,
                 check=True,
             )
             return res.stdout
+        except (OSError, subprocess.CalledProcessError):
+            return _sign_rs256_pure_python(signing_input, private_key_pem)
         finally:
             try:
                 Path(key_path).unlink()
@@ -219,20 +286,48 @@ def submit_google_indexing(queue_data, state_path=DEFAULT_STATE):
     return {"status": status, "submitted": submitted, "failed": failed, "results": results}
 
 
+def build_indexnow_urls(queue_data, seo_state_path=ROOT / "data/seo_state.json"):
+    """Gather all new/updated indexable URLs (jobs, results, admit cards, schemes, homepage) for Bing IndexNow."""
+    urls = []
+    seen = set()
+
+    def add_u(u):
+        if u and u not in seen:
+            seen.add(u)
+            urls.append(u)
+
+    add_u(BASE)
+    for item in queue_data.get("batch", []):
+        if item.get("type") == "URL_UPDATED":
+            add_u(item.get("url"))
+
+    if Path(seo_state_path).exists():
+        try:
+            seo_state = json.loads(Path(seo_state_path).read_text(encoding="utf-8")).get("urls") or {}
+            if seo_state:
+                latest_lm = max((m.get("lastmod", "") for m in seo_state.values()), default="")
+                for u, meta in sorted(seo_state.items()):
+                    if latest_lm and meta.get("lastmod") == latest_lm:
+                        add_u(u)
+        except Exception:
+            pass
+    return urls[:500]
+
+
 def submit_bing_indexnow(queue_data):
     key = os.environ.get("BING_INDEXNOW_KEY", "").strip()
+    urls = build_indexnow_urls(queue_data)
     if not key:
-        return {"status": "AWAITING_AUTHORIZATION", "submitted": 0}
-    urls = [item["url"] for item in queue_data["batch"] if item["type"] == "URL_UPDATED"]
+        return {"status": "AWAITING_AUTHORIZATION", "submitted": 0, "queued": len(urls)}
     if not urls:
-        return {"status": "UP_TO_DATE", "submitted": 0}
+        return {"status": "UP_TO_DATE", "submitted": 0, "queued": 0}
     host = urllib.parse.urlparse(BASE).netloc
     payload = json.dumps(
         {
             "host": host,
             "key": key,
             "keyLocation": f"{BASE}{key}.txt",
-            "urlList": urls[:500],
+            "urlList": urls,
         }
     ).encode("utf-8")
     req = urllib.request.Request(
@@ -243,9 +338,9 @@ def submit_bing_indexnow(queue_data):
     )
     try:
         with urllib.request.urlopen(req, timeout=20) as resp:
-            return {"status": "SUBMITTED", "httpStatus": resp.status, "submitted": len(urls[:500])}
+            return {"status": "SUBMITTED", "httpStatus": resp.status, "submitted": len(urls), "queued": len(urls)}
     except Exception as ex:
-        return {"status": "FAILED", "error": str(ex)[:200], "submitted": 0}
+        return {"status": "FAILED", "error": str(ex)[:200], "submitted": 0, "queued": len(urls)}
 
 
 if __name__ == "__main__":
@@ -255,18 +350,24 @@ if __name__ == "__main__":
     args = ap.parse_args()
 
     q = build_indexing_queue()
+    inow_urls = build_indexnow_urls(q)
     if args.submit:
         google_res = submit_google_indexing(q)
         bing_res = submit_bing_indexnow(q)
     else:
         has_secret = bool(os.environ.get("GOOGLE_INDEXING_SA_JSON", "").strip())
+        has_bkey = bool(os.environ.get("BING_INDEXNOW_KEY", "").strip())
         google_res = {
             "status": "READY_DRY_RUN" if has_secret else "AWAITING_AUTHORIZATION",
             "submitted": 0,
             "failed": 0,
             "results": [],
         }
-        bing_res = {"status": "DRY_RUN", "submitted": 0}
+        bing_res = {
+            "status": "DRY_RUN" if has_bkey else "AWAITING_AUTHORIZATION",
+            "submitted": 0,
+            "queued": len(inow_urls),
+        }
 
     report = {
         "generatedAt": q["generatedAt"],
@@ -275,6 +376,8 @@ if __name__ == "__main__":
         "deletedQueued": q["deletedQueued"],
         "batchCount": len(q["batch"]),
         "sampleBatch": [{"url": x["url"], "type": x["type"]} for x in q["batch"][:10]],
+        "indexNowQueued": len(inow_urls),
+        "indexNowSample": inow_urls[:10],
         "googleIndexingApi": google_res,
         "bingIndexNow": bing_res,
     }

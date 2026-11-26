@@ -238,6 +238,168 @@ class ImportTests(unittest.TestCase):
         for ev_name in ("category_visit", "apply_online_click", "notification_download", "referral_click", "outbound_click"):
             self.assertIn(ev_name, js_txt)
 
+    def test_auto_verify_official_pipeline(self):
+        import tempfile
+        from unittest.mock import patch
+        import auto_verify
+
+        disc_payload = {
+            "officialDiscoveries": [
+                {
+                    "title": "Scientist-D (Non-Medical) Test Open Recruitment",
+                    "department": "ICMR Test Institute",
+                    "noticeId": "ICMR/TEST/SC-D/2026",
+                    "lastDateRaw": "2026-12-31",
+                    "applyUrl": "https://recruitment.icmr.org.in/",
+                    "notificationUrl": "https://www.icmr.gov.in/test_open.pdf",
+                    "officialUrl": "https://www.icmr.gov.in/employment-opportunities",
+                    "postNature": "Permanent Posts",
+                },
+                {
+                    "title": "ICMR Temporary Project Technician",
+                    "department": "ICMR Test Institute",
+                    "noticeId": "ICMR/TEST/TEMP/2026",
+                    "lastDateRaw": "2026-12-31",
+                    "applyUrl": "https://recruitment.icmr.org.in/",
+                    "notificationUrl": "https://www.icmr.gov.in/test_temp.pdf",
+                    "officialUrl": "https://www.icmr.gov.in/employment-opportunities",
+                    "postNature": "Temporary Posts",
+                },
+                {
+                    # Duplicate noticeId of existing published ICMR post
+                    "title": "Duplicate Advertisement",
+                    "department": "ICMR-Hqrs New Delhi",
+                    "noticeId": "ICMR/Rectt/Sc-D/02/2026-RPCell",
+                    "lastDateRaw": "2026-12-31",
+                    "applyUrl": "https://recruitment.icmr.org.in/",
+                    "notificationUrl": "https://www.icmr.gov.in/dup.pdf",
+                    "officialUrl": "https://www.icmr.gov.in/employment-opportunities",
+                    "postNature": "Permanent Posts",
+                },
+            ],
+            "candidates": [
+                {"sourceUrl": "https://sarkariresult.com.cm/unverified-sample/", "sourceSlug": "unverified-sample"}
+            ],
+        }
+        with tempfile.TemporaryDirectory() as td:
+            dpath = Path(td) / "disc.json"
+            dpath.write_text(json.dumps(disc_payload), encoding="utf-8")
+            mock_ok = {"ok": True, "status": 200, "isPdf": True, "finalUrl": "https://www.icmr.gov.in/", "reason": ""}
+            with patch.object(auto_verify, "probe_official", return_value=mock_ok):
+                res = auto_verify.run_auto_verify(discovery_path=dpath, write_approved=False, now=self.now)
+            self.assertEqual(res["autoApprovedCount"], 1)
+            self.assertEqual(res["duplicatesSkipped"], 1)
+            self.assertEqual(res["pendingReviewCount"], 2)
+
+    def test_jobposting_audit_compliance_and_sitemap_stability(self):
+        import tempfile
+        from build_site import render_standard_post, update_sitemap_lastmod, BASE
+
+        # Direct application form vs General recruitment portal directApply semantics + verified location + noticeDate
+        direct_job = dict(
+            self.p,
+            id="test-direct-form-2026",
+            noticeDate="2026-11-20",
+            publishedDate="2026-11-26",
+            applyLinkType="DIRECT_APPLICATION_FORM",
+            locationLocality="New Delhi",
+            locationRegion="Delhi",
+            eligibilityHi="स्नातक डिग्री आवश्यक है।",
+        )
+        portal_job = dict(
+            self.p,
+            id="test-general-portal-2026",
+            applyLinkType="GENERAL_RECRUITMENT_PORTAL",
+            locationLocality="Lucknow",
+            locationRegion="Uttar Pradesh",
+        )
+        d_html = render_standard_post(direct_job, now=self.now)
+        p_html = render_standard_post(portal_job, now=self.now)
+
+        self.assertIn('"datePosted": "2026-11-20"', d_html)
+        self.assertIn('"directApply": true', d_html)
+        self.assertIn('"addressLocality": "New Delhi"', d_html)
+        self.assertIn('"addressRegion": "Delhi"', d_html)
+        self.assertIn('"directApply": false', p_html)
+        self.assertIn("Direct Form", d_html)
+        self.assertIn("General Portal", p_html)
+
+        # Sitemap lastmod stability across wrapper rebuilds vs semantic change
+        urls = [BASE, f"{BASE}posts/test-direct-form-2026/"]
+        base_dates = {BASE: "2026-11-26", f"{BASE}posts/test-direct-form-2026/": "2026-11-20"}
+        sem = {BASE: "abc123", f"{BASE}posts/test-direct-form-2026/": "postfp1"}
+        with tempfile.TemporaryDirectory() as td:
+            sp = Path(td) / "seo_state.json"
+            out1 = {"index.html": "<html>v1</html>", "posts/test-direct-form-2026/index.html": d_html}
+            lm1 = update_sitemap_lastmod(urls, out1, dt.date(2026, 11, 26), base_dates, semantic_hashes=sem, state_path=sp)
+            sp.write_text(out1["data/seo_state.json"], encoding="utf-8")
+            self.assertEqual(lm1[f"{BASE}posts/test-direct-form-2026/"], "2026-11-20")
+
+            # Rebuild on next day with different wrapper HTML but SAME semantic hash -> lastmod unchanged
+            out2 = {"index.html": "<html>v2 wrapper</html>", "posts/test-direct-form-2026/index.html": d_html + "<!-- GA -->"}
+            lm2 = update_sitemap_lastmod(urls, out2, dt.date(2026, 11, 27), base_dates, semantic_hashes=sem, state_path=sp)
+            self.assertEqual(lm2[f"{BASE}posts/test-direct-form-2026/"], "2026-11-20")
+
+            # Change substantive semantic hash -> lastmod advances to rebuild date
+            sem_changed = dict(sem, **{f"{BASE}posts/test-direct-form-2026/": "postfp2"})
+            lm3 = update_sitemap_lastmod(urls, out2, dt.date(2026, 11, 27), base_dates, semantic_hashes=sem_changed, state_path=sp)
+            self.assertEqual(lm3[f"{BASE}posts/test-direct-form-2026/"], "2026-11-27")
+
+    def test_up_rte_strict_ssl_no_cert_none(self):
+        for rel in ("scripts/bulk_import/discover.py", "scripts/bulk_import/auto_verify.py"):
+            src = (ROOT / rel).read_text(encoding="utf-8")
+            self.assertNotIn("CERT_NONE", src)
+            self.assertNotIn("verify=False", src)
+
+    def test_google_indexing_rs256_jwt_and_indexnow(self):
+        import base64
+        import hashlib
+        from google_indexing import sign_rs256, build_indexnow_urls, BASE
+
+        # Construct two proven 256-bit primes for fast zero-dependency RSA-512 test keypair (RFC 8017)
+        p = (1 << 256) - 189
+        q = (1 << 256) - 357
+        n = p * q
+        e = 65537
+        d = pow(e, -1, (p - 1) * (q - 1))
+
+        def der_len(nbytes: int) -> bytes:
+            if nbytes < 128:
+                return bytes([nbytes])
+            lb = nbytes.to_bytes((nbytes.bit_length() + 7) // 8, "big")
+            return bytes([0x80 | len(lb)]) + lb
+
+        def der_tlv(tag: int, body: bytes) -> bytes:
+            return bytes([tag]) + der_len(len(body)) + body
+
+        def der_uint(v: int) -> bytes:
+            b = v.to_bytes((v.bit_length() + 7) // 8 or 1, "big")
+            if b[0] & 0x80:
+                b = b"\x00" + b
+            return der_tlv(0x02, b)
+
+        pkcs1 = der_tlv(0x30, b"".join(der_uint(x) for x in (0, n, e, d, p, q, d % (p - 1), d % (q - 1), pow(q, -1, p))))
+        pem = (
+            "-----BEGIN RSA PRIVATE KEY-----\n"
+            + base64.encodebytes(pkcs1).decode("ascii")
+            + "-----END RSA PRIVATE KEY-----\n"
+        )
+        payload = b"header.claims.rs256check"
+        sig = sign_rs256(payload, pem)
+        k = (n.bit_length() + 7) // 8
+        self.assertEqual(len(sig), k)
+        digest_info = (
+            b"\x30\x31\x30\x0d\x06\x09\x60\x86\x48\x01\x65\x03\x04\x02\x01\x05\x00\x04\x20"
+            + hashlib.sha256(payload).digest()
+        )
+        expected_em = b"\x00\x01" + (b"\xff" * (k - len(digest_info) - 3)) + b"\x00" + digest_info
+        verified_em = pow(int.from_bytes(sig, "big"), e, n).to_bytes(k, "big")
+        self.assertEqual(verified_em, expected_em)
+
+        inow = build_indexnow_urls({"batch": [{"url": f"{BASE}posts/upsc-dental-surgeon-2026/", "type": "URL_UPDATED"}]})
+        self.assertIn(BASE, inow)
+        self.assertGreater(len(inow), 1)
+
 
 if __name__ == "__main__":
     unittest.main()

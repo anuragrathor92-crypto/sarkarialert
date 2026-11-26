@@ -111,6 +111,18 @@ def audit_site(now=None):
                         for req_k in ("title", "description", "datePosted", "validThrough", "employmentType", "hiringOrganization", "jobLocation", "url"):
                             if not item.get(req_k):
                                 errors.append(f"{rel}: JobPosting missing {req_k}")
+                        if len(str(item.get("description", ""))) < 120:
+                            errors.append(f"{rel}: JobPosting description too brief")
+                        addr = (item.get("jobLocation") or {}).get("address") or {}
+                        reg = str(addr.get("addressRegion", "")).strip()
+                        loc_city = str(addr.get("addressLocality", "")).strip()
+                        if not reg or reg.lower() == "india":
+                            errors.append(f"{rel}: JobPosting addressRegion invalid ({reg!r})")
+                        if not loc_city:
+                            errors.append(f"{rel}: JobPosting missing addressLocality")
+                        expected_direct = post_obj.get("applyLinkType") == "DIRECT_APPLICATION_FORM"
+                        if item.get("directApply") is not expected_direct:
+                            errors.append(f"{rel}: JobPosting directApply={item.get('directApply')} expected {expected_direct}")
                         vt = item.get("validThrough", "")
                         try:
                             dt_v = dt.datetime.fromisoformat(vt)
@@ -160,7 +172,7 @@ def audit_site(now=None):
         if extra_in_sm:
             errors.append(f"Non-indexable/orphan URLs in sitemap.xml: {extra_in_sm[:5]}")
         if len(set(sm_lastmods)) < 2:
-            warnings.append("sitemap.xml has uniform single lastmod across all URLs")
+            errors.append("sitemap.xml has uniform single lastmod across all URLs")
 
     # RSS Feed audit
     feed_path = ROOT / "feed.xml"

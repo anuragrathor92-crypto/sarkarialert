@@ -512,6 +512,16 @@ footer p { margin-bottom: 0; }
   font-weight: 700;
   cursor: pointer;
 }
+.apply-type-badge {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 3px;
+}
+.apply-type-badge.direct { background: #e8f5e9; color: #1b5e20; border: 1px solid #a5d6a7; }
+.apply-type-badge.portal { background: #e3f2fd; color: #0d47a1; border: 1px solid #90caf9; }
+.apply-type-badge.pending { background: #fff3e0; color: #e65100; border: 1px solid #ffcc80; }
 [hidden] { display: none !important; }
 
 @media (max-width: 900px) {
