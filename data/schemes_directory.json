@@ -187,7 +187,7 @@
         "मोबाइल नंबर (आधार OTP सत्यापन हेतु)"
       ],
       "officialUrl": "https://nha.gov.in/",
-      "sourceUrl": "https://nha.gov.in/img/resources/English_FAQs_related_to_the_benefits_for_senior_citizens.pdf",
+      "sourceUrl": "https://nha.gov.in/",
       "notes": "आयुष्मान 70+ की पात्रता सामान्य PM-JAY SECC सूची से स्वतंत्र है।",
       "verified": true,
       "verifiedOn": "2026-11-26",
@@ -328,7 +328,7 @@
         "उद्यम पंजीकरण / साझेदारी विलेख (यदि लागू)"
       ],
       "officialUrl": "https://financialservices.gov.in/stand-india-scheme-supi",
-      "sourceUrl": "https://www.standupmitra.in/",
+      "sourceUrl": "https://financialservices.gov.in/stand-india-scheme-supi",
       "notes": "बैंक शाखा या Stand Up Mitra पोर्टल मार्गदर्शन के अनुसार आवेदन प्रक्रिया पूरी होती है।",
       "verified": true,
       "verifiedOn": "2026-11-26",
@@ -565,8 +565,8 @@
         "बैंक या डाकघर पासबुक विवरण",
         "पति का मृत्यु प्रमाण पत्र (विधवा पेंशन हेतु) या दिव्यांगता प्रमाण पत्र (दिव्यांग पेंशन हेतु)"
       ],
-      "officialUrl": "https://nsap.nic.in/",
-      "sourceUrl": "https://www.rural.gov.in/",
+      "officialUrl": "https://nsap.dord.gov.in/",
+      "sourceUrl": "https://nsap.dord.gov.in/",
       "notes": "प्रत्येक राज्य के समाज कल्याण/ग्रामीण विकास पोर्टल पर राज्य टॉप-अप राशि व प्रक्रिया अलग हो सकती है।",
       "verified": true,
       "verifiedOn": "2026-11-26",

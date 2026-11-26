@@ -5,6 +5,9 @@ on:
   push:
     branches: [main]
     paths: ['scripts/bulk_import/**', '.github/workflows/bulk-import.yml', 'data/import_approved.json', 'data/posts.json', 'data/schemes_directory.json', 'data/referrals.json']
+  pull_request:
+    branches: [main]
+    paths: ['scripts/bulk_import/**', '.github/workflows/bulk-import.yml', 'data/**', 'assets/**', 'posts/**', 'category/**', '*.html']
   workflow_dispatch:
     inputs:
       publish_approved:
@@ -27,6 +30,8 @@ jobs:
           python-version: '3.12'
       - name: Run unit tests & site integrity checks
         run: python -m unittest discover -s scripts/bulk_import -p 'test_*.py'
+      - name: Run permanent broken-link & PDF checker
+        run: python scripts/bulk_import/verify_links.py --check-internal --output import-output/link-verification.json
       - name: Discover candidate URLs & monitor UP RTE 2027-28
         run: python scripts/bulk_import/discover.py --inspect 20 --write-monitor
       - name: Dry-run expiry & approved queue check
@@ -37,14 +42,25 @@ jobs:
           python - << 'EOF'
           import json, os
           from pathlib import Path
-          disc = json.loads(Path("import-output/discovery.json").read_text(encoding="utf-8"))
-          pub = json.loads(Path("import-output/publish-report.json").read_text(encoding="utf-8"))
+          disc_p = Path("import-output/discovery.json")
+          pub_p = Path("import-output/publish-report.json")
+          disc = json.loads(disc_p.read_text(encoding="utf-8")) if disc_p.exists() else {}
+          pub = json.loads(pub_p.read_text(encoding="utf-8")) if pub_p.exists() else {}
+          lv_path = Path("import-output/link-verification.json")
+          lv = json.loads(lv_path.read_text(encoding="utf-8")) if lv_path.exists() else {}
+          broken_int = len(lv.get("internal", {}).get("broken", []))
+          ext_list = lv.get("external", [])
+          hard_404 = sum(1 for r in ext_list if r.get("status") in (404, 410, 422))
+          pending_cnt = len(lv.get("pendingRecheck", []))
           rte = disc.get("upRteMonitor", {})
           lines = [
               "## Sarkari Alert 2-Hour Discovery & Monitor Report",
               f"- Checked At: `{disc.get('checkedAt')}`",
               f"- Discovered Candidate URLs: `{len(disc.get('candidates', []))}`",
               f"- Source Errors: `{len(disc.get('errors', []))}`",
+              f"- Internal Links Checked: `{lv.get('internal', {}).get('linksChecked', 0)}` (Broken: `{broken_int}`)",
+              f"- External URLs Audited: `{len(ext_list)}` (404/Bad PDF: `{hard_404}`)",
+              f"- Verification Pending Links Rechecked: `{pending_cnt}`",
               f"- Expired Active Posts Detected: `{len(disc.get('expiredActivePosts', []))}`",
               f"- UP RTE 2027-28 Monitor: `{rte.get('status')}` (HTTP `{rte.get('httpStatus')}`)",
               f"- Pending Publish Changes: `{len(pub.get('changedFiles', []))}`",
