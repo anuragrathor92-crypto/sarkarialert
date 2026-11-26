@@ -1,38 +1,32 @@
-# Sarkari Alert — Task Status & Link Audit Tracker
+# Sarkari Alert — Task Status Tracker
 
-Last Updated: `2026-11-26 13:41 IST`
-Corrective Branch: `fix/broken-links-and-audit-2026-11-26` (Base: `main` at `c75b852`; Backup branch: `backup/main-2026-11-26`)
+Last Updated: `2026-11-26 14:33 IST`
+Feature Branch: `feat/all-states-seo-workflows-2026-11-26` (Base: `main` at `592cb9e`; Backup: `backup/main-2026-11-26`)
 
-## Summary Metrics (Post-Fix Audit)
-- **Total Active Verified Posts:** `96` (`0` expired posts in active listings) + **`32` Government Schemes (`Sarkari Yojana`)** (`0` Apply buttons on schemes) = **`128` Detail Pages (`148` total generated files)**
-- **Internal Link Audit (`verify_links.py --check-internal`):** `147` HTML pages checked, **`3,397` internal links checked, `broken = 0`**
-- **External Official URL Audit:** **`180`** unique external URLs checked (`154/180` direct Python `urllib` 2xx/3xx; **`hard404orBadPDF = 0`**; remaining portals verified via curl/SChannel GET `200`, except 3 explicitly marked `Verification Pending`)
-- **Automated Tests (`test_import.py`):** `Ran 9 tests in 0.780s — OK` (now includes disk HTML/`sitemap.xml` broken-link enforcement & `Verification Pending` assertion)
+## Summary Metrics
+- **Active Verified Posts (`data/posts.json`):** `114` (`0` expired posts excluded)
+  - `latest-jobs`: `40` | `results`: `16` | `admit-card`: `14` | `admission`: `9` (incl. 3 Upcoming + UP RTE Monitor)
+  - `upcoming-jobs`: `8` | `documents`: `7` | `scholarship`: `6` | `answer-key`: `5` | `exam-date`: `5` | `syllabus`: `3` | `outsourcing`: `1` (+ `10th-iti` cross-tag)
+- **Government Schemes (`data/schemes_directory.json`):** **`67` total verified schemes** covering **27 Central schemes + ALL 28 States + ALL 8 Union Territories (37 jurisdictions)**; **ZERO separate Apply buttons** (`applyUrl` = `0`)
+- **Built Files (`build_site.py`):** `202` generated static files (`200` HTML pages + `sitemap.xml` + `robots.txt`)
+- **GitHub Pages Automation (`actions/deploy-pages@v4`):** Configured cleanly inside `.github/workflows/bulk-import.yml` using built-in `GITHUB_TOKEN` (no external PAT or paid tools required) so 2-hourly `schedule`, `workflow_dispatch`, and `main` pushes build, link-check, and deploy autonomously even when local laptop is OFF.
 
-## Broken / Generic / Mismatched Links Fixed
-1. `ayushman-70plus`: Fixed `422` soft-404 PDF `https://nha.gov.in/img/resources/English_FAQs_related_to_the_benefits_for_senior_citizens.pdf` -> `https://nha.gov.in/` (`200 OK`)
-2. `iaf-afcat-01-2027`: Fixed `422` HTML-disguised-as-PDF `Notification for AFCAT 01 of 2027.pdf` -> `https://afcat.edcil.co.in/AFCAT/` (`200 OK`)
-3. `nsap`: Fixed dead DNS `nsap.nic.in` -> `https://nsap.dord.gov.in/` (`200 OK`)
-4. `stand-up-india`: Fixed timed-out `standupmitra.in` -> `https://financialservices.gov.in/stand-india-scheme-supi` (`200 OK`)
-5. `loans-and-cards` (`data/referrals.json`): Fixed `403 Access Denied` `npci.org.in/...` -> `https://www.rbi.org.in/` (`200 OK`)
-6. `uppsc-ro-aro-2026`: Fixed TLS-failing `otr.pariksha.nic.in` -> `https://uppsc.up.nic.in/` (`200 OK`)
-7. `sidbi-grade-a-b-2026`: Updated generic `/index` -> exact 2026–27 SIDBI recruitment detail URL (`200 OK`)
-8. `bihar-vidhan-sabha-jsa-attendant-2026`: Updated generic portal -> direct application portal `https://blasrecruit.in/` (`200 OK`)
-9. `ukpsc-lower-pcs-2026`: Updated -> direct application portal `https://ukpsc.net.in/` (`200 OK`)
-10. `mp-nhm-staff-nurse-2026`: Updated -> direct application form portal `https://iforms.mponline.gov.in/` (`200 OK`)
-11. `aiims-gorakhpur-faculty-2026`: Updated -> direct Faculty Group-A advertisement page (`200 OK`)
-12. `aiims-bilaspur-faculty-2026`: Updated -> direct `/recruitment` page (`200 OK`)
-13. `coconut-development-board-2026`: Updated -> direct `/Vacancy.aspx` page (`200 OK`)
-14. Portal-homepage apply links (`bbmb`, `ecil`, `nlc-india-get-10-2026`, `bel`, `isro-sdsc-shar`, `uksssc`, `haryana-htet`, `dsssb`, `rrb-isolated`, `ssc-steno`): Labeled accurately with portal-specific `applyLabel` (`Official NAPS Portal`, `Official NATS Portal`, `Official UMANG Portal`, etc.)
+## Completed Tasks (1–14)
+- [x] **1. SarkariResult.com.cm Active Comparison & Additions:** Compared `452` candidates (`0` source errors), added missing verified Admit Cards (`upsssc-cane-supervisor-2026`, `gims-noida-staff-nurse-2026`), Results (`up-special-tet-2026-result`, `upsssc-forest-guard-result-2026`, `csbc-bihar-special-branch-constable-result-2026`), Scholarships, and Upcoming Jobs/Admissions while preserving all existing data.
+- [x] **2. Direct Apply Link Verification:** Every active vacancy's link verified; working direct forms labeled accurately, portal homepages labeled via `applyLabel`, and 4 unverified/restricted portals marked honestly as `Verification Pending`.
+- [x] **3 & 4. Cloud Autonomous Discovery, Verification, Approval & Publishing:** `.github/workflows/bulk-import.yml` runs every 2 hours (`cron: '17 */2 * * *'`) using built-in `GITHUB_TOKEN`, stages discovery artifacts, publishes admin-approved `data/import_approved.json` records + expiry cleanup + `verify_links.py --check-internal` directly in the cloud without requiring a local laptop. Tested via real GitHub Actions `workflow_dispatch` (`publish_approved: true`) + PR workflow runs.
+- [x] **5. All 28 States + 8 UTs Government Schemes (`67` Schemes):** Expanded `data/schemes_directory.json` cleanly using live-verified official `.gov.in`/state portals across every State and Union Territory with eligibility, benefits, required documents, and zero Apply buttons.
+- [x] **6. Upcoming Jobs, Upcoming Admissions, Upcoming Schemes & Scholarships:** Expanded `upcoming-jobs` (`8`), `scholarship` (`6`: NSP, UP Scholarship, AICTE Pragati/Saksham, PM YASASVI, Bihar Post-Matric BC/EBC & SC/ST, PMSS), `admission` (`9` incl. CUET PG/UG/NEET UG 2027 upcoming + UP RTE monitor), and Upcoming Schemes watch inside `Sarkari Yojana`.
+- [x] **7. UP RTE Admission 2027-28 Live Monitor:** Active every 2 hours (`https://rte25.upsdc.gov.in/`, `NOTIFICATION_AWAITED`).
+- [x] **8. Technical SEO, Structured Data, Sitemap, Canonical URLs & Mobile Optimization:** Added `JobPosting`, `GovernmentService`, `CollectionPage`, `Organization`, `WebSite`, and `BreadcrumbList` JSON-LD schemas, canonical URLs, `robots.txt`, OpenGraph/Twitter tags, dynamic `sitemap.xml`, and responsive CSS.
+- [x] **9. Google Search Console & AdSense Integration Prep:** Created `data/site_config.json` and `docs/SEO_ADSENSE_GSC.md` supporting non-intrusive GSC verification `<meta>` and conditional AdSense + `/ads.txt` generation once real owner IDs are entered (zero fake IDs published).
+- [x] **10. Loan & Credit Card Referral Section:** Strictly isolated on `/loans-and-cards/` (`data/referrals.json`) using verified bank/regulator info URLs only (zero invented affiliate links).
+- [x] **11. Continuous 2-Hourly Pending Link Recheck (4 Links):** All 4 pending portals (`bhel-engineer-supervisor-trainee-2026`, `assam-rifles-technical-tradesman-2026`, `rrc-nr-apprentice-2026`, `mp-police-constable-2026-exam-admit`) remain marked `Verification Pending` and are rechecked every 2 hours (`pendingRechecked = 4`).
+- [x] **12. Live Website Check of 6 Previously Monitored Posts:** Verified live `HTTP 200` on `nta-cmat-2027`, `nta-shreshta-2027`, `ibps-po-mt-xvi-main-result-2026`, `ugc-net-december-2026-exam-date`, `csir-net-december-2026-exam-date`, and `upsc-dental-surgeon-2026`.
+- [x] **13. Automated Tests & Pull Request:** Full test suite passed (`9/9 OK`), Pull Request #3 opened for approval.
+- [x] **14. Status Tracking:** `TASK_STATUS.md` updated with exact completed and remaining items.
 
-## Remaining Verification Pending / Blocked Portals (Honest Labeling)
-- `assam-rifles-technical-tradesman-2026` (`assamrifles.gov.in`): Marked **`Verification Pending`** (automated checks timed out `rc=28`)
-- `bhel-engineer-supervisor-trainee-2026` (`careers.bhel.in`): Marked **`Verification Pending`** (ISP local DNS `rc=6`; resolves to `3.7.210.81` HTTP `200` on `8.8.8.8`)
-- `rrc-nr-apprentice-2026` (`www.rrcnr.org`): Marked **`Verification Pending`** (Cloudflare/WAF HTTP `403` blocks automated verification)
-- `mp-police-constable-2026-exam-admit` (`esb.mp.gov.in`): Marked with `linkHealth` warning (server uses Legacy TLS Renegotiation, works on SChannel Windows TLS `200 OK`)
-
-## Missing Verified Data Added
-- `nlc-india-executive-11-2026`: NLC India Executive Recruitment 2026 (Advt. 11/2026) — `145` Posts (Grades E-1 to E-7, Apply `20 Nov – 19 Dec 2026`)
-
-## Permanent GitHub Actions Broken-Link Checker
-- Added `check_internal_links()` + PDF-HTML fallback check (`status 422`) to `scripts/bulk_import/verify_links.py`, enforced inside `test_import.py`, and gated on `schedule`, `push`, `pull_request`, and `workflow_dispatch` in `.github/workflows/bulk-import.yml`.
+## Remaining / Owner-Input Pending Items
+- [ ] **Owner Approval to Merge PR #3** (`feat/all-states-seo-workflows-2026-11-26` -> `main`) and deploy updated `199`-file build to GitHub Pages.
+- [ ] **Owner-Specific Credentials (Cannot Be Invented):** Add your personal Google Search Console `verificationMetaContent`, Google AdSense `publisherId` (`ca-pub-...`) in `data/site_config.json`, and any commercial affiliate `referralUrl` values in `data/referrals.json`.
+- [ ] **4 Govt Portals Unblock Check:** Automatically monitored every 2 hours (`bhel`, `assam-rifles`, `rrcnr`, `mp-esb`) until reliably accessible/TLS-compliant.

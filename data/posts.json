@@ -1948,7 +1948,8 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "type": "official-notice",
-      "linkHealth": "esb.mp.gov.in पुराने TLS (Legacy Renegotiation) का उपयोग करता है, जिससे कुछ ब्राउज़र/Linux चेकर में त्रुटि आ सकती है।"
+      "linkHealth": "esb.mp.gov.in पुराने TLS (Legacy Renegotiation) का उपयोग करता है, जिससे कुछ ब्राउज़र/Linux चेकर में त्रुटि आ सकती है।",
+      "linkStatus": "VERIFICATION_PENDING"
     },
     {
       "id": "upessc-assistant-professor-answer-key-2026",
@@ -3814,6 +3815,612 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "applicationStatus": "OPEN",
+      "type": "official-notice"
+    },
+    {
+      "id": "upsssc-cane-supervisor-2026",
+      "title": "UPSSSC Cane Supervisor Mains Admit Card 2026 – 1,182 Posts (Exam 29 Nov)",
+      "category": "admit-card",
+      "department": "UPSSSC",
+      "qualification": "B.Sc. Agriculture",
+      "noticeDate": "2026-11-25",
+      "lastDate": "2026-11-29",
+      "deadline": "29 Nov 2026 (Exam)",
+      "notificationUrl": "https://upsssc.gov.in/",
+      "officialUrl": "https://upsssc.gov.in/",
+      "summary": "UPSSSC ने गन्ना पर्यवेक्षक (1,182 पद) मुख्य परीक्षा के एडमिट कार्ड 25 नवंबर 2026 को जारी कर दिए हैं। परीक्षा 29 नवंबर 2026 को आयोजित होगी।",
+      "rows": [
+        [
+          "Total Vacancies",
+          "1,182 Cane Supervisor Posts"
+        ],
+        [
+          "Admit Card Released",
+          "25 November 2026"
+        ],
+        [
+          "Main Exam Date",
+          "29 November 2026"
+        ],
+        [
+          "Official Download Portal",
+          "upsssc.gov.in"
+        ]
+      ],
+      "verified": true,
+      "verifiedOn": "2026-11-26",
+      "publishedDate": "2026-11-26",
+      "type": "official-notice"
+    },
+    {
+      "id": "gims-noida-staff-nurse-2026",
+      "title": "GIMS Greater Noida Staff Nurse CBT Exam Date & Admit Card 2026 (3 Dec)",
+      "category": "admit-card",
+      "department": "GIMS Greater Noida",
+      "qualification": "B.Sc Nursing / GNM",
+      "noticeDate": "2026-11-24",
+      "lastDate": "2026-12-03",
+      "deadline": "03 Dec 2026 (CBT)",
+      "notificationUrl": "https://gims.ac.in/",
+      "officialUrl": "https://gims.ac.in/",
+      "summary": "राजकीय आयुर्विज्ञान संस्थान (GIMS), ग्रेटर नोएडा ने स्टाफ नर्स CBT परीक्षा 3 दिसंबर 2026 के लिए निर्धारित की है। प्रवेश पत्र एवं शहर सूचना आधिकारिक पोर्टल से देखें।",
+      "rows": [
+        [
+          "Post",
+          "Staff Nurse CBT Recruitment 2026"
+        ],
+        [
+          "CBT Examination Date",
+          "3 December 2026"
+        ],
+        [
+          "Admit Card Portal",
+          "gims.ac.in & Registered Candidate Email"
+        ]
+      ],
+      "verified": true,
+      "verifiedOn": "2026-11-26",
+      "publishedDate": "2026-11-26",
+      "type": "official-notice"
+    },
+    {
+      "id": "up-special-tet-2026-result",
+      "title": "UPESSC UP Special TET 2026 Result & Scorecard Declared",
+      "category": "results",
+      "department": "UPESSC",
+      "qualification": "D.El.Ed / B.Ed",
+      "noticeDate": "2026-11-20",
+      "lastDate": "",
+      "deadline": "Result Live",
+      "notificationUrl": "https://upessc.up.gov.in/",
+      "officialUrl": "https://upessc.up.gov.in/",
+      "summary": "UPESSC ने यूपी स्पेशल TET 2026 का परीक्षा परिणाम घोषित कर दिया है जिसमें लगभग 38,900+ सेवारत शिक्षक उत्तीर्ण हुए हैं। स्कोरकार्ड upessc.up.gov.in पर उपलब्ध है।",
+      "rows": [
+        [
+          "Conducting Authority",
+          "UP Education Service Selection Commission (UPESSC)"
+        ],
+        [
+          "Result Status",
+          "Declared (20 November 2026)"
+        ],
+        [
+          "Qualified Candidates",
+          "38,900+ Teachers"
+        ],
+        [
+          "Official Portal",
+          "upessc.up.gov.in"
+        ]
+      ],
+      "verified": true,
+      "verifiedOn": "2026-11-26",
+      "publishedDate": "2026-11-26",
+      "type": "official-notice"
+    },
+    {
+      "id": "upsssc-forest-guard-result-2026",
+      "title": "UPSSSC Forest Guard & Wildlife Guard (Advt. 12/2026) Written Result & PST Shortlist",
+      "category": "results",
+      "department": "UPSSSC",
+      "qualification": "10+2 (Intermediate)",
+      "noticeDate": "2026-11-21",
+      "lastDate": "",
+      "deadline": "PST/PMT Shortlist Live",
+      "notificationUrl": "https://upsssc.gov.in/",
+      "officialUrl": "https://upsssc.gov.in/",
+      "summary": "UPSSSC ने वन रक्षक एवं वन्य जीव रक्षक (708 पद, विज्ञापन संख्या 12-परीक्षा/2026) मुख्य लिखित परीक्षा का परिणाम और PST/PMT शॉर्टलिस्ट जारी की है।",
+      "rows": [
+        [
+          "Advertisement No.",
+          "12-Exam/2026 (708 Posts)"
+        ],
+        [
+          "Stage",
+          "Written Exam Result & PST/PMT Shortlist"
+        ],
+        [
+          "Official Portal",
+          "upsssc.gov.in"
+        ]
+      ],
+      "verified": true,
+      "verifiedOn": "2026-11-26",
+      "publishedDate": "2026-11-26",
+      "type": "official-notice"
+    },
+    {
+      "id": "csbc-bihar-special-branch-constable-result-2026",
+      "title": "CSBC Bihar Police Special Branch Constable (01/2026) Final Selection Result",
+      "category": "results",
+      "department": "CSBC Bihar",
+      "qualification": "10+2 (Intermediate)",
+      "noticeDate": "2026-11-20",
+      "lastDate": "",
+      "deadline": "Final Result Live",
+      "notificationUrl": "https://csbc.bihar.gov.in/",
+      "officialUrl": "https://csbc.bihar.gov.in/",
+      "summary": "केंद्रीय चयन पर्षद (सिपाही भर्ती), बिहार ने विज्ञापन संख्या 01/2026 विशेष शाखा सिपाही भर्ती का अंतिम चयन परिणाम csbc.bihar.gov.in पर प्रकाशित कर दिया है।",
+      "rows": [
+        [
+          "Advertisement No.",
+          "01/2026 (Bihar Police Special Branch Constable)"
+        ],
+        [
+          "Status",
+          "Final Selection List Published"
+        ],
+        [
+          "Official Portal",
+          "csbc.bihar.gov.in"
+        ]
+      ],
+      "verified": true,
+      "verifiedOn": "2026-11-26",
+      "publishedDate": "2026-11-26",
+      "type": "official-notice"
+    },
+    {
+      "id": "aicte-pragati-saksham-2026-27",
+      "title": "AICTE Pragati & Saksham Technical Scholarship 2026–27 via NSP (Apply by 30 Nov)",
+      "category": "scholarship",
+      "department": "AICTE / NSP",
+      "qualification": "Diploma / Degree Technical",
+      "noticeDate": "2026-11-18",
+      "lastDate": "2026-11-30",
+      "deadline": "2026-11-30T23:59:00+05:30",
+      "notificationUrl": "https://aicte.gov.in/",
+      "officialUrl": "https://scholarships.gov.in/",
+      "actionUrl": "https://scholarships.gov.in/",
+      "actionLabel": "Apply via Official NSP Portal",
+      "summary": "AICTE प्रगति (छात्राओं हेतु) एवं सक्षम (दिव्यांग छात्रों हेतु) छात्रवृत्ति 2026–27 के लिए नेशनल स्कॉलरशिप पोर्टल पर आवेदन 30 नवंबर 2026 तक विस्तारित हैं।",
+      "rows": [
+        [
+          "Scheme",
+          "AICTE Pragati (Girls) & Saksham (PwD Technical)"
+        ],
+        [
+          "Assistance",
+          "₹50,000 per annum tuition/incidentals (as per AICTE norms)"
+        ],
+        [
+          "Student Application Last Date",
+          "30 November 2026 (on NSP)"
+        ],
+        [
+          "Family Income Limit",
+          "Up to ₹8 Lakh per annum"
+        ],
+        [
+          "Official Portals",
+          "aicte.gov.in & scholarships.gov.in"
+        ]
+      ],
+      "verified": true,
+      "verifiedOn": "2026-11-26",
+      "publishedDate": "2026-11-26",
+      "type": "official-notice"
+    },
+    {
+      "id": "pm-yasasvi-scholarship-2026-27",
+      "title": "PM YASASVI Scholarship Scheme 2026–27 (OBC / EBC / DNT) – NSP Portal",
+      "category": "scholarship",
+      "department": "MSJE / NSP",
+      "qualification": "Class 9–12 & Post-Matric",
+      "noticeDate": "2026-11-18",
+      "lastDate": "2026-11-30",
+      "deadline": "2026-11-30T23:59:00+05:30",
+      "notificationUrl": "https://scholarships.gov.in/",
+      "officialUrl": "https://scholarships.gov.in/",
+      "actionUrl": "https://scholarships.gov.in/",
+      "actionLabel": "Open NSP Scholarship Portal",
+      "summary": "पीएम यशस्वी छात्रवृत्ति 2026–27 (OBC, EBC, DNT छात्रों हेतु टॉप क्लास स्कूल व पोस्ट-मैट्रिक घटक) के आवेदन NSP एवं राज्य पोर्टलों के माध्यम से 30 नवंबर 2026 तक संकलित किए जा रहे हैं।",
+      "rows": [
+        [
+          "Target Categories",
+          "OBC, EBC, and DNT Students"
+        ],
+        [
+          "Selection Mode",
+          "Direct Merit-based on previous qualifying marks (No entrance test)"
+        ],
+        [
+          "Top Class School NSP Last Date",
+          "30 November 2026"
+        ],
+        [
+          "Official Portal",
+          "scholarships.gov.in"
+        ]
+      ],
+      "verified": true,
+      "verifiedOn": "2026-11-26",
+      "publishedDate": "2026-11-26",
+      "type": "official-notice"
+    },
+    {
+      "id": "bihar-post-matric-scholarship-2026-27",
+      "title": "Bihar Post Matric Scholarship 2026–27 (BC/EBC & SC/ST) – Apply by 30 Nov",
+      "category": "scholarship",
+      "department": "Govt. of Bihar",
+      "qualification": "Post-Matric (10+2 / UG / PG / ITI)",
+      "noticeDate": "2026-11-15",
+      "lastDate": "2026-11-30",
+      "deadline": "2026-11-30T23:59:00+05:30",
+      "notificationUrl": "https://pmsonline.bihar.gov.in/",
+      "officialUrl": "https://pmsonline.bihar.gov.in/",
+      "actionUrl": "https://pmsonline.bihar.gov.in/",
+      "actionLabel": "Open Bihar PMS Portal (BC/EBC)",
+      "extraLinks": [
+        [
+          "SC / ST Post Matric Portal",
+          "https://scstpmsonline.bihar.gov.in/"
+        ]
+      ],
+      "summary": "बिहार पोस्ट मैट्रिक छात्रवृत्ति 2026–27 (BC/EBC एवं SC/ST छात्र) की पुनः खोली गई पंजीकरण विंडो 30 नवंबर 2026 तक सक्रिय है।",
+      "rows": [
+        [
+          "Eligibility",
+          "Bihar domicile students (BC/EBC/SC/ST) passed Class 10th & enrolled in Post-Matric courses"
+        ],
+        [
+          "Final Submission Window",
+          "Up to 30 November 2026"
+        ],
+        [
+          "BC/EBC Official Portal",
+          "pmsonline.bihar.gov.in"
+        ],
+        [
+          "SC/ST Official Portal",
+          "scstpmsonline.bihar.gov.in"
+        ]
+      ],
+      "verified": true,
+      "verifiedOn": "2026-11-26",
+      "publishedDate": "2026-11-26",
+      "type": "official-notice"
+    },
+    {
+      "id": "pmss-armed-forces-scholarship-2026-27",
+      "title": "Prime Minister's Scholarship Scheme (PMSS) 2026–27 – Ex-Servicemen Wards",
+      "category": "scholarship",
+      "department": "Kendriya Sainik Board / MHA",
+      "qualification": "Professional Degree (Engg / Medical / MBA)",
+      "noticeDate": "2026-11-20",
+      "lastDate": "",
+      "deadline": "Annual Portal Active",
+      "notificationUrl": "https://www.myscheme.gov.in/",
+      "officialUrl": "https://scholarships.gov.in/",
+      "summary": "भूतपूर्व सैनिकों/शहीद कर्मियों की विधवाओं और बच्चों के लिए उच्च व्यावसायिक/तकनीकी शिक्षा (B.Tech/MBBS/MBA आदि) हेतु PMSS छात्रवृत्ति (₹2,500–₹3,000 प्रति माह)।",
+      "rows": [
+        [
+          "Monthly Grant",
+          "Boys: ₹2,500/month | Girls: ₹3,000/month"
+        ],
+        [
+          "Eligible Courses",
+          "First-year professional degrees (BE/BTech, MBBS, BDS, BBA, BCA, MBA, MCA)"
+        ],
+        [
+          "Official Portals",
+          "scholarships.gov.in & myscheme.gov.in"
+        ]
+      ],
+      "verified": true,
+      "verifiedOn": "2026-11-26",
+      "publishedDate": "2026-11-26",
+      "type": "official-notice"
+    },
+    {
+      "id": "nta-cuet-pg-2027-upcoming",
+      "title": "Upcoming Admission: NTA CUET PG 2027 – Registration Expected Dec 2026 (Exam Mar 2027)",
+      "category": "admission",
+      "department": "NTA",
+      "qualification": "Graduate",
+      "noticeDate": "2026-11-24",
+      "lastDate": "",
+      "deadline": "Upcoming (Mar 2027 Exam)",
+      "notificationUrl": "https://nta.ac.in/",
+      "officialUrl": "https://nta.ac.in/",
+      "summary": "राष्ट्रीय परीक्षा एजेंसी (NTA) द्वारा CUET PG 2027 की अधिसूचना दिसंबर 2026 में संभावित है और CBT परीक्षा 2 से 31 मार्च 2027 के बीच निर्धारित होने की जानकारी है।",
+      "rows": [
+        [
+          "Status",
+          "Upcoming Admission Notice (Expected Dec 2026)"
+        ],
+        [
+          "Tentative CBT Window",
+          "2 – 31 March 2027"
+        ],
+        [
+          "Official Website",
+          "nta.ac.in"
+        ]
+      ],
+      "verified": true,
+      "verifiedOn": "2026-11-26",
+      "publishedDate": "2026-11-26",
+      "type": "official-notice"
+    },
+    {
+      "id": "nta-cuet-ug-2027-upcoming",
+      "title": "Upcoming Admission: NTA CUET UG 2027 Central University Entrance – Expected Jan 2027",
+      "category": "admission",
+      "department": "NTA",
+      "qualification": "10+2 (Intermediate)",
+      "noticeDate": "2026-11-24",
+      "lastDate": "",
+      "deadline": "Upcoming (Jan 2027 Expected)",
+      "notificationUrl": "https://nta.ac.in/",
+      "officialUrl": "https://nta.ac.in/",
+      "summary": "केंद्रीय विश्वविद्यालयों में स्नातक प्रवेश हेतु NTA CUET UG 2027 की सूचना एवं ऑनलाइन आवेदन जनवरी 2027 में संभावित है।",
+      "rows": [
+        [
+          "Status",
+          "Upcoming Admission (Expected Jan 2027)"
+        ],
+        [
+          "Eligibility",
+          "Class 12th passed/appearing students"
+        ],
+        [
+          "Official Portal",
+          "nta.ac.in"
+        ]
+      ],
+      "verified": true,
+      "verifiedOn": "2026-11-26",
+      "publishedDate": "2026-11-26",
+      "type": "official-notice"
+    },
+    {
+      "id": "nta-neet-ug-2027-upcoming",
+      "title": "Upcoming Admission: NTA NEET UG 2027 Medical Entrance – Bulletin Awaited (Feb 2027)",
+      "category": "admission",
+      "department": "NTA",
+      "qualification": "10+2 (PCB)",
+      "noticeDate": "2026-11-24",
+      "lastDate": "",
+      "deadline": "Upcoming (Bulletin Awaited)",
+      "notificationUrl": "https://nta.ac.in/",
+      "officialUrl": "https://nta.ac.in/",
+      "summary": "MBBS, BDS एवं AYUSH स्नातक प्रवेश हेतु NEET UG 2027 का आधिकारिक इन्फॉर्मेशन बुलेटिन फरवरी 2027 के आसपास संभावित है।",
+      "rows": [
+        [
+          "Status",
+          "Upcoming Admission (Bulletin Expected Feb 2027)"
+        ],
+        [
+          "Eligibility",
+          "10+2 with Physics, Chemistry, Biology/Biotech"
+        ],
+        [
+          "Official Portal",
+          "nta.ac.in"
+        ]
+      ],
+      "verified": true,
+      "verifiedOn": "2026-11-26",
+      "publishedDate": "2026-11-26",
+      "type": "official-notice"
+    },
+    {
+      "id": "upsc-cse-2027-upcoming",
+      "title": "UPSC Civil Services (IAS / IPS) Prelims 2027 – Notification on 13 January 2027",
+      "category": "upcoming-jobs",
+      "department": "UPSC",
+      "qualification": "Graduate",
+      "noticeDate": "2026-11-24",
+      "lastDate": "2027-02-02",
+      "deadline": "2027-02-02T18:00:00+05:30",
+      "notificationUrl": "https://upsc.gov.in/",
+      "officialUrl": "https://upsc.gov.in/",
+      "summary": "UPSC वार्षिक कैलेंडर के अनुसार सिविल सेवा परीक्षा (CSE) 2027 की अधिसूचना 13 जनवरी 2027 को जारी होगी (अंतिम तिथि 2 फरवरी 2027, प्रारंभिक परीक्षा 23 मई 2027)।",
+      "rows": [
+        [
+          "Notification Date",
+          "13 January 2027 (UPSC Annual Calendar)"
+        ],
+        [
+          "Application Window",
+          "13 January – 2 February 2027"
+        ],
+        [
+          "Prelims Exam Date",
+          "23 May 2027"
+        ],
+        [
+          "Mains Exam Starts",
+          "20 August 2027"
+        ],
+        [
+          "Official Website",
+          "upsc.gov.in"
+        ]
+      ],
+      "verified": true,
+      "verifiedOn": "2026-11-26",
+      "publishedDate": "2026-11-26",
+      "type": "official-notice"
+    },
+    {
+      "id": "ssc-2026-27-calendar-upcoming",
+      "title": "SSC Annual Examination Calendar 2026–27 – Upcoming CGL, CHSL, MTS & GD Cycles",
+      "category": "upcoming-jobs",
+      "department": "SSC",
+      "qualification": "10th / 12th / Graduate",
+      "noticeDate": "2026-11-24",
+      "lastDate": "",
+      "deadline": "2026–27 Calendar Active",
+      "notificationUrl": "https://ssc.gov.in/",
+      "officialUrl": "https://ssc.gov.in/",
+      "summary": "कर्मचारी चयन आयोग (SSC) के आधिकारिक कैलेंडर 2026–27 के अनुसार आगामी परीक्षा तिथियाँ व विभागीय भर्तियों के नोटिस ssc.gov.in पर जारी होते हैं।",
+      "rows": [
+        [
+          "Commission",
+          "Staff Selection Commission (SSC)"
+        ],
+        [
+          "Coverage",
+          "CGL, CHSL, MTS, GD Constable, JE & Departmental LDCE"
+        ],
+        [
+          "Official Website",
+          "ssc.gov.in"
+        ]
+      ],
+      "verified": true,
+      "verifiedOn": "2026-11-26",
+      "publishedDate": "2026-11-26",
+      "type": "official-notice"
+    },
+    {
+      "id": "bihar-police-constable-2027-upcoming",
+      "title": "CSBC Bihar Police Upcoming Constable & Operator Recruitment Monitor 2026–27",
+      "category": "upcoming-jobs",
+      "department": "CSBC Bihar",
+      "qualification": "10+2 (Intermediate)",
+      "noticeDate": "2026-11-24",
+      "lastDate": "",
+      "deadline": "Watch CSBC Official Notice",
+      "notificationUrl": "https://csbc.bihar.gov.in/",
+      "officialUrl": "https://csbc.bihar.gov.in/",
+      "summary": "केंद्रीय चयन पर्षद (सिपाही भर्ती), बिहार की आगामी सिपाही एवं पुलिस संवर्ग भर्तियों की आधिकारिक सूचना csbc.bihar.gov.in पर प्रकाशित होती है।",
+      "rows": [
+        [
+          "Recruiting Board",
+          "CSBC Bihar"
+        ],
+        [
+          "Status",
+          "Upcoming Recruitment Watch (2026–27)"
+        ],
+        [
+          "Official Portal",
+          "csbc.bihar.gov.in"
+        ]
+      ],
+      "verified": true,
+      "verifiedOn": "2026-11-26",
+      "publishedDate": "2026-11-26",
+      "type": "official-notice"
+    },
+    {
+      "id": "rrb-ntpc-graduate-cen-06-2026-status",
+      "title": "RRB NTPC Graduate Level (CEN 06/2026) Application Status Out – 3,548 Posts",
+      "category": "admit-card",
+      "department": "RRB",
+      "qualification": "Graduate",
+      "noticeDate": "2026-11-26",
+      "lastDate": "",
+      "deadline": "Status Live 26 Nov 2026",
+      "notificationUrl": "https://www.rrbapply.gov.in/",
+      "officialUrl": "https://www.rrbapply.gov.in/",
+      "summary": "रेलवे भर्ती बोर्ड (RRB) ने CEN 06/2026 (NTPC ग्रेजुएट लेवल – 3,548 पद) के लिए आवेदन स्थिति (Application Status) 26 नवंबर 2026 को सक्रिय कर दी है। अभ्यर्थी rrbapply.gov.in पर लॉगिन करके स्थिति जांच सकते हैं।",
+      "rows": [
+        [
+          "Notification No.",
+          "CEN 06/2026 (NTPC Graduate Posts – 3,548 Vacancies)"
+        ],
+        [
+          "Application Status Active",
+          "26 November 2026"
+        ],
+        [
+          "Official Candidate Portal",
+          "rrbapply.gov.in (Provisionally Accepted / Rejected Check)"
+        ]
+      ],
+      "verified": true,
+      "verifiedOn": "2026-11-26",
+      "publishedDate": "2026-11-26",
+      "type": "official-notice"
+    },
+    {
+      "id": "rpsc-1st-grade-teacher-result-2026",
+      "title": "RPSC School Lecturer (1st Grade) Subject-wise Provisional Result & DV Shortlist",
+      "category": "results",
+      "department": "RPSC",
+      "qualification": "Postgraduate + B.Ed",
+      "noticeDate": "2026-11-22",
+      "lastDate": "",
+      "deadline": "Subject Lists Live",
+      "notificationUrl": "https://rpsc.rajasthan.gov.in/",
+      "officialUrl": "https://rpsc.rajasthan.gov.in/",
+      "summary": "राजस्थान लोक सेवा आयोग (RPSC) द्वारा प्राध्यापक (स्कूल शिक्षा / 1st ग्रेड) परीक्षा के विषयवार अनंतिम परिणाम, मेरिट सूची एवं दस्तावेज सत्यापन शॉर्टलिस्ट rpsc.rajasthan.gov.in पर जारी किए जा रहे हैं।",
+      "rows": [
+        [
+          "Commission",
+          "Rajasthan Public Service Commission (RPSC)"
+        ],
+        [
+          "Update Type",
+          "Subject-wise Provisional & Main Merit / Reserve Lists"
+        ],
+        [
+          "Official Portal",
+          "rpsc.rajasthan.gov.in (Results Section)"
+        ]
+      ],
+      "verified": true,
+      "verifiedOn": "2026-11-26",
+      "publishedDate": "2026-11-26",
+      "type": "official-notice"
+    },
+    {
+      "id": "nicl-assistant-prelims-scorecard-2026",
+      "title": "NICL Assistant (Class-III) Prelims Scorecard & Mains Shortlist – 500 Posts",
+      "category": "results",
+      "department": "NICL",
+      "qualification": "Graduate",
+      "noticeDate": "2026-11-20",
+      "lastDate": "",
+      "deadline": "Scorecard Live",
+      "notificationUrl": "https://nationalinsurance.nic.co.in/",
+      "officialUrl": "https://nationalinsurance.nic.co.in/",
+      "summary": "नेशनल इंश्योरेंस कंपनी लिमिटेड (NICL) ने 500 असिस्टेंट (क्लास-III) पदों की प्रारंभिक परीक्षा के स्कोरकार्ड एवं मुख्य परीक्षा हेतु शॉर्टलिस्ट विवरण जारी किया है।",
+      "rows": [
+        [
+          "Organization",
+          "National Insurance Company Limited (NICL)"
+        ],
+        [
+          "Total Vacancies",
+          "500 Assistant (Class-III) Posts"
+        ],
+        [
+          "Update Status",
+          "Phase-I Scorecard & Mains Shortlist Released"
+        ],
+        [
+          "Official Portal",
+          "nationalinsurance.nic.co.in (Recruitment Section)"
+        ]
+      ],
+      "verified": true,
+      "verifiedOn": "2026-11-26",
+      "publishedDate": "2026-11-26",
       "type": "official-notice"
     }
   ]

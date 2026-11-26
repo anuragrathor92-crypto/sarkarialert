@@ -154,12 +154,13 @@ if __name__ == "__main__":
         res_map = {r["url"]: r for r in results}
         posts = json.loads((ROOT / "data/posts.json").read_text(encoding="utf-8"))["posts"]
         for p in posts:
-            if p.get("applyStatus") == "VERIFICATION_PENDING":
-                r = res_map.get(p.get("applyUrl"), {})
+            if p.get("applyStatus") == "VERIFICATION_PENDING" or p.get("linkStatus") == "VERIFICATION_PENDING":
+                target_u = p.get("applyUrl") or p.get("notificationUrl") or p.get("officialUrl")
+                r = res_map.get(target_u, {})
                 still_blocked = not (200 <= r.get("status", 0) < 400)
                 pending_recheck.append({
                     "id": p["id"],
-                    "url": p.get("applyUrl"),
+                    "url": target_u,
                     "httpStatus": r.get("status", 0),
                     "remainPending": still_blocked,
                     "note": r.get("note", ""),

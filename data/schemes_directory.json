@@ -23,7 +23,8 @@
       "notes": "आवेदन से पहले e-KYC और भूलेख सत्यापन की वर्तमान स्थिति आधिकारिक पोर्टल पर जाँचें।",
       "verified": true,
       "verifiedOn": "2026-11-26",
-      "publishedDate": "2026-11-24"
+      "publishedDate": "2026-11-24",
+      "stateOrUt": "All India (Central)"
     },
     {
       "id": "pmfby",
@@ -47,7 +48,8 @@
       "notes": "प्रत्येक फसल मौसम (खरीफ/रबी) की अंतिम कटऑफ तिथि राज्य अधिसूचना के अनुसार बदलती है।",
       "verified": true,
       "verifiedOn": "2026-11-26",
-      "publishedDate": "2026-11-24"
+      "publishedDate": "2026-11-24",
+      "stateOrUt": "All India (Central)"
     },
     {
       "id": "pm-kusum",
@@ -71,7 +73,8 @@
       "notes": "प्रक्रिया राज्य की नोडल एजेंसी (जैसे UP में UPNEDA) के माध्यम से संचालित होती है।",
       "verified": true,
       "verifiedOn": "2026-11-26",
-      "publishedDate": "2026-11-24"
+      "publishedDate": "2026-11-24",
+      "stateOrUt": "All India (Central)"
     },
     {
       "id": "pm-surya-ghar-scheme",
@@ -96,7 +99,8 @@
       "notes": "आधिकारिक राष्ट्रीय पोर्टल पर DISCOM और पंजीकृत वेंडर के माध्यम से प्रक्रिया पूरी होती है।",
       "verified": true,
       "verifiedOn": "2026-11-26",
-      "publishedDate": "2026-11-24"
+      "publishedDate": "2026-11-24",
+      "stateOrUt": "All India (Central)"
     },
     {
       "id": "pmay-u-2",
@@ -120,7 +124,8 @@
       "notes": "घटक के अनुसार ULB, CSC या आधिकारिक पोर्टल की शर्तें अलग-अलग होती हैं।",
       "verified": true,
       "verifiedOn": "2026-11-26",
-      "publishedDate": "2026-11-24"
+      "publishedDate": "2026-11-24",
+      "stateOrUt": "All India (Central)"
     },
     {
       "id": "pmuy",
@@ -146,7 +151,8 @@
       "notes": "कनेक्शन की प्रक्रिया निकटतम LPG वितरक या आधिकारिक OMC पोर्टल निर्देशों के अनुसार होती है।",
       "verified": true,
       "verifiedOn": "2026-11-26",
-      "publishedDate": "2026-11-24"
+      "publishedDate": "2026-11-24",
+      "stateOrUt": "All India (Central)"
     },
     {
       "id": "pmjdy",
@@ -169,7 +175,8 @@
       "notes": "खाता बैंक शाखा या अधिकृत बैंक मित्र (BC) केंद्र के माध्यम से खोला जाता है।",
       "verified": true,
       "verifiedOn": "2026-11-26",
-      "publishedDate": "2026-11-24"
+      "publishedDate": "2026-11-24",
+      "stateOrUt": "All India (Central)"
     },
     {
       "id": "ayushman-70plus",
@@ -191,7 +198,8 @@
       "notes": "आयुष्मान 70+ की पात्रता सामान्य PM-JAY SECC सूची से स्वतंत्र है।",
       "verified": true,
       "verifiedOn": "2026-11-26",
-      "publishedDate": "2026-11-24"
+      "publishedDate": "2026-11-24",
+      "stateOrUt": "All India (Central)"
     },
     {
       "id": "eshram",
@@ -214,7 +222,8 @@
       "notes": "पंजीकरण हेतु कोई अंतिम तिथि नहीं है; केवल आधिकारिक पोर्टल या CSC का उपयोग करें।",
       "verified": true,
       "verifiedOn": "2026-11-26",
-      "publishedDate": "2026-11-24"
+      "publishedDate": "2026-11-24",
+      "stateOrUt": "All India (Central)"
     },
     {
       "id": "pmjjby",
@@ -237,7 +246,8 @@
       "notes": "नामांकन संबंधित बैंक शाखा, नेट बैंकिंग या डाकघर के माध्यम से होता है।",
       "verified": true,
       "verifiedOn": "2026-11-26",
-      "publishedDate": "2026-11-24"
+      "publishedDate": "2026-11-24",
+      "stateOrUt": "All India (Central)"
     },
     {
       "id": "pmsby",
@@ -260,7 +270,8 @@
       "notes": "बैंक शाखा या डाकघर के माध्यम से वर्ष में किसी भी समय नामांकन किया जा सकता है।",
       "verified": true,
       "verifiedOn": "2026-11-26",
-      "publishedDate": "2026-11-24"
+      "publishedDate": "2026-11-24",
+      "stateOrUt": "All India (Central)"
     },
     {
       "id": "apy",
@@ -283,7 +294,8 @@
       "notes": "मासिक/त्रैमासिक/अर्धवार्षिक अंशदान प्रवेश की आयु और चुनी गई पेंशन राशि पर निर्भर करता है।",
       "verified": true,
       "verifiedOn": "2026-11-26",
-      "publishedDate": "2026-11-24"
+      "publishedDate": "2026-11-24",
+      "stateOrUt": "All India (Central)"
     },
     {
       "id": "pmmy",
@@ -307,7 +319,8 @@
       "notes": "ऋण स्वीकृति बैंक/ऋणदाता संस्था की मूल्यांकन शर्तों पर निर्भर करती है।",
       "verified": true,
       "verifiedOn": "2026-11-26",
-      "publishedDate": "2026-11-24"
+      "publishedDate": "2026-11-24",
+      "stateOrUt": "All India (Central)"
     },
     {
       "id": "stand-up-india",
@@ -332,7 +345,8 @@
       "notes": "बैंक शाखा या Stand Up Mitra पोर्टल मार्गदर्शन के अनुसार आवेदन प्रक्रिया पूरी होती है।",
       "verified": true,
       "verifiedOn": "2026-11-26",
-      "publishedDate": "2026-11-24"
+      "publishedDate": "2026-11-24",
+      "stateOrUt": "All India (Central)"
     },
     {
       "id": "pm-kv-y",
@@ -355,7 +369,8 @@
       "notes": "कौशल कोर्स और केंद्रवार बैच उपलब्धता Skill India Digital Hub पोर्टल पर देखी जा सकती है।",
       "verified": true,
       "verifiedOn": "2026-11-26",
-      "publishedDate": "2026-11-24"
+      "publishedDate": "2026-11-24",
+      "stateOrUt": "All India (Central)"
     },
     {
       "id": "pm-vishwakarma",
@@ -379,7 +394,8 @@
       "notes": "पंजीकरण अधिकृत CSC केंद्रों के माध्यम से बायोमेट्रिक सत्यापन द्वारा होता है।",
       "verified": true,
       "verifiedOn": "2026-11-26",
-      "publishedDate": "2026-11-24"
+      "publishedDate": "2026-11-24",
+      "stateOrUt": "All India (Central)"
     },
     {
       "id": "pmmvy",
@@ -403,7 +419,8 @@
       "notes": "निकटतम आंगनवाड़ी/ASHA केंद्र या आधिकारिक पोर्टल के माध्यम से पंजीकरण की जानकारी लें।",
       "verified": true,
       "verifiedOn": "2026-11-26",
-      "publishedDate": "2026-11-24"
+      "publishedDate": "2026-11-24",
+      "stateOrUt": "All India (Central)"
     },
     {
       "id": "pm-svanidhi",
@@ -426,7 +443,8 @@
       "notes": "आधिकारिक पोर्टल पर पात्रता व संशोधित योजना समय-सीमा की पुष्टि करें।",
       "verified": true,
       "verifiedOn": "2026-11-26",
-      "publishedDate": "2026-11-24"
+      "publishedDate": "2026-11-24",
+      "stateOrUt": "All India (Central)"
     },
     {
       "id": "nsp-scholarship-directory",
@@ -450,7 +468,8 @@
       "notes": "प्रमुख केंद्रीय योजनाओं के लिए शैक्षणिक वर्ष 2026-27 की आवेदन अवधि व नियम पोर्टल पर देखें।",
       "verified": true,
       "verifiedOn": "2026-11-26",
-      "publishedDate": "2026-11-24"
+      "publishedDate": "2026-11-24",
+      "stateOrUt": "All India (Central)"
     },
     {
       "id": "up-kanya-sumangala",
@@ -475,7 +494,8 @@
       "notes": "प्रत्येक चरण (1 से 6) के लिए अलग दस्तावेज व समय-सीमा नियम लागू होते हैं।",
       "verified": true,
       "verifiedOn": "2026-11-26",
-      "publishedDate": "2026-11-24"
+      "publishedDate": "2026-11-24",
+      "stateOrUt": "Uttar Pradesh"
     },
     {
       "id": "up-family-id",
@@ -498,7 +518,8 @@
       "notes": "फैमिली पासबुक डाउनलोड व परिवार विवरण अपडेट की सुविधा आधिकारिक पोर्टल पर उपलब्ध है।",
       "verified": true,
       "verifiedOn": "2026-11-26",
-      "publishedDate": "2026-11-24"
+      "publishedDate": "2026-11-24",
+      "stateOrUt": "Uttar Pradesh"
     },
     {
       "id": "up-myuva",
@@ -522,7 +543,8 @@
       "notes": "आधिकारिक UP MSME निर्देशों में DI-UP पोर्टल के माध्यम से प्रक्रिया वर्णित है।",
       "verified": true,
       "verifiedOn": "2026-11-26",
-      "publishedDate": "2026-11-24"
+      "publishedDate": "2026-11-24",
+      "stateOrUt": "Uttar Pradesh"
     },
     {
       "id": "up-scholarships",
@@ -546,7 +568,8 @@
       "notes": "प्रत्येक शैक्षिक सत्र के नवीन एवं नवीनीकरण आवेदन की समय-सारणी आधिकारिक पोर्टल पर जारी होती है।",
       "verified": true,
       "verifiedOn": "2026-11-26",
-      "publishedDate": "2026-11-24"
+      "publishedDate": "2026-11-24",
+      "stateOrUt": "Uttar Pradesh"
     },
     {
       "id": "nsap",
@@ -570,7 +593,8 @@
       "notes": "प्रत्येक राज्य के समाज कल्याण/ग्रामीण विकास पोर्टल पर राज्य टॉप-अप राशि व प्रक्रिया अलग हो सकती है।",
       "verified": true,
       "verifiedOn": "2026-11-26",
-      "publishedDate": "2026-11-24"
+      "publishedDate": "2026-11-24",
+      "stateOrUt": "All India (Central)"
     },
     {
       "id": "pmegp",
@@ -594,7 +618,8 @@
       "notes": "KVIC/KVIB/DIC और बैंक मूल्यांकन के माध्यम से सब्सिडी स्वीकृत की जाती है।",
       "verified": true,
       "verifiedOn": "2026-11-26",
-      "publishedDate": "2026-11-26"
+      "publishedDate": "2026-11-26",
+      "stateOrUt": "All India (Central)"
     },
     {
       "id": "pm-vidyalaxmi",
@@ -618,7 +643,8 @@
       "notes": "पोर्टल पर छात्र पंजीकरण एवं कॉमन एजुकेशन लोन फॉर्म (CELAF) द्वारा बैंकों में प्रक्रिया होती है।",
       "verified": true,
       "verifiedOn": "2026-11-26",
-      "publishedDate": "2026-11-26"
+      "publishedDate": "2026-11-26",
+      "stateOrUt": "All India (Central)"
     },
     {
       "id": "pmfme",
@@ -642,7 +668,8 @@
       "notes": "जिला संसाधन व्यक्ति (DRP) व राज्य नोडल एजेंसी द्वारा परियोजना मार्गदर्शन उपलब्ध है।",
       "verified": true,
       "verifiedOn": "2026-11-26",
-      "publishedDate": "2026-11-26"
+      "publishedDate": "2026-11-26",
+      "stateOrUt": "All India (Central)"
     },
     {
       "id": "skill-india-digital",
@@ -664,7 +691,8 @@
       "notes": "कौशल केंद्रों व ऑनलाइन पाठ्यक्रमों के बैच समय-समय पर पोर्टल पर अपडेट होते हैं।",
       "verified": true,
       "verifiedOn": "2026-11-26",
-      "publishedDate": "2026-11-26"
+      "publishedDate": "2026-11-26",
+      "stateOrUt": "All India (Central)"
     },
     {
       "id": "pmmsy",
@@ -688,7 +716,8 @@
       "notes": "प्रस्ताव जिला मत्स्य अधिकारी / राज्य मत्स्य विभाग के माध्यम से प्रस्तुत किए जाते हैं।",
       "verified": true,
       "verifiedOn": "2026-11-26",
-      "publishedDate": "2026-11-26"
+      "publishedDate": "2026-11-26",
+      "stateOrUt": "All India (Central)"
     },
     {
       "id": "pm-poshan",
@@ -710,7 +739,8 @@
       "notes": "यह विद्यालय-स्तरीय संस्थागत कल्याण योजना है; विद्यार्थियों को अलग फॉर्म नहीं भरना होता।",
       "verified": true,
       "verifiedOn": "2026-11-26",
-      "publishedDate": "2026-11-26"
+      "publishedDate": "2026-11-26",
+      "stateOrUt": "All India (Central)"
     },
     {
       "id": "pm-shri",
@@ -732,7 +762,8 @@
       "notes": "यह विद्यालय उन्नयन कार्यक्रम है; छात्र सामान्य विद्यालय प्रवेश नियमों के अनुसार पढ़ते हैं।",
       "verified": true,
       "verifiedOn": "2026-11-26",
-      "publishedDate": "2026-11-26"
+      "publishedDate": "2026-11-26",
+      "stateOrUt": "All India (Central)"
     },
     {
       "id": "up-rte-2027-28",
@@ -756,7 +787,794 @@
       "notes": "2027–28 सत्र का आधिकारिक समय-सारणी नोटिफिकेशन अभी प्रतीक्षित (Notification Awaited) है; Sarkari Alert इस पोर्टल की हर 2 घंटे निगरानी कर रहा है।",
       "verified": true,
       "verifiedOn": "2026-11-26",
-      "publishedDate": "2026-11-26"
+      "publishedDate": "2026-11-26",
+      "stateOrUt": "Uttar Pradesh",
+      "upcoming": true
+    },
+    {
+      "id": "ap-thalliki-vandanam",
+      "title": "Thalliki Vandanam (AP Navasakam Education Assistance)",
+      "titleHi": "आंध्र प्रदेश — थल्लिकी वंदनम शिक्षा सहायता योजना",
+      "category": "yojana",
+      "department": "Government of Andhra Pradesh",
+      "scope": "State",
+      "stateOrUt": "Andhra Pradesh",
+      "upcoming": false,
+      "officialUrl": "https://bm-sgsw.ap.gov.in/",
+      "sourceUrl": "https://bm-sgsw.ap.gov.in/",
+      "benefit": "स्कूल (कक्षा 1–12) जाने वाले बच्चों की माताओं को ₹15,000 वार्षिक शैक्षिक सहायता (आंध्र प्रदेश शासन)।",
+      "eligibility": "आंध्र प्रदेश निवासी छात्र एवं माता, राज्य के मान्यता प्राप्त विद्यालय में नामांकित।",
+      "requiredDocuments": [
+        "आधार कार्ड",
+        "राशन/चावल कार्ड",
+        "बैंक खाता पासबुक",
+        "स्कूल नामांकन प्रमाण"
+      ],
+      "notes": "योजना से जुड़ी पात्रता, आवेदन स्थिति और अद्यतन दिशानिर्देश ऊपर दी गई आधिकारिक राज्य/UT सरकारी वेबसाइट पर देखें।",
+      "verified": true,
+      "verifiedOn": "2026-11-26"
+    },
+    {
+      "id": "arunachal-swavalamban-welfare",
+      "title": "Arunachal Pradesh State Welfare & Swavalamban Schemes",
+      "titleHi": "अरुणाचल प्रदेश — राज्य कल्याण व स्वावलंबन योजना पोर्टल",
+      "category": "yojana",
+      "department": "Government of Arunachal Pradesh",
+      "scope": "State",
+      "stateOrUt": "Arunachal Pradesh",
+      "upcoming": false,
+      "officialUrl": "https://arunachalpradesh.gov.in/",
+      "sourceUrl": "https://arunachalpradesh.gov.in/",
+      "benefit": "अरुणाचल प्रदेश के नागरिकों, युवाओं व किसानों हेतु स्वरोजगार सब्सिडी और राज्य कल्याण योजनाएँ।",
+      "eligibility": "अरुणाचल प्रदेश के स्थायी निवासी (APST एवं पात्र नागरिक योजनानुसार)।",
+      "requiredDocuments": [
+        "स्थायी निवास प्रमाणपत्र",
+        "आधार कार्ड",
+        "बैंक विवरण",
+        "योजना अनुसार परियोजना/आय प्रमाण"
+      ],
+      "notes": "योजना से जुड़ी पात्रता, आवेदन स्थिति और अद्यतन दिशानिर्देश ऊपर दी गई आधिकारिक राज्य/UT सरकारी वेबसाइट पर देखें।",
+      "verified": true,
+      "verifiedOn": "2026-11-26"
+    },
+    {
+      "id": "assam-state-welfare-orunodoi",
+      "title": "Assam State Welfare & Orunodoi Citizen Schemes",
+      "titleHi": "असम — ओरुनोदोई व राज्य सामाजिक सुरक्षा योजनाएँ",
+      "category": "yojana",
+      "department": "Government of Assam",
+      "scope": "State",
+      "stateOrUt": "Assam",
+      "upcoming": false,
+      "officialUrl": "https://assam.gov.in/",
+      "sourceUrl": "https://assam.gov.in/",
+      "benefit": "असम राज्य के आर्थिक रूप से कमजोर परिवारों की महिलाओं को मासिक DBT सहायता व खाद्य/चिकित्सा सुरक्षा।",
+      "eligibility": "असम की स्थायी निवासी महिला मुखिया, राज्य मानदंडों के अनुरूप पारिवारिक आय सीमा।",
+      "requiredDocuments": [
+        "आधार कार्ड",
+        "निवास प्रमाणपत्र",
+        "आय प्रमाणपत्र",
+        "DBT बैंक खाता"
+      ],
+      "notes": "योजना से जुड़ी पात्रता, आवेदन स्थिति और अद्यतन दिशानिर्देश ऊपर दी गई आधिकारिक राज्य/UT सरकारी वेबसाइट पर देखें।",
+      "verified": true,
+      "verifiedOn": "2026-11-26"
+    },
+    {
+      "id": "bihar-mukhyamantri-udyami",
+      "title": "Bihar Mukhyamantri Udyami Yojana (MMUY)",
+      "titleHi": "बिहार — मुख्यमंत्री उद्यमी योजना",
+      "category": "yojana",
+      "department": "Industries Department, Govt. of Bihar",
+      "scope": "State",
+      "stateOrUt": "Bihar",
+      "upcoming": false,
+      "officialUrl": "https://udyami.bihar.gov.in/",
+      "sourceUrl": "https://udyami.bihar.gov.in/",
+      "benefit": "नया सूक्ष्म/लघु उद्यम शुरू करने हेतु ₹10 लाख तक की वित्तीय सहायता (50% अनुदान + ब्याज मुक्त/न्यूनतम ब्याज ऋण)।",
+      "eligibility": "बिहार के स्थायी निवासी (SC/ST/EBC/महिला/युवा वर्ग), न्यूनतम 10+2 या ITI/डिप्लोमा उत्तीर्ण।",
+      "requiredDocuments": [
+        "बिहार निवास प्रमाणपत्र",
+        "मैट्रिक/12वीं प्रमाणपत्र",
+        "जाति प्रमाणपत्र",
+        "आधार कार्ड व बैंक खाता"
+      ],
+      "notes": "योजना से जुड़ी पात्रता, आवेदन स्थिति और अद्यतन दिशानिर्देश ऊपर दी गई आधिकारिक राज्य/UT सरकारी वेबसाइट पर देखें।",
+      "verified": true,
+      "verifiedOn": "2026-11-26"
+    },
+    {
+      "id": "cg-mahtari-vandan",
+      "title": "Chhattisgarh Mahtari Vandan Yojana",
+      "titleHi": "छत्तीसगढ़ — महतारी वंदन योजना",
+      "category": "yojana",
+      "department": "Women & Child Development, Chhattisgarh",
+      "scope": "State",
+      "stateOrUt": "Chhattisgarh",
+      "upcoming": false,
+      "officialUrl": "https://mahtarivandan.cgstate.gov.in/",
+      "sourceUrl": "https://mahtarivandan.cgstate.gov.in/",
+      "benefit": "छत्तीसगढ़ की पात्र विवाहित महिलाओं को ₹1,000 प्रति माह (₹12,000 वार्षिक) सीधे बैंक खाते में DBT सहायता।",
+      "eligibility": "छत्तीसगढ़ की स्थानीय निवासी विवाहित/विधवा/परित्यक्ता महिला (आयु 21+ वर्ष, आयकरदाता न हो)।",
+      "requiredDocuments": [
+        "आधार कार्ड",
+        "विवाह/निवास प्रमाणपत्र",
+        "राशन कार्ड",
+        "DBT लिंक्ड बैंक खाता"
+      ],
+      "notes": "योजना से जुड़ी पात्रता, आवेदन स्थिति और अद्यतन दिशानिर्देश ऊपर दी गई आधिकारिक राज्य/UT सरकारी वेबसाइट पर देखें।",
+      "verified": true,
+      "verifiedOn": "2026-11-26"
+    },
+    {
+      "id": "goa-griha-aadhar-services",
+      "title": "Goa Griha Aadhar & Citizen Welfare Portal",
+      "titleHi": "गोवा — गृह आधार व महिला सशक्तिकरण योजनाएँ",
+      "category": "yojana",
+      "department": "Government of Goa (Goa Online)",
+      "scope": "State",
+      "stateOrUt": "Goa",
+      "upcoming": false,
+      "officialUrl": "https://goaonline.gov.in/",
+      "sourceUrl": "https://goaonline.gov.in/",
+      "benefit": "गृह आधार एवं लाड़ली लक्ष्मी योजनाओं के तहत गृहिणियों और बेटियों को प्रत्यक्ष मासिक/वित्तीय सहायता।",
+      "eligibility": "गोवा की स्थायी निवासी महिला (न्यूनतम 15 वर्ष निवास एवं निर्धारित वार्षिक पारिवारिक आय सीमा)।",
+      "requiredDocuments": [
+        "15 वर्ष निवास प्रमाणपत्र",
+        "आधार कार्ड",
+        "आय प्रमाणपत्र",
+        "बैंक पासबुक"
+      ],
+      "notes": "योजना से जुड़ी पात्रता, आवेदन स्थिति और अद्यतन दिशानिर्देश ऊपर दी गई आधिकारिक राज्य/UT सरकारी वेबसाइट पर देखें।",
+      "verified": true,
+      "verifiedOn": "2026-11-26"
+    },
+    {
+      "id": "gujarat-digital-welfare",
+      "title": "Digital Gujarat Welfare & Scholarship Schemes",
+      "titleHi": "गुजरात — डिजिटल गुजरात छात्रवृत्ति व नागरिक योजनाएँ",
+      "category": "yojana",
+      "department": "Government of Gujarat",
+      "scope": "State",
+      "stateOrUt": "Gujarat",
+      "upcoming": false,
+      "officialUrl": "https://www.digitalgujarat.gov.in/",
+      "sourceUrl": "https://www.digitalgujarat.gov.in/",
+      "benefit": "गुजरात के छात्रों, महिलाओं व कमजोर वर्गों के लिए राज्य छात्रवृत्ति, प्रमाणपत्र व सामाजिक कल्याण सहायता।",
+      "eligibility": "गुजरात के निवासी छात्र एवं पात्र नागरिक।",
+      "requiredDocuments": [
+        "आधार कार्ड",
+        "निवास व जाति/आय प्रमाणपत्र",
+        "शैक्षणिक मार्कशीट",
+        "बैंक खाता"
+      ],
+      "notes": "योजना से जुड़ी पात्रता, आवेदन स्थिति और अद्यतन दिशानिर्देश ऊपर दी गई आधिकारिक राज्य/UT सरकारी वेबसाइट पर देखें।",
+      "verified": true,
+      "verifiedOn": "2026-11-26"
+    },
+    {
+      "id": "haryana-parivar-pehchan-welfare",
+      "title": "Haryana Parivar Pehchan Patra (PPP) & Welfare Schemes",
+      "titleHi": "हरियाणा — परिवार पहचान पत्र (PPP) व कल्याण योजनाएँ",
+      "category": "yojana",
+      "department": "Government of Haryana",
+      "scope": "State",
+      "stateOrUt": "Haryana",
+      "upcoming": false,
+      "officialUrl": "https://meraparivar.haryana.gov.in/",
+      "sourceUrl": "https://meraparivar.haryana.gov.in/",
+      "benefit": "हरियाणा में परिवार पहचान पत्र के माध्यम से वृद्धावस्था सम्मान, छात्रवृत्ति, आयुष्मान चिरायु व DBT योजनाओं का लाभ।",
+      "eligibility": "हरियाणा के निवासी परिवार जिनका सत्यापित PPP (फैमिली आईडी) पंजीकरण हो।",
+      "requiredDocuments": [
+        "परिवार पहचान पत्र (PPP)",
+        "आधार कार्ड",
+        "बैंक खाता",
+        "आय विवरण"
+      ],
+      "notes": "योजना से जुड़ी पात्रता, आवेदन स्थिति और अद्यतन दिशानिर्देश ऊपर दी गई आधिकारिक राज्य/UT सरकारी वेबसाइट पर देखें।",
+      "verified": true,
+      "verifiedOn": "2026-11-26"
+    },
+    {
+      "id": "hp-himcare-welfare",
+      "title": "Himachal Pradesh HIMCARE Health Assurance Scheme",
+      "titleHi": "हिमाचल प्रदेश — हिमकेयर स्वास्थ्य सुरक्षा योजना",
+      "category": "yojana",
+      "department": "HP Swasthya Bima Yojana Society",
+      "scope": "State",
+      "stateOrUt": "Himachal Pradesh",
+      "upcoming": false,
+      "officialUrl": "https://www.hpsbys.in/",
+      "sourceUrl": "https://www.hpsbys.in/",
+      "benefit": "हिमाचल प्रदेश के पात्र परिवारों को सूचीबद्ध अस्पतालों में ₹5 लाख प्रति वर्ष तक कैशलेस उपचार सुविधा।",
+      "eligibility": "हिमाचल प्रदेश के स्थायी निवासी एवं निर्धारित श्रेणी के पात्र परिवार।",
+      "requiredDocuments": [
+        "हिमाचल राशन कार्ड",
+        "आधार कार्ड",
+        "श्रेणी/बीपीएल प्रमाणपत्र"
+      ],
+      "notes": "योजना से जुड़ी पात्रता, आवेदन स्थिति और अद्यतन दिशानिर्देश ऊपर दी गई आधिकारिक राज्य/UT सरकारी वेबसाइट पर देखें।",
+      "verified": true,
+      "verifiedOn": "2026-11-26"
+    },
+    {
+      "id": "jharkhand-maiya-samman",
+      "title": "Jharkhand Mukhyamantri Maiya Samman Yojana",
+      "titleHi": "झारखंड — मुख्यमंत्री मंईयां सम्मान योजना",
+      "category": "yojana",
+      "department": "Women & Child Welfare, Jharkhand",
+      "scope": "State",
+      "stateOrUt": "Jharkhand",
+      "upcoming": false,
+      "officialUrl": "https://mmmsy.jharkhand.gov.in/",
+      "sourceUrl": "https://mmmsy.jharkhand.gov.in/",
+      "benefit": "झारखंड की पात्र महिलाओं को ₹2,500 प्रति माह प्रत्यक्ष वित्तीय सहायता (DBT) प्रदान करने की राज्य योजना।",
+      "eligibility": "झारखंड की स्थानीय निवासी महिला (आयु 18–50 वर्ष), परिवार आयकरदाता न हो।",
+      "requiredDocuments": [
+        "आधार कार्ड",
+        "झारखंड राशन कार्ड",
+        "मतदाता/निवास प्रमाण",
+        "आधार सीडेड बैंक खाता"
+      ],
+      "notes": "योजना से जुड़ी पात्रता, आवेदन स्थिति और अद्यतन दिशानिर्देश ऊपर दी गई आधिकारिक राज्य/UT सरकारी वेबसाइट पर देखें।",
+      "verified": true,
+      "verifiedOn": "2026-11-26"
+    },
+    {
+      "id": "karnataka-sevasindhu-guarantees",
+      "title": "Karnataka Seva Sindhu Guarantee Schemes",
+      "titleHi": "कर्नाटक — सेवा सिंधु गारंटी योजनाएँ (गृह लक्ष्मी/शक्ति)",
+      "category": "yojana",
+      "department": "Government of Karnataka",
+      "scope": "State",
+      "stateOrUt": "Karnataka",
+      "upcoming": false,
+      "officialUrl": "https://sevasindhu.karnataka.gov.in/",
+      "sourceUrl": "https://sevasindhu.karnataka.gov.in/",
+      "benefit": "गृह लक्ष्मी (₹2,000/माह), गृह ज्योति (निःशुल्क बिजली सीमा) और युवा निधि जैसी राज्य गारंटी सेवाएँ।",
+      "eligibility": "कर्नाटक की निवासी परिवार की महिला मुखिया एवं पात्र नागरिक।",
+      "requiredDocuments": [
+        "राशन कार्ड (BPL/APL/Antyodaya)",
+        "आधार कार्ड",
+        "आधार लिंक्ड बैंक खाता"
+      ],
+      "notes": "योजना से जुड़ी पात्रता, आवेदन स्थिति और अद्यतन दिशानिर्देश ऊपर दी गई आधिकारिक राज्य/UT सरकारी वेबसाइट पर देखें।",
+      "verified": true,
+      "verifiedOn": "2026-11-26"
+    },
+    {
+      "id": "kerala-kudumbashree-welfare",
+      "title": "Kerala Kudumbashree & State Welfare Mission",
+      "titleHi": "केरल — कुटुंबश्री महिला सशक्तिकरण व राज्य कल्याण पोर्टल",
+      "category": "yojana",
+      "department": "Government of Kerala (Kudumbashree)",
+      "scope": "State",
+      "stateOrUt": "Kerala",
+      "upcoming": false,
+      "officialUrl": "https://www.kudumbashree.org/",
+      "sourceUrl": "https://www.kudumbashree.org/",
+      "benefit": "केरल की महिलाओं को स्व-सहायता समूह, सूक्ष्म-उद्यम, आजीविका सहायता और सामाजिक सुरक्षा लाभ।",
+      "eligibility": "केरल की स्थानीय निवासी महिला एवं पात्र परिवार।",
+      "requiredDocuments": [
+        "आधार कार्ड",
+        "राशन कार्ड / पहचान पत्र",
+        "स्थानीय निकाय पंजीकरण"
+      ],
+      "notes": "योजना से जुड़ी पात्रता, आवेदन स्थिति और अद्यतन दिशानिर्देश ऊपर दी गई आधिकारिक राज्य/UT सरकारी वेबसाइट पर देखें।",
+      "verified": true,
+      "verifiedOn": "2026-11-26"
+    },
+    {
+      "id": "mp-ladli-behna",
+      "title": "Madhya Pradesh Mukhyamantri Ladli Behna Yojana",
+      "titleHi": "मध्य प्रदेश — मुख्यमंत्री लाड़ली बहना योजना",
+      "category": "yojana",
+      "department": "Government of Madhya Pradesh",
+      "scope": "State",
+      "stateOrUt": "Madhya Pradesh",
+      "upcoming": false,
+      "officialUrl": "https://cmladlibahna.mp.gov.in/",
+      "sourceUrl": "https://cmladlibahna.mp.gov.in/",
+      "benefit": "मध्य प्रदेश की पात्र महिलाओं को ₹1,250 प्रति माह आर्थिक सशक्तिकरण सहायता सीधे बैंक खाते में।",
+      "eligibility": "मध्य प्रदेश की स्थानीय निवासी विवाहित/विधवा/परित्यक्ता महिला (आयु 21–60 वर्ष, गैर-आयकरदाता)।",
+      "requiredDocuments": [
+        "समग्र आईडी (Samagra ID)",
+        "आधार कार्ड",
+        "DBT सक्रिय बैंक खाता"
+      ],
+      "notes": "योजना से जुड़ी पात्रता, आवेदन स्थिति और अद्यतन दिशानिर्देश ऊपर दी गई आधिकारिक राज्य/UT सरकारी वेबसाइट पर देखें।",
+      "verified": true,
+      "verifiedOn": "2026-11-26"
+    },
+    {
+      "id": "maharashtra-mahadbt-welfare",
+      "title": "Maharashtra MahaDBT Welfare & Scholarship Schemes",
+      "titleHi": "महाराष्ट्र — महाडीबीटी छात्रवृत्ति, किसान व कल्याण योजनाएँ",
+      "category": "yojana",
+      "department": "Government of Maharashtra",
+      "scope": "State",
+      "stateOrUt": "Maharashtra",
+      "upcoming": false,
+      "officialUrl": "https://mahadbt.maharashtra.gov.in/",
+      "sourceUrl": "https://mahadbt.maharashtra.gov.in/",
+      "benefit": "महाराष्ट्र के छात्रों, किसानों और नागरिकों को राज्य सरकार की सभी DBT योजनाओं और छात्रवृत्तियों का एकीकृत लाभ।",
+      "eligibility": "महाराष्ट्र के अधिवास प्रमाणपत्र धारक छात्र, किसान और पात्र नागरिक।",
+      "requiredDocuments": [
+        "आधार कार्ड",
+        "अधिवास प्रमाणपत्र",
+        "आय प्रमाणपत्र",
+        "बैंक खाता"
+      ],
+      "notes": "योजना से जुड़ी पात्रता, आवेदन स्थिति और अद्यतन दिशानिर्देश ऊपर दी गई आधिकारिक राज्य/UT सरकारी वेबसाइट पर देखें।",
+      "verified": true,
+      "verifiedOn": "2026-11-26"
+    },
+    {
+      "id": "manipur-state-welfare",
+      "title": "Manipur Citizen Welfare & Health Portal",
+      "titleHi": "मणिपुर — राज्य कल्याण व स्वास्थ्य सहायता योजना पोर्टल",
+      "category": "yojana",
+      "department": "Government of Manipur",
+      "scope": "State",
+      "stateOrUt": "Manipur",
+      "upcoming": false,
+      "officialUrl": "https://manipur.gov.in/",
+      "sourceUrl": "https://manipur.gov.in/",
+      "benefit": "मणिपुर राज्य की स्वास्थ्य सुरक्षा (CMHT), छात्रवृत्ति और सामाजिक कल्याण योजनाओं की आधिकारिक जानकारी।",
+      "eligibility": "मणिपुर के स्थायी निवासी एवं पात्र परिवार।",
+      "requiredDocuments": [
+        "मणिपुर निवास/पहचान पत्र",
+        "आधार कार्ड",
+        "राशन/आय प्रमाणपत्र"
+      ],
+      "notes": "योजना से जुड़ी पात्रता, आवेदन स्थिति और अद्यतन दिशानिर्देश ऊपर दी गई आधिकारिक राज्य/UT सरकारी वेबसाइट पर देखें।",
+      "verified": true,
+      "verifiedOn": "2026-11-26"
+    },
+    {
+      "id": "meghalaya-mymeg-focus",
+      "title": "Meghalaya MyMeG & FOCUS+ Farmer Welfare",
+      "titleHi": "मेघालय — मायमेग नागरिक व फोकस+ किसान कल्याण योजना",
+      "category": "yojana",
+      "department": "Government of Meghalaya",
+      "scope": "State",
+      "stateOrUt": "Meghalaya",
+      "upcoming": false,
+      "officialUrl": "https://mymeg.meghalaya.gov.in/",
+      "sourceUrl": "https://mymeg.meghalaya.gov.in/",
+      "benefit": "मेघालय के किसानों, उत्पादक समूहों और नागरिकों को राज्य सेवाओं व प्रत्यक्ष कल्याण सहायता का लाभ।",
+      "eligibility": "मेघालय के स्थायी निवासी किसान, छात्र व नागरिक।",
+      "requiredDocuments": [
+        "आधार कार्ड / मतदाता पहचान पत्र",
+        "निवास व किसान समूह विवरण",
+        "बैंक खाता"
+      ],
+      "notes": "योजना से जुड़ी पात्रता, आवेदन स्थिति और अद्यतन दिशानिर्देश ऊपर दी गई आधिकारिक राज्य/UT सरकारी वेबसाइट पर देखें।",
+      "verified": true,
+      "verifiedOn": "2026-11-26"
+    },
+    {
+      "id": "mizoram-bana-kaih",
+      "title": "Mizoram Bana Kaih (Handholding) & State Schemes",
+      "titleHi": "मिजोरम — बाना काइह हैंडहोल्डिंग व राज्य कल्याण योजनाएँ",
+      "category": "yojana",
+      "department": "Government of Mizoram",
+      "scope": "State",
+      "stateOrUt": "Mizoram",
+      "upcoming": false,
+      "officialUrl": "https://mizoram.gov.in/",
+      "sourceUrl": "https://mizoram.gov.in/",
+      "benefit": "मिजोरम के किसानों, उद्यमियों व युवाओं को MSP समर्थन, ब्याज अनुदान और आजीविका हैंडहोल्डिंग सहायता।",
+      "eligibility": "मिजोरम के स्थायी निवासी पात्र किसान, युवा उद्यमी और नागरिक।",
+      "requiredDocuments": [
+        "निवास/पहचान प्रमाण",
+        "आधार कार्ड",
+        "बैंक पासबुक"
+      ],
+      "notes": "योजना से जुड़ी पात्रता, आवेदन स्थिति और अद्यतन दिशानिर्देश ऊपर दी गई आधिकारिक राज्य/UT सरकारी वेबसाइट पर देखें।",
+      "verified": true,
+      "verifiedOn": "2026-11-26"
+    },
+    {
+      "id": "nagaland-cmhis",
+      "title": "Nagaland Chief Minister's Health Insurance Scheme (CMHIS)",
+      "titleHi": "नागालैंड — मुख्यमंत्री स्वास्थ्य बीमा योजना (CMHIS)",
+      "category": "yojana",
+      "department": "Government of Nagaland",
+      "scope": "State",
+      "stateOrUt": "Nagaland",
+      "upcoming": false,
+      "officialUrl": "https://cmhis.nagaland.gov.in/",
+      "sourceUrl": "https://cmhis.nagaland.gov.in/",
+      "benefit": "नागालैंड के नागरिकों एवं राज्य कर्मियों के परिवारों को कैशलेस स्वास्थ्य उपचार बीमा सुरक्षा।",
+      "eligibility": "नागालैंड के स्वदेशी निवासी, राज्य सरकारी कर्मचारी व पात्र परिवार।",
+      "requiredDocuments": [
+        "आधार कार्ड",
+        "राशन कार्ड / स्वदेशी निवास प्रमाण",
+        "परिवार विवरण"
+      ],
+      "notes": "योजना से जुड़ी पात्रता, आवेदन स्थिति और अद्यतन दिशानिर्देश ऊपर दी गई आधिकारिक राज्य/UT सरकारी वेबसाइट पर देखें।",
+      "verified": true,
+      "verifiedOn": "2026-11-26"
+    },
+    {
+      "id": "odisha-subhadra-yojana",
+      "title": "Odisha Subhadra Yojana",
+      "titleHi": "ओडिशा — सुभद्रा योजना",
+      "category": "yojana",
+      "department": "Women & Child Development, Odisha",
+      "scope": "State",
+      "stateOrUt": "Odisha",
+      "upcoming": false,
+      "officialUrl": "https://subhadra.odisha.gov.in/",
+      "sourceUrl": "https://subhadra.odisha.gov.in/",
+      "benefit": "ओडिशा की पात्र महिलाओं को 5 वर्षों में ₹50,000 (₹10,000 प्रति वर्ष दो किस्तों में) प्रत्यक्ष DBT सहायता।",
+      "eligibility": "ओडिशा की स्थायी निवासी महिला (आयु 21–60 वर्ष), राष्ट्रीय खाद्य सुरक्षा या राज्य आय सीमा के अंतर्गत।",
+      "requiredDocuments": [
+        "आधार कार्ड (मोबाइल लिंक्ड)",
+        "राशन कार्ड",
+        "DBT सक्षम एकल बैंक खाता"
+      ],
+      "notes": "योजना से जुड़ी पात्रता, आवेदन स्थिति और अद्यतन दिशानिर्देश ऊपर दी गई आधिकारिक राज्य/UT सरकारी वेबसाइट पर देखें।",
+      "verified": true,
+      "verifiedOn": "2026-11-26"
+    },
+    {
+      "id": "punjab-pgrkam-welfare",
+      "title": "Punjab Ghar Ghar Rozgar & Welfare Portal (PGRKAM)",
+      "titleHi": "पंजाब — घर-घर रोजगार व राज्य कल्याण पोर्टल (PGRKAM)",
+      "category": "yojana",
+      "department": "Government of Punjab",
+      "scope": "State",
+      "stateOrUt": "Punjab",
+      "upcoming": false,
+      "officialUrl": "https://punjabrozgar.punjab.gov.in/",
+      "sourceUrl": "https://punjabrozgar.punjab.gov.in/",
+      "benefit": "पंजाब के युवाओं को रोजगार पंजीकरण, कौशल प्रशिक्षण, स्वरोजगार सहायता व कैरियर काउंसलिंग सेवाएँ।",
+      "eligibility": "पंजाब के निवासी बेरोजगार युवा, कौशल प्रशिक्षु और उद्यमी।",
+      "requiredDocuments": [
+        "आधार कार्ड",
+        "पंजाब निवास प्रमाणपत्र",
+        "शैक्षणिक प्रमाणपत्र"
+      ],
+      "notes": "योजना से जुड़ी पात्रता, आवेदन स्थिति और अद्यतन दिशानिर्देश ऊपर दी गई आधिकारिक राज्य/UT सरकारी वेबसाइट पर देखें।",
+      "verified": true,
+      "verifiedOn": "2026-11-26"
+    },
+    {
+      "id": "rajasthan-palanhar-sje",
+      "title": "Rajasthan Palanhar Yojana & Social Justice Schemes",
+      "titleHi": "राजस्थान — पालनहार व सामाजिक सुरक्षा योजनाएँ (SJE)",
+      "category": "yojana",
+      "department": "Social Justice & Empowerment, Rajasthan",
+      "scope": "State",
+      "stateOrUt": "Rajasthan",
+      "upcoming": false,
+      "officialUrl": "https://sje.rajasthan.gov.in/",
+      "sourceUrl": "https://sje.rajasthan.gov.in/",
+      "benefit": "राजस्थान में अनाथ/विशेष देखभाल आवश्यकता वाले बच्चों के पालन-पोषण हेतु मासिक आर्थिक सहायता व छात्रवृत्ति।",
+      "eligibility": "राजस्थान के स्थायी निवासी पात्र परिवार एवं जन-आधार धारक।",
+      "requiredDocuments": [
+        "जन आधार कार्ड",
+        "आधार कार्ड",
+        "विद्यालय अध्ययन प्रमाणपत्र",
+        "आय/श्रेणी प्रमाण"
+      ],
+      "notes": "योजना से जुड़ी पात्रता, आवेदन स्थिति और अद्यतन दिशानिर्देश ऊपर दी गई आधिकारिक राज्य/UT सरकारी वेबसाइट पर देखें।",
+      "verified": true,
+      "verifiedOn": "2026-11-26"
+    },
+    {
+      "id": "sikkim-state-welfare",
+      "title": "Sikkim Citizen Welfare & Social Assistance Schemes",
+      "titleHi": "सिक्किम — राज्य सामाजिक सुरक्षा व नागरिक कल्याण पोर्टल",
+      "category": "yojana",
+      "department": "Government of Sikkim",
+      "scope": "State",
+      "stateOrUt": "Sikkim",
+      "upcoming": false,
+      "officialUrl": "https://www.sikkim.gov.in/",
+      "sourceUrl": "https://www.sikkim.gov.in/",
+      "benefit": "सिक्किम की माताओं, छात्रों व वरिष्ठ नागरिकों हेतु राज्य कल्याण पेंशन व आजीविका सहायता योजनाएँ।",
+      "eligibility": "सिक्किम विषय (COI) / स्थायी निवास प्रमाणपत्र धारक पात्र नागरिक।",
+      "requiredDocuments": [
+        "सिक्किम COI / निवास प्रमाण",
+        "आधार कार्ड",
+        "बैंक खाता विवरण"
+      ],
+      "notes": "योजना से जुड़ी पात्रता, आवेदन स्थिति और अद्यतन दिशानिर्देश ऊपर दी गई आधिकारिक राज्य/UT सरकारी वेबसाइट पर देखें।",
+      "verified": true,
+      "verifiedOn": "2026-11-26"
+    },
+    {
+      "id": "tn-kalaignar-magalir-urimai",
+      "title": "Tamil Nadu Kalaignar Magalir Urimai Thogai",
+      "titleHi": "तमिलनाडु — कलैग्नार मगलीर उरिमाई थोगई योजना",
+      "category": "yojana",
+      "department": "Government of Tamil Nadu",
+      "scope": "State",
+      "stateOrUt": "Tamil Nadu",
+      "upcoming": false,
+      "officialUrl": "https://kmut.tn.gov.in/",
+      "sourceUrl": "https://kmut.tn.gov.in/",
+      "benefit": "तमिलनाडु की पात्र परिवार महिला मुखियाओं को ₹1,000 प्रति माह अधिकार सहायता सीधे बैंक खाते में।",
+      "eligibility": "तमिलनाडु की निवासी 21+ वर्ष की महिला परिवार मुखिया (वार्षिक परिवार आय ₹2.5 लाख से कम)।",
+      "requiredDocuments": [
+        "राशन कार्ड (स्मार्ट फैमिली कार्ड)",
+        "आधार कार्ड",
+        "बैंक खाता विवरण"
+      ],
+      "notes": "योजना से जुड़ी पात्रता, आवेदन स्थिति और अद्यतन दिशानिर्देश ऊपर दी गई आधिकारिक राज्य/UT सरकारी वेबसाइट पर देखें।",
+      "verified": true,
+      "verifiedOn": "2026-11-26"
+    },
+    {
+      "id": "telangana-praja-palana",
+      "title": "Telangana Praja Palana Six Guarantees Portal",
+      "titleHi": "तेलंगाना — प्रजा पालन छह गारंटी कल्याण योजनाएँ",
+      "category": "yojana",
+      "department": "Government of Telangana",
+      "scope": "State",
+      "stateOrUt": "Telangana",
+      "upcoming": false,
+      "officialUrl": "https://prajapalana.telangana.gov.in/",
+      "sourceUrl": "https://prajapalana.telangana.gov.in/",
+      "benefit": "महालक्ष्मी, गृह ज्योति, इंदिरम्मा इल्लू और रायथु भरोसा सहित तेलंगाना की प्रमुख कल्याण योजनाओं का ट्रैकिंग पोर्टल।",
+      "eligibility": "तेलंगाना के स्थायी निवासी पात्र परिवार।",
+      "requiredDocuments": [
+        "राशन कार्ड (Food Security Card)",
+        "आधार कार्ड",
+        "निवास व बैंक विवरण"
+      ],
+      "notes": "योजना से जुड़ी पात्रता, आवेदन स्थिति और अद्यतन दिशानिर्देश ऊपर दी गई आधिकारिक राज्य/UT सरकारी वेबसाइट पर देखें।",
+      "verified": true,
+      "verifiedOn": "2026-11-26"
+    },
+    {
+      "id": "tripura-state-welfare",
+      "title": "Tripura State Citizen Welfare & Youth Schemes",
+      "titleHi": "त्रिपुरा — राज्य नागरिक कल्याण व युवा योजना पोर्टल",
+      "category": "yojana",
+      "department": "Government of Tripura",
+      "scope": "State",
+      "stateOrUt": "Tripura",
+      "upcoming": false,
+      "officialUrl": "https://tripura.gov.in/",
+      "sourceUrl": "https://tripura.gov.in/",
+      "benefit": "त्रिपुरा राज्य की सामाजिक सुरक्षा पेंशन, छात्र सहायता (CM Yuba) और महिला कल्याण योजनाएँ।",
+      "eligibility": "त्रिपुरा राज्य के स्थायी निवासी एवं पात्र नागरिक।",
+      "requiredDocuments": [
+        "PRTC (स्थायी निवास प्रमाणपत्र)",
+        "आधार कार्ड",
+        "बैंक पासबुक"
+      ],
+      "notes": "योजना से जुड़ी पात्रता, आवेदन स्थिति और अद्यतन दिशानिर्देश ऊपर दी गई आधिकारिक राज्य/UT सरकारी वेबसाइट पर देखें।",
+      "verified": true,
+      "verifiedOn": "2026-11-26"
+    },
+    {
+      "id": "uttarakhand-state-welfare",
+      "title": "Uttarakhand State Welfare & Citizen e-Services",
+      "titleHi": "उत्तराखंड — राज्य कल्याण व नागरिक सेवा पोर्टल",
+      "category": "yojana",
+      "department": "Government of Uttarakhand",
+      "scope": "State",
+      "stateOrUt": "Uttarakhand",
+      "upcoming": false,
+      "officialUrl": "https://uk.gov.in/",
+      "sourceUrl": "https://uk.gov.in/",
+      "benefit": "उत्तराखंड राज्य की महालक्ष्मी, नंदा गौरा, पेंशन एवं पर्वतीय कृषि-कल्याण योजनाओं का आधिकारिक पोर्टल।",
+      "eligibility": "उत्तराखंड के स्थायी निवासी पात्र परिवार, बेटियाँ व वरिष्ठ नागरिक।",
+      "requiredDocuments": [
+        "उत्तराखंड स्थायी निवास प्रमाणपत्र",
+        "आधार कार्ड",
+        "परिवार रजिस्टर नकल / बैंक खाता"
+      ],
+      "notes": "योजना से जुड़ी पात्रता, आवेदन स्थिति और अद्यतन दिशानिर्देश ऊपर दी गई आधिकारिक राज्य/UT सरकारी वेबसाइट पर देखें।",
+      "verified": true,
+      "verifiedOn": "2026-11-26"
+    },
+    {
+      "id": "wb-lakshmir-bhandar",
+      "title": "West Bengal Lakshmir Bhandar & Social Security Schemes",
+      "titleHi": "पश्चिम बंगाल — लक्ष्मी भंडार व सामाजिक सुरक्षा योजनाएँ",
+      "category": "yojana",
+      "department": "Government of West Bengal",
+      "scope": "State",
+      "stateOrUt": "West Bengal",
+      "upcoming": false,
+      "officialUrl": "https://socialsecurity.wb.gov.in/",
+      "sourceUrl": "https://socialsecurity.wb.gov.in/",
+      "benefit": "पश्चिम बंगाल की पात्र महिलाओं को ₹1,000–₹1,200 प्रति माह वित्तीय सहायता सीधे बैंक खाते में।",
+      "eligibility": "पश्चिम बंगाल की निवासी महिला (आयु 25–60 वर्ष, गैर-सरकारी कर्मचारी)।",
+      "requiredDocuments": [
+        "स्वास्थ्य साथी कार्ड",
+        "आधार कार्ड",
+        "जाति प्रमाणपत्र (यदि लागू)",
+        "एकल बैंक पासबुक"
+      ],
+      "notes": "योजना से जुड़ी पात्रता, आवेदन स्थिति और अद्यतन दिशानिर्देश ऊपर दी गई आधिकारिक राज्य/UT सरकारी वेबसाइट पर देखें।",
+      "verified": true,
+      "verifiedOn": "2026-11-26"
+    },
+    {
+      "id": "an-eservices-welfare",
+      "title": "Andaman & Nicobar ServicePlus Citizen Welfare",
+      "titleHi": "अंडमान एवं निकोबार द्वीप समूह — ई-सेवा व कल्याण योजनाएँ",
+      "category": "yojana",
+      "department": "Andaman & Nicobar Administration",
+      "scope": "UT",
+      "stateOrUt": "Andaman & Nicobar Islands",
+      "upcoming": false,
+      "officialUrl": "https://eservices.andamannicobar.gov.in/",
+      "sourceUrl": "https://eservices.andamannicobar.gov.in/",
+      "benefit": "अंडमान व निकोबार के नागरिकों को पेंशन, छात्रवृत्ति, प्रमाणपत्र और समाज कल्याण योजनाओं का ऑनलाइन पोर्टल।",
+      "eligibility": "अंडमान व निकोबार द्वीप समूह के निवासी एवं पात्र नागरिक।",
+      "requiredDocuments": [
+        "द्वीप निवासी प्रमाणपत्र",
+        "आधार कार्ड",
+        "बैंक पासबुक"
+      ],
+      "notes": "योजना से जुड़ी पात्रता, आवेदन स्थिति और अद्यतन दिशानिर्देश ऊपर दी गई आधिकारिक राज्य/UT सरकारी वेबसाइट पर देखें।",
+      "verified": true,
+      "verifiedOn": "2026-11-26"
+    },
+    {
+      "id": "chandigarh-welfare-schemes",
+      "title": "Chandigarh UT Citizen & Social Welfare Portal",
+      "titleHi": "चंडीगढ़ — केंद्र शासित समाज कल्याण व श्रमिक योजनाएँ",
+      "category": "yojana",
+      "department": "Chandigarh Administration",
+      "scope": "UT",
+      "stateOrUt": "Chandigarh",
+      "upcoming": false,
+      "officialUrl": "https://chandigarh.gov.in/",
+      "sourceUrl": "https://chandigarh.gov.in/",
+      "benefit": "चंडीगढ़ के निवासियों, वरिष्ठ नागरिकों व निर्माण श्रमिकों हेतु पेंशन, दिव्यांग सहायता और शिक्षा अनुदान।",
+      "eligibility": "चंडीगढ़ UT के पात्र निवासी एवं पंजीकृत श्रमिक।",
+      "requiredDocuments": [
+        "चंडीगढ़ निवास प्रमाण",
+        "आधार कार्ड",
+        "बैंक खाता व आय प्रमाण"
+      ],
+      "notes": "योजना से जुड़ी पात्रता, आवेदन स्थिति और अद्यतन दिशानिर्देश ऊपर दी गई आधिकारिक राज्य/UT सरकारी वेबसाइट पर देखें।",
+      "verified": true,
+      "verifiedOn": "2026-11-26"
+    },
+    {
+      "id": "dnhdd-welfare-portal",
+      "title": "Dadra & Nagar Haveli and Daman & Diu Citizen Schemes",
+      "titleHi": "दादरा नगर हवेली एवं दमन-दीव — नागरिक कल्याण योजनाएँ",
+      "category": "yojana",
+      "department": "UT Administration of DNH & DD",
+      "scope": "UT",
+      "stateOrUt": "Dadra & Nagar Haveli and Daman & Diu",
+      "upcoming": false,
+      "officialUrl": "https://dnh.gov.in/",
+      "sourceUrl": "https://dnh.gov.in/",
+      "benefit": "DNH व दमन-दीव में बालिका शिक्षा, जनजातीय कल्याण, स्वास्थ्य एवं सामाजिक सुरक्षा योजनाएँ।",
+      "eligibility": "दादरा नगर हवेली और दमन-दीव के स्थायी निवासी।",
+      "requiredDocuments": [
+        "निवास प्रमाणपत्र",
+        "आधार कार्ड",
+        "राशन कार्ड व बैंक खाता"
+      ],
+      "notes": "योजना से जुड़ी पात्रता, आवेदन स्थिति और अद्यतन दिशानिर्देश ऊपर दी गई आधिकारिक राज्य/UT सरकारी वेबसाइट पर देखें।",
+      "verified": true,
+      "verifiedOn": "2026-11-26"
+    },
+    {
+      "id": "delhi-edistrict-welfare",
+      "title": "Delhi NCT e-District Social Welfare & Pension Schemes",
+      "titleHi": "दिल्ली — ई-डिस्ट्रिक्ट समाज कल्याण, पेंशन व लाड़ली योजना",
+      "category": "yojana",
+      "department": "Government of NCT of Delhi",
+      "scope": "UT",
+      "stateOrUt": "Delhi (NCT)",
+      "upcoming": false,
+      "officialUrl": "https://edistrict.delhigovt.nic.in/",
+      "sourceUrl": "https://edistrict.delhigovt.nic.in/",
+      "benefit": "दिल्ली की वृद्धावस्था, विधवा, दिव्यांग सहायता और दिल्ली लाड़ली सहित प्रमुख समाज कल्याण योजनाएँ।",
+      "eligibility": "राष्ट्रीय राजधानी क्षेत्र दिल्ली के पात्र निवासी (न्यूनतम 5 वर्ष निवास एवं आय मानदंड अनुसार)।",
+      "requiredDocuments": [
+        "दिल्ली निवास प्रमाण",
+        "आधार कार्ड",
+        "आय प्रमाणपत्र",
+        "आधार सीडेड बैंक खाता"
+      ],
+      "notes": "योजना से जुड़ी पात्रता, आवेदन स्थिति और अद्यतन दिशानिर्देश ऊपर दी गई आधिकारिक राज्य/UT सरकारी वेबसाइट पर देखें।",
+      "verified": true,
+      "verifiedOn": "2026-11-26"
+    },
+    {
+      "id": "jk-welfare-mygov-schemes",
+      "title": "Jammu & Kashmir Citizen Welfare & Ladli Beti Schemes",
+      "titleHi": "जम्मू एवं कश्मीर — लाड़ली बेटी व समाज कल्याण योजनाएँ",
+      "category": "yojana",
+      "department": "Government of Jammu & Kashmir",
+      "scope": "UT",
+      "stateOrUt": "Jammu & Kashmir",
+      "upcoming": false,
+      "officialUrl": "https://jk.mygov.in/",
+      "sourceUrl": "https://jk.mygov.in/",
+      "benefit": "जम्मू-कश्मीर में लाड़ली बेटी, एकीकृत सामाजिक सुरक्षा पेंशन (ISSS) और विवाह सहायता योजनाओं की जानकारी।",
+      "eligibility": "जम्मू एवं कश्मीर UT के अधिवास प्रमाणपत्र (Domicile) धारक पात्र परिवार।",
+      "requiredDocuments": [
+        "J&K डोमिसाइल प्रमाणपत्र",
+        "आधार कार्ड",
+        "आय/राशन कार्ड",
+        "बैंक पासबुक"
+      ],
+      "notes": "योजना से जुड़ी पात्रता, आवेदन स्थिति और अद्यतन दिशानिर्देश ऊपर दी गई आधिकारिक राज्य/UT सरकारी वेबसाइट पर देखें।",
+      "verified": true,
+      "verifiedOn": "2026-11-26"
+    },
+    {
+      "id": "ladakh-ut-welfare",
+      "title": "Ladakh UT Social & Tribal Welfare Schemes",
+      "titleHi": "लद्दाख — केंद्र शासित समाज व जनजातीय कल्याण योजनाएँ",
+      "category": "yojana",
+      "department": "Administration of UT Ladakh",
+      "scope": "UT",
+      "stateOrUt": "Ladakh",
+      "upcoming": false,
+      "officialUrl": "https://ladakh.gov.in/",
+      "sourceUrl": "https://ladakh.gov.in/",
+      "benefit": "लद्दाख में जनजातीय छात्रवृत्ति, पेंशन, सौर सब्सिडी और पर्वतीय आजीविका कल्याण योजनाएँ।",
+      "eligibility": "केंद्र शासित प्रदेश लद्दाख के स्थायी निवासी / ST एवं पात्र नागरिक।",
+      "requiredDocuments": [
+        "लद्दाख निवास प्रमाणपत्र",
+        "आधार कार्ड",
+        "ST/आय प्रमाणपत्र (यदि लागू)",
+        "बैंक खाता"
+      ],
+      "notes": "योजना से जुड़ी पात्रता, आवेदन स्थिति और अद्यतन दिशानिर्देश ऊपर दी गई आधिकारिक राज्य/UT सरकारी वेबसाइट पर देखें।",
+      "verified": true,
+      "verifiedOn": "2026-11-26"
+    },
+    {
+      "id": "lakshadweep-ut-welfare",
+      "title": "Lakshadweep UT Welfare & Fisheries Support Schemes",
+      "titleHi": "लक्षद्वीप — समाज कल्याण, छात्रवृत्ति व मत्स्य सहायता योजनाएँ",
+      "category": "yojana",
+      "department": "Administration of UT Lakshadweep",
+      "scope": "UT",
+      "stateOrUt": "Lakshadweep",
+      "upcoming": false,
+      "officialUrl": "https://lakshadweep.gov.in/",
+      "sourceUrl": "https://lakshadweep.gov.in/",
+      "benefit": "लक्षद्वीप के छात्रों को उच्च शिक्षा छात्रवृत्ति, मत्स्यजीवी सहायता और सामाजिक सुरक्षा लाभ।",
+      "eligibility": "लक्षद्वीप UT के स्थायी द्वीप निवासी।",
+      "requiredDocuments": [
+        "द्वीप पहचान/निवास प्रमाण",
+        "आधार कार्ड",
+        "बैंक खाता"
+      ],
+      "notes": "योजना से जुड़ी पात्रता, आवेदन स्थिति और अद्यतन दिशानिर्देश ऊपर दी गई आधिकारिक राज्य/UT सरकारी वेबसाइट पर देखें।",
+      "verified": true,
+      "verifiedOn": "2026-11-26"
+    },
+    {
+      "id": "puducherry-socwelfare",
+      "title": "Puducherry Directorate of Social Welfare Schemes",
+      "titleHi": "पुदुचेरी — समाज कल्याण व वित्तीय सहायता योजनाएँ",
+      "category": "yojana",
+      "department": "Government of Puducherry",
+      "scope": "UT",
+      "stateOrUt": "Puducherry",
+      "upcoming": false,
+      "officialUrl": "https://socwelfare.py.gov.in/",
+      "sourceUrl": "https://socwelfare.py.gov.in/",
+      "benefit": "पुदुचेरी में वृद्धावस्था/विधवा पेंशन, दिव्यांग सहायता और कमजोर वर्ग कल्याण योजनाओं का पोर्टल।",
+      "eligibility": "पुदुचेरी केंद्र शासित प्रदेश के पात्र निवासी (आयु व आय शर्तों के अनुसार)।",
+      "requiredDocuments": [
+        "पुदुचेरी निवास प्रमाणपत्र",
+        "आधार कार्ड",
+        "राशन कार्ड व बैंक खाता"
+      ],
+      "notes": "योजना से जुड़ी पात्रता, आवेदन स्थिति और अद्यतन दिशानिर्देश ऊपर दी गई आधिकारिक राज्य/UT सरकारी वेबसाइट पर देखें।",
+      "verified": true,
+      "verifiedOn": "2026-11-26"
     }
   ]
 }
