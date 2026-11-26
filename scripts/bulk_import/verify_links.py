@@ -146,19 +146,38 @@ if __name__ == "__main__":
 
     results = []
     bad_pdf = []
+    pending_recheck = []
     if not args.skip_external:
         urls = collect_urls()
         with concurrent.futures.ThreadPoolExecutor(max_workers=12) as ex:
             results = list(ex.map(check_url, urls))
+        res_map = {r["url"]: r for r in results}
+        posts = json.loads((ROOT / "data/posts.json").read_text(encoding="utf-8"))["posts"]
+        for p in posts:
+            if p.get("applyStatus") == "VERIFICATION_PENDING":
+                r = res_map.get(p.get("applyUrl"), {})
+                still_blocked = not (200 <= r.get("status", 0) < 400)
+                pending_recheck.append({
+                    "id": p["id"],
+                    "url": p.get("applyUrl"),
+                    "httpStatus": r.get("status", 0),
+                    "remainPending": still_blocked,
+                    "note": r.get("note", ""),
+                })
         ok = sum(1 for r in results if 200 <= r["status"] < 400)
         bad_pdf = [r for r in results if r["status"] == 422]
         hard_404 = [r for r in results if r["status"] in (404, 410)]
-        print(f"External URL check: {len(results)} URLs, urllib2xx/3xx={ok}/{len(results)}, external404={len(hard_404)}, badPDF={len(bad_pdf)}")
+        print(f"External URL check: {len(results)} URLs, urllib2xx/3xx={ok}/{len(results)}, external404={len(hard_404)}, badPDF={len(bad_pdf)}, pendingRechecked={len(pending_recheck)}")
+        for pr in pending_recheck:
+            print("  PENDING RECHECK (2h):", pr["id"], pr["httpStatus"], pr["url"])
         for r in bad_pdf + hard_404:
             print("  EXTERNAL NOTICE:", r["status"], r["url"], r["note"])
         out = Path(args.output)
         out.parent.mkdir(parents=True, exist_ok=True)
-        out.write_text(json.dumps({"internal": internal, "external": results}, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+        out.write_text(
+            json.dumps({"internal": internal, "external": results, "pendingRecheck": pending_recheck}, indent=2, ensure_ascii=False) + "\n",
+            encoding="utf-8",
+        )
         if bad_pdf or (args.strict_external and hard_404):
             sys.exit(1)
 

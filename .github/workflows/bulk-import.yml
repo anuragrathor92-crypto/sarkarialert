@@ -51,6 +51,7 @@ jobs:
           broken_int = len(lv.get("internal", {}).get("broken", []))
           ext_list = lv.get("external", [])
           hard_404 = sum(1 for r in ext_list if r.get("status") in (404, 410, 422))
+          pending_cnt = len(lv.get("pendingRecheck", []))
           rte = disc.get("upRteMonitor", {})
           lines = [
               "## Sarkari Alert 2-Hour Discovery & Monitor Report",
@@ -59,6 +60,7 @@ jobs:
               f"- Source Errors: `{len(disc.get('errors', []))}`",
               f"- Internal Links Checked: `{lv.get('internal', {}).get('linksChecked', 0)}` (Broken: `{broken_int}`)",
               f"- External URLs Audited: `{len(ext_list)}` (404/Bad PDF: `{hard_404}`)",
+              f"- Verification Pending Links Rechecked: `{pending_cnt}`",
               f"- Expired Active Posts Detected: `{len(disc.get('expiredActivePosts', []))}`",
               f"- UP RTE 2027-28 Monitor: `{rte.get('status')}` (HTTP `{rte.get('httpStatus')}`)",
               f"- Pending Publish Changes: `{len(pub.get('changedFiles', []))}`",
