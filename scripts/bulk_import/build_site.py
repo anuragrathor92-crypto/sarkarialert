@@ -161,6 +161,9 @@ def render_shell(
     root_relative=False,
     site_cfg=None,
     robots="index,follow,max-image-preview:large",
+    page_type="site",
+    page_category="",
+    post_id="",
 ):
     site_cfg = site_cfg if site_cfg is not None else load_site_config()
 
@@ -188,8 +191,15 @@ def render_shell(
     if re.fullmatch(r"G-[A-Z0-9]{6,14}", ga4_id):
         ga4_tag = (
             f'<script async src="https://www.googletagmanager.com/gtag/js?id={e(ga4_id)}"></script>'
-            f"<script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}"
-            f"gtag('js',new Date());gtag('config','{e(ga4_id)}',{{'anonymize_ip':true}});</script>"
+            "<script>(function(){if(window.__saGaInit)return;window.__saGaInit=true;"
+            "var denied=false;try{denied=localStorage.getItem('sa_ga_consent')==='denied';}catch(ex){}"
+            f"if(denied){{window['ga-disable-{e(ga4_id)}']=true;}}"
+            "window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}"
+            "window.gtag=window.gtag||gtag;"
+            "gtag('consent','default',{'analytics_storage':denied?'denied':'granted','ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','wait_for_update':500});"
+            "gtag('js',new Date());"
+            f"gtag('config','{e(ga4_id)}',{{'anonymize_ip':true,'allow_google_signals':false,'allow_ad_personalization_signals':false,'page_location':location.origin+location.pathname}});"
+            "})();</script>"
         )
 
     ads_cfg = site_cfg.get("googleAdSense") or {}
@@ -201,6 +211,10 @@ def render_shell(
     )
 
     safe_desc = desc[:160]
+    body_attrs = (
+        f'data-ga-id="{e(ga4_id)}" data-asset-prefix="{e(asset_prefix)}" '
+        f'data-page-type="{e(page_type)}" data-category="{e(page_category)}" data-post-id="{e(post_id)}"'
+    )
     return (
         '<!doctype html><html lang="en"><head>'
         '<meta charset="utf-8">'
@@ -229,7 +243,7 @@ def render_shell(
         f'<link rel="stylesheet" href="{asset_prefix}assets/style.css">'
         f'<script defer src="{asset_prefix}assets/site.js"></script>'
         f"{ga4_tag}{ads_tag}{ld_tag}"
-        '</head><body><div class="wrap">'
+        f'</head><body {body_attrs}><div class="wrap">'
         f'<header class="brand"><a href="{nav_href("")}"><span class="logo" aria-hidden="true">SA</span>'
         '<span>SARKARI ALERT<small>Verified Government Jobs, Results, Admit Cards &amp; Sarkari Yojana</small></span></a></header>'
         f'<nav aria-label="Main navigation">{nav_html}</nav>'
@@ -238,6 +252,7 @@ def render_shell(
         f'<div><a href="{nav_href("about/")}">About Us</a> · <a href="{nav_href("privacy/")}">Privacy Policy</a> · '
         f'<a href="{nav_href("disclaimer/")}">Disclaimer</a> · <a href="{nav_href("sitemap/")}">All Updates Directory</a> · '
         f'<a href="{nav_href("loans-and-cards/")}">Loans &amp; Cards Referral</a></div>'
+        '<div><button type="button" id="manage-analytics-consent" class="consent-link">Analytics &amp; Privacy Settings</button></div>'
         "<p>Not affiliated with any government body. Always verify the original official notification before applying.</p>"
         "</footer></div></body></html>\n"
     )
@@ -280,7 +295,7 @@ def render_item(post, prefix, is_scheme=False, now_date=None):
             + "</div>"
         )
     return (
-        f'<li data-post data-deadline="{e(deadline)}" data-department="{e(dept)}" data-qualification="{e(qual)}">'
+        f'<li data-post data-post-id="{e(pid)}" data-deadline="{e(deadline)}" data-department="{e(dept)}" data-qualification="{e(qual)}">'
         f'<a href="{prefix}posts/{e(pid)}/">{e(title)}</a>{new_badge}{date_html}{actions}'
         "</li>"
     )
@@ -429,7 +444,18 @@ def render_scheme_post(scheme, related_items=None, site_cfg=None, title_override
             ],
         },
     ]
-    return render_shell("../../", seo_title, desc, f"posts/{scheme['id']}/", body, ld, site_cfg=site_cfg)
+    return render_shell(
+        "../../",
+        seo_title,
+        desc,
+        f"posts/{scheme['id']}/",
+        body,
+        ld,
+        site_cfg=site_cfg,
+        page_type="scheme",
+        page_category="yojana",
+        post_id=scheme["id"],
+    )
 
 
 def build_checklist_box(post):
@@ -741,6 +767,9 @@ def render_standard_post(
         ld,
         site_cfg=site_cfg,
         robots=robots,
+        page_type="post",
+        page_category=cat,
+        post_id=post["id"],
     )
 
 
@@ -783,6 +812,8 @@ def render_referrals_page(referrals, site_cfg=None):
         "loans-and-cards/",
         body,
         site_cfg=site_cfg,
+        page_type="referrals",
+        page_category="loans-and-cards",
     )
 
 
@@ -1097,6 +1128,8 @@ def build_all(now=None, prune_expired=False, posts_override=None):
             body,
             cat_ld,
             site_cfg=site_cfg,
+            page_type="category",
+            page_category=slug,
         )
 
     # 6. Render Separate Loans & Credit Cards Referral Page + HTML Sitemap Directory
@@ -1104,15 +1137,42 @@ def build_all(now=None, prune_expired=False, posts_override=None):
     files["sitemap/index.html"] = render_html_sitemap(active_posts, schemes, by_cat, site_cfg=site_cfg)
 
     # 7. Render Static Info Pages & 404 (noindex on 404)
+    privacy_body = (
+        '<article class="article"><a href="../">← Home</a><h1>Privacy Policy</h1>'
+        "<p>Sarkari Alert does not require user accounts or collect Aadhaar numbers, PAN details, bank information, passwords, or personal application documents. External government recruitment portals and partner links follow their own privacy policies.</p>"
+        "<h2>Google Analytics 4 (Measurement ID: G-K7T49V1PWN)</h2>"
+        "<p>Sarkari Alert uses Google Analytics 4 solely for aggregated, privacy-preserving traffic insights (page views, category visits, notification notice clicks, Apply Online outbound clicks, and partner referral clicks).</p>"
+        "<ul>"
+        "<li><strong>No PII Collected:</strong> Personally identifiable information (names, emails, phone numbers, Aadhaar, form inputs, and URL search query strings) is stripped before any analytics payload is sent.</li>"
+        "<li><strong>IP Anonymization &amp; Zero Ad Profiling:</strong> <code>anonymize_ip</code> is enabled and Google Signals / ad personalization signals are disabled.</li>"
+        '<li><strong>Your Consent Controls:</strong> Current status: <strong id="privacy-consent-state">Checking…</strong>. You may allow or opt out of analytics at any time using the buttons below or via <em>Analytics &amp; Privacy Settings</em> in the footer.</li>'
+        "</ul>"
+        '<div class="consent-actions" style="margin:14px 0">'
+        '<button type="button" id="privacy-allow-analytics" class="consent-accept">Allow Anonymized Analytics</button>'
+        '<button type="button" id="privacy-deny-analytics" class="consent-decline">Opt Out (Disable Analytics)</button>'
+        "</div>"
+        '<h2 lang="hi">गोपनीयता व एनालिटिक्स नीति (Privacy Policy — हिंदी)</h2>'
+        '<p class="notice" lang="hi">Sarkari Alert किसी भी यूज़र का व्यक्तिगत डेटा (नाम, ईमेल, मोबाइल, आधार या बैंक विवरण) एकत्र नहीं करता और न ही Google Analytics को कोई PII भेजता है। केवल अनाम विज़िट व आधिकारिक लिंक क्लिक आँकड़ों के लिए GA4 का उपयोग होता है, जिसे आप ऊपर दिए गए बटन से कभी भी बंद (Opt Out) कर सकते हैं।</p>'
+        "</article>"
+    )
+    files["privacy/index.html"] = render_shell(
+        "../",
+        make_seo_title("Privacy Policy & Analytics Consent"),
+        make_seo_desc("Sarkari Alert Privacy Policy: Zero PII policy, anonymized Google Analytics 4 consent controls, and official external portal safety notice."),
+        "privacy/",
+        privacy_body,
+        site_cfg=site_cfg,
+        page_type="static",
+    )
+
     static_pages = [
         ("about", "About Us", "Sarkari Alert is an independent information portal for verified government recruitment, examination, admission, result, and welfare scheme updates. It is not affiliated with any government agency."),
-        ("privacy", "Privacy Policy", "Sarkari Alert does not require user accounts or collect Aadhaar, bank details, or application documents. External official government portals and partner links have their own privacy policies."),
         ("disclaimer", "Disclaimer", "Always verify eligibility, deadlines, fees, and official instructions directly on the original issuing government website or notification PDF before applying. Sarkari Alert never accepts application fees."),
     ]
     for slug, heading, text in static_pages:
         body = f'<article class="article"><a href="../">← Home</a><h1>{e(heading)}</h1><p>{e(text)}</p></article>'
         files[f"{slug}/index.html"] = render_shell(
-            "../", make_seo_title(heading), make_seo_desc(text), f"{slug}/", body, site_cfg=site_cfg
+            "../", make_seo_title(heading), make_seo_desc(text), f"{slug}/", body, site_cfg=site_cfg, page_type="static"
         )
 
     files["404.html"] = render_shell(
@@ -1263,6 +1323,7 @@ def build_all(now=None, prune_expired=False, posts_override=None):
         home_main,
         home_ld,
         site_cfg=site_cfg,
+        page_type="home",
     )
 
     # 9. Build sitemap.xml with accurate per-URL lastmod, feed.xml, robots.txt, ads.txt & optional IndexNow key file

@@ -20,9 +20,10 @@
     "policyNote": "Used strictly for active/expired JobPosting URLs (URL_UPDATED / URL_DELETED) only."
   },
   "googleAnalytics4": {
-    "measurementId": "",
+    "measurementId": "G-K7T49V1PWN",
     "anonymizeIp": true,
-    "status": "READY_FOR_OWNER_GA4_ID"
+    "allowAdPersonalizationSignals": false,
+    "status": "CONFIGURED"
   },
   "bingWebmaster": {
     "verificationMetaContent": "",

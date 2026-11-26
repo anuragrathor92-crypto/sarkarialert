@@ -220,6 +220,24 @@ class ImportTests(unittest.TestCase):
             self.assertEqual(types[f"{BASE}posts/test-expired-removed-2026/"], "URL_DELETED")
             self.assertNotIn(f"{BASE}posts/test-result-not-job/", types)
 
+    def test_ga4_integration_and_privacy(self):
+        cfg = json.loads((ROOT / "data/site_config.json").read_text(encoding="utf-8"))
+        ga_id = cfg["googleAnalytics4"]["measurementId"]
+        self.assertEqual(ga_id, "G-K7T49V1PWN")
+        files, _, _ = build_all(now=self.now)
+        for rel in ("index.html", "category/latest-jobs/index.html", "posts/upsc-dental-surgeon-2026/index.html", "loans-and-cards/index.html", "privacy/index.html"):
+            h = files[rel]
+            self.assertIn(f"https://www.googletagmanager.com/gtag/js?id={ga_id}", h)
+            self.assertIn("window.__saGaInit", h)
+            self.assertIn("anonymize_ip", h)
+            self.assertIn("consent", h)
+            self.assertIn("manage-analytics-consent", h)
+        self.assertIn("sa_ga_consent", files["privacy/index.html"] + (ROOT / "assets/site.js").read_text(encoding="utf-8"))
+        self.assertIn("G-K7T49V1PWN", files["privacy/index.html"])
+        js_txt = (ROOT / "assets/site.js").read_text(encoding="utf-8")
+        for ev_name in ("category_visit", "apply_online_click", "notification_download", "referral_click", "outbound_click"):
+            self.assertIn(ev_name, js_txt)
+
 
 if __name__ == "__main__":
     unittest.main()
