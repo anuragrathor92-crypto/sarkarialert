@@ -1,0 +1,58 @@
+name: Priority Post and Apply Link Watch
+on:
+  schedule:
+    - cron: '3,18,33,48 * * * *'
+  push:
+    branches: [main]
+    paths: ['scripts/bulk_import/priority_watch.py', 'scripts/bulk_import/test_priority_watch.py', '.github/workflows/priority-watch.yml']
+  pull_request:
+    branches: [main]
+    paths: ['scripts/bulk_import/priority_watch.py', 'scripts/bulk_import/test_priority_watch.py', '.github/workflows/priority-watch.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: priority-post-watch-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test watch module
+        run: python -m unittest discover -s scripts/bulk_import -p 'test_priority_watch.py'
+      - uses: actions/cache/restore@v4
+        if: github.ref == 'refs/heads/main'
+        with:
+          path: .watch-state
+          key: priority-watch-v1-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: priority-watch-v1-
+      - name: Check due sources on trusted main
+        if: github.ref == 'refs/heads/main'
+        run: |
+          python scripts/bulk_import/priority_watch.py
+          python - << 'PY'
+          import json, os
+          from pathlib import Path
+          r = json.loads(Path('import-output/priority-watch.json').read_text())
+          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as f:
+              f.write('## Priority source checks (review signals only)\n\n')
+              for k in ('registeredSources','dueBeforeRun','checked','dueNotChecked','counts','publishedPosts'):
+                  f.write(f'- {k}: {r[k]}\n')
+          PY
+      - uses: actions/cache/save@v4
+        if: github.ref == 'refs/heads/main' && success()
+        with:
+          path: .watch-state
+          key: priority-watch-v1-${{ github.run_id }}-${{ github.run_attempt }}
+      - uses: actions/upload-artifact@v4
+        if: github.ref == 'refs/heads/main' && always()
+        with:
+          name: priority-post-watch-report
+          path: import-output/priority-watch.json
+          if-no-files-found: warn
+          retention-days: 14
