@@ -1730,9 +1730,9 @@
       "startDate": "2026-11-18",
       "lastDate": "2026-12-17",
       "deadline": "2026-12-17T23:59:00+05:30",
-      "notificationUrl": "https://www.sjvn.nic.in/",
-      "applyUrl": "https://www.sjvn.nic.in/",
-      "officialUrl": "https://www.sjvn.nic.in/",
+      "notificationUrl": "https://recruitment.sjvn.co.in/ErecruitLogin/Login.jsp",
+      "applyUrl": "https://recruitment.sjvn.co.in/ErecruitLogin/Login.jsp",
+      "officialUrl": "https://recruitment.sjvn.co.in/ErecruitLogin/Login.jsp",
       "summary": "SJVN लिमिटेड ने हिमाचल प्रदेश में ग्रेजुएट, डिप्लोमा और 10वीं + ITI (35 पद) सहित कुल 100 अप्रेंटिस सीटों के लिए आवेदन आमंत्रित किए हैं।",
       "rows": [
         [
@@ -3626,6 +3626,117 @@
         [
           "Official Login Portal",
           "Regional RRB Website / rrbapply.gov.in (Registration No. & DOB)"
+        ]
+      ],
+      "verified": true,
+      "verifiedOn": "2026-11-26",
+      "publishedDate": "2026-11-26",
+      "type": "official-notice"
+    },
+    {
+      "id": "isro-sdsc-shar-apprentice-2026",
+      "title": "ISRO SDSC SHAR Apprentice Recruitment 2026 – 400 Slots (Last Day Today)",
+      "category": "latest-jobs",
+      "extraCategory": "10th-iti",
+      "department": "ISRO SDSC SHAR",
+      "qualification": "10th + ITI / Diploma / Graduate",
+      "noticeId": "SDSC-SHAR-APP-2026",
+      "vacancies": 400,
+      "startDate": "2026-11-06",
+      "lastDate": "2026-11-26",
+      "deadline": "2026-11-26T23:59:00+05:30",
+      "notificationUrl": "https://www.shar.gov.in/",
+      "applyUrl": "https://web.umang.gov.in/",
+      "officialUrl": "https://www.shar.gov.in/",
+      "summary": "इसरो सतीश धवन अंतरिक्ष केंद्र (SDSC SHAR), श्रीहरिकोटा ने ग्रेजुएट, डिप्लोमा और ITI ट्रेड अप्रेंटिस की 400 सीटों के लिए 26 नवंबर 2026 (आज अंतिम तिथि) तक UMANG पोर्टल के माध्यम से ऑनलाइन आवेदन आमंत्रित किए हैं।",
+      "applyInstructions": "First complete enrolment on NATS (Degree/Diploma) or NAPS (ITI), then apply online by searching SDSC SHAR Apprenticeship on the official UMANG portal (web.umang.gov.in).",
+      "rows": [
+        [
+          "Total slots",
+          "400 (Engg Grad: 50, Non-Engg Grad: 60, Diploma Tech: 35, DCCP: 60, ITI Trade: 180, Vocational: 15)"
+        ],
+        [
+          "Application window",
+          "6 November – 26 November 2026 (Last Day Today)"
+        ],
+        [
+          "Application fee",
+          "₹0/- (All Categories)"
+        ],
+        [
+          "Eligibility",
+          "ITI (10th + NCVT ITI) / Diploma (First Class >=60%) / Graduate (First Class >=60%); Degree/Diploma passed 2022 or later"
+        ],
+        [
+          "How to apply",
+          "Enrol on NATS/NAPS first, then submit via UMANG portal (web.umang.gov.in)"
+        ]
+      ],
+      "verified": true,
+      "verifiedOn": "2026-11-26",
+      "publishedDate": "2026-11-26",
+      "applicationStatus": "OPEN",
+      "type": "official-notice"
+    },
+    {
+      "id": "upsssc-junior-analyst-food-result-2026",
+      "title": "UPSSSC Junior Analyst (Food) Advt. 04/2024 Final Result 2026",
+      "category": "results",
+      "department": "UPSSSC",
+      "qualification": "Master Degree (Food / Chemistry / Microbiology)",
+      "noticeDate": "2026-11-26",
+      "lastDate": "",
+      "deadline": "Declared 26 Nov 2026",
+      "notificationUrl": "https://upsssc.gov.in/",
+      "officialUrl": "https://upsssc.gov.in/",
+      "summary": "UPSSSC ने कनिष्ठ विश्लेषक (खाद्य) विज्ञापन संख्या 04-परीक्षा/2024 का अंतिम चयन परिणाम एवं कट-ऑफ 26 नवंबर 2026 को घोषित कर दिया है। 417 पदों के सापेक्ष 414 अभ्यर्थियों का अंतिम चयन हुआ है।",
+      "rows": [
+        [
+          "Advertisement No.",
+          "04-Exam/2024 (Junior Analyst – Food)"
+        ],
+        [
+          "Total Vacancies / Selected",
+          "417 Posts (414 Candidates Finally Selected)"
+        ],
+        [
+          "Final Result Declared",
+          "26 November 2026"
+        ],
+        [
+          "How to Check",
+          "Download final selection list & cut-off PDF on upsssc.gov.in (Notice Board)"
+        ]
+      ],
+      "verified": true,
+      "verifiedOn": "2026-11-26",
+      "publishedDate": "2026-11-26",
+      "type": "official-notice"
+    },
+    {
+      "id": "sbi-clerk-mains-backlog-result-2026",
+      "title": "SBI Clerk (Junior Associate) Special Backlog Mains Result 2026",
+      "category": "results",
+      "department": "SBI",
+      "qualification": "Graduate",
+      "noticeDate": "2026-11-26",
+      "lastDate": "",
+      "deadline": "Final Selection PDF Live",
+      "notificationUrl": "https://sbi.bank.in/",
+      "officialUrl": "https://sbi.bank.in/",
+      "summary": "भारतीय स्टेट बैंक (SBI) ने विशेष भर्ती अभियान (SC/ST/OBC बैकलॉग रिक्तियां) के अंतर्गत जूनियर एसोसिएट (क्लर्क) मुख्य परीक्षा का अंतिम चयन परिणाम 1,540 चयनित अभ्यर्थियों के रोल नंबर सहित जारी कर दिया है।",
+      "rows": [
+        [
+          "Recruitment Drive",
+          "SBI Junior Associate (Customer Support & Sales) – Special Backlog Drive"
+        ],
+        [
+          "Provisionally Selected",
+          "1,540 Candidates (Mains Selection PDF Released)"
+        ],
+        [
+          "Official Careers Portal",
+          "sbi.bank.in (Careers -> Current Openings / Results)"
         ]
       ],
       "verified": true,

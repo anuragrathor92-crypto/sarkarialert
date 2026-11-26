@@ -44,7 +44,7 @@ ALLOWED = {
     "www.assamrifles.gov.in", "assamrifles.gov.in", "assamrifles.mha.gov.in",
     "www.mponline.gov.in", "mponline.gov.in", "www.rrccr.com", "rrccr.com",
     "www.rrcnr.org", "rrcnr.org", "bseh.org.in", "www.bseh.org.in",
-    "www.eximbankindia.in", "eximbankindia.in",
+    "www.eximbankindia.in", "eximbankindia.in", "recruitment.sjvn.co.in",
 }
 UP_RTE_URL = "https://rte25.upsdc.gov.in/"
 
