@@ -1,18 +1,22 @@
 # Sarkari Alert — Final Task Status & Verification Tracker
 
-Last Updated: `2026-11-26 17:06 IST`
-Active Branch: `import/avyaan-jobs-2026-11-26` (PR #4 awaiting merge approval into `main`; `main` merged PR #1 `c244cc3`, PR #2 `592cb9e`, PR #3 `7d1b108`; Cloud Actions commit `7258434`; Backup: `backup/main-2026-11-26`)
+Last Updated: `2026-11-26 20:54 IST`
+Active Branch: `seo/advanced-seo-automation-2026-11-26` (PR pending merge approval into `main`; `main` merged PR #1 `c244cc3`, PR #2 `592cb9e`, PR #3 `7d1b108`, PR #4 `dc54f45`, Cloud Actions `7c50ecf`; Backup: `backup/main-2026-11-26`)
 
 ## Verified Final Metrics
-- **Active Verified Posts (`data/posts.json`):** `171` (`0` expired posts in active listings; includes **+57 newly verified jobs from `AVYAAN_Govt_Jobs_26Nov2026.xlsx`** = `4` staged in initial PR #4 + `53` additional active posts verified across official PSU, University, Bank, Kerala PSC, Odisha, and UP ICDS portals; `21` existing duplicates skipped with `#80 UKSSSC 84/2026` apply portal upgraded; `3` closing/expired on `2026-11-26` excluded)
+- **Active Verified Posts (`data/posts.json`):** `171` (`0` expired posts in active listings; includes **+57 newly verified jobs from `AVYAAN_Govt_Jobs_26Nov2026.xlsx`**)
   - `latest-jobs`: `97` | `results`: `16` | `admit-card`: `14` | `admission`: `9` (incl. 3 Upcoming + UP RTE Monitor)
   - `upcoming-jobs`: `8` | `documents`: `7` | `scholarship`: `6` | `answer-key`: `5` | `exam-date`: `5` | `syllabus`: `3` | `outsourcing`: `1` (+ `10th-iti` cross-tag)
 - **Government Schemes (`data/schemes_directory.json`):** **`67` verified schemes** (27 Central + all **28 States** + all **8 Union Territories** = `37` jurisdictions); **ZERO separate Apply buttons** (`applyUrl = 0`)
-- **Built Files (`build_site.py`):** `259` generated files (`257` HTML pages + `sitemap.xml` + `robots.txt`)
-- **Unit & Integrity Tests (`test_import.py`):** `Ran 9 tests in 5.543s — OK`
-- **Local Link Audit (`verify_links.py --strict-external`):**
-  - Internal HTML (`257` pages, `5,928` links): **`broken = 0`**
-  - External URLs (`314` unique): `urllib2xx/3xx = 241/314`, `external404 = 0`, `badPDF = 0`, **`pendingRechecked = 4`**
+- **Built Files (`build_site.py`):** `262` generated files (`258` HTML pages incl. `/sitemap/` directory + `sitemap.xml` + `robots.txt` + `feed.xml` + `data/seo_state.json`)
+- **Unit & SEO Integrity Tests (`test_import.py`):** `Ran 11 tests in 2.905s — OK`
+- **Technical SEO Audit (`seo_audit.py --strict`):**
+  - `258` HTML pages (`257` indexable, `404.html` = `noindex,follow`), `duplicateTitlesCount = 0`, `duplicateDescriptionsCount = 0`
+  - Eligible valid `JobPosting` pages: **`98`**, expired/ineligible `JobPosting`s: **`0`**
+  - `sitemap.xml`: `257` URLs with real per-URL `<lastmod>` tracked in `data/seo_state.json`; `feed.xml`: `40` latest items; Related internal links rendered on `100%` of post & scheme pages
+  - Mobile CWV & Social Assets: deferred JS, `content-visibility: auto`, inline `style=` stripped from tables, `assets/favicon.svg` + `assets/og-card.png` (`3,188 B`)
+- **Local Link Audit (`verify_links.py --check-internal --skip-external`):**
+  - Internal HTML (`257` pages, **`8,605` links**): **`broken = 0`**
 - **GitHub Pages Live Deployment (`actions/deploy-pages@v4`):**
   - Pages Source: `build_type: workflow` | Status: **`built`** | URL: `https://anuragrathor92-crypto.github.io/sarkarialert/`
   - Cloud Push Run (`45798708215`): `discover: success`, `publish: success`, `deploy: success`
@@ -29,9 +33,10 @@ Active Branch: `import/avyaan-jobs-2026-11-26` (PR #4 awaiting merge approval in
 - [x] Configured 2-hourly cloud automation (`discover` → `publish` → `deploy` via `actions/deploy-pages@v4`) using built-in `GITHUB_TOKEN` (no external PAT or paid tools) and verified end-to-end cloud runs (`45798708215` & `45798708057`)
 - [x] Completed technical SEO (`JobPosting`, `GovernmentService`, `CollectionPage`, `Organization`, `WebSite`, `BreadcrumbList`, `sitemap.xml`, `robots.txt`), mobile UI, separate `/loans-and-cards/` referral section, and Google Search Console / AdSense config (`data/site_config.json`)
 
-- [x] **Priority Excel Import (`AVYAAN_Govt_Jobs_26Nov2026.xlsx` — `81` rows audited, PR #4):** Verified and published all `57` eligible active records (`4` initial PR #4 + `53` additional PSU/University/Bank/Kerala PSC/Odisha/UP ICDS posts; including offline postal labeling for `CSIR-NPL MTS` and official `applyUrl` resolution for `POWERGRID`, `DU`, `SCL`, `GAIL`, `CPCL`, `SBI CSTRA`, `BECIL`, `DVC`, `MANIT`, `IIT (ISM)`, `NCPUL`, `NIPER`), skipped `21` duplicates (and upgraded `UKSSSC 84/2026` apply link), excluded `3` closing/expired on `2026-11-26`, passed `9/9` tests and `verify_links.py --strict-external` (`0` broken / `0` 404 across `257` pages & `314` external URLs)
+- [x] **Priority Excel Import (`AVYAAN_Govt_Jobs_26Nov2026.xlsx` — `81` rows audited, PR #4 merged `dc54f45`):** Verified and published all `57` eligible active records (`4` initial + `53` added), skipped `21` duplicates, excluded `3` closing on `2026-11-26`, verified `171/171` live posts & `67/67` schemes on GitHub Pages
+- [x] **Advanced SEO, CWV & Organic Indexing Automation (`seo/advanced-seo-automation-2026-11-26`):** Audited all `258` HTML pages (`seo_audit.py --strict`), enforced unique `<title>` (`<=70` chars) & descriptions, researched Hindi/English keywords (`seo_keywords.py`), added Related Jobs & HTML Sitemap Directory (`/sitemap/`) + `feed.xml`, enriched `98` eligible `JobPosting` schemas & removed `JobPosting` from expired/ineligible pages, maintained real per-URL `<lastmod>` (`data/seo_state.json`), prepared Google Indexing API (`google_indexing.py` for `URL_UPDATED`/`URL_DELETED`), GA4, Bing Webmaster & IndexNow, AdSense, and automated GitHub Actions SEO health check & post-deploy reports
 
 ## Ongoing / Optional Owner Actions Only
-- [ ] **PR #4 Final Merge Approval:** Merge `import/avyaan-jobs-2026-11-26` into `main` to deploy the `171`-post site via GitHub Actions (`actions/deploy-pages@v4`).
+- [ ] **Owner Authorization for Live Analytics, Ads & Indexing API:** Add repository secret `GOOGLE_INDEXING_SA_JSON` (Search Console Owner Service Account JSON for Indexing API), optional `BING_INDEXNOW_KEY`, GA4 `measurementId` (`G-...`), Bing `verificationMetaContent`, and AdSense `publisherId` (`ca-pub-...`) in `data/site_config.json`.
 - [ ] Optional Owner Credentials in `data/site_config.json` & `data/referrals.json`: Add personal Google Search Console `verificationMetaContent`, AdSense `publisherId` (`ca-pub-...`), and partner affiliate `referralUrl` values when ready.
 - [ ] Automated Ongoing 2-Hour Monitoring: Continues watching UP RTE 2027–28 (`NOTIFICATION_AWAITED`), new `sarkariresult.com.cm` candidates, expiry pruning, and the 4 pending portals (`bhel`, `assam-rifles`, `rrcnr`, `mp-esb`).

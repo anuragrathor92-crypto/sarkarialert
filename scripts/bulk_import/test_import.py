@@ -158,6 +158,67 @@ class ImportTests(unittest.TestCase):
         pending_tracked = [p["id"] for p in posts_data if p.get("applyStatus") == "VERIFICATION_PENDING" or p.get("linkStatus") == "VERIFICATION_PENDING"]
         self.assertGreaterEqual(len(pending_tracked), 4)
         self.assertIn("JobPosting", files["posts/upsc-dental-surgeon-2026/index.html"])
+        self.assertIn("feed.xml", files)
+        self.assertIn("sitemap/index.html", files)
+
+    def test_seo_audit_and_expired_jobposting_removal(self):
+        from build_site import render_standard_post, is_jobposting_eligible
+        from seo_audit import audit_site
+
+        # Expired vacancy must NOT be JobPosting-eligible and must render noindex without JobPosting
+        expired_job = dict(self.p, deadline="2026-11-20T18:00:00+05:30")
+        self.assertFalse(is_jobposting_eligible(expired_job, self.now))
+        exp_html = render_standard_post(expired_job, now=self.now)
+        self.assertIn('content="noindex,follow"', exp_html)
+        self.assertNotIn('"@type": "JobPosting"', exp_html)
+        self.assertIn("Application Closed", exp_html)
+
+        # Ineligible category (results) must never emit JobPosting
+        res_post = dict(self.p, category="results", deadline="")
+        self.assertFalse(is_jobposting_eligible(res_post, self.now))
+        res_html = render_standard_post(res_post, now=self.now)
+        self.assertNotIn('"@type": "JobPosting"', res_html)
+
+        # Disk audit check
+        rep = audit_site(now=self.now)
+        self.assertTrue(rep["passed"], f"SEO audit errors: {rep['errors']}")
+        self.assertEqual(rep["duplicateTitlesCount"], 0)
+        self.assertEqual(rep["duplicateDescriptionsCount"], 0)
+        self.assertEqual(rep["expiredOrIneligibleJobPostings"], 0)
+        self.assertGreaterEqual(rep["eligibleJobPostingPages"], 95)
+
+    def test_indexing_queue_strict_eligibility(self):
+        import tempfile
+        from google_indexing import build_indexing_queue, BASE
+
+        posts_db = {
+            "posts": [
+                self.p,
+                dict(self.p, id="test-result-not-job", category="results", deadline=""),
+            ],
+            "archivedExpiredIds": ["test-expired-removed-2026"],
+        }
+        with tempfile.TemporaryDirectory() as td:
+            td_p = Path(td)
+            pfile = td_p / "posts.json"
+            sfile = td_p / "indexing_state.json"
+            pfile.write_text(json.dumps(posts_db), encoding="utf-8")
+            sfile.write_text(
+                json.dumps({
+                    "urls": {
+                        f"{BASE}posts/test-expired-removed-2026/": {"status": "ACTIVE", "fingerprint": "old"},
+                    }
+                }),
+                encoding="utf-8",
+            )
+            q = build_indexing_queue(now=self.now, state_path=sfile, posts_path=pfile)
+            self.assertEqual(q["eligibleJobPostingCount"], 1)
+            self.assertEqual(q["updatedQueued"], 1)
+            self.assertEqual(q["deletedQueued"], 1)
+            types = {x["url"]: x["type"] for x in q["batch"]}
+            self.assertEqual(types[f"{BASE}posts/test-only-synthetic-2026/"], "URL_UPDATED")
+            self.assertEqual(types[f"{BASE}posts/test-expired-removed-2026/"], "URL_DELETED")
+            self.assertNotIn(f"{BASE}posts/test-result-not-job/", types)
 
 
 if __name__ == "__main__":

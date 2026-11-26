@@ -4,11 +4,36 @@
   "googleSearchConsole": {
     "verificationMetaContent": "",
     "sitemapUrl": "https://anuragrathor92-crypto.github.io/sarkarialert/sitemap.xml",
+    "status": "CONNECTED_SITEMAP_SUBMITTED"
+  },
+  "googleIndexingApi": {
+    "enabled": true,
+    "secretName": "GOOGLE_INDEXING_SA_JSON",
+    "endpoint": "https://indexing.googleapis.com/v3/urlNotifications:publish",
+    "eligibleCategories": [
+      "latest-jobs",
+      "10th-iti",
+      "outsourcing"
+    ],
+    "dailyLimit": 180,
+    "status": "READY_FOR_SERVICE_ACCOUNT_SECRET",
+    "policyNote": "Used strictly for active/expired JobPosting URLs (URL_UPDATED / URL_DELETED) only."
+  },
+  "googleAnalytics4": {
+    "measurementId": "",
+    "anonymizeIp": true,
+    "status": "READY_FOR_OWNER_GA4_ID"
+  },
+  "bingWebmaster": {
+    "verificationMetaContent": "",
+    "indexNowEnabled": false,
+    "secretName": "BING_INDEXNOW_KEY",
     "status": "READY_FOR_OWNER_TOKEN"
   },
   "googleAdSense": {
     "publisherId": "",
     "enableAutoAds": false,
+    "adsTxtEnabled": true,
     "status": "READY_FOR_OWNER_PUBLISHER_ID",
     "policyNote": "Never place ads inside misleading Apply Online buttons or government scheme informational notices."
   }
