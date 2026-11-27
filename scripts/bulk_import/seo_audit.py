@@ -21,6 +21,7 @@ def audit_site(now=None):
         ROOT / "index.html",
         ROOT / "404.html",
         ROOT / "sitemap/index.html",
+        ROOT / "tools/index.html",
         ROOT / "loans-and-cards/index.html",
         ROOT / "about/index.html",
         ROOT / "privacy/index.html",

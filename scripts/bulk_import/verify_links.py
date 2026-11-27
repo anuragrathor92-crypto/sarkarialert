@@ -29,6 +29,7 @@ def check_internal_links(root=ROOT):
         list(root.glob("*.html"))
         + list((root / "category").glob("*/index.html"))
         + list((root / "posts").glob("*/index.html"))
+        + list((root / "tools").glob("index.html"))
         + list((root / "loans-and-cards").glob("index.html"))
         + list((root / "about").glob("index.html"))
         + list((root / "privacy").glob("index.html"))
