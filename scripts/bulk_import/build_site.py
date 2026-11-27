@@ -199,7 +199,7 @@ def render_shell(
     def nav_label(rel, label):
         if rel.startswith("category/"):
             return category_label(rel.split("/")[1])
-        return bilingual(label, "मुख्य पृष्ठ" if not rel else "ऋण व कार्ड")
+        return bilingual(label, {"": "मुख्य पृष्ठ", "tools/": "विद्यार्थी उपयोगी उपकरण", "loans-and-cards/": "ऋण व कार्ड"}.get(rel, label))
     nav_html = "".join(f'<a href="{nav_href(rel)}">{nav_label(rel, label)}</a>' for rel, label in NAV_ITEMS)
     canonical = BASE + canonical_path.lstrip("/")
     og_image = f"{BASE}assets/og-card.png"
