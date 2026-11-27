@@ -235,7 +235,15 @@ def render_shell(
     pub_id = str(ads_cfg.get("publisherId", "")).strip()
     ads_tag = (
         f'<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={e(pub_id)}" crossorigin="anonymous"></script>'
-        if pub_id.startswith("ca-pub-") and ads_cfg.get("enableAutoAds")
+        if (re.fullmatch(r"ca-pub-[0-9]{16}", pub_id)
+            and ads_cfg.get("enableAutoAds") is True
+            and ads_cfg.get("siteApprovalConfirmed") is True
+            and ads_cfg.get("commercialHostingConfirmed") is True
+            and ads_cfg.get("consentSetupConfirmed") is True
+            and page_type == "post"
+            and robots.startswith("index,")
+            and post_id
+            and post_id in (ads_cfg.get("reviewedAdEligiblePostIds") or []))
         else ""
     )
 
@@ -1213,6 +1221,10 @@ def build_all(now=None, prune_expired=False, posts_override=None):
         '<button type="button" id="privacy-allow-analytics" class="consent-accept">Allow Anonymized Analytics</button>'
         '<button type="button" id="privacy-deny-analytics" class="consent-decline">Opt Out (Disable Analytics)</button>'
         "</div>"
+        "<h2>Advertising, cookies and local storage — विज्ञापन व कुकीज़</h2>"
+        "<p>Analytics preferences may be stored in your browser. Google Analytics may use cookies or similar technologies to measure site use, depending on your consent and browser settings. Google advertising is currently disabled. If enabled in future, Google and other authorized advertising partners may use cookies, device identifiers or similar technologies to serve and measure advertisements. Applicable consent controls must be in place before advertising is enabled.</p>"
+        '<p>Learn about <a href="https://policies.google.com/technologies/partner-sites" rel="noopener noreferrer">how Google uses information from partner sites</a> and manage advertising preferences at <a href="https://myadcenter.google.com/" rel="noopener noreferrer">My Ad Center</a>. Official application links are not advertisements; any sponsored content must be clearly labeled.</p>'
+        '<p lang="hi">एनालिटिक्स की पसंद आपके ब्राउज़र में सुरक्षित हो सकती है। Google Analytics कुकीज़ या समान तकनीकों का उपयोग कर सकता है। अभी Google विज्ञापन बंद हैं। भविष्य में विज्ञापन शुरू करने से पहले आवश्यक सहमति व्यवस्था लागू की जाएगी। विज्ञापन और सरकारी आवेदन लिंक अलग रखे जाएंगे।</p>'
         '<h2 lang="hi">गोपनीयता व एनालिटिक्स नीति (Privacy Policy — हिंदी)</h2>'
         '<p class="notice" lang="hi">Sarkari Alert किसी भी यूज़र का व्यक्तिगत डेटा (नाम, ईमेल, मोबाइल, आधार या बैंक विवरण) एकत्र नहीं करता और न ही Google Analytics को कोई PII भेजता है। केवल अनाम विज़िट व आधिकारिक लिंक क्लिक आँकड़ों के लिए GA4 का उपयोग होता है, जिसे आप ऊपर दिए गए बटन से कभी भी बंद (Opt Out) कर सकते हैं।</p>'
         "</article>"
@@ -1468,7 +1480,7 @@ def build_all(now=None, prune_expired=False, posts_override=None):
     files["robots.txt"] = f"User-agent: *\nAllow: /\nSitemap: {BASE}sitemap.xml\n"
 
     pub_id = str((site_cfg.get("googleAdSense") or {}).get("publisherId", "")).strip()
-    if pub_id.startswith("ca-pub-"):
+    if re.fullmatch(r"ca-pub-[0-9]{16}", pub_id) and (site_cfg.get("googleAdSense") or {}).get("adsTxtEnabled") is True:
         files["ads.txt"] = f"google.com, {pub_id.replace('ca-pub-', 'pub-')}, DIRECT, f08c47fec0942fa0\n"
 
     inow_key = os.environ.get("BING_INDEXNOW_KEY", "").strip()
