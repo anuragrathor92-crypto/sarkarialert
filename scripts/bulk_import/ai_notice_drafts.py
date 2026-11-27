@@ -38,12 +38,29 @@ def extract_pdf(url):
                               "Accept": "application/pdf"}, MAX_PDF)
     if not raw.lstrip().startswith(b"%PDF"):
         raise ValueError("not_pdf")
+    source = ""
     with tempfile.TemporaryDirectory() as tmp:
         pdf = Path(tmp) / "notice.pdf"
         pdf.write_bytes(raw)
-        result = subprocess.run(["pdftotext", "-f", "1", "-l", "12", "-layout", str(pdf), "-"],
-                                capture_output=True, timeout=20, check=True)
-    source = result.stdout.decode("utf-8", errors="replace")[:MAX_TEXT]
+        try:
+            import pdfplumber
+            parts = []
+            with pdfplumber.open(str(pdf)) as doc:
+                for page in doc.pages[:12]:
+                    txt = (page.extract_text() or "").strip()
+                    if txt:
+                        parts.append(txt)
+                    for tbl in (page.extract_tables() or []):
+                        rows = [" | ".join((c or "").replace("\n", " ").strip() for c in r) for r in tbl if any(r)]
+                        if rows:
+                            parts.append("\n".join(rows))
+            source = "\n\n".join(parts)[:MAX_TEXT]
+        except Exception:
+            source = ""
+        if len(source.strip()) < 100:
+            result = subprocess.run(["pdftotext", "-f", "1", "-l", "12", "-layout", str(pdf), "-"],
+                                    capture_output=True, timeout=20, check=True)
+            source = result.stdout.decode("utf-8", errors="replace")[:MAX_TEXT]
     if len(source.strip()) < 100:
         raise ValueError("insufficient_text_or_scanned_pdf")
     return source
