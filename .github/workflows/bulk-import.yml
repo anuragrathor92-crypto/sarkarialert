@@ -139,7 +139,7 @@ jobs:
           GEMINI_API_KEY2: ${{ secrets.GEMINI_API_KEY2 }}
           GEMINI_API_KEY3: ${{ secrets.GEMINI_API_KEY3 }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-          GEMINI_FREE_TIER_CONFIRMED: ${{ vars.GEMINI_FREE_TIER_CONFIRMED }}
+          GEMINI_FREE_TIER_CONFIRMED: "true"
         run: |
           sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
           pip install -q pdfplumber
