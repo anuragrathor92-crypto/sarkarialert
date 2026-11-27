@@ -1,12 +1,12 @@
 {
-  "lastCheckedAt": "2026-11-27T04:37:48+05:30",
+  "lastCheckedAt": "2026-11-27T14:19:51+05:30",
   "monitors": [
     {
       "id": "up-rte-2027-28",
       "name": "UP RTE 25% Private School Admission 2027-28",
       "url": "https://rte25.upsdc.gov.in/",
       "fallbackUrl": "https://basiceducation.up.gov.in/hi",
-      "checkedAt": "2026-11-27T04:37:48+05:30",
+      "checkedAt": "2026-11-27T14:19:51+05:30",
       "httpStatus": 0,
       "session2027Detected": false,
       "status": "CHECK_ERROR",
