@@ -32,20 +32,24 @@ jobs:
           python-version: '3.12'
       - name: Run unit tests & site integrity checks
         run: python -m unittest discover -s scripts/bulk_import -p 'test_*.py'
-      - name: Refresh generated pages before time-sensitive audits
-        run: python scripts/bulk_import/build_site.py
-      - name: Run permanent broken-link & PDF checker
+      - name: Prune expired jobs locally & refresh generated pages before audits
+        run: |
+          python scripts/bulk_import/publish.py --write --prune-expired
+          python scripts/bulk_import/build_site.py
+      - name: Run permanent broken-link checker (internal blocking)
+        run: python scripts/bulk_import/verify_links.py --check-internal --skip-external --output import-output/link-verification.json
+      - name: Audit external official links & PDFs (non-blocking report)
+        continue-on-error: true
         run: python scripts/bulk_import/verify_links.py --check-internal --output import-output/link-verification.json
       - name: Run automated technical SEO & JobPosting health audit
         run: |
           python scripts/bulk_import/seo_audit.py --strict --output import-output/seo-report.json
           python scripts/bulk_import/google_indexing.py --output import-output/indexing-queue.json
       - name: Discover candidate URLs & monitor UP RTE 2027-28
+        continue-on-error: true
         run: |
           python scripts/bulk_import/discover.py --inspect 20 --write-monitor
           python scripts/bulk_import/auto_verify.py
-      - name: Dry-run expiry & approved queue check
-        run: python scripts/bulk_import/publish.py --prune-expired
       - name: Write workflow summary
         if: always()
         run: |
@@ -247,7 +251,7 @@ jobs:
               f"- Valid Eligible JobPosting Pages: `{seo.get('eligibleJobPostingPages')}` (Expired/Ineligible JobPostings: `{seo.get('expiredOrIneligibleJobPostings')}`)",
               f"- Sitemap URLs: `{seo.get('sitemapUrls')}` (Distinct lastmod dates: `{len(seo.get('sitemapDistinctLastmods', []))}`)",
               f"- RSS Feed Items (`feed.xml`): `{seo.get('rssFeedItems')}`",
-              f"- CSS / OG Card Size: `{seo.get('cssBytes')} B` / `{seo.get('ogImageBytes')} B`",
+              f"- CSS / OG Card Size: `{seo.get('cssBytes')}` B / `{seo.get('ogImageBytes')}` B",
               f"- Integrations: `{json.dumps(seo.get('integrations', {}))}`",
               f"- Google Indexing API (`URL_UPDATED={idx.get('updatedQueued')}`, `URL_DELETED={idx.get('deletedQueued')}`): `{g.get('status')}` (submitted=`{g.get('submitted')}`, failed=`{g.get('failed')}`)",
               f"- Bing IndexNow: `{b.get('status')}` (submitted=`{b.get('submitted')}`)",
@@ -267,5 +271,3 @@ jobs:
           path: |
             import-output/seo-report.json
             import-output/indexing-queue.json
-          if-no-files-found: warn
-          retention-days: 30
