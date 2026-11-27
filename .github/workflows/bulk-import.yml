@@ -35,6 +35,7 @@ jobs:
       - name: Prune expired jobs locally & refresh generated pages before audits
         run: |
           python scripts/bulk_import/repair_apply_links.py || true
+          python scripts/bulk_import/smart_apply_resolver.py || true
           python scripts/bulk_import/publish.py --write --prune-expired
           python scripts/bulk_import/build_site.py
       - name: Run permanent broken-link checker (internal blocking)
@@ -125,6 +126,7 @@ jobs:
           python scripts/bulk_import/discover.py --inspect 10 --write-monitor || true
           python scripts/bulk_import/auto_verify.py --write-approved || true
           python scripts/bulk_import/repair_apply_links.py || true
+          python scripts/bulk_import/smart_apply_resolver.py || true
           python scripts/bulk_import/publish.py --write --prune-expired
           python scripts/bulk_import/build_site.py
           python scripts/bulk_import/verify_links.py --check-internal --skip-external
