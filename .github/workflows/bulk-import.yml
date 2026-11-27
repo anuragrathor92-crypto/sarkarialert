@@ -143,13 +143,13 @@ jobs:
         run: python scripts/bulk_import/ai_notice_drafts.py
       - name: Commit and push authorized updates to main
         run: |
-          if [ -z "$(git status --porcelain --untracked-files=all -- index.html 404.html robots.txt sitemap.xml feed.xml sitemap category posts loans-and-cards about privacy disclaimer data/posts.json data/monitor_status.json data/import_approved.json data/seo_state.json data/public-search.json)" ]; then
+          if [ -z "$(git status --porcelain --untracked-files=all -- index.html 404.html robots.txt sitemap.xml feed.xml sitemap category posts tools loans-and-cards about privacy disclaimer data/posts.json data/monitor_status.json data/import_approved.json data/seo_state.json data/public-search.json)" ]; then
             echo "No new approved records or site changes."
             exit 0
           fi
           git config user.name "Sarkari Alert Publisher"
           git config user.email "sarkarialert-bot@users.noreply.github.com"
-          git add index.html 404.html robots.txt sitemap.xml feed.xml sitemap category posts loans-and-cards about privacy disclaimer data/posts.json data/monitor_status.json data/import_approved.json data/seo_state.json data/public-search.json
+          git add index.html 404.html robots.txt sitemap.xml feed.xml sitemap category posts tools loans-and-cards about privacy disclaimer data/posts.json data/monitor_status.json data/import_approved.json data/seo_state.json data/public-search.json
           if [ -f ads.txt ]; then git add ads.txt; fi
           git commit -m "Publish verified updates, SEO state, UP RTE monitor, and expiry cleanup"
           git pull --rebase origin main
@@ -209,7 +209,7 @@ jobs:
               p = Path(item)
               if p.exists():
                   shutil.copy2(p, out / item)
-          for d in ("assets", "category", "posts", "sitemap", "loans-and-cards", "about", "privacy", "disclaimer", "data"):
+          for d in ("assets", "category", "posts", "sitemap", "tools", "loans-and-cards", "about", "privacy", "disclaimer", "data"):
               p = Path(d)
               if p.exists():
                   shutil.copytree(p, out / d)
