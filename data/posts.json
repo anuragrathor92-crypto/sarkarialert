@@ -5270,53 +5270,6 @@
       "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या UPESSC/07/2026 चुनें, OTR/पंजीकरण लॉगिन करें और 2026-11-28 तक आवेदन सबमिट करें।"
     },
     {
-      "id": "upsssc-je-electrical-2026",
-      "title": "UPSSSC Junior Engineer (Electrical) Recruitment 2026 – 380 Posts",
-      "category": "latest-jobs",
-      "department": "UPSSSC",
-      "qualification": "Diploma / Engineering",
-      "noticeId": "UPSSSC-JE-EE-2026",
-      "vacancies": 380,
-      "lastDate": "2026-11-27",
-      "deadline": "2026-11-27T23:59:59+05:30",
-      "notificationUrl": "https://upsssc.gov.in/AllNotifications.aspx",
-      "applyUrl": "https://upsssc.gov.in/AllNotifications.aspx",
-      "officialUrl": "https://upsssc.gov.in/",
-      "summary": "UPSSSC जूनियर इंजीनियर (इलेक्ट्रिकल) के 380 पदों पर ऑनलाइन आवेदन 27 नवंबर 2026 तक खुले हैं।",
-      "rows": [
-        [
-          "Total vacancies",
-          "380 Posts (Electrical)"
-        ],
-        [
-          "Last date to apply",
-          "27 November 2026"
-        ],
-        [
-          "Fee reconciliation & correction",
-          "Up to 4 December 2026"
-        ],
-        [
-          "Application fee",
-          "₹25 (All categories)"
-        ],
-        [
-          "Eligibility",
-          "UPSSSC PET score + Diploma in Electrical Engineering per official advertisement"
-        ]
-      ],
-      "verified": true,
-      "verifiedOn": "2026-11-26",
-      "publishedDate": "2026-11-26",
-      "applicationStatus": "OPEN",
-      "type": "official-notice",
-      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
-      "locationLocality": "Lucknow",
-      "locationRegion": "Uttar Pradesh",
-      "eligibilityHi": "न्यूनतम योग्यता: Diploma / Engineering। आयु सीमा व आरक्षण शर्तें UPSSSC के आधिकारिक विज्ञापन (UPSSSC-JE-EE-2026) में सत्यापित करें।",
-      "applyInstructions": "आधिकारिक सामान्य भर्ती पोर्टल से आवेदन करें: पोर्टल खुलने पर विज्ञापन संख्या UPSSSC-JE-EE-2026 चुनें, OTR/पंजीकरण लॉगिन करें और 2026-11-27 तक आवेदन सबमिट करें।"
-    },
-    {
       "id": "rrb-ntpc-ug-cbtst-admit-card-2026",
       "title": "Railway RRB NTPC (10+2 UG) CEN 07/2025 CBTST Typing Admit Card 2026",
       "category": "admit-card",
@@ -7776,7 +7729,8 @@
     "isro-sdsc-shar-apprentice-2026",
     "goa-shipyard-non-executive-09-2026",
     "haryana-htet-2026",
-    "powergrid-trainee-engineer-electronics-gate-2026"
+    "powergrid-trainee-engineer-electronics-gate-2026",
+    "upsssc-je-electrical-2026"
   ],
-  "archivedExpiredCount": 7
+  "archivedExpiredCount": 8
 }
