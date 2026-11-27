@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Sarkari Alert — Admin Panel (No-Code CMS)</title>
+  <style>
+    body{font-family:system-ui,-apple-system,sans-serif;max-width:1050px;margin:0 auto;padding:16px;background:#f8fafc;color:#0f172a}
+    .card{background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:16px;margin-bottom:16px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
+    input,select{width:100%;padding:8px;border:1px solid #cbd5e1;border-radius:6px;box-sizing:border-box}
+    .btn{padding:9px 16px;border:none;border-radius:6px;background:#1d4ed8;color:#fff;font-weight:600;cursor:pointer}
+    .btn-sm{padding:4px 10px;border:none;border-radius:5px;background:#0f172a;color:#fff;cursor:pointer}
+    table{width:100%;border-collapse:collapse;font-size:0.92rem}
+    th,td{border:1px solid #e2e8f0;padding:8px;text-align:left}
+    th{background:#f1f5f9}
+  </style>
+</head>
+<body>
+  <p><a href="../">← Sarkari Alert Home</a> | <a href="../tools/">Student Tools</a></p>
+  <h1>Sarkari Alert — Admin Panel (बिना कोडिंग पोस्ट जोड़ें / एडिट करें)</h1>
+  <div class="card">
+    <label><strong>GitHub Personal Access Token</strong> (सिर्फ़ आपके ब्राउज़र में सेव होता है, कोड में नहीं):</label>
+    <div style="display:flex;gap:8px;margin-top:6px">
+      <input id="gh-token" type="password" placeholder="github_pat_... या ghp_...">
+      <button id="save-token-btn" class="btn" type="button">Save Token</button>
+    </div>
+    <p id="admin-status" style="font-weight:600;margin-top:8px"></p>
+  </div>
+
+  <div class="card">
+    <h2>नई पोस्ट जोड़ें या पुरानी एडिट करें</h2>
+    <form id="post-form">
+      <div class="grid">
+        <div><label>Post ID (slug)</label><input id="f-id" placeholder="ssc-cgl-2026" required></div>
+        <div><label>Title (भर्ती का नाम)</label><input id="f-title" placeholder="SSC CGL Recruitment 2026" required></div>
+        <div><label>Category</label>
+          <select id="f-cat">
+            <option value="latest-jobs">Latest Jobs</option>
+            <option value="results">Results</option>
+            <option value="admit-card">Admit Card</option>
+            <option value="answer-key">Answer Key</option>
+            <option value="admission">Admission</option>
+            <option value="scholarship">Scholarship</option>
+            <option value="exam-date">Exam Dates</option>
+            <option value="upcoming-jobs">Upcoming Jobs</option>
+          </select>
+        </div>
+        <div><label>Department (विभाग)</label><input id="f-dept" placeholder="Staff Selection Commission"></div>
+        <div><label>Last Date (YYYY-MM-DD)</label><input id="f-last" placeholder="2026-12-31"></div>
+        <div><label>Direct Apply Link (URL)</label><input id="f-apply" placeholder="https://ssc.gov.in/"></div>
+        <div><label>Official Website (URL)</label><input id="f-official" placeholder="https://ssc.gov.in/"></div>
+        <div><label>Official Notification PDF (URL)</label><input id="f-pdf" placeholder="https://.../notice.pdf"></div>
+        <div><label>Eligibility (योग्यता — हिंदी/English)</label><input id="f-elig" placeholder="Graduate / 12th Pass"></div>
+      </div>
+      <div style="margin-top:12px"><button class="btn" type="submit">Save &amp; Publish to GitHub</button></div>
+    </form>
+  </div>
+
+  <div class="card">
+    <h2>मौजूदा पोस्ट (खोजें और Edit करें)</h2>
+    <input id="admin-search" placeholder="नौकरी, विभाग या कैटेगरी से खोजें..." style="margin-bottom:10px">
+    <div style="overflow-x:auto">
+      <table>
+        <thead><tr><th>Title / ID</th><th>Category</th><th>Last Date</th><th>Apply Link</th><th>Action</th></tr></thead>
+        <tbody id="post-list"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Giscus (फ्री छात्र कमेंट बॉक्स) सेटअप</h2>
+    <p>हर पोस्ट के नीचे फ्री कमेंट बॉक्स चालू करने के लिए अपनी GitHub रिपॉजिटरी की Settings में <strong>Discussions</strong> ऑन करें और <a href="https://giscus.app/" target="_blank" rel="noopener">giscus.app</a> से अपनी रिपॉजिटरी कनेक्ट करें।</p>
+  </div>
+
+  <script>
+(function () {
+  "use strict";
+  var REPO = "anuragrathor92-crypto/sarkarialert";
+  var FILE_PATH = "data/posts.json";
+  var posts = [];
+  var fileSha = "";
+
+  var tokenEl = document.getElementById("gh-token");
+  var statusEl = document.getElementById("admin-status");
+  var listEl = document.getElementById("post-list");
+  var searchEl = document.getElementById("admin-search");
+
+  if (localStorage.getItem("sa_gh_token")) {
+    tokenEl.value = localStorage.getItem("sa_gh_token");
+  }
+
+  function setStatus(msg, isErr) {
+    statusEl.textContent = msg;
+    statusEl.style.color = isErr ? "#b91c1c" : "#15803d";
+  }
+
+  function loadPublicPreview() {
+    fetch("../data/posts.json?t=" + Date.now())
+      .then(function (r) { return r.ok ? r.json() : []; })
+      .then(function (data) {
+        posts = Array.isArray(data) ? data : (data.posts || []);
+        renderList();
+        setStatus("लाइव डेटा लोड हो गया: कुल " + posts.length + " पोस्ट।", false);
+      })
+      .catch(function () { setStatus("डेटा लोड नहीं हो सका।", true); });
+  }
+
+  function renderList() {
+    var q = (searchEl.value || "").trim().toLowerCase();
+    var filtered = posts.filter(function (p) {
+      if (!q) return true;
+      return ((p.title || "") + " " + (p.department || "") + " " + (p.category || "") + " " + (p.id || "")).toLowerCase().indexOf(q) !== -1;
+    }).slice(0, 60);
+
+    listEl.innerHTML = filtered.map(function (p) {
+      return '<tr><td><strong>' + (p.title || p.id) + '</strong><br><small>' + (p.id || "") + '</small></td>' +
+        '<td>' + (p.category || "") + '</td>' +
+        '<td>' + (p.lastDate || "—") + '</td>' +
+        '<td>' + (p.applyUrl ? '<a href="' + p.applyUrl + '" target="_blank" rel="noopener">Apply Link</a>' : '—') + '</td>' +
+        '<td><button class="btn-sm" data-edit="' + (p.id || "") + '">Edit</button></td></tr>';
+    }).join("");
+
+    listEl.querySelectorAll("[data-edit]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var id = btn.getAttribute("data-edit");
+        var p = posts.find(function (x) { return x.id === id; });
+        if (!p) return;
+        document.getElementById("f-id").value = p.id || "";
+        document.getElementById("f-title").value = p.title || "";
+        document.getElementById("f-cat").value = p.category || "latest-jobs";
+        document.getElementById("f-dept").value = p.department || "";
+        document.getElementById("f-last").value = p.lastDate || "";
+        document.getElementById("f-apply").value = p.applyUrl || "";
+        document.getElementById("f-official").value = p.officialUrl || "";
+        document.getElementById("f-pdf").value = p.notificationUrl || "";
+        document.getElementById("f-elig").value = p.eligibilityHi || p.eligibility || "";
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    });
+  }
+
+  document.getElementById("save-token-btn").addEventListener("click", function () {
+    var tok = tokenEl.value.trim();
+    if (!tok) { localStorage.removeItem("sa_gh_token"); setStatus("टोकन हटा दिया गया।", false); return; }
+    localStorage.setItem("sa_gh_token", tok);
+    setStatus("टोकन इस ब्राउज़र में सुरक्षित सेव हो गया।", false);
+  });
+
+  searchEl.addEventListener("input", renderList);
+
+  document.getElementById("post-form").addEventListener("submit", function (ev) {
+    ev.preventDefault();
+    var tok = tokenEl.value.trim();
+    if (!tok) { setStatus("कृपया पहले ऊपर अपना GitHub Token डालें।", true); return; }
+    localStorage.setItem("sa_gh_token", tok);
+
+    var id = document.getElementById("f-id").value.trim().toLowerCase().replace(/[^a-z0-9-]+/g, "-");
+    var title = document.getElementById("f-title").value.trim();
+    if (!id || !title) { setStatus("ID और Title अनिवार्य हैं।", true); return; }
+
+    var rec = {
+      id: id,
+      title: title,
+      category: document.getElementById("f-cat").value,
+      department: document.getElementById("f-dept").value.trim() || "Government Department",
+      lastDate: document.getElementById("f-last").value.trim(),
+      applyUrl: document.getElementById("f-apply").value.trim(),
+      officialUrl: document.getElementById("f-official").value.trim() || document.getElementById("f-apply").value.trim(),
+      notificationUrl: document.getElementById("f-pdf").value.trim(),
+      eligibilityHi: document.getElementById("f-elig").value.trim(),
+      applyLinkType: document.getElementById("f-apply").value.trim() ? "DIRECT_APPLICATION_FORM" : "GENERAL_RECRUITMENT_PORTAL",
+      verifiedOn: new Date().toISOString().slice(0, 10)
+    };
+
+    setStatus("GitHub पर सेव किया जा रहा है...", false);
+    fetch("https://api.github.com/repos/" + REPO + "/contents/" + FILE_PATH, {
+      headers: { "Authorization": "Bearer " + tok, "Accept": "application/vnd.github+json" }
+    })
+      .then(function (r) { if (!r.ok) throw new Error("GitHub Auth/Read error: " + r.status); return r.json(); })
+      .then(function (meta) {
+        fileSha = meta.sha;
+        var decoded = decodeURIComponent(escape(atob(meta.content.replace(/\n/g, ""))));
+        var rawObj = JSON.parse(decoded);
+        var arr = Array.isArray(rawObj) ? rawObj : (rawObj.posts || []);
+        var idx = arr.findIndex(function (x) { return x.id === id; });
+        if (idx >= 0) {
+          arr[idx] = Object.assign({}, arr[idx], rec);
+        } else {
+          arr.unshift(rec);
+        }
+        var outJson = Array.isArray(rawObj) ? JSON.stringify(arr, null, 2) : JSON.stringify(Object.assign({}, rawObj, { posts: arr }), null, 2);
+        var b64 = btoa(unescape(encodeURIComponent(outJson + "\n")));
+        return fetch("https://api.github.com/repos/" + REPO + "/contents/" + FILE_PATH, {
+          method: "PUT",
+          headers: { "Authorization": "Bearer " + tok, "Accept": "application/vnd.github+json", "Content-Type": "application/json" },
+          body: JSON.stringify({ message: "Admin Panel update: " + id, content: b64, sha: fileSha })
+        });
+      })
+      .then(function (r) { if (!r.ok) throw new Error("GitHub Save error: " + r.status); return r.json(); })
+      .then(function () {
+        setStatus("सफलतापूर्वक सेव हो गया! GitHub Actions 3 मिनट में लाइव अपडेट कर देगा।", false);
+        loadPublicPreview();
+      })
+      .catch(function (err) { setStatus("त्रुटि: " + err.message, true); });
+  });
+
+  loadPublicPreview();
+})();
+
+  </script>
+</body>
+</html>

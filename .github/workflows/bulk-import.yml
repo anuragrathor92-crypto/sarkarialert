@@ -211,7 +211,7 @@ jobs:
               p = Path(item)
               if p.exists():
                   shutil.copy2(p, out / item)
-          for d in ("assets", "category", "posts", "sitemap", "tools", "loans-and-cards", "about", "privacy", "disclaimer", "data"):
+          for d in ("assets", "category", "posts", "sitemap", "tools", "admin", "loans-and-cards", "about", "privacy", "disclaimer", "data"):
               p = Path(d)
               if p.exists():
                   shutil.copytree(p, out / d)
