@@ -50,6 +50,30 @@ def e(val):
     return html.escape(str(val or ""), quote=True)
 
 
+
+def bilingual(en, hi):
+    return f'{e(en)} — <span lang="hi">{e(hi)}</span>'
+
+
+def category_label(slug):
+    en, hi, _ = CAT_MAP[slug]
+    return bilingual(en, hi)
+
+
+def application_display(post):
+    kind = post.get("applyLinkType") or "GENERAL_RECRUITMENT_PORTAL"
+    pending = (post.get("applyStatus") == "VERIFICATION_PENDING"
+               or kind == "VERIFICATION_PENDING")
+    if pending:
+        return "Verification Pending — लिंक सत्यापन बाकी", True
+    labels = {
+        "DIRECT_APPLICATION_FORM": "Application Form — आवेदन फ़ॉर्म",
+        "GENERAL_RECRUITMENT_PORTAL": "Official Recruitment Portal — सरकारी भर्ती पोर्टल",
+        "OFFLINE_POSTAL_FORM": "Offline Application Form — ऑफलाइन आवेदन पत्र",
+    }
+    return labels.get(kind, "Official Link — आधिकारिक लिंक"), False
+
+
 def clean_text(val):
     return re.sub(r"\s+", " ", str(val or "")).strip()
 
@@ -171,7 +195,11 @@ def render_shell(
         return f"/sarkarialert/{rel}" if root_relative else f"{prefix}{rel}"
 
     asset_prefix = "/sarkarialert/" if root_relative else prefix
-    nav_html = "".join(f'<a href="{nav_href(rel)}">{e(label)}</a>' for rel, label in NAV_ITEMS)
+    def nav_label(rel, label):
+        if rel.startswith("category/"):
+            return category_label(rel.split("/")[1])
+        return bilingual(label, "मुख्य पृष्ठ" if not rel else "ऋण व कार्ड")
+    nav_html = "".join(f'<a href="{nav_href(rel)}">{nav_label(rel, label)}</a>' for rel, label in NAV_ITEMS)
     canonical = BASE + canonical_path.lstrip("/")
     og_image = f"{BASE}assets/og-card.png"
     ld_tag = (
@@ -267,7 +295,7 @@ def render_item(post, prefix, is_scheme=False, now_date=None):
     date_label = post.get("lastDate") or (deadline[:10] if deadline else "")
     pub = post.get("publishedDate") or post.get("verifiedOn") or ""
     is_new = bool(now_date and pub and (now_date - dt.date.fromisoformat(pub)).days <= 3)
-    new_badge = '<span class="new-tag">New</span>' if is_new else ""
+    new_badge = '<span class="new-tag">New — नया</span>' if is_new else ""
 
     if is_scheme:
         loc_tag = post.get("stateOrUt") or ("राज्य" if post.get("scope") == "State" else "केंद्र")
@@ -279,13 +307,10 @@ def render_item(post, prefix, is_scheme=False, now_date=None):
             "</li>"
         )
 
-    date_html = f' <span class="date-tag">Last Date: {e(date_label)}</span>' if date_label else ""
+    date_html = f' <span class="date-tag">Last Date / अंतिम तिथि: {e(date_label)}</span>' if date_label else ""
     actions = ""
     if post.get("category") in JOB_CATS and post.get("applyUrl"):
-        is_pending = post.get("applyStatus") == "VERIFICATION_PENDING"
-        apply_label = post.get("applyLabel") or (
-            "Portal (Verification Pending)" if is_pending else "Apply Online"
-        )
+        apply_label, is_pending = application_display(post)
         apply_cls = "pending-btn" if is_pending else "apply-btn"
         actions = (
             '<div class="job-actions">'
@@ -519,8 +544,8 @@ def render_standard_post(
 
     action_box = ""
     if not expired_flag and cat in JOB_CATS and post.get("applyUrl"):
-        is_pending = post.get("applyStatus") == "VERIFICATION_PENDING"
-        link_type = post.get("applyLinkType") or (
+        apply_label, is_pending = application_display(post)
+        link_type = "VERIFICATION_PENDING" if is_pending else post.get("applyLinkType") or (
             "VERIFICATION_PENDING" if is_pending else "GENERAL_RECRUITMENT_PORTAL"
         )
         type_badge_map = {
@@ -530,9 +555,6 @@ def render_standard_post(
             "VERIFICATION_PENDING": '<span class="apply-type-badge pending">लिंक सत्यापन प्रतीक्षित (Verification Pending)</span>',
         }
         type_badge = type_badge_map.get(link_type, "")
-        apply_label = post.get("applyLabel") or (
-            "Official Portal (Verification Pending)" if is_pending else "Apply Online – Official Portal"
-        )
         apply_cls = "pending-btn" if is_pending else "apply-btn"
         box_cls = "apply-box pending-box" if is_pending else "apply-box"
         instr = f'<p>{e(post.get("applyInstructions"))}</p>' if post.get("applyInstructions") else ""
@@ -607,10 +629,10 @@ def render_standard_post(
         v_sub = post.get("qualification") or dept
         grid_html = (
             '<div class="detail-columns">'
-            f"<section><h3>Important Dates</h3><ul>{d_li}</ul></section>"
-            f"<section><h3>Application Fee</h3><ul>{f_li}</ul></section>"
-            f"<section><h3>Age Limit</h3><ul>{a_li}</ul></section>"
-            f'<section class="vacancy"><h3>Total Vacancies</h3><strong>{e(v_str)}</strong><p>{e(v_sub)}</p></section>'
+            f"<section><h3>Important Dates — महत्वपूर्ण तिथियाँ</h3><ul>{d_li}</ul></section>"
+            f"<section><h3>Application Fee — आवेदन शुल्क</h3><ul>{f_li}</ul></section>"
+            f"<section><h3>Age Limit — आयु सीमा</h3><ul>{a_li}</ul></section>"
+            f'<section class="vacancy"><h3>Total Vacancies — कुल पद</h3><strong>{e(v_str)}</strong><p>{e(v_sub)}</p></section>'
             "</div>"
         )
 
@@ -618,12 +640,12 @@ def render_standard_post(
     if not expired_flag:
         if post.get("howToApply"):
             steps_li = "".join(f"<li>{e(st)}</li>" for st in post["howToApply"])
-            how_html = f'<h2 class="detail-bar">How to Apply</h2><ol>{steps_li}</ol>'
+            how_html = f'<h2 class="detail-bar">How to Apply — आवेदन कैसे करें</h2><ol>{steps_li}</ol>'
         elif cat in JOB_CATS:
             is_offline = "offline" in str(post.get("applyLabel", "")).lower() or "डाक" in str(post.get("applyLabel", ""))
             if is_offline:
                 how_html = (
-                    '<h2 class="detail-bar">How to Apply (Postal / Offline)</h2>'
+                    '<h2 class="detail-bar">How to Apply (Postal / Offline) — डाक से आवेदन</h2>'
                     "<ol><li>Download and read the official notification PDF carefully.</li>"
                     "<li>Fill the prescribed offline application format with self-attested copies of documents.</li>"
                     "<li>Send via Speed Post / Registered Post to the exact address before the closing date.</li>"
@@ -631,7 +653,7 @@ def render_standard_post(
                 )
             else:
                 how_html = (
-                    '<h2 class="detail-bar">How to Apply</h2>'
+                    '<h2 class="detail-bar">How to Apply — आवेदन कैसे करें</h2>'
                     "<ol><li>Read the full official notification PDF before starting registration.</li>"
                     "<li>Click the official Apply Online portal link above and complete OTR/registration.</li>"
                     "<li>Fill accurate details, upload required photo/signature/documents, and pay applicable fee before deadline.</li>"
@@ -644,15 +666,11 @@ def render_standard_post(
         faq_items = "".join(
             f"<details><summary>{e(q)}</summary><p>{e(ans)}</p></details>" for q, ans in faq_pairs
         )
-        faq_html = f"<h2>Frequently Asked Questions</h2>{faq_items}"
+        faq_html = f"<h2>Frequently Asked Questions — सामान्य प्रश्न</h2>{faq_items}"
 
     links = []
     if not expired_flag and cat in JOB_CATS and post.get("applyUrl"):
-        tbl_label = post.get("applyLabel") or (
-            "Official Portal (Verification Pending)"
-            if post.get("applyStatus") == "VERIFICATION_PENDING"
-            else "Apply Online – Official Portal"
-        )
+        tbl_label, _ = application_display(post)
         links.append((tbl_label, post["applyUrl"]))
     if not expired_flag and post.get("actionUrl"):
         links.append((post.get("actionLabel") or "Direct Official Link", post["actionUrl"]))
@@ -681,20 +699,22 @@ def render_standard_post(
 
     body = (
         '<article class="article detail">'
-        f'<a href="../../">Home</a> › <a href="../../category/{e(cat)}/">{e(cat_en)}</a>'
+        f'<a href="../../">Home</a> › <a href="../../category/{e(cat)}/">{category_label(cat)}</a>'
         f"<h1>{e(title)}</h1>"
-        f"{action_box}"
+        + (f'<p lang="hi" class="hindi"><strong>{e(post["titleHi"])}</strong></p>' if post.get("titleHi") and post["titleHi"] != title else "")
+        + f"{action_box}"
         f"{ssl_warn}"
         f'<p>Published &amp; Verified: {e(verified_on)} · Department: <strong>{e(dept)}</strong></p>'
         f'<p lang="hi">{e(summary)}</p>'
-        f"{elig_hi_html}"
+        + (f'<p lang="en">{e(post["summaryEn"])}</p>' if post.get("summaryEn") else "")
+        + f"{elig_hi_html}"
         '<div class="detail-box">'
         f'<div class="detail-heading"><h2>{e(title)}</h2><p>{e(dept)} · Verified Official Update</p><strong>SARKARI ALERT</strong></div>'
         f"{grid_html}"
-        '<h2 class="detail-bar">Important Dates, Eligibility, Fees &amp; Details</h2>'
+        '<h2 class="detail-bar">Important Dates, Eligibility, Fees &amp; Details — तिथियाँ, पात्रता, शुल्क व विवरण</h2>'
         f"<table><tbody>{rows_html}</tbody></table>"
         f"{how_html}"
-        '<h2 class="detail-bar">Important Official Links</h2>'
+        '<h2 class="detail-bar">Important Official Links — महत्वपूर्ण आधिकारिक लिंक</h2>'
         f'<table class="important-links"><tbody>{links_html}</tbody></table>'
         "</div>"
         f"{checklist_html}"
@@ -1230,8 +1250,8 @@ def build_all(now=None, prune_expired=False, posts_override=None):
     # 8. Render Homepage (index.html)
     depts = sorted({p.get("department") for p in active_posts + schemes if p.get("department")})
     quals = sorted({p.get("qualification") for p in active_posts if p.get("qualification")})
-    dept_opts = '<option value="">All departments</option>' + "".join(f"<option>{e(d)}</option>" for d in depts)
-    qual_opts = '<option value="">All qualifications</option>' + "".join(f"<option>{e(q)}</option>" for q in quals)
+    dept_opts = '<option value="">All departments — सभी विभाग</option>' + "".join(f"<option>{e(d)}</option>" for d in depts)
+    qual_opts = '<option value="">All qualifications — सभी योग्यताएँ</option>' + "".join(f"<option>{e(q)}</option>" for q in quals)
 
     hl_colors = ["#9c1637", "#14539a", "#146c2e", "#b04300", "#6a1b9a", "#006978", "#8b2635", "#3b4252"]
     hl_candidates = (
@@ -1243,17 +1263,17 @@ def build_all(now=None, prune_expired=False, posts_override=None):
     )[:8]
     hl_html = "".join(
         f'<a class="highlight-card" style="--hl:{hl_colors[i % len(hl_colors)]}" href="./posts/{e(p["id"])}/">'
-        f'{e(p["title"][:62])}<small>{e(CAT_MAP[p["category"]][0])}</small></a>'
+        f'{e(p["title"])}<small>{e(CAT_MAP[p["category"]][0])}</small></a>'
         for i, p in enumerate(hl_candidates)
     )
 
     ticker_links = " · ".join(
-        f'<a href="./posts/{e(p["id"])}/">{e(p["title"][:55])}</a>'
+        f'<a href="./posts/{e(p["id"])}/">{e(p["title"])}</a>'
         for p in (by_cat["latest-jobs"][:2] + by_cat["results"][:1] + by_cat["answer-key"][:1])
     )
 
     tiles_html = "".join(
-        f'<a style="--tile:{color}" href="./category/{slug}/">{e(en)}'
+        f'<a style="--tile:{color}" href="./category/{slug}/">{category_label(slug)}'
         f'{f" ({len(schemes)})" if slug == "yojana" else ""}</a>'
         for slug, en, _, color in CATEGORIES[:11]
     ) + '<a style="--tile:#0f4c81" href="./loans-and-cards/">Loans &amp; Cards</a>'
@@ -1286,9 +1306,9 @@ def build_all(now=None, prune_expired=False, posts_override=None):
             )
             panels_html.append(
                 f'<section class="panel" data-category="{slug}">'
-                f'<h2><a href="./category/{slug}/">{e(en)}{heading_count}</a></h2>'
+                f'<h2><a href="./category/{slug}/">{category_label(slug)}{heading_count}</a></h2>'
                 f"{content}"
-                f'<a class="more" href="./category/{slug}/">View More »</a></section>'
+                f'<a class="more" href="./category/{slug}/">View More — और देखें »</a></section>'
             )
 
     rte_mon = monitors[0] if monitors else {}
@@ -1304,7 +1324,7 @@ def build_all(now=None, prune_expired=False, posts_override=None):
         "<h1>Sarkari Alert — Latest Government Jobs, Results, Admit Cards &amp; Sarkari Yojana</h1>"
         '<p class="hindi" lang="hi">सत्यापित सरकारी नौकरी, परीक्षा परिणाम, प्रवेश पत्र, उत्तर कुंजी और सरकारी योजनाओं की सटीक जानकारी</p>'
         f'<p class="launch">{len(active_posts)} verified active notices &amp; service guides + {len(schemes)} Sarkari Yojana entries · Updated {now_date.isoformat()}</p>'
-        f'<div class="ticker"><strong>LIVE UPDATES:</strong> {ticker_links}</div>'
+        f'<div class="ticker"><strong>LIVE UPDATES — ताज़ा अपडेट:</strong> {ticker_links}</div>'
         f'<div class="highlight-grid">{hl_html}</div>'
         f"{rte_html}"
         '<div class="quick-links">'
@@ -1322,7 +1342,7 @@ def build_all(now=None, prune_expired=False, posts_override=None):
         '<input id="query" type="search" aria-label="Search posts" placeholder="Search jobs, results, schemes, exams…">'
         f'<select id="department" aria-label="Department">{dept_opts}</select>'
         f'<select id="qualification" aria-label="Qualification">{qual_opts}</select>'
-        '<button type="submit">Search</button><button type="reset" class="reset">Reset</button>'
+        '<button type="submit">Search — खोजें</button><button type="reset" class="reset">Reset — रीसेट</button>'
         "</form>"
         '<p id="search-status" role="status" hidden></p>'
         f'<div class="tiles">{tiles_html}</div>'
