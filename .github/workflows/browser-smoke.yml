@@ -1,0 +1,49 @@
+name: Browser smoke tests
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/**'
+      - 'assets/**'
+      - 'tools/**'
+      - '.github/workflows/browser-smoke.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: browser-smoke-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Build static website
+        run: python scripts/bulk_import/build_site.py
+      - name: Install pinned browser test package
+        run: npm install --no-save --no-package-lock --ignore-scripts puppeteer-core@24.31.0
+      - name: Run isolated Chromium smoke tests
+        run: |
+          export CHROME_PATH="$(command -v google-chrome)"
+          test -n "$CHROME_PATH"
+          root="$(mktemp -d)"
+          ln -s "$PWD" "$root/sarkarialert"
+          python -m http.server 8765 --bind 127.0.0.1 --directory "$root" > /tmp/sarkarialert-smoke.log 2>&1 &
+          server=$!
+          trap 'kill "$server" || true; rm -rf "$root"' EXIT
+          for i in 1 2 3 4 5; do
+            if curl -fsS http://127.0.0.1:8765/sarkarialert/ >/dev/null; then break; fi
+            sleep 1
+          done
+          node scripts/browser_smoke.mjs
