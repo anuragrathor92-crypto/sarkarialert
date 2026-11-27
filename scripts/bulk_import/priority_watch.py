@@ -99,7 +99,7 @@ def targets(posts):
                                   "applyType": p.get("applyLinkType") if field == "applyUrl" else None})
     return out
 
-def due(target_map, state, now, limit=24):
+def due(target_map, state, now, limit=80):
     ranked = []
     for url, item in target_map.items():
         previous = state.get(url, {})
@@ -122,7 +122,7 @@ def due(target_map, state, now, limit=24):
             break
     return chosen, len(ranked)
 
-def watch(posts, state, now, probe_fn=probe, limit=24):
+def watch(posts, state, now, probe_fn=probe, limit=80):
     items = targets(posts)
     state = {k:v for k,v in state.items() if k in items}
     selected, due_count = due(items, state, now, limit)
@@ -134,7 +134,7 @@ def watch(posts, state, now, probe_fn=probe, limit=24):
         groups.setdefault(urllib.parse.urlsplit(url).hostname, []).append(url)
     def check_group(urls):
         return [(url, probe_fn(url, state.get(url, {}))) for url in urls]
-    with cf.ThreadPoolExecutor(max_workers=6) as executor:
+    with cf.ThreadPoolExecutor(max_workers=10) as executor:
         for group in executor.map(check_group, groups.values()):
             for url, result in group:
                 previous = state.get(url, {})

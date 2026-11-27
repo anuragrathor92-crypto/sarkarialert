@@ -140,7 +140,9 @@ jobs:
           GEMINI_API_KEY3: ${{ secrets.GEMINI_API_KEY3 }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           GEMINI_FREE_TIER_CONFIRMED: ${{ vars.GEMINI_FREE_TIER_CONFIRMED }}
-        run: python scripts/bulk_import/ai_notice_drafts.py
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
+          python scripts/bulk_import/ai_notice_drafts.py
       - name: Commit and push authorized updates to main
         run: |
           if [ -z "$(git status --porcelain --untracked-files=all -- index.html 404.html robots.txt sitemap.xml feed.xml sitemap category posts tools loans-and-cards about privacy disclaimer data/posts.json data/monitor_status.json data/import_approved.json data/seo_state.json data/public-search.json)" ]; then
