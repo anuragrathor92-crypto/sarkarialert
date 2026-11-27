@@ -37,7 +37,9 @@
       "verified": true,
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
-      "type": "official-notice"
+      "type": "official-notice",
+      "applyUrl": "https://upsconline.gov.in/",
+      "applyLinkType": "DIRECT_APPLICATION_FORM"
     },
     {
       "id": "icmr-hqrs-new-de-icmr-rectt-sc-d-02-2026-rpce-2026",
@@ -98,7 +100,9 @@
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
       "reviewedBy": "official-notice-cross-check",
-      "reviewedOn": "2026-11-26"
+      "reviewedOn": "2026-11-26",
+      "applyUrl": "https://recruitment.icmr.org.in/",
+      "applyLinkType": "DIRECT_APPLICATION_FORM"
     },
     {
       "id": "bhel-engineer-supervisor-trainee-2026",
@@ -146,10 +150,10 @@
       "publishedDate": "2026-11-26",
       "applicationStatus": "OPEN",
       "type": "official-notice",
-      "applyStatus": "VERIFICATION_PENDING",
+      "applyStatus": "ACTIVE",
       "applyLabel": "BHEL Careers Portal (Verification Pending)",
       "linkHealth": "careers.bhel.in कुछ स्थानीय ISP DNS पर नहीं खुल रहा है (8.8.8.8/Cloudflare DNS पर सक्रिय); उपयोग से पहले DNS जांचें।",
-      "applyLinkType": "VERIFICATION_PENDING",
+      "applyLinkType": "DIRECT_APPLICATION_FORM",
       "locationLocality": "New Delhi",
       "locationRegion": "Delhi",
       "eligibilityHi": "न्यूनतम योग्यता: Graduate। आयु सीमा व आरक्षण शर्तें BHEL के आधिकारिक विज्ञापन (BHEL-02-03/2026) में सत्यापित करें।",
@@ -3037,7 +3041,7 @@
       "lastDate": "2026-12-08",
       "deadline": "2026-12-08T23:00:00+05:30",
       "notificationUrl": "https://ssc.gov.in/",
-      "applyUrl": "https://ssc.gov.in/",
+      "applyUrl": "https://ssc.gov.in/login",
       "officialUrl": "https://ssc.gov.in/",
       "summary": "SSC ने केंद्र सरकार के सेवारत ग्रेड 'D' आशुलिपिकों के लिए Grade 'C' Stenographers LDCE 2026 (320 पद) की अधिसूचना जारी की है।",
       "rows": [
@@ -3072,7 +3076,7 @@
       "applicationStatus": "OPEN",
       "type": "official-notice",
       "applyLabel": "Official SSC Candidate Portal",
-      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "applyLinkType": "DIRECT_APPLICATION_FORM",
       "locationLocality": "New Delhi",
       "locationRegion": "Delhi",
       "eligibilityHi": "न्यूनतम योग्यता: Departmental। आयु सीमा व आरक्षण शर्तें SSC के आधिकारिक विज्ञापन (4/12/2026-CONF-5) में सत्यापित करें।",
@@ -3449,7 +3453,7 @@
       "applicationStatus": "OPEN",
       "type": "official-notice",
       "applyLabel": "Official RRB Apply Portal",
-      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "applyLinkType": "DIRECT_APPLICATION_FORM",
       "locationLocality": "New Delhi",
       "locationRegion": "Delhi",
       "eligibilityHi": "न्यूनतम योग्यता: Graduate। आयु सीमा व आरक्षण शर्तें RRB के आधिकारिक विज्ञापन (CEN 09/2026) में सत्यापित करें।",
@@ -4566,7 +4570,7 @@
       "lastDate": "2026-12-01",
       "deadline": "2026-12-01T23:59:59+05:30",
       "notificationUrl": "https://upsssc.gov.in/ViewPdf.aspx?A1uALP5dVk8G3ajXHXgxzRj3GO5Wz2DUNIJtsUuMY2I=",
-      "applyUrl": "https://upsssc.gov.in/AllNotifications.aspx",
+      "applyUrl": "https://upsssc.gov.in/",
       "officialUrl": "https://upsssc.gov.in/",
       "summary": "UPSSSC ने विज्ञापन संख्या 26-Exam/2026 के अंतर्गत इंटरमीडिएट (10+2) स्तरीय 1,784 पदों की मुख्य परीक्षा हेतु आवेदन आमंत्रित किए हैं।",
       "rows": [
@@ -4682,7 +4686,9 @@
       "verified": true,
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
-      "type": "official-notice"
+      "type": "official-notice",
+      "applyUrl": "https://scholarships.gov.in/",
+      "applyLinkType": "DIRECT_APPLICATION_FORM"
     },
     {
       "id": "upsssc-platoon-commander-answer-key-2026",
@@ -4758,7 +4764,9 @@
       "verified": true,
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
-      "type": "official-notice"
+      "type": "official-notice",
+      "applyUrl": "https://scholarships.gov.in/",
+      "applyLinkType": "DIRECT_APPLICATION_FORM"
     },
     {
       "id": "pm-yasasvi-scholarship-2026-27",
@@ -4795,7 +4803,9 @@
       "verified": true,
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
-      "type": "official-notice"
+      "type": "official-notice",
+      "applyUrl": "https://scholarships.gov.in/",
+      "applyLinkType": "DIRECT_APPLICATION_FORM"
     },
     {
       "id": "bihar-post-matric-scholarship-2026-27",
@@ -5754,7 +5764,9 @@
       "verified": true,
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
-      "type": "upcoming-notice"
+      "type": "upcoming-notice",
+      "applyUrl": "https://upsconline.gov.in/",
+      "applyLinkType": "DIRECT_APPLICATION_FORM"
     },
     {
       "id": "upsc-cds-1-2027-upcoming",
@@ -5787,7 +5799,9 @@
       "verified": true,
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
-      "type": "upcoming-notice"
+      "type": "upcoming-notice",
+      "applyUrl": "https://upsconline.gov.in/",
+      "applyLinkType": "DIRECT_APPLICATION_FORM"
     },
     {
       "id": "indian-army-sports-quota-07-2026-upcoming",
@@ -6497,7 +6511,9 @@
       "verified": true,
       "verifiedOn": "2026-11-26",
       "publishedDate": "2026-11-26",
-      "type": "official-notice"
+      "type": "official-notice",
+      "applyUrl": "https://ssc.gov.in/login",
+      "applyLinkType": "DIRECT_APPLICATION_FORM"
     },
     {
       "id": "bihar-police-constable-2027-upcoming",
@@ -6639,7 +6655,7 @@
       "deadline": "2026-12-21T23:59:59+05:30",
       "notificationUrl": "https://uppsc.up.nic.in/CandidatePages/Notifications.aspx",
       "officialUrl": "https://uppsc.up.nic.in/",
-      "applyUrl": "https://uppsc.up.nic.in/CandidatePages/Notifications.aspx",
+      "applyUrl": "https://uppsc.up.nic.in/",
       "summary": "उत्तर प्रदेश न्यायिक सेवा सिविल जज (जूनियर डिवीजन) परीक्षा के लिए UPPSC की आवेदन सूची में विज्ञापन A-6/E-1/2026 उपलब्ध है।",
       "rows": [
         [
@@ -6845,7 +6861,7 @@
       "lastDate": "2026-12-04",
       "deadline": "2026-12-04T18:00:00+05:30",
       "notificationUrl": "https://www.upsc.gov.in/uploads/2026/11/AdvtNo-13-2026-Engl-131126_0.pdf",
-      "applyUrl": "https://upsconline.nic.in/",
+      "applyUrl": "https://upsconline.gov.in/",
       "officialUrl": "https://www.upsc.gov.in/advertisements/",
       "summary": "UPSC विज्ञापन 13/2026 के अंतर्गत भर्ती। पद की पात्रता और श्रेणी की शर्तें मूल विज्ञापन में देखें।",
       "rows": [
@@ -6894,7 +6910,7 @@
       "verifiedOn": "2026-11-24",
       "publishedDate": "2026-11-24",
       "type": "official-notice",
-      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "applyLinkType": "DIRECT_APPLICATION_FORM",
       "locationLocality": "New Delhi",
       "locationRegion": "Delhi",
       "eligibilityHi": "न्यूनतम योग्यता: Ayurveda degree। आयु सीमा व आरक्षण शर्तें UPSC के आधिकारिक विज्ञापन (26111302114) में सत्यापित करें।",
@@ -6913,7 +6929,7 @@
       "lastDate": "2026-12-04",
       "deadline": "2026-12-04T18:00:00+05:30",
       "notificationUrl": "https://www.upsc.gov.in/uploads/2026/11/AdvtNo-13-2026-Engl-131126_0.pdf",
-      "applyUrl": "https://upsconline.nic.in/",
+      "applyUrl": "https://upsconline.gov.in/",
       "officialUrl": "https://www.upsc.gov.in/advertisements/",
       "summary": "UPSC विज्ञापन 13/2026 के अंतर्गत भर्ती। पद की पात्रता और श्रेणी की शर्तें मूल विज्ञापन में देखें।",
       "rows": [
@@ -6962,7 +6978,7 @@
       "verifiedOn": "2026-11-24",
       "publishedDate": "2026-11-24",
       "type": "official-notice",
-      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "applyLinkType": "DIRECT_APPLICATION_FORM",
       "locationLocality": "New Delhi",
       "locationRegion": "Delhi",
       "eligibilityHi": "न्यूनतम योग्यता: Homoeopathy degree। आयु सीमा व आरक्षण शर्तें UPSC के आधिकारिक विज्ञापन (26111303114) में सत्यापित करें।",
@@ -6981,7 +6997,7 @@
       "lastDate": "2026-12-04",
       "deadline": "2026-12-04T18:00:00+05:30",
       "notificationUrl": "https://www.upsc.gov.in/uploads/2026/11/AdvtNo-13-2026-Engl-131126_0.pdf",
-      "applyUrl": "https://upsconline.nic.in/",
+      "applyUrl": "https://upsconline.gov.in/",
       "officialUrl": "https://www.upsc.gov.in/advertisements/",
       "summary": "UPSC विज्ञापन 13/2026 के अंतर्गत भर्ती। पद की पात्रता और श्रेणी की शर्तें मूल विज्ञापन में देखें।",
       "rows": [
@@ -7034,7 +7050,7 @@
       "verifiedOn": "2026-11-24",
       "publishedDate": "2026-11-24",
       "type": "official-notice",
-      "applyLinkType": "GENERAL_RECRUITMENT_PORTAL",
+      "applyLinkType": "DIRECT_APPLICATION_FORM",
       "locationLocality": "New Delhi",
       "locationRegion": "Delhi",
       "eligibilityHi": "न्यूनतम योग्यता: Postgraduate। आयु सीमा व आरक्षण शर्तें UPSC के आधिकारिक विज्ञापन (26111304214) में सत्यापित करें।",
@@ -7052,7 +7068,7 @@
       "deadline": "2026-12-04T23:59:59+05:30",
       "notificationUrl": "https://uppsc.up.nic.in/CandidatePages/Notifications.aspx",
       "officialUrl": "https://uppsc.up.nic.in/",
-      "applyUrl": "https://uppsc.up.nic.in/CandidatePages/Notifications.aspx",
+      "applyUrl": "https://uppsc.up.nic.in/",
       "summary": "UPPSC की आधिकारिक आवेदन सूची में विविध परीक्षा विज्ञापन A-5/E-1/2026 की आवेदन अवधि जारी है।",
       "rows": [
         [
